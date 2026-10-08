@@ -186,7 +186,7 @@
       fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(payload) })
         .then(function (r) { return r.json(); }).then(function (j) {
           if (!j.success) throw new Error(j.message || 'fail');
-          if (window.dataLayer) window.dataLayer.push({ event: 'quote_submit', lines: cart.length });
+          if (window.dataLayer) window.dataLayer.push({ event: 'quote_submit', lines: cart.length }); if (window.sofilxFormDonusum) window.sofilxFormDonusum();
           cart = []; save(); root.hidden = true; $('#q-trk').textContent = no; $('#q-ok').hidden = false; lead.textContent = ''; window.scrollTo(0, 0);
         }).catch(function () { btn.disabled = false; btn.textContent = t.submit; msg.textContent = t.failMsg; msg.hidden = false; });
     });
@@ -202,8 +202,9 @@
   function cookies() {
     var bar = $('#cookiebar'), c = store.get(CK, null);
     if (c === 'all') loadGTM(); else if (!c) bar.hidden = false;
-    $('#ck-accept').addEventListener('click', function () { store.set(CK, 'all'); bar.hidden = true; loadGTM(); });
-    $('#ck-reject').addEventListener('click', function () { store.set(CK, 'necessary'); bar.hidden = true; });
+    function consent(g) { if (typeof window.gtag === 'function') window.gtag('consent', 'update', { ad_storage: g, ad_user_data: g, ad_personalization: g, analytics_storage: g }); }
+    $('#ck-accept').addEventListener('click', function () { store.set(CK, 'all'); bar.hidden = true; consent('granted'); loadGTM(); });
+    $('#ck-reject').addEventListener('click', function () { store.set(CK, 'necessary'); bar.hidden = true; consent('denied'); });
     var op = $('#cookie-open'); if (op) op.addEventListener('click', function () { bar.hidden = false; });
   }
 

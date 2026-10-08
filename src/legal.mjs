@@ -23,7 +23,7 @@ export const pages = {
       html: `<h2>Çerez nedir?</h2><p>Çerezler, ziyaret ettiğiniz internet siteleri tarafından tarayıcınıza kaydedilen küçük metin dosyalarıdır. Benzer amaçla tarayıcının yerel depolama alanı (localStorage) da kullanılabilir.</p>
 <h2>Kullandığımız çerezler</h2><table><thead><tr><th>Tür</th><th>Amaç</th><th>Süre</th><th>Onay</th></tr></thead><tbody>
 <tr><td>Zorunlu (yerel depolama)</td><td>Teklif listenizin ve çerez tercihinizin tarayıcınızda saklanması</td><td>Siz silene kadar</td><td>Gerekmez</td></tr>
-<tr><td>Analitik (Google Tag Manager / Google Analytics)</td><td>Ziyaret sayısı, kullanılan sayfalar ve trafik kaynaklarının ölçülmesi</td><td>En fazla 2 yıl</td><td>Açık rızanız ile</td></tr></tbody></table>
+<tr><td>Analitik (Google Tag Manager / Google Analytics)</td><td>Ziyaret sayısı, kullanılan sayfalar ve trafik kaynaklarının ölçülmesi</td><td>En fazla 2 yıl</td><td>Açık rızanız ile</td></tr><tr><td>Reklam (Google Ads)</td><td>Reklamlarımızın etkinliğini ölçmek (WhatsApp, telefon, e-posta ve teklif formu dönüşümleri)</td><td>En fazla 90 gün</td><td>Açık rızanız ile</td></tr></tbody></table>
 <h2>Tercihlerinizi yönetme</h2><p>Siteye ilk girişinizde çıkan bant üzerinden analitik çerezleri kabul edebilir ya da yalnızca zorunlu çerezlerle devam edebilirsiniz. Tercihinizi istediğiniz zaman sayfanın altındaki <b>Çerez ayarları</b> bağlantısından değiştirebilirsiniz. Ayrıca tarayıcı ayarlarınızdan çerezleri silebilir veya engelleyebilirsiniz.</p>
 <h2>İletişim</h2><p>Sorularınız için <a href="mailto:${MAIL}">${MAIL}</a> adresine yazabilirsiniz. Kişisel verilerinizin işlenmesine ilişkin ayrıntılar için <a href="/kvkk">KVKK Aydınlatma Metni</a>’ni inceleyebilirsiniz.</p>`
     }
@@ -47,7 +47,7 @@ export const pages = {
       html: `<h2>What are cookies?</h2><p>Cookies are small text files stored in your browser by websites you visit. Browser local storage may be used for similar purposes.</p>
 <h2>Cookies we use</h2><table><thead><tr><th>Type</th><th>Purpose</th><th>Duration</th><th>Consent</th></tr></thead><tbody>
 <tr><td>Strictly necessary (local storage)</td><td>Keeping your quote list and cookie preference in your browser</td><td>Until you delete them</td><td>Not required</td></tr>
-<tr><td>Analytics (Google Tag Manager / Google Analytics)</td><td>Measuring visits, pages viewed and traffic sources</td><td>Up to 2 years</td><td>Only with your consent</td></tr></tbody></table>
+<tr><td>Analytics (Google Tag Manager / Google Analytics)</td><td>Measuring visits, pages viewed and traffic sources</td><td>Up to 2 years</td><td>Only with your consent</td></tr><tr><td>Advertising (Google Ads)</td><td>Measuring the effectiveness of our ads (WhatsApp, phone, e-mail and quote form conversions)</td><td>Up to 90 days</td><td>Only with your consent</td></tr></tbody></table>
 <h2>Managing your preferences</h2><p>Accept analytics cookies or continue with necessary cookies only using the banner shown on your first visit. You can change your choice any time via <b>Cookie settings</b> at the bottom of each page, or delete cookies in your browser settings.</p>
 <h2>Contact</h2><p>Questions: <a href="mailto:${MAIL}">${MAIL}</a>. See also our <a href="/en/privacy">Privacy Notice</a>.</p>`
     }

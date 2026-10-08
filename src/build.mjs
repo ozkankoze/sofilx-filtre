@@ -10,6 +10,26 @@ const DIST = path.join(ROOT, 'dist');
 const SITE = 'https://www.sofilx.com';
 const WEB3FORMS_KEY = process.env.WEB3FORMS_KEY || '';
 const GTM_ID = process.env.GTM_ID || 'GTM-56P6SPBF';
+// Google Ads (AW-615899386). Dönüşüm etiketleri gelince yalnızca aşağıdaki 4 satırı doldurun (ör. 'AbC123xyz').
+const ADS_ID = 'AW-615899386';
+const ADS_LABELS = {
+  whatsapp: '', // FILTRE - WhatsApp Tiklama
+  telefon: '',  // FILTRE - Telefon Tiklama
+  eposta: '',   // FILTRE - E-posta Tiklama
+  form: '',     // FILTRE - Teklif Formu
+};
+// Consent Mode v2: çerez onayı yoksa reklam/analitik depolama 'denied' başlar; 'Kabul et' ile 'granted' olur.
+const ADS_HEAD = `<!-- Google tag (gtag.js) - Google Ads ${ADS_ID} -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=${ADS_ID}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+(function(){var c=null;try{c=JSON.parse(localStorage.getItem('sofilx-consent'))}catch(e){}var g=c==='all'?'granted':'denied';gtag('consent','default',{ad_storage:g,ad_user_data:g,ad_personalization:g,analytics_storage:g,wait_for_update:500});})();
+gtag('js',new Date());gtag('config','${ADS_ID}');</script>
+<script>(function(){var ID='${ADS_ID}',L=${JSON.stringify(ADS_LABELS)};
+function gonder(t){if(!t||!L[t]||typeof gtag!=='function')return;gtag('event','conversion',{send_to:ID+'/'+L[t]});}
+function tur(u){if(!u)return null;u=String(u).toLowerCase();if(u.indexOf('wa.me')>-1||u.indexOf('whatsapp')>-1)return'whatsapp';if(u.indexOf('tel:')===0)return'telefon';if(u.indexOf('mailto:')===0)return'eposta';return null;}
+document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href]'):null;if(a)gonder(tur(a.getAttribute('href')));},true);
+var _o=window.open;window.open=function(u){gonder(tur(u));return _o.apply(window,arguments);};
+window.sofilxFormDonusum=function(){gonder('form');};})();</script>`;
 const PHONE_TR = '(0216) 606 32 06', PHONE_X = '+90 216 606 32 06', PHONE_INT = '+902166063206', MOBILE_TR = '(0552) 350 84 46', MOBILE_X = '+90 552 350 84 46', WA = '905523508446', EMAIL = 'info@sofilx.com';
 const ADDRESS = 'Esatpaşa Mah. Bingöl Sok. No:1A, Ataşehir / İstanbul';
 
@@ -172,6 +192,7 @@ function layout({ L, path: url, route, title, desc, body, jsonld = [], noindex =
   return `<!doctype html>
 <html lang="${L}" dir="${rtl(L) ? 'rtl' : 'ltr'}">
 <head>
+${ADS_HEAD}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>${esc(fullTitle)}</title>
