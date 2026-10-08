@@ -1,0 +1,602 @@
+{
+ "t": {
+  "lang": "de",
+  "locale": "de_DE",
+  "home": "Startseite",
+  "nav": {
+   "products": "Produkte",
+   "sectors": "Branchen",
+   "brands": "Marken",
+   "custom": "Sonderanfertigung",
+   "about": "Über uns",
+   "refs": "Referenzen",
+   "contact": "Kontakt"
+  },
+  "topRight": "Versand ab Lager am selben Tag · Original / Ersatz",
+  "searchPh": "Teilenummer oder Vergleichsnummer eingeben",
+  "list": "Anfrageliste",
+  "addToList": "Zur Anfrageliste",
+  "inList": "In der Liste",
+  "addMore": "In der Liste · eins mehr",
+  "viewAll": "Alle anzeigen",
+  "allProducts": "Alle Produkte",
+  "products": "Produkte",
+  "stockIn": "Auf Lager",
+  "muadil": "Ersatzteil",
+  "original": "Original",
+  "sofilxMade": "Sofilx",
+  "waAsk": "Per WhatsApp fragen",
+  "waQuote": "Angebot per WhatsApp",
+  "heroKick": "Filter für Kompressoren · Vakuumpumpen",
+  "heroH1a": "Der richtige Filter.",
+  "heroH1b": "Damit Ihre Maschinen laufen.",
+  "heroP": "Original- und Ersatzfilter, Lamellen und Schmierstoffe für Kompressoren und Vakuumpumpen von über 40 Marken. Teile per Nummer finden, auf die Liste setzen und ein Angebot für alles erhalten.",
+  "heroBtn": "Produkte ansehen",
+  "cardKick": "Sofilx · Filtration",
+  "cardGroups": "Produktgruppen",
+  "cardFoot": "Alle Produkte ansehen",
+  "chipRef": [
+   "Vergleichsnummern",
+   "Teile in Sekunden finden"
+  ],
+  "chipBrand": [
+   "Über 40 Marken",
+   "Original und Ersatz"
+  ],
+  "searchBtn": "Teile suchen",
+  "example": "Beispiel",
+  "searchHeroPh": "Teilenummer, Vergleichsnummer oder Pumpenmodell",
+  "facts": [
+   [
+    "Versand am selben Tag",
+    "Für Artikel auf Lager"
+   ],
+   [
+    "Über 40 Marken",
+    "Kompressoren und Vakuumpumpen"
+   ],
+   [
+    "Original und Ersatz",
+    "Zugeordnet per Vergleichsnummer"
+   ],
+   [
+    "Ein Formular, ein Angebot",
+    "Preise für Ihre gesamte Liste"
+   ]
+  ],
+  "groupsH": "Produktgruppen",
+  "groupsP": "Wählen Sie Ihren Maschinentyp oder suchen Sie oben nach der Teilenummer.",
+  "sectorsH": "Nach Branche",
+  "sectorsP": "Wählen Sie Ihre Branche und sehen Sie die Teile, die an deren Maschinen am häufigsten gewechselt werden.",
+  "howH": "In drei Schritten zum Angebot",
+  "howP": "Kein Konto erforderlich. Ihre Liste wird in Ihrem Browser gespeichert.",
+  "how": [
+   [
+    "Auf die Liste setzen",
+    "Fügen Sie die benötigten Teile mit dem + neben jedem Produkt samt Menge hinzu."
+   ],
+   [
+    "Daten angeben",
+    "Geben Sie Firma und Kontaktdaten ein und ergänzen Sie Hinweise zu den Positionen."
+   ],
+   [
+    "Angebot erhalten",
+    "Preise und Lieferzeiten erhalten Sie per E-Mail, in der Regel am selben Werktag."
+   ]
+  ],
+  "popularH": "Häufig angefragt",
+  "oilsH": "Industrieschmierstoffe",
+  "oilsP": "Kompressor-, Vakuumpumpen-, Hydraulik- und Getriebeöle sowie Fette.",
+  "oilsBtn": "Schmierstoffe ansehen",
+  "customH": "Nach Maß gefertigt",
+  "customP": "Nicht im Katalog? Wir fertigen Filter nach Zeichnung, Muster oder Typenschildangaben.",
+  "customBtn": "Sonderfilter anfragen",
+  "helpH": "Kundenservice",
+  "helpP": "Fragen zu Preis, Verfügbarkeit, Bestellung oder Technik? Wählen Sie den passenden Kanal – wir melden uns schnell.",
+  "helpHours": "<b>Während der Geschäftszeiten</b> per Telefon und WhatsApp<br>Anfragelisten und E-Mail rund um die Uhr",
+  "help": [
+   [
+    "Preis und Verfügbarkeit",
+    "Artikel auf die Liste setzen und ein Angebot anfordern",
+    "Anfrageliste →"
+   ],
+   [
+    "Fragen zur Bestellung",
+    "Versand, Lieferzeit, Rechnung und Zustellung",
+    "WhatsApp →"
+   ],
+   [
+    "Das passende Teil finden",
+    "Suche nach Teilenummer oder Vergleichsnummer",
+    "Suche →"
+   ],
+   [
+    "Technischer Support",
+    "Kompatibilität, Abmessungen und Ersatzteilzuordnung",
+    "+90 216 606 32 06 →"
+   ],
+   [
+    "Sonderanfertigung anfragen",
+    "Nach Zeichnung, Muster oder Typenschild",
+    "Sonderfilter →"
+   ]
+  ],
+  "filters": "Filter",
+  "productGroup": "Produktgruppe",
+  "brand": "Marke",
+  "type": "Typ",
+  "clear": "Filter zurücksetzen",
+  "searchInList": "In dieser Liste suchen",
+  "sort": [
+   "Empfohlen",
+   "Name A–Z"
+  ],
+  "items": "Produkte",
+  "noResult": "Keine Produkte für diese Filter. Tragen Sie die Teilenummer im Anfrageformular ein – wir beschaffen sie auch, wenn sie nicht im Katalog steht.",
+  "tabs": {
+   "uyum": "Passende Maschinen",
+   "teknik": "Technische Daten",
+   "aciklama": "Beschreibung",
+   "genel": "Allgemeine Informationen",
+   "teslimat": "Lieferung",
+   "iade": "Stornierung & Rückgabe",
+   "sss": "FAQ"
+  },
+  "compatBrands": "Passende Marken",
+  "compatModels": "Passende Modelle",
+  "noModels": [
+   "Modellliste in Vorbereitung",
+   "Senden Sie uns ein Foto des Typenschilds oder die Modellbezeichnung – wir prüfen die Kompatibilität.",
+   "Typenschild-Foto senden"
+  ],
+  "partNo": "Teilenummer",
+  "crossRef": "Vergleichsnummern",
+  "sofilxNo": "Sofilx-Code",
+  "size": "Abmessungen",
+  "setSize": "Satz",
+  "setUnit": "-teiliger Satz",
+  "ptype": "Produkttyp",
+  "group": "Produktgruppe",
+  "usedIn": "Branchen",
+  "drawTop": "Draufsicht",
+  "drawSide": "Seitenansicht",
+  "drawNote": "Maße in mm · nicht maßstabsgetreu",
+  "drawThumb": "Maßzeichnung",
+  "photo": "Foto",
+  "notes": [
+   [
+    "Versand am selben Tag",
+    "Für Artikel auf Lager"
+   ],
+   [
+    "Kompatibilitätsprüfung",
+    "Abgleich vor dem Angebot"
+   ],
+   [
+    "Verkauf mit Rechnung",
+    "Zahlung für Firmenkunden"
+   ]
+  ],
+  "share": "Teilen",
+  "copyCode": "Code kopieren",
+  "related": "Ähnliche Produkte",
+  "compatible": "Passend für",
+  "type2": "Typ",
+  "genel": "<p><b>Original und Ersatz.</b> Sofilx liefert sowohl Originalteile des Herstellers als auch Ersatzteile mit gleichen Abmessungen und gleicher Leistung. Jede Angebotsposition weist aus, um welche Variante es sich handelt.</p><p><b>Vergleichsnummern.</b> Die angegebenen Nummern dienen der einfacheren Suche. Markennamen werden ausschließlich zur Angabe der Kompatibilität verwendet.</p><p class=\"disclaimer\">Vergleichs-, technische und Kompatibilitätsangaben dienen der Orientierung; für ihre Richtigkeit und Vollständigkeit wird keine Gewähr übernommen. Beachten Sie bei der Teileauswahl stets die Empfehlungen des Maschinenherstellers und die Betriebsbedingungen.</p>",
+  "teslimat": [
+   [
+    "Artikel auf Lager",
+    "Während der Geschäftszeiten bestätigte Bestellungen werden am selben Tag versandt."
+   ],
+   [
+    "Auftragsfertigung",
+    "Lieferzeiten werden im Angebot je Position angegeben."
+   ],
+   [
+    "Lieferoptionen",
+    "Vertragskurier, Kurier am selben Tag innerhalb Istanbuls oder Abholung in unserem Lager in Ataşehir."
+   ]
+  ],
+  "iade": "<p>Die Rückgabebedingungen für unbenutzte Artikel in ungeöffneter Verpackung sind in der Auftragsbestätigung angegeben. Sonderanfertigungen sind von der Rückgabe ausgeschlossen.</p><p>Für Rückgaben und Umtausch <a href=\"/de/contact\">kontaktieren Sie uns</a> bitte.</p>",
+  "faq": [
+   [
+    "Kann ein Ersatzteil das Originalteil ersetzen?",
+    "Ersatzteile werden so ausgewählt, dass sie Abmessungen und Leistung des Originals entsprechen. Berücksichtigen Sie bei kritischen Anwendungen auch die Empfehlung des Maschinenherstellers; wir prüfen die Zuordnung vor dem Angebot gemeinsam mit Ihnen."
+   ],
+   [
+    "Ich kenne meine Teilenummer nicht. Was tun?",
+    "Senden Sie uns per WhatsApp ein Foto des Typenschilds oder des alten Teils – wir finden das passende Teil."
+   ],
+   [
+    "Warum werden keine Preise angezeigt?",
+    "Die Preise hängen von Menge, Wahl zwischen Original und Ersatz sowie der Verfügbarkeit ab. Senden Sie uns Ihre Anfrageliste, und wir antworten mit aktuellen Preisen und Lieferzeiten je Position."
+   ],
+   [
+    "Rechnung und Zahlung?",
+    "Alle Verkäufe erfolgen gegen Rechnung. Die Zahlungsbedingungen sind im Angebot angegeben."
+   ]
+  ],
+  "quoteH": "Anfrageliste",
+  "quoteEmpty": "Ihre Liste ist leer. Fügen Sie Produkte mit + hinzu oder beschreiben Sie Ihren Bedarf im Hinweisfeld.",
+  "quoteP": "Prüfen Sie die Mengen und geben Sie Ihre Daten an.",
+  "form": {
+   "h": "Firma und Ansprechpartner",
+   "sub": "Auf Basis dieser Angaben erstellen wir Ihr Angebot.",
+   "company": "Firma",
+   "name": "Vor- und Nachname",
+   "phone": "Telefon",
+   "email": "E-Mail",
+   "city": "Stadt / Land",
+   "delivery": "Lieferung",
+   "note": "Hinweis",
+   "notePh": "Teile, die nicht in der Liste stehen, gewünschte Lieferzeit, Zahlungsbedingungen",
+   "kvkk": "Ich habe die <a href=\"/de/privacy\" target=\"_blank\">Datenschutzhinweise</a> zur Verarbeitung meiner personenbezogenen Daten für die Angebotserstellung gelesen.",
+   "submit": "Angebot anfordern",
+   "sending": "Wird gesendet…",
+   "wa": "Liste per WhatsApp senden",
+   "notePer": "Hinweis: Maschinenmodell, Seriennr., Dringlichkeit",
+   "errCompany": "Bitte Firmennamen eingeben.",
+   "errName": "Bitte Namen eingeben.",
+   "errPhone": "Telefonnummer fehlt.",
+   "errEmail": "Bitte gültige E-Mail-Adresse eingeben.",
+   "errKvkk": "Bitte setzen Sie das Häkchen, um fortzufahren.",
+   "cities": [
+    "Deutschland",
+    "Österreich",
+    "Schweiz",
+    "Türkei",
+    "Sonstige"
+   ],
+   "deliveries": [
+    "Kurier",
+    "Abholung im Lager",
+    "Spedition"
+   ],
+   "photoTip": "Sie können uns ein Foto des Typenschilds oder des Teils per WhatsApp senden."
+  },
+  "okH": "Ihre Angebotsanfrage ist eingegangen",
+  "okP": "Ihre Anfrage wurde an unseren Vertrieb weitergeleitet, und eine Zusammenfassung wurde an Ihre E-Mail-Adresse gesendet. In der Regel antworten wir am selben Werktag.",
+  "okTrk": "Bitte geben Sie diese Referenz in Ihrer Korrespondenz an.",
+  "newList": "Neue Liste beginnen",
+  "failMsg": "Senden fehlgeschlagen. Bitte erneut versuchen oder die Liste per WhatsApp senden.",
+  "drawerEmpty": "Ihre Liste ist leer. Fügen Sie Produkte mit + hinzu.",
+  "lines": "Positionen",
+  "pcs": "Stk.",
+  "backToProducts": "Zurück zu den Produkten",
+  "requestQuote": "Angebot anfordern",
+  "added": "zur Liste hinzugefügt",
+  "seeList": "Liste anzeigen",
+  "copied": "Kopiert",
+  "cookie": {
+   "text": "Wir verwenden Cookies, um Ihr Nutzungserlebnis zu verbessern und Besuche zu messen. Technisch notwendige Cookies sind immer aktiv.",
+   "more": "Cookie-Richtlinie",
+   "accept": "Akzeptieren",
+   "reject": "Nur notwendige"
+  },
+  "footP": "Filter für Kompressoren und Vakuumpumpen, Lamellen, Industrieschmierstoffe und Kupplungen. Versand ab Lager am selben Tag.",
+  "footLegal": "Vergleichs-, Maß- und Kompatibilitätsangaben dienen der Orientierung; für ihre Richtigkeit und Vollständigkeit wird keine Gewähr übernommen. Beachten Sie bei der Teileauswahl die Empfehlungen des Maschinenherstellers. Markennamen bei Ersatzprodukten dienen ausschließlich der Angabe der Kompatibilität.",
+  "rights": "Alle Rechte vorbehalten.",
+  "kvkkL": "Datenschutzhinweise",
+  "cookieL": "Cookie-Richtlinie",
+  "customerCenter": "Kundenservice",
+  "nf": [
+   "Seite nicht gefunden",
+   "Die gesuchte Seite wurde möglicherweise verschoben oder entfernt. Suchen Sie Ihr Teil per Nummer oder durchsuchen Sie die Produktgruppen.",
+   "Zur Startseite"
+  ],
+  "x": {
+   "siteTitle": "Sofilx | Filter für Kompressoren & Vakuumpumpen",
+   "skip": "Zum Inhalt springen",
+   "mainMenu": "Hauptmenü",
+   "language": "Sprache",
+   "cookieSettings": "Cookie-Einstellungen",
+   "waHello": "Guten Tag, ich hätte gern ein Angebot.",
+   "waFloat": "WhatsApp",
+   "waProduct": "Guten Tag, können Sie mir Preis und Verfügbarkeit nennen für ",
+   "waList": "Guten Tag, ich hätte gern ein Angebot für:",
+   "examples": [
+    "Ölfilter",
+    "Kohlelamelle",
+    "Luftfilter",
+    "HEPA"
+   ],
+   "homeDesc": "Original- und Ersatzfilter für Kompressoren und Vakuumpumpen, Kohle- und Faserlamellen, Industrieschmierstoffe und Kupplungen. Suche per Teilenummer und ein Angebot für Ihre gesamte Liste.",
+   "productsDesc": "Alle Sofilx-Produkte: Filter für Kompressoren und Vakuumpumpen, Kohle- und Faserlamellen, Schmierstoffe, Kupplungen.",
+   "catDesc": "{cat}: Original- und Ersatzteile mit Vergleichsnummern. Versand ab Lager am selben Tag, Angebot mit einem Formular.",
+   "catBrandTitle": "{brand} {cat}",
+   "catBrandDesc": "{cat} passend für {brand} mit Teile- und Vergleichsnummern. Angebot bei Sofilx anfordern.",
+   "crossShort": "Vergl.-Nr.",
+   "qty": "Menge",
+   "dec": ",",
+   "descCompat": "{type} passend für {brand}-Maschinen.",
+   "descSofilx": "{type}, geliefert von Sofilx.",
+   "descFits": "Passend für {n} Modelle, u. a. {list}.",
+   "descDims": "Abmessungen: {d}.",
+   "reqQuote": "Angebot bei Sofilx anfordern.",
+   "origDetails": "Technische Originalangaben (Türkisch)",
+   "sectorIntro": "Diese Teile werden von Instandhaltungsteams dieser Branche am häufigsten angefragt. Für nicht aufgeführte Teile ergänzen Sie Ihre Anfrage um die Teilenummer oder ein Typenschild-Foto.",
+   "addAll": "Alle zur Anfrageliste",
+   "mostReplaced": "Am häufigsten gewechselt",
+   "otherSectors": "Weitere Branchen",
+   "brandsLead": "Wählen Sie Ihre Maschinenmarke und sehen Sie Filter, Lamellen, Schmierstoffe und Kupplungen in einer Liste.",
+   "brandsDesc": "Von Sofilx gelieferte Marken: Busch, Becker, Elmo Rietschle, Leybold, Kaeser und weitere.",
+   "brandDesc": "Filter, Lamellen und Ersatzteile passend für {brand} mit Vergleichsnummern. Angebot bei Sofilx anfordern.",
+   "customH1": "Sonderfilter",
+   "customLead": "Wir fertigen Patronen-, Taschen-, Luft-, Hydraulik- und Glasfaserfilter nach Zeichnung, Muster oder Typenschildangaben. Setzen Sie ein Produkt auf Ihre Liste und tragen Sie die Maße im Hinweis ein.",
+   "customDesc": "Sonderanfertigung von Filtern: Patronen-, Taschen-, Luft-, Hydraulik- und Glasfaserfilter nach Ihren Maßen.",
+   "customNeed": "Was wir für ein Angebot benötigen",
+   "customRows": [
+    [
+     "Abmessungen",
+     "Außendurchmesser, Innendurchmesser, Länge (mm)"
+    ],
+    [
+     "Filterfeinheit",
+     "µm oder Klasse (F9, H13 usw.)"
+    ],
+    [
+     "Filtermedium",
+     "Zellulose, Polyester, Glasfaser, Edelstahlgewebe"
+    ],
+    [
+     "Endkappen und Dichtungen",
+     "Material und Anschlussart"
+    ],
+    [
+     "Menge und Lieferzeit",
+     "Erstlieferung und Jahresbedarf"
+    ]
+   ],
+   "aboutH1": "Das richtige Teil zur richtigen Zeit",
+   "aboutLead": "Bei Sofilx Filtre liefern wir sowohl Produkte unserer eigenen Marke als auch der führenden Marken der Branche – mit dem Ziel, die Zufriedenheit unserer Kunden zu steigern und durch nachhaltiges Wachstum dauerhaften Mehrwert zu schaffen.",
+   "aboutBlocks": [
+    [
+     "Erfahrung und Know-how",
+     "Über unser breites Vertriebsnetz liefern wir Qualitätsprodukte zuverlässiger Marken aus unserem Lager schnell und zu wettbewerbsfähigen Preisen – mit langjähriger Erfahrung, verlässlichem Service und Fokus auf Kundenzufriedenheit."
+    ],
+    [
+     "Unsere Mission",
+     "Unseren Kunden das richtige, hochwertige Produkt zur richtigen Zeit zu liefern und durch nachhaltiges Wachstum dauerhaften Mehrwert für die Branche zu schaffen."
+    ],
+    [
+     "Unsere Vision",
+     "Der erste Lieferant zu sein, an den man bei industrieller Filtration und Verschleißteilen denkt."
+    ]
+   ],
+   "aboutStats": [
+    "Produkte im Katalog",
+    "Marken",
+    "Produktgruppen",
+    "Am selben Tag",
+    "Versand ab Lager"
+   ],
+   "visit": "Besuchen Sie uns",
+   "refsLead": "Von Verpackungslinien bis zu CNC-Werkstätten: Wir beliefern Hersteller in der ganzen Türkei mit Wartungsteilen.",
+   "refsDesc": "Sofilx-Referenzen und belieferte Branchen.",
+   "served": "Belieferte Branchen",
+   "servedP": "Instandhaltungsteams in diesen Branchen setzen bei Filtern, Lamellen und Schmierstoffen auf Sofilx.",
+   "work": "Arbeiten Sie mit uns",
+   "workP": "Senden Sie uns Ihre Teileliste – wir antworten mit Preisen und Lieferzeiten je Position.",
+   "address": "Adresse",
+   "phone": "Telefon",
+   "email": "E-Mail",
+   "directions": "Route planen",
+   "cityName": "Ataşehir, Istanbul",
+   "openMaps": "In Google Maps öffnen",
+   "contactLead": "Erreichen Sie uns per Telefon, WhatsApp oder E-Mail; Ihre Anfrageliste können Sie auch von hier senden.",
+   "contactDesc": "Kontakt zu Sofilx: {addr}. Telefon {phone}, {email}."
+  }
+ },
+ "cats": {
+  "kompresor-filtreleri": {
+   "name": "Kompressorfilter",
+   "short": "Luft-, Öl- und Abscheiderfilter"
+  },
+  "vakum-pompasi-filtreleri": {
+   "name": "Vakuumpumpenfilter",
+   "short": "Öl-, Luft- und Abluftfilter"
+  },
+  "karbon-paletler": {
+   "name": "Kohlelamellen",
+   "short": "Für trockenlaufende Vakuumpumpen"
+  },
+  "fiber-paletler": {
+   "name": "Faserlamellen",
+   "short": "Für ölgeschmierte Vakuumpumpen"
+  },
+  "endustriyel-yaglar": {
+   "name": "Industrieschmierstoffe",
+   "short": "Kompressor-, Hydraulik-, Spezialöle und Fette"
+  },
+  "endustriyel-filtreler": {
+   "name": "Industriefilter",
+   "short": "HEPA-, Panel-, Taschen- und Hydraulikfilter"
+  },
+  "ozel-uretim-filtreler": {
+   "name": "Sonderfilter",
+   "short": "Patronen-, Taschen- und Luftfilter nach Maß"
+  },
+  "karbon-burc-ve-komurler": {
+   "name": "Kohlebürsten & Kohlebuchsen",
+   "short": "Kohlebürsten, technische Kohle"
+  },
+  "kompresor-kaplinleri": {
+   "name": "Kompressorkupplungen",
+   "short": "Elastische und drehmomentübertragende Kupplungen"
+  }
+ },
+ "sectors": {
+  "ambalaj": {
+   "name": "Verpackung",
+   "line": "Vakuumverpackung, Tiefziehen und Abfülllinien",
+   "parts": [
+    "Öl- und Abluftfilter für Vakuumpumpen",
+    "Kohlelamellen",
+    "Vakuumpumpenöle"
+   ]
+  },
+  "gida": {
+   "name": "Lebensmittel & Getränke",
+   "line": "Verpacken, Abfüllen, Trocknen und Druckluft",
+   "parts": [
+    "Vakuumpumpenfilter",
+    "Kompressorfilter",
+    "Lebensmitteltaugliche Schmierstoffe"
+   ]
+  },
+  "plastik": {
+   "name": "Kunststoff & Gummi",
+   "line": "Spritzguss, Extrusion und Materialförderung",
+   "parts": [
+    "Luftfilter für Vakuumpumpen",
+    "Kompressorfilter",
+    "Trennmittel und Hydrauliköle"
+   ]
+  },
+  "agac-isleme": {
+   "name": "Holzbearbeitung & CNC",
+   "line": "CNC-Vakuumtische und Kantenanleimmaschinen",
+   "parts": [
+    "Lamellen für trockenlaufende Pumpen",
+    "Luftfilter",
+    "Absaugsäcke"
+   ]
+  },
+  "matbaa": {
+   "name": "Druck & Papier",
+   "line": "Papieranleger, Falz- und Schneidemaschinen",
+   "parts": [
+    "Kohle- und Faserlamellen",
+    "Luftfilter",
+    "Ölfilter"
+   ]
+  },
+  "kimya-ilac": {
+   "name": "Chemie & Pharma",
+   "line": "Prozessvakuum, Reinräume und Druckluft",
+   "parts": [
+    "HEPA- und Panelfilter",
+    "Abluftfilter",
+    "Sonderpatronen"
+   ]
+  },
+  "otomotiv-metal": {
+   "name": "Automobil & Metall",
+   "line": "Lackierereien, Zerspanung und Hydrauliksysteme",
+   "parts": [
+    "Kühlschmierstoffe",
+    "Hydraulikfilter",
+    "Kupplungen"
+   ]
+  },
+  "enerji-bakim": {
+   "name": "Energie & Instandhaltung",
+   "line": "Generatoren, Motoren und Antriebstechnik",
+   "parts": [
+    "Kohlebürsten",
+    "Kohlebuchsen",
+    "Kompressorkupplungen"
+   ]
+  }
+ },
+ "types": {
+  "HEPA filter": "HEPA-Filter",
+  "Hydraulic filter": "Hydraulikfilter",
+  "Panel filter": "Panelfilter",
+  "Bag filter": "Taschenfilter",
+  "Custom filter": "Sonderfilter",
+  "Air filter": "Luftfilter",
+  "Cartridge filter": "Patronenfilter",
+  "Glass fibre filter": "Glasfaserfilter",
+  "Filter": "Filter",
+  "Separator filter": "Abscheiderfilter",
+  "Oil filter": "Ölfilter",
+  "Exhaust filter": "Abluftfilter",
+  "Industrial lubricant": "Industrieschmierstoff",
+  "Grease": "Schmierfett",
+  "Carbon vane": "Kohlelamelle",
+  "Fibre vane": "Faserlamelle",
+  "Carbon brush": "Kohlebürste",
+  "Carbon product": "Kohleprodukt",
+  "Coupling": "Kupplung"
+ },
+ "phrases": {
+  "Non-Destructive Crack Detection Chemicals": "Rissprüfmittel (zerstörungsfrei)",
+  "Special Purpose Lubricants": "Spezialschmierstoffe",
+  "Special Purpose Products": "Spezialprodukte",
+  "Multi-Purpose Lubricants": "Mehrzweckschmierstoffe",
+  "Vacuum Pump Carbon Vane": "Vakuumpumpen-Kohlelamelle",
+  "Superior Performance": "Höchstleistung",
+  "Corrosion Protection": "Korrosionsschutz",
+  "Dry Film Lubricants": "Trockenschmierstoffe",
+  "Separator Filters": "Abscheiderfilter",
+  "Mechanical Carbon": "Technische Kohle",
+  "High Performance": "Hochleistung",
+  "Glass Mould Oils": "Glasformenöle",
+  "Coupling Element": "Kupplungselement",
+  "Fully Synthetic": "Vollsynthetisch",
+  "Coupling Rubber": "Kupplungsgummi",
+  "Assembly Pastes": "Montagepasten",
+  "Exhaust Filters": "Abluftfilter",
+  "Carbon Bushings": "Kohlebuchsen",
+  "Release Agents": "Trennmittel",
+  "Exhaust Filter": "Abluftfilter",
+  "Carbon Brushes": "Kohlebürsten",
+  "Other Products": "Sonstige Produkte",
+  "Water-Soluble": "Wassermischbar",
+  "Conveyor Oils": "Förderkettenöle",
+  "Oil Additives": "Öladditive",
+  "Rust Removers": "Rostlöser",
+  "Carbon Rings": "Kohleringe",
+  "Metalworking": "Metallbearbeitung",
+  "Emulsifiers": "Emulgatoren",
+  "Vacuum Pump": "Vakuumpumpe",
+  "Oil Filters": "Ölfilter",
+  "Air Filters": "Luftfilter",
+  "Glass Fibre": "Glasfaser",
+  "Oil Filter": "Ölfilter",
+  "Air Filter": "Luftfilter",
+  "Compressor": "Kompressor",
+  "Separator": "Abscheider",
+  "Couplings": "Kupplungen",
+  "Hydraulic": "Hydraulik",
+  "Cartridge": "Patrone",
+  "Elements": "Elemente",
+  "Vane Set": "Lamellensatz",
+  "Coupling": "Kupplung",
+  "Flexible": "Elastisch",
+  "Cleaners": "Reiniger",
+  "Silicone": "Silikon",
+  "Exhaust": "Abluft",
+  "Filters": "Filter",
+  "Greases": "Schmierfette",
+  "Bearing": "Lager",
+  "Cooling": "Kühlung",
+  "Filter": "Filter",
+  "Grease": "Schmierfett",
+  "Basic": "Basis",
+  "Chain": "Ketten",
+  "Panel": "Panel",
+  "Vane": "Lamelle",
+  "Oils": "Öle",
+  "Gear": "Getriebe",
+  "Size": "Größe",
+  "Hub": "Nabe",
+  "Oil": "Öl",
+  "Bag": "Tasche",
+  "and": "und",
+  "Air": "Luft"
+ },
+ "legal": {
+  "kvkk": {
+   "title": "Datenschutzhinweise",
+   "lead": "Wie wir Ihre personenbezogenen Daten nach dem türkischen Gesetz Nr. 6698 zum Schutz personenbezogener Daten (KVKK) verarbeiten.",
+   "html": "<h2>1. Verantwortlicher</h2><p>Ihre personenbezogenen Daten werden von Sofilx Filtre („Sofilx“), Esatpaşa Mah. Bingöl Sok. No:1A, Ataşehir / İstanbul, als Verantwortlichem im nachstehend beschriebenen Umfang verarbeitet.</p>\n<h2>2. Verarbeitete Daten</h2><ul><li><b>Identitäts- und Kontaktdaten:</b> Vor- und Nachname, Firma, Telefonnummer, E-Mail-Adresse, Stadt.</li><li><b>Anfragedaten:</b> Artikel in Ihrer Anfrageliste, Mengen, Hinweise und Lieferwunsch.</li><li><b>Sicherheits- und Nutzungsdaten:</b> IP-Adresse, Browserinformationen und Cookie-Daten (nur soweit Sie eingewilligt haben).</li></ul>\n<h2>3. Zwecke</h2><ul><li>Entgegennahme und Prüfung Ihrer Angebotsanfragen sowie Übermittlung von Angeboten,</li><li>Abwicklung von Bestellungen, Lieferung und After-Sales-Prozessen,</li><li>Beantwortung Ihrer Anfragen und Beschwerden,</li><li>Erfüllung unserer gesetzlichen Pflichten,</li><li>mit Ihrer Einwilligung: Messung der Websitenutzung und Verbesserung unserer Leistungen.</li></ul>\n<h2>4. Rechtsgrundlagen</h2><p>Die Verarbeitung erfolgt auf Grundlage der Vertragserfüllung, der Erfüllung gesetzlicher Pflichten und unserer berechtigten Interessen (KVKK Art. 5/2) sowie für Analyse-Cookies auf Grundlage Ihrer ausdrücklichen Einwilligung (Art. 5/1).</p>\n<h2>5. Übermittlungen</h2><p>Ihre Daten können gemäß KVKK Art. 8 und 9 an E-Mail-/Formulardienstleister, die für die Übermittlung des Anfrageformulars eingesetzt werden, an unseren Hosting-Anbieter, an Versandunternehmen sowie – soweit gesetzlich vorgeschrieben – an zuständige Behörden weitergegeben werden. Einige Anbieter können Daten außerhalb der Türkei speichern.</p>\n<h2>6. Speicherdauer</h2><p>Die Daten werden so lange gespeichert, wie es der Zweck und die gesetzlichen Verjährungsfristen erfordern; danach werden sie gelöscht, vernichtet oder anonymisiert.</p>\n<h2>7. Ihre Rechte</h2><p>Nach KVKK Art. 11 können Sie erfragen, ob Ihre Daten verarbeitet werden, Auskunft verlangen, den Zweck der Verarbeitung und die Empfänger erfahren, Berichtigung oder Löschung verlangen, automatisierten Entscheidungen widersprechen und Schadensersatz bei rechtswidriger Verarbeitung fordern.</p>\n<h2>8. Kontakt</h2><p>Richten Sie Ihre Anfragen an <a href=\"mailto:info@sofilx.com\">info@sofilx.com</a> oder schriftlich an Esatpaşa Mah. Bingöl Sok. No:1A, Ataşehir / İstanbul. Anfragen werden innerhalb von 30 Tagen kostenlos beantwortet.</p>"
+  },
+  "cookies": {
+   "title": "Cookie-Richtlinie",
+   "lead": "Welche Cookies wir auf dieser Website verwenden, warum, und wie Sie Ihre Einstellungen verwalten können.",
+   "html": "<h2>Was sind Cookies?</h2><p>Cookies sind kleine Textdateien, die von besuchten Websites in Ihrem Browser gespeichert werden. Für ähnliche Zwecke kann auch der lokale Speicher des Browsers genutzt werden.</p>\n<h2>Von uns verwendete Cookies</h2><table><thead><tr><th>Art</th><th>Zweck</th><th>Dauer</th><th>Einwilligung</th></tr></thead><tbody>\n<tr><td>Technisch notwendig (lokaler Speicher)</td><td>Speichern Ihrer Anfrageliste und Ihrer Cookie-Einstellung im Browser</td><td>Bis Sie sie löschen</td><td>Nicht erforderlich</td></tr>\n<tr><td>Analyse (Google Tag Manager / Google Analytics)</td><td>Messung von Besuchen, aufgerufenen Seiten und Zugriffsquellen</td><td>Bis zu 2 Jahre</td><td>Nur mit Ihrer Einwilligung</td></tr></tbody></table>\n<h2>Einstellungen verwalten</h2><p>Über das beim ersten Besuch angezeigte Banner können Sie Analyse-Cookies akzeptieren oder nur mit notwendigen Cookies fortfahren. Ihre Auswahl können Sie jederzeit über <b>Cookie-Einstellungen</b> am Ende jeder Seite ändern oder Cookies in Ihren Browsereinstellungen löschen.</p>\n<h2>Kontakt</h2><p>Fragen: <a href=\"mailto:info@sofilx.com\">info@sofilx.com</a>. Siehe auch unsere <a href=\"/de/privacy\">Datenschutzhinweise</a>.</p>"
+  }
+ }
+}

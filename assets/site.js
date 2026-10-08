@@ -73,7 +73,7 @@
     var codes = (p.c || '').split(' | ').concat(p.n.match(/\d[\d\s.\-]{3,}\d/g) || []);
     if (codes.some(function (c) { return tight(c) === tq; })) s += 100; else if (tq.length > 2 && codes.some(function (c) { return tight(c).indexOf(tq) > -1; })) s += 60;
     if (tq.length > 2 && (p.m || '').split(' | ').some(function (m) { return tight(m).indexOf(tq) > -1; })) s += 40;
-    var words = nq.split(/\s+/).filter(Boolean), hay = norm([p.n, p.b, p.t, p.g].join(' '));
+    var words = nq.split(/\s+/).filter(Boolean), hay = norm([p.n, p.b, p.t, p.g, p.k || ''].join(' '));
     if (words.length && words.every(function (w) { return hay.indexOf(w) > -1; })) s += 30;
     return s;
   }
@@ -124,7 +124,7 @@
       });
       var sort = $('#f-sort') ? $('#f-sort').value : 'rel';
       var ordered = cards.slice();
-      if (sort === 'az') ordered.sort(function (a, b) { return a.dataset.name.localeCompare(b.dataset.name, 'tr'); });
+      if (sort === 'az') ordered.sort(function (a, b) { return a.dataset.name.localeCompare(b.dataset.name, L); });
       else if (hits) ordered.sort(function (a, b) { return (rank[a.dataset.id] || 9999) - (rank[b.dataset.id] || 9999); });
       ordered.forEach(function (c) { grid.appendChild(c); });
       $('#f-count').textContent = shown + ' ' + t.items; $('#grid-empty').hidden = shown > 0;
@@ -159,7 +159,7 @@
   function bindQuote() {
     var root = $('#quote-root'); if (!root) return;
     var box = $('#q-lines'), lead = $('#q-lead');
-    function waText() { return (L === 'en' ? 'Hello, I would like a quote for:\n' : 'Merhaba, aşağıdaki ürünler için teklif rica ediyorum:\n') + cart.map(function (l) { return '- ' + l.name + (l.code ? ' (' + l.code + ')' : '') + ' × ' + l.qty + (l.note ? ' – ' + l.note : ''); }).join('\n'); }
+    function waText() { return (t.waList || 'Merhaba, aşağıdaki ürünler için teklif rica ediyorum:') + '\n' + cart.map(function (l) { return '- ' + l.name + (l.code ? ' (' + l.code + ')' : '') + ' × ' + l.qty + (l.note ? ' – ' + l.note : ''); }).join('\n'); }
     function render() {
       box.innerHTML = cart.length ? cart.map(function (l) {
         return '<div class="qline"><a class="th" href="' + esc(l.url) + '"><img src="' + esc(l.img) + '" alt=""></a><div style="min-width:0"><b>' + esc(l.name) + '</b><span class="mono">' + esc(l.code) + '</span><input class="note" data-note="' + esc(l.id) + '" value="' + esc(l.note) + '" placeholder="' + esc(t.notePer) + '"></div><div class="ctl"><div class="qty small"><button type="button" data-q="' + esc(l.id) + '" data-d="-1">−</button><input type="number" min="1" value="' + l.qty + '" data-qi="' + esc(l.id) + '"><button type="button" data-q="' + esc(l.id) + '" data-d="1">+</button></div><button class="x" type="button" data-rm="' + esc(l.id) + '">' + ICON.trash + '</button></div></div>';
@@ -179,7 +179,7 @@
       if (ok && !cart.length && !$('#f-not').value.trim()) { toast(lead.dataset.empty, true); ok = false; }
       if (!ok) return;
       var d = new Date(), no = 'SFX-' + String(d.getFullYear()).slice(2) + String(d.getMonth() + 1).padStart(2, '0') + String(d.getDate()).padStart(2, '0') + '-' + Math.floor(1000 + Math.random() * 9000);
-      var lines = cart.map(function (l, i) { return (i + 1) + ') ' + l.name + (l.code ? ' [' + l.code + ']' : '') + ' × ' + l.qty + (l.note ? ' — Not: ' + l.note : '') + '\n   ' + location.origin + l.url; }).join('\n');
+      var lines = cart.map(function (l, i) { return (i + 1) + ') ' + l.name + (l.code ? ' [' + l.code + ']' : '') + ' × ' + l.qty + (l.note ? ' — Not: ' + l.note : '') + '\n   ' + location.origin + '/urun/' + l.id; }).join('\n');
       var payload = { access_key: S.w3f, subject: 'Teklif talebi ' + no + ' — ' + $('#f-firma').value.trim() + ' (' + cart.length + ' kalem)', from_name: 'Sofilx web sitesi', replyto: $('#f-mail').value.trim(), 'Takip no': no, 'Firma': $('#f-firma').value.trim(), 'Ad soyad': $('#f-ad').value.trim(), 'Telefon': $('#f-tel').value.trim(), 'E-posta': $('#f-mail').value.trim(), 'Şehir': $('#f-sehir').value, 'Teslimat': $('#f-teslim').value, 'Dil': L.toUpperCase(), 'Ürünler': lines || '-', 'Not': $('#f-not').value.trim() || '-', botcheck: form.botcheck.checked };
       var btn = $('#q-submit'), msg = $('#form-msg'); btn.disabled = true; btn.textContent = t.sending; msg.hidden = true;
       if (!S.w3f) { btn.disabled = false; btn.textContent = t.submit; msg.textContent = t.failMsg; msg.hidden = false; return; }
@@ -240,3 +240,5 @@
   $$('[data-try]').forEach(function (b) { b.addEventListener('click', function () { var i = $('#q-hero'); i.value = b.dataset.try; i.focus(); i.dispatchEvent(new Event('input')); }); });
   bindListing(); bindProduct(); bindQuote(); cookies(); badge();
 })();
+/* dil menüsü: dışarı tıklayınca kapat */
+document.addEventListener('click', function (e) { document.querySelectorAll('details.langsw[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); }); });

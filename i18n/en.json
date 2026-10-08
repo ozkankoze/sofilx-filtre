@@ -1,0 +1,602 @@
+{
+ "t": {
+  "lang": "en",
+  "locale": "en_GB",
+  "home": "Home",
+  "nav": {
+   "products": "Products",
+   "sectors": "Industries",
+   "brands": "Brands",
+   "custom": "Custom Filters",
+   "about": "About",
+   "refs": "References",
+   "contact": "Contact"
+  },
+  "topRight": "Same-day dispatch from stock · OEM / equivalent",
+  "searchPh": "Type a part number or cross reference",
+  "list": "Quote list",
+  "addToList": "Add to quote list",
+  "inList": "In list",
+  "addMore": "In list · add one more",
+  "viewAll": "View all",
+  "allProducts": "All products",
+  "products": "Products",
+  "stockIn": "In stock",
+  "muadil": "Equivalent",
+  "original": "OEM",
+  "sofilxMade": "Sofilx",
+  "waAsk": "Ask on WhatsApp",
+  "waQuote": "Get a quote on WhatsApp",
+  "heroKick": "Compressor · vacuum pump filters",
+  "heroH1a": "The right filter.",
+  "heroH1b": "Keep machines running.",
+  "heroP": "OEM and equivalent filters, vanes and lubricants for compressors and vacuum pumps of 40+ brands. Find parts by number, add them to your list and get one quote for everything.",
+  "heroBtn": "Browse products",
+  "cardKick": "Sofilx · filtration",
+  "cardGroups": "product groups",
+  "cardFoot": "Browse all products",
+  "chipRef": [
+   "Cross reference",
+   "Find parts in seconds"
+  ],
+  "chipBrand": [
+   "40+ brands",
+   "OEM and equivalent"
+  ],
+  "searchBtn": "Search parts",
+  "example": "Try",
+  "searchHeroPh": "Part number, cross reference or pump model",
+  "facts": [
+   [
+    "Same-day dispatch",
+    "For items in stock"
+   ],
+   [
+    "40+ brands",
+    "Compressors and vacuum pumps"
+   ],
+   [
+    "OEM and equivalent",
+    "Matched by cross reference"
+   ],
+   [
+    "One form, one quote",
+    "Prices for your whole list"
+   ]
+  ],
+  "groupsH": "Product groups",
+  "groupsP": "Choose your machine type or search by part number above.",
+  "sectorsH": "By industry",
+  "sectorsP": "Choose your industry to see the parts that are replaced most often on its machines.",
+  "howH": "Three steps to a quote",
+  "howP": "No account needed. Your list is kept in your browser.",
+  "how": [
+   [
+    "Add to your list",
+    "Use the + next to each product to add the parts you need, with quantities."
+   ],
+   [
+    "Leave your details",
+    "Enter your company and contact details and add notes to items."
+   ],
+   [
+    "Receive your quote",
+    "Prices and lead times arrive by e-mail, usually the same working day."
+   ]
+  ],
+  "popularH": "Frequently requested",
+  "oilsH": "Industrial lubricants",
+  "oilsP": "Compressor, vacuum pump, hydraulic, gear oils and greases.",
+  "oilsBtn": "View lubricants",
+  "customH": "Made to your size",
+  "customP": "Not in the catalogue? We manufacture filters from drawings, samples or label details.",
+  "customBtn": "Request custom filter",
+  "helpH": "Customer help centre",
+  "helpP": "Questions about price, stock, an order or a technical detail? Pick the right channel and we will get back to you fast.",
+  "helpHours": "<b>During business hours</b> by phone and WhatsApp<br>Quote lists and e-mail 24/7",
+  "help": [
+   [
+    "Get price and stock",
+    "Add items to your list and request one quote",
+    "Quote list →"
+   ],
+   [
+    "Ask about your order",
+    "Shipping, lead time, invoicing and delivery",
+    "WhatsApp →"
+   ],
+   [
+    "Find the part you need",
+    "Search by part number or cross reference",
+    "Search →"
+   ],
+   [
+    "Get technical support",
+    "Compatibility, dimensions and equivalent matching",
+    "+90 216 606 32 06 →"
+   ],
+   [
+    "Request custom manufacturing",
+    "From a drawing, sample or label",
+    "Custom filters →"
+   ]
+  ],
+  "filters": "Filters",
+  "productGroup": "Product group",
+  "brand": "Brand",
+  "type": "Type",
+  "clear": "Clear filters",
+  "searchInList": "Search this list",
+  "sort": [
+   "Recommended",
+   "Name A–Z"
+  ],
+  "items": "products",
+  "noResult": "No products match these filters. Write the part number in the quote form; we can source it even if it is not in the catalogue.",
+  "tabs": {
+   "uyum": "Compatible equipment",
+   "teknik": "Specifications",
+   "aciklama": "Description",
+   "genel": "General information",
+   "teslimat": "Delivery",
+   "iade": "Cancellation & returns",
+   "sss": "FAQ"
+  },
+  "compatBrands": "Compatible brands",
+  "compatModels": "Compatible models",
+  "noModels": [
+   "Model list in preparation",
+   "Send us a photo of your machine label or the model name and we will check compatibility.",
+   "Send label photo"
+  ],
+  "partNo": "Part number",
+  "crossRef": "Cross references",
+  "sofilxNo": "Sofilx code",
+  "size": "Dimensions",
+  "setSize": "Set",
+  "setUnit": "-piece set",
+  "ptype": "Product type",
+  "group": "Product group",
+  "usedIn": "Industries",
+  "drawTop": "Top view",
+  "drawSide": "Side view",
+  "drawNote": "Dimensions in mm · not to scale",
+  "drawThumb": "Dimension drawing",
+  "photo": "Photo",
+  "notes": [
+   [
+    "Same-day dispatch",
+    "For items in stock"
+   ],
+   [
+    "Compatibility check",
+    "Matched before quoting"
+   ],
+   [
+    "Invoiced sales",
+    "Corporate payment"
+   ]
+  ],
+  "share": "Share",
+  "copyCode": "Copy code",
+  "related": "Related products",
+  "compatible": "Fits",
+  "type2": "Type",
+  "genel": "<p><b>OEM and equivalent.</b> Sofilx supplies both original manufacturer parts and equivalent parts with the same dimensions and performance. Each line of the quote states which one it is.</p><p><b>Cross references.</b> Listed numbers are provided to make searching easier. Brand names are used only to indicate compatibility.</p><p class=\"disclaimer\">Cross-reference, technical and compatibility information is provided for convenience; its accuracy and completeness are not guaranteed. Always follow the equipment manufacturer's recommendations and operating conditions when selecting parts.</p>",
+  "teslimat": [
+   [
+    "Items in stock",
+    "Orders confirmed during business hours are dispatched the same day."
+   ],
+   [
+    "Made to order",
+    "Lead times are stated line by line in the quote."
+   ],
+   [
+    "Delivery options",
+    "Contracted courier, Istanbul same-day courier or collection from our Ataşehir warehouse."
+   ]
+  ],
+  "iade": "<p>Return conditions for unused items in unopened packaging are stated in the order confirmation. Custom-made items cannot be returned.</p><p>For returns and exchanges please <a href=\"/en/contact\">contact us</a>.</p>",
+  "faq": [
+   [
+    "Can an equivalent part replace the OEM part?",
+    "Equivalent parts are selected to match the dimensions and performance of the original. For critical applications also consider the equipment manufacturer's recommendation; we check the match with you before quoting."
+   ],
+   [
+    "I do not know my part number. What should I do?",
+    "Send a photo of the machine label or the old part on WhatsApp and we will find the right part."
+   ],
+   [
+    "Why are prices not shown?",
+    "Prices depend on quantity, OEM or equivalent choice and stock. Send your quote list and we will reply with current prices and lead times for each line."
+   ],
+   [
+    "Invoicing and payment?",
+    "All sales are invoiced. Payment terms are stated in the quote."
+   ]
+  ],
+  "quoteH": "Quote list",
+  "quoteEmpty": "Your list is empty. Add products with + or describe what you need in the note field.",
+  "quoteP": "Check the quantities and leave your details.",
+  "form": {
+   "h": "Company and contact",
+   "sub": "We prepare your quote based on these details.",
+   "company": "Company",
+   "name": "Full name",
+   "phone": "Phone",
+   "email": "E-mail",
+   "city": "City / country",
+   "delivery": "Delivery",
+   "note": "Note",
+   "notePh": "Parts not in the list, required lead time, payment terms",
+   "kvkk": "I have read the <a href=\"/en/privacy\" target=\"_blank\">privacy notice</a> on the processing of my personal data to prepare a quote.",
+   "submit": "Request quote",
+   "sending": "Sending…",
+   "wa": "Send list on WhatsApp",
+   "notePer": "Note: machine model, serial no, urgency",
+   "errCompany": "Enter your company name.",
+   "errName": "Enter your name.",
+   "errPhone": "Phone number is missing.",
+   "errEmail": "Enter a valid e-mail.",
+   "errKvkk": "Please tick the box to continue.",
+   "cities": [
+    "Istanbul",
+    "Turkey – other",
+    "Europe",
+    "Middle East",
+    "Other"
+   ],
+   "deliveries": [
+    "Courier",
+    "Collection from warehouse",
+    "Freight forwarder"
+   ],
+   "photoTip": "You can send a photo of the machine label or part on WhatsApp."
+  },
+  "okH": "Your quote request has been received",
+  "okP": "Your request has been passed to our sales team and a summary has been sent to your e-mail. We usually reply the same working day.",
+  "okTrk": "Please quote this reference in your correspondence.",
+  "newList": "Start a new list",
+  "failMsg": "Could not send. Please try again or send the list on WhatsApp.",
+  "drawerEmpty": "Your list is empty. Use + on products to add them.",
+  "lines": "lines",
+  "pcs": "pcs",
+  "backToProducts": "Back to products",
+  "requestQuote": "Request quote",
+  "added": "added to your list",
+  "seeList": "View list",
+  "copied": "Copied",
+  "cookie": {
+   "text": "We use cookies to improve your experience and measure visits. Strictly necessary cookies are always on.",
+   "more": "Cookie policy",
+   "accept": "Accept",
+   "reject": "Necessary only"
+  },
+  "footP": "Compressor and vacuum pump filters, vanes, industrial lubricants and couplings. Same-day dispatch from stock.",
+  "footLegal": "Cross-reference, dimension and compatibility information is provided for convenience; its accuracy and completeness are not guaranteed. Follow the equipment manufacturer's recommendations when selecting parts. Brand names on equivalent products are used only to indicate compatibility.",
+  "rights": "All rights reserved.",
+  "kvkkL": "Privacy notice",
+  "cookieL": "Cookie policy",
+  "customerCenter": "Customer help centre",
+  "nf": [
+   "Page not found",
+   "The page you are looking for may have moved or been removed. Search your part by number or browse the product groups.",
+   "Back to home"
+  ],
+  "x": {
+   "siteTitle": "Sofilx | Compressor & Vacuum Pump Filters",
+   "skip": "Skip to content",
+   "mainMenu": "Main menu",
+   "language": "Language",
+   "cookieSettings": "Cookie settings",
+   "waHello": "Hello, I would like a quote.",
+   "waFloat": "WhatsApp",
+   "waProduct": "Hello, could I get price and stock for ",
+   "waList": "Hello, I would like a quote for:",
+   "examples": [
+    "Oil filter",
+    "Carbon vane",
+    "Air filter",
+    "HEPA"
+   ],
+   "homeDesc": "OEM and equivalent compressor and vacuum pump filters, carbon and fibre vanes, industrial lubricants and couplings. Search by part number and get one quote for your whole list.",
+   "productsDesc": "All Sofilx products: compressor and vacuum pump filters, carbon and fibre vanes, lubricants, couplings.",
+   "catDesc": "{cat}: OEM and equivalent parts with cross references. Same-day dispatch from stock, quote with one form.",
+   "catBrandTitle": "{brand} {cat}",
+   "catBrandDesc": "{brand} compatible {cat} with part numbers and cross references. Request a quote from Sofilx.",
+   "crossShort": "Cross ref.",
+   "qty": "Quantity",
+   "dec": ".",
+   "descCompat": "{type} compatible with {brand} equipment.",
+   "descSofilx": "{type} supplied by Sofilx.",
+   "descFits": "Fits {n} models including {list}.",
+   "descDims": "Dimensions: {d}.",
+   "reqQuote": "Request a quote from Sofilx.",
+   "origDetails": "Original technical details (Turkish)",
+   "sectorIntro": "These are the parts maintenance teams in this industry request most often. For anything not listed, add the part number or a label photo to your quote request.",
+   "addAll": "Add all to quote list",
+   "mostReplaced": "Most frequently replaced",
+   "otherSectors": "Other industries",
+   "brandsLead": "Choose your machine brand to see its filters, vanes, lubricants and couplings in one list.",
+   "brandsDesc": "Brands supplied by Sofilx: Busch, Becker, Elmo Rietschle, Leybold, Kaeser and more.",
+   "brandDesc": "{brand} compatible filters, vanes and spare parts with cross references. Request a quote from Sofilx.",
+   "customH1": "Custom filters",
+   "customLead": "We manufacture cartridge, bag, air, hydraulic and glass fibre filters from drawings, samples or label details. Add a product to your list and write the dimensions in the note.",
+   "customDesc": "Custom-made filters: cartridge, bag, air, hydraulic and glass fibre filters to your dimensions.",
+   "customNeed": "What we need for a quote",
+   "customRows": [
+    [
+     "Dimensions",
+     "Outer diameter, inner diameter, length (mm)"
+    ],
+    [
+     "Filtration rating",
+     "µm or class (F9, H13 etc.)"
+    ],
+    [
+     "Media",
+     "Cellulose, polyester, glass fibre, stainless mesh"
+    ],
+    [
+     "End caps and seals",
+     "Material and connection type"
+    ],
+    [
+     "Quantity and lead time",
+     "First delivery and annual demand"
+    ]
+   ],
+   "aboutH1": "The right part, at the right time",
+   "aboutLead": "At Sofilx Filtre we supply both our own branded products and those of the leading brands in the industry, aiming to increase customer satisfaction and create lasting value through sustainable growth.",
+   "aboutBlocks": [
+    [
+     "Experience and know-how",
+     "We deliver quality products from reliable brands held in our stock quickly and at competitive prices through our wide distribution network, combining years of experience with a reliable service policy and customer satisfaction."
+    ],
+    [
+     "Our mission",
+     "To deliver the right, high-quality product to our customers at the right time, and to create lasting value in the industry through sustainable growth."
+    ],
+    [
+     "Our vision",
+     "To be the first supplier that comes to mind for industrial filtration and consumable parts."
+    ]
+   ],
+   "aboutStats": [
+    "products in catalogue",
+    "brands",
+    "product groups",
+    "Same day",
+    "dispatch from stock"
+   ],
+   "visit": "Visit us",
+   "refsLead": "From packaging lines to CNC workshops, we supply maintenance parts to manufacturers across Turkey.",
+   "refsDesc": "Sofilx references and industries served.",
+   "served": "Industries we serve",
+   "servedP": "Maintenance teams in these industries rely on Sofilx for filters, vanes and lubricants.",
+   "work": "Work with us",
+   "workP": "Send your parts list; we reply with prices and lead times line by line.",
+   "address": "Address",
+   "phone": "Phone",
+   "email": "E-mail",
+   "directions": "Get directions",
+   "cityName": "Ataşehir, Istanbul",
+   "openMaps": "Open in Google Maps",
+   "contactLead": "Reach us by phone, WhatsApp or e-mail; you can also send your quote list from here.",
+   "contactDesc": "Contact Sofilx: {addr}. Phone {phone}, {email}."
+  }
+ },
+ "cats": {
+  "kompresor-filtreleri": {
+   "name": "Compressor Filters",
+   "short": "Air, oil and separator filters"
+  },
+  "vakum-pompasi-filtreleri": {
+   "name": "Vacuum Pump Filters",
+   "short": "Oil, air and exhaust filters"
+  },
+  "karbon-paletler": {
+   "name": "Carbon Vanes",
+   "short": "For dry-running vacuum pumps"
+  },
+  "fiber-paletler": {
+   "name": "Fibre Vanes",
+   "short": "For oil-lubricated vacuum pumps"
+  },
+  "endustriyel-yaglar": {
+   "name": "Industrial Lubricants",
+   "short": "Compressor, hydraulic, grease and special oils"
+  },
+  "endustriyel-filtreler": {
+   "name": "Industrial Filters",
+   "short": "HEPA, panel, bag and hydraulic"
+  },
+  "ozel-uretim-filtreler": {
+   "name": "Custom Filters",
+   "short": "Cartridge, bag and air filters to size"
+  },
+  "karbon-burc-ve-komurler": {
+   "name": "Carbon Brushes & Bushings",
+   "short": "Carbon brushes, mechanical carbon"
+  },
+  "kompresor-kaplinleri": {
+   "name": "Compressor Couplings",
+   "short": "Flexible and torque couplings"
+  }
+ },
+ "sectors": {
+  "ambalaj": {
+   "name": "Packaging",
+   "line": "Vacuum packing, thermoforming and filling lines",
+   "parts": [
+    "Vacuum pump oil and exhaust filters",
+    "Carbon vanes",
+    "Vacuum pump oils"
+   ]
+  },
+  "gida": {
+   "name": "Food & beverage",
+   "line": "Packing, filling, drying and compressed air",
+   "parts": [
+    "Vacuum pump filters",
+    "Compressor filters",
+    "Food-grade lubricants"
+   ]
+  },
+  "plastik": {
+   "name": "Plastics & rubber",
+   "line": "Injection moulding, extrusion and material handling",
+   "parts": [
+    "Vacuum pump air filters",
+    "Compressor filters",
+    "Release agents and hydraulic oils"
+   ]
+  },
+  "agac-isleme": {
+   "name": "Woodworking & CNC",
+   "line": "CNC vacuum tables and edge banding",
+   "parts": [
+    "Dry-running pump vanes",
+    "Air filters",
+    "Dust collection bags"
+   ]
+  },
+  "matbaa": {
+   "name": "Printing & paper",
+   "line": "Paper feeding, folding and cutting machines",
+   "parts": [
+    "Carbon and fibre vanes",
+    "Air filters",
+    "Oil filters"
+   ]
+  },
+  "kimya-ilac": {
+   "name": "Chemicals & pharma",
+   "line": "Process vacuum, clean rooms and compressed air",
+   "parts": [
+    "HEPA and panel filters",
+    "Exhaust filters",
+    "Custom cartridges"
+   ]
+  },
+  "otomotiv-metal": {
+   "name": "Automotive & metal",
+   "line": "Paint shops, machining and hydraulic systems",
+   "parts": [
+    "Metalworking fluids",
+    "Hydraulic filters",
+    "Couplings"
+   ]
+  },
+  "enerji-bakim": {
+   "name": "Energy & maintenance",
+   "line": "Generators, motors and drive equipment",
+   "parts": [
+    "Carbon brushes",
+    "Carbon bushings",
+    "Compressor couplings"
+   ]
+  }
+ },
+ "types": {
+  "HEPA filter": "HEPA filter",
+  "Hydraulic filter": "Hydraulic filter",
+  "Panel filter": "Panel filter",
+  "Bag filter": "Bag filter",
+  "Custom filter": "Custom filter",
+  "Air filter": "Air filter",
+  "Cartridge filter": "Cartridge filter",
+  "Glass fibre filter": "Glass fibre filter",
+  "Filter": "Filter",
+  "Separator filter": "Separator filter",
+  "Oil filter": "Oil filter",
+  "Exhaust filter": "Exhaust filter",
+  "Industrial lubricant": "Industrial lubricant",
+  "Grease": "Grease",
+  "Carbon vane": "Carbon vane",
+  "Fibre vane": "Fibre vane",
+  "Carbon brush": "Carbon brush",
+  "Carbon product": "Carbon product",
+  "Coupling": "Coupling"
+ },
+ "phrases": {
+  "Non-Destructive Crack Detection Chemicals": "Non-Destructive Crack Detection Chemicals",
+  "Special Purpose Lubricants": "Special Purpose Lubricants",
+  "Special Purpose Products": "Special Purpose Products",
+  "Multi-Purpose Lubricants": "Multi-Purpose Lubricants",
+  "Vacuum Pump Carbon Vane": "Vacuum Pump Carbon Vane",
+  "Superior Performance": "Superior Performance",
+  "Corrosion Protection": "Corrosion Protection",
+  "Dry Film Lubricants": "Dry Film Lubricants",
+  "Separator Filters": "Separator Filters",
+  "Mechanical Carbon": "Mechanical Carbon",
+  "High Performance": "High Performance",
+  "Glass Mould Oils": "Glass Mould Oils",
+  "Coupling Element": "Coupling Element",
+  "Fully Synthetic": "Fully Synthetic",
+  "Coupling Rubber": "Coupling Rubber",
+  "Assembly Pastes": "Assembly Pastes",
+  "Exhaust Filters": "Exhaust Filters",
+  "Carbon Bushings": "Carbon Bushings",
+  "Release Agents": "Release Agents",
+  "Exhaust Filter": "Exhaust Filter",
+  "Carbon Brushes": "Carbon Brushes",
+  "Other Products": "Other Products",
+  "Water-Soluble": "Water-Soluble",
+  "Conveyor Oils": "Conveyor Oils",
+  "Oil Additives": "Oil Additives",
+  "Rust Removers": "Rust Removers",
+  "Carbon Rings": "Carbon Rings",
+  "Metalworking": "Metalworking",
+  "Emulsifiers": "Emulsifiers",
+  "Vacuum Pump": "Vacuum Pump",
+  "Oil Filters": "Oil Filters",
+  "Air Filters": "Air Filters",
+  "Glass Fibre": "Glass Fibre",
+  "Oil Filter": "Oil Filter",
+  "Air Filter": "Air Filter",
+  "Compressor": "Compressor",
+  "Separator": "Separator",
+  "Couplings": "Couplings",
+  "Hydraulic": "Hydraulic",
+  "Cartridge": "Cartridge",
+  "Elements": "Elements",
+  "Vane Set": "Vane Set",
+  "Coupling": "Coupling",
+  "Flexible": "Flexible",
+  "Cleaners": "Cleaners",
+  "Silicone": "Silicone",
+  "Exhaust": "Exhaust",
+  "Filters": "Filters",
+  "Greases": "Greases",
+  "Bearing": "Bearing",
+  "Cooling": "Cooling",
+  "Filter": "Filter",
+  "Grease": "Grease",
+  "Basic": "Basic",
+  "Chain": "Chain",
+  "Panel": "Panel",
+  "Vane": "Vane",
+  "Oils": "Oils",
+  "Gear": "Gear",
+  "Size": "Size",
+  "Hub": "Hub",
+  "Oil": "Oil",
+  "Bag": "Bag",
+  "and": "and",
+  "Air": "Air"
+ },
+ "legal": {
+  "kvkk": {
+   "title": "Privacy Notice",
+   "lead": "How we process your personal data under the Turkish Personal Data Protection Law No. 6698 (KVKK).",
+   "html": "<h2>1. Data controller</h2><p>Your personal data is processed by Sofilx Filtre (“Sofilx”), Esatpaşa Mah. Bingöl Sok. No:1A, Ataşehir / İstanbul, as data controller, within the scope described below.</p>\n<h2>2. Data we process</h2><ul><li><b>Identity and contact:</b> full name, company, phone number, e-mail address, city.</li><li><b>Request details:</b> items in your quote list, quantities, notes and delivery preference.</li><li><b>Security and usage:</b> IP address, browser information and cookie data (only to the extent you consent).</li></ul>\n<h2>3. Purposes</h2><ul><li>To receive and assess your quote requests and send you quotes,</li><li>To handle orders, delivery and after-sales processes,</li><li>To answer your requests and complaints,</li><li>To meet our legal obligations,</li><li>With your consent, to measure site usage and improve our services.</li></ul>\n<h2>4. Legal grounds</h2><p>Data is processed on the grounds of performance of a contract, compliance with legal obligations and our legitimate interests (KVKK art. 5/2), and for analytics cookies on the basis of your explicit consent (art. 5/1).</p>\n<h2>5. Transfers</h2><p>Your data may be shared with e-mail/form service providers used to deliver the quote form, our hosting provider, shipping companies and, where legally required, competent authorities, in line with KVKK arts. 8 and 9. Some providers may store data outside Turkey.</p>\n<h2>6. Retention</h2><p>Data is kept for as long as the purpose requires and the statutory limitation periods; afterwards it is deleted, destroyed or anonymised.</p>\n<h2>7. Your rights</h2><p>Under KVKK art. 11 you may ask whether your data is processed, request information, learn the purpose of processing and recipients, request correction or deletion, object to automated decisions and claim compensation for unlawful processing.</p>\n<h2>8. Contact</h2><p>Send your requests to <a href=\"mailto:info@sofilx.com\">info@sofilx.com</a> or in writing to Esatpaşa Mah. Bingöl Sok. No:1A, Ataşehir / İstanbul. Requests are answered free of charge within 30 days.</p>"
+  },
+  "cookies": {
+   "title": "Cookie Policy",
+   "lead": "Which cookies we use on this site, why, and how you can manage your preferences.",
+   "html": "<h2>What are cookies?</h2><p>Cookies are small text files stored in your browser by websites you visit. Browser local storage may be used for similar purposes.</p>\n<h2>Cookies we use</h2><table><thead><tr><th>Type</th><th>Purpose</th><th>Duration</th><th>Consent</th></tr></thead><tbody>\n<tr><td>Strictly necessary (local storage)</td><td>Keeping your quote list and cookie preference in your browser</td><td>Until you delete them</td><td>Not required</td></tr>\n<tr><td>Analytics (Google Tag Manager / Google Analytics)</td><td>Measuring visits, pages viewed and traffic sources</td><td>Up to 2 years</td><td>Only with your consent</td></tr></tbody></table>\n<h2>Managing your preferences</h2><p>Accept analytics cookies or continue with necessary cookies only using the banner shown on your first visit. You can change your choice any time via <b>Cookie settings</b> at the bottom of each page, or delete cookies in your browser settings.</p>\n<h2>Contact</h2><p>Questions: <a href=\"mailto:info@sofilx.com\">info@sofilx.com</a>. See also our <a href=\"/en/privacy\">Privacy Notice</a>.</p>"
+  }
+ }
+}

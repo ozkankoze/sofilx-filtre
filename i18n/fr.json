@@ -1,0 +1,602 @@
+{
+ "t": {
+  "lang": "fr",
+  "locale": "fr_FR",
+  "home": "Accueil",
+  "nav": {
+   "products": "Produits",
+   "sectors": "Secteurs",
+   "brands": "Marques",
+   "custom": "Filtres sur mesure",
+   "about": "À propos",
+   "refs": "Références",
+   "contact": "Contact"
+  },
+  "topRight": "Expédition le jour même depuis le stock · Origine / adaptable",
+  "searchPh": "Saisissez une référence ou une correspondance",
+  "list": "Liste de devis",
+  "addToList": "Ajouter à la liste de devis",
+  "inList": "Dans la liste",
+  "addMore": "Dans la liste · en ajouter un",
+  "viewAll": "Tout voir",
+  "allProducts": "Tous les produits",
+  "products": "Produits",
+  "stockIn": "En stock",
+  "muadil": "Adaptable",
+  "original": "Origine",
+  "sofilxMade": "Sofilx",
+  "waAsk": "Demander sur WhatsApp",
+  "waQuote": "Devis sur WhatsApp",
+  "heroKick": "Filtres pour compresseurs · pompes à vide",
+  "heroH1a": "Le bon filtre.",
+  "heroH1b": "Des machines qui tournent.",
+  "heroP": "Filtres, palettes et lubrifiants d'origine et adaptables pour compresseurs et pompes à vide de plus de 40 marques. Trouvez vos pièces par référence, ajoutez-les à votre liste et recevez un devis unique pour l'ensemble.",
+  "heroBtn": "Voir les produits",
+  "cardKick": "Sofilx · filtration",
+  "cardGroups": "gammes de produits",
+  "cardFoot": "Voir tous les produits",
+  "chipRef": [
+   "Correspondances",
+   "Trouvez vos pièces en quelques secondes"
+  ],
+  "chipBrand": [
+   "40+ marques",
+   "Origine et adaptable"
+  ],
+  "searchBtn": "Rechercher",
+  "example": "Exemple",
+  "searchHeroPh": "Référence, correspondance ou modèle de pompe",
+  "facts": [
+   [
+    "Expédition le jour même",
+    "Pour les articles en stock"
+   ],
+   [
+    "40+ marques",
+    "Compresseurs et pompes à vide"
+   ],
+   [
+    "Origine et adaptable",
+    "Identifiés par correspondance"
+   ],
+   [
+    "Un formulaire, un devis",
+    "Des prix pour toute votre liste"
+   ]
+  ],
+  "groupsH": "Gammes de produits",
+  "groupsP": "Choisissez votre type de machine ou recherchez par référence ci-dessus.",
+  "sectorsH": "Par secteur",
+  "sectorsP": "Choisissez votre secteur pour voir les pièces les plus souvent remplacées sur ses machines.",
+  "howH": "Un devis en trois étapes",
+  "howP": "Aucun compte requis. Votre liste est conservée dans votre navigateur.",
+  "how": [
+   [
+    "Ajoutez à votre liste",
+    "Utilisez le + à côté de chaque produit pour ajouter les pièces nécessaires, avec les quantités."
+   ],
+   [
+    "Indiquez vos coordonnées",
+    "Saisissez les informations de votre société et de contact, et ajoutez des remarques aux articles."
+   ],
+   [
+    "Recevez votre devis",
+    "Prix et délais vous parviennent par e-mail, généralement le jour ouvré même."
+   ]
+  ],
+  "popularH": "Les plus demandés",
+  "oilsH": "Lubrifiants industriels",
+  "oilsP": "Huiles pour compresseurs, pompes à vide, huiles hydrauliques, huiles pour engrenages et graisses.",
+  "oilsBtn": "Voir les lubrifiants",
+  "customH": "Fabriqué à vos dimensions",
+  "customP": "Absent du catalogue ? Nous fabriquons des filtres sur plan, sur échantillon ou d'après la plaque signalétique.",
+  "customBtn": "Demander un filtre sur mesure",
+  "helpH": "Centre d'assistance client",
+  "helpP": "Une question sur un prix, le stock, une commande ou un détail technique ? Choisissez le bon canal, nous vous répondons rapidement.",
+  "helpHours": "<b>Aux heures d'ouverture</b> par téléphone et WhatsApp<br>Listes de devis et e-mail 24 h/24, 7 j/7",
+  "help": [
+   [
+    "Obtenir prix et disponibilité",
+    "Ajoutez des articles à votre liste et demandez un devis unique",
+    "Liste de devis →"
+   ],
+   [
+    "Suivre votre commande",
+    "Expédition, délai, facturation et livraison",
+    "WhatsApp →"
+   ],
+   [
+    "Trouver la bonne pièce",
+    "Recherche par référence ou correspondance",
+    "Rechercher →"
+   ],
+   [
+    "Assistance technique",
+    "Compatibilité, dimensions et correspondance adaptable",
+    "+90 216 606 32 06 →"
+   ],
+   [
+    "Fabrication sur mesure",
+    "Sur plan, échantillon ou plaque signalétique",
+    "Filtres sur mesure →"
+   ]
+  ],
+  "filters": "Filtres",
+  "productGroup": "Gamme de produits",
+  "brand": "Marque",
+  "type": "Type",
+  "clear": "Effacer les filtres",
+  "searchInList": "Rechercher dans cette liste",
+  "sort": [
+   "Recommandés",
+   "Nom A–Z"
+  ],
+  "items": "produits",
+  "noResult": "Aucun produit ne correspond à ces filtres. Indiquez la référence dans le formulaire de devis ; nous pouvons la sourcer même si elle ne figure pas au catalogue.",
+  "tabs": {
+   "uyum": "Équipements compatibles",
+   "teknik": "Caractéristiques techniques",
+   "aciklama": "Description",
+   "genel": "Informations générales",
+   "teslimat": "Livraison",
+   "iade": "Annulation et retours",
+   "sss": "FAQ"
+  },
+  "compatBrands": "Marques compatibles",
+  "compatModels": "Modèles compatibles",
+  "noModels": [
+   "Liste des modèles en préparation",
+   "Envoyez-nous une photo de la plaque signalétique de votre machine ou le nom du modèle, nous vérifierons la compatibilité.",
+   "Envoyer une photo de la plaque"
+  ],
+  "partNo": "Référence",
+  "crossRef": "Correspondances",
+  "sofilxNo": "Code Sofilx",
+  "size": "Dimensions",
+  "setSize": "Jeu",
+  "setUnit": " pièces",
+  "ptype": "Type de produit",
+  "group": "Gamme de produits",
+  "usedIn": "Secteurs",
+  "drawTop": "Vue de dessus",
+  "drawSide": "Vue de côté",
+  "drawNote": "Dimensions en mm · pas à l'échelle",
+  "drawThumb": "Plan coté",
+  "photo": "Photo",
+  "notes": [
+   [
+    "Expédition le jour même",
+    "Pour les articles en stock"
+   ],
+   [
+    "Contrôle de compatibilité",
+    "Vérifiée avant le devis"
+   ],
+   [
+    "Ventes avec facture",
+    "Paiement entreprise"
+   ]
+  ],
+  "share": "Partager",
+  "copyCode": "Copier le code",
+  "related": "Produits associés",
+  "compatible": "Compatible avec",
+  "type2": "Type",
+  "genel": "<p><b>Origine et adaptable.</b> Sofilx fournit aussi bien des pièces d'origine constructeur que des pièces adaptables de mêmes dimensions et performances. Chaque ligne du devis précise de quel type il s'agit.</p><p><b>Correspondances.</b> Les références indiquées sont fournies pour faciliter la recherche. Les noms de marques sont utilisés uniquement pour indiquer la compatibilité.</p><p class=\"disclaimer\">Les informations de correspondance, techniques et de compatibilité sont fournies à titre indicatif ; leur exactitude et leur exhaustivité ne sont pas garanties. Respectez toujours les recommandations du constructeur et les conditions d'exploitation lors du choix des pièces.</p>",
+  "teslimat": [
+   [
+    "Articles en stock",
+    "Les commandes confirmées pendant les heures d'ouverture sont expédiées le jour même."
+   ],
+   [
+    "Fabrication à la commande",
+    "Les délais sont indiqués ligne par ligne dans le devis."
+   ],
+   [
+    "Options de livraison",
+    "Transporteur partenaire, coursier le jour même à Istanbul ou retrait à notre entrepôt d'Ataşehir."
+   ]
+  ],
+  "iade": "<p>Les conditions de retour des articles non utilisés, dans leur emballage d'origine non ouvert, sont précisées dans la confirmation de commande. Les articles fabriqués sur mesure ne sont ni repris ni échangés.</p><p>Pour tout retour ou échange, merci de <a href=\"/fr/contact\">nous contacter</a>.</p>",
+  "faq": [
+   [
+    "Une pièce adaptable peut-elle remplacer la pièce d'origine ?",
+    "Les pièces adaptables sont sélectionnées pour correspondre aux dimensions et performances de l'original. Pour les applications critiques, tenez également compte de la recommandation du constructeur ; nous vérifions la correspondance avec vous avant le devis."
+   ],
+   [
+    "Je ne connais pas ma référence. Que faire ?",
+    "Envoyez une photo de la plaque signalétique de la machine ou de l'ancienne pièce sur WhatsApp, nous trouverons la bonne pièce."
+   ],
+   [
+    "Pourquoi les prix ne sont-ils pas affichés ?",
+    "Les prix dépendent de la quantité, du choix origine ou adaptable et du stock. Envoyez votre liste de devis, nous vous répondrons avec les prix et délais actuels pour chaque ligne."
+   ],
+   [
+    "Facturation et paiement ?",
+    "Toutes les ventes sont facturées. Les conditions de paiement sont indiquées dans le devis."
+   ]
+  ],
+  "quoteH": "Liste de devis",
+  "quoteEmpty": "Votre liste est vide. Ajoutez des produits avec + ou décrivez votre besoin dans le champ remarque.",
+  "quoteP": "Vérifiez les quantités et indiquez vos coordonnées.",
+  "form": {
+   "h": "Société et contact",
+   "sub": "Nous établissons votre devis sur la base de ces informations.",
+   "company": "Société",
+   "name": "Nom et prénom",
+   "phone": "Téléphone",
+   "email": "E-mail",
+   "city": "Ville / pays",
+   "delivery": "Livraison",
+   "note": "Remarque",
+   "notePh": "Pièces absentes de la liste, délai souhaité, conditions de paiement",
+   "kvkk": "J'ai lu la <a href=\"/fr/privacy\" target=\"_blank\">politique de confidentialité</a> relative au traitement de mes données personnelles pour l'établissement d'un devis.",
+   "submit": "Demander un devis",
+   "sending": "Envoi…",
+   "wa": "Envoyer la liste sur WhatsApp",
+   "notePer": "Remarque : modèle de machine, n° de série, urgence",
+   "errCompany": "Indiquez le nom de votre société.",
+   "errName": "Indiquez votre nom.",
+   "errPhone": "Le numéro de téléphone est manquant.",
+   "errEmail": "Indiquez un e-mail valide.",
+   "errKvkk": "Veuillez cocher la case pour continuer.",
+   "cities": [
+    "Istanbul",
+    "Turquie – autre",
+    "Europe",
+    "Afrique du Nord",
+    "Autre"
+   ],
+   "deliveries": [
+    "Transporteur",
+    "Retrait à l'entrepôt",
+    "Transitaire"
+   ],
+   "photoTip": "Vous pouvez envoyer une photo de la plaque signalétique ou de la pièce sur WhatsApp."
+  },
+  "okH": "Votre demande de devis a bien été reçue",
+  "okP": "Votre demande a été transmise à notre équipe commerciale et un récapitulatif a été envoyé à votre adresse e-mail. Nous répondons généralement le jour ouvré même.",
+  "okTrk": "Merci de rappeler cette référence dans vos échanges.",
+  "newList": "Commencer une nouvelle liste",
+  "failMsg": "Échec de l'envoi. Veuillez réessayer ou envoyer la liste sur WhatsApp.",
+  "drawerEmpty": "Votre liste est vide. Utilisez le + sur les produits pour les ajouter.",
+  "lines": "lignes",
+  "pcs": "pcs",
+  "backToProducts": "Retour aux produits",
+  "requestQuote": "Demander un devis",
+  "added": "ajouté à votre liste",
+  "seeList": "Voir la liste",
+  "copied": "Copié",
+  "cookie": {
+   "text": "Nous utilisons des cookies pour améliorer votre expérience et mesurer l'audience. Les cookies strictement nécessaires sont toujours actifs.",
+   "more": "Politique de cookies",
+   "accept": "Accepter",
+   "reject": "Nécessaires uniquement"
+  },
+  "footP": "Filtres pour compresseurs et pompes à vide, palettes, lubrifiants industriels et accouplements. Expédition le jour même depuis le stock.",
+  "footLegal": "Les informations de correspondance, de dimensions et de compatibilité sont fournies à titre indicatif ; leur exactitude et leur exhaustivité ne sont pas garanties. Respectez les recommandations du constructeur lors du choix des pièces. Les noms de marques figurant sur les produits adaptables sont utilisés uniquement pour indiquer la compatibilité.",
+  "rights": "Tous droits réservés.",
+  "kvkkL": "Politique de confidentialité",
+  "cookieL": "Politique de cookies",
+  "customerCenter": "Centre d'assistance client",
+  "nf": [
+   "Page introuvable",
+   "La page que vous cherchez a peut-être été déplacée ou supprimée. Recherchez votre pièce par référence ou parcourez les gammes de produits.",
+   "Retour à l'accueil"
+  ],
+  "x": {
+   "siteTitle": "Sofilx | Filtres pour compresseurs et pompes à vide",
+   "skip": "Aller au contenu",
+   "mainMenu": "Menu principal",
+   "language": "Langue",
+   "cookieSettings": "Paramètres des cookies",
+   "waHello": "Bonjour, je souhaiterais un devis.",
+   "waFloat": "WhatsApp",
+   "waProduct": "Bonjour, pourriez-vous m'indiquer le prix et la disponibilité de ",
+   "waList": "Bonjour, je souhaiterais un devis pour :",
+   "examples": [
+    "Filtre à huile",
+    "Palette carbone",
+    "Filtre à air",
+    "HEPA"
+   ],
+   "homeDesc": "Filtres d'origine et adaptables pour compresseurs et pompes à vide, palettes carbone et fibre, lubrifiants industriels et accouplements. Recherchez par référence et obtenez un devis unique pour toute votre liste.",
+   "productsDesc": "Tous les produits Sofilx : filtres pour compresseurs et pompes à vide, palettes carbone et fibre, lubrifiants, accouplements.",
+   "catDesc": "{cat} : pièces d'origine et adaptables avec correspondances. Expédition le jour même depuis le stock, devis via un seul formulaire.",
+   "catBrandTitle": "{cat} {brand}",
+   "catBrandDesc": "{cat} compatibles {brand} avec références et correspondances. Demandez un devis à Sofilx.",
+   "crossShort": "Corresp.",
+   "qty": "Quantité",
+   "dec": ",",
+   "descCompat": "{type} compatible avec les équipements {brand}.",
+   "descSofilx": "{type} fourni par Sofilx.",
+   "descFits": "Compatible avec {n} modèles, dont {list}.",
+   "descDims": "Dimensions : {d}.",
+   "reqQuote": "Demandez un devis à Sofilx.",
+   "origDetails": "Détails techniques d'origine (en turc)",
+   "sectorIntro": "Voici les pièces les plus demandées par les équipes de maintenance de ce secteur. Pour tout article non listé, ajoutez la référence ou une photo de la plaque signalétique à votre demande de devis.",
+   "addAll": "Tout ajouter à la liste de devis",
+   "mostReplaced": "Les plus souvent remplacées",
+   "otherSectors": "Autres secteurs",
+   "brandsLead": "Choisissez la marque de votre machine pour voir ses filtres, palettes, lubrifiants et accouplements dans une seule liste.",
+   "brandsDesc": "Marques fournies par Sofilx : Busch, Becker, Elmo Rietschle, Leybold, Kaeser et bien d'autres.",
+   "brandDesc": "Filtres, palettes et pièces détachées compatibles {brand} avec correspondances. Demandez un devis à Sofilx.",
+   "customH1": "Filtres sur mesure",
+   "customLead": "Nous fabriquons des filtres à cartouche, à poches, à air, hydrauliques et en fibre de verre sur plan, sur échantillon ou d'après la plaque signalétique. Ajoutez un produit à votre liste et indiquez les dimensions en remarque.",
+   "customDesc": "Filtres fabriqués sur mesure : filtres à cartouche, à poches, à air, hydrauliques et en fibre de verre à vos dimensions.",
+   "customNeed": "Ce dont nous avons besoin pour un devis",
+   "customRows": [
+    [
+     "Dimensions",
+     "Diamètre extérieur, diamètre intérieur, longueur (mm)"
+    ],
+    [
+     "Finesse de filtration",
+     "µm ou classe (F9, H13, etc.)"
+    ],
+    [
+     "Média filtrant",
+     "Cellulose, polyester, fibre de verre, toile inox"
+    ],
+    [
+     "Flasques et joints",
+     "Matériau et type de raccordement"
+    ],
+    [
+     "Quantité et délai",
+     "Première livraison et besoin annuel"
+    ]
+   ],
+   "aboutH1": "La bonne pièce, au bon moment",
+   "aboutLead": "Chez Sofilx Filtre, nous fournissons aussi bien nos produits de marque propre que ceux des grandes marques du secteur, avec pour objectif d'accroître la satisfaction de nos clients et de créer une valeur durable grâce à une croissance pérenne.",
+   "aboutBlocks": [
+    [
+     "Expérience et savoir-faire",
+     "Grâce à notre vaste réseau de distribution, nous livrons rapidement et à des prix compétitifs des produits de qualité issus de marques fiables disponibles en stock, en alliant des années d'expérience à une politique de service fiable et à la satisfaction client."
+    ],
+    [
+     "Notre mission",
+     "Livrer à nos clients le bon produit, de qualité, au bon moment, et créer une valeur durable dans le secteur grâce à une croissance pérenne."
+    ],
+    [
+     "Notre vision",
+     "Être le premier fournisseur auquel on pense pour la filtration industrielle et les pièces d'usure."
+    ]
+   ],
+   "aboutStats": [
+    "produits au catalogue",
+    "marques",
+    "gammes de produits",
+    "Le jour même",
+    "expédition depuis le stock"
+   ],
+   "visit": "Rendez-nous visite",
+   "refsLead": "Des lignes d'emballage aux ateliers CNC, nous fournissons des pièces de maintenance aux industriels de toute la Turquie.",
+   "refsDesc": "Références Sofilx et secteurs servis.",
+   "served": "Secteurs que nous servons",
+   "servedP": "Les équipes de maintenance de ces secteurs font confiance à Sofilx pour leurs filtres, palettes et lubrifiants.",
+   "work": "Travaillons ensemble",
+   "workP": "Envoyez votre liste de pièces ; nous vous répondons avec prix et délais ligne par ligne.",
+   "address": "Adresse",
+   "phone": "Téléphone",
+   "email": "E-mail",
+   "directions": "Itinéraire",
+   "cityName": "Ataşehir, Istanbul",
+   "openMaps": "Ouvrir dans Google Maps",
+   "contactLead": "Contactez-nous par téléphone, WhatsApp ou e-mail ; vous pouvez aussi envoyer votre liste de devis depuis cette page.",
+   "contactDesc": "Contacter Sofilx : {addr}. Téléphone {phone}, {email}."
+  }
+ },
+ "cats": {
+  "kompresor-filtreleri": {
+   "name": "Filtres pour compresseurs",
+   "short": "Filtres à air, à huile et déshuileurs"
+  },
+  "vakum-pompasi-filtreleri": {
+   "name": "Filtres pour pompes à vide",
+   "short": "Filtres à huile, à air et d'échappement"
+  },
+  "karbon-paletler": {
+   "name": "Palettes carbone",
+   "short": "Pour pompes à vide fonctionnant à sec"
+  },
+  "fiber-paletler": {
+   "name": "Palettes fibre",
+   "short": "Pour pompes à vide lubrifiées"
+  },
+  "endustriyel-yaglar": {
+   "name": "Lubrifiants industriels",
+   "short": "Huiles compresseur, hydrauliques, graisses et huiles spéciales"
+  },
+  "endustriyel-filtreler": {
+   "name": "Filtres industriels",
+   "short": "HEPA, panneaux, poches et hydrauliques"
+  },
+  "ozel-uretim-filtreler": {
+   "name": "Filtres sur mesure",
+   "short": "Filtres à cartouche, à poches et à air à vos dimensions"
+  },
+  "karbon-burc-ve-komurler": {
+   "name": "Balais et bagues carbone",
+   "short": "Balais carbone, carbone mécanique"
+  },
+  "kompresor-kaplinleri": {
+   "name": "Accouplements de compresseur",
+   "short": "Accouplements élastiques et limiteurs de couple"
+  }
+ },
+ "sectors": {
+  "ambalaj": {
+   "name": "Emballage",
+   "line": "Conditionnement sous vide, thermoformage et lignes de remplissage",
+   "parts": [
+    "Filtres à huile et d'échappement de pompe à vide",
+    "Palettes carbone",
+    "Huiles pour pompes à vide"
+   ]
+  },
+  "gida": {
+   "name": "Agroalimentaire",
+   "line": "Conditionnement, remplissage, séchage et air comprimé",
+   "parts": [
+    "Filtres de pompe à vide",
+    "Filtres de compresseur",
+    "Lubrifiants de qualité alimentaire"
+   ]
+  },
+  "plastik": {
+   "name": "Plasturgie et caoutchouc",
+   "line": "Injection, extrusion et manutention de matières",
+   "parts": [
+    "Filtres à air de pompe à vide",
+    "Filtres de compresseur",
+    "Agents de démoulage et huiles hydrauliques"
+   ]
+  },
+  "agac-isleme": {
+   "name": "Travail du bois et CNC",
+   "line": "Tables aspirantes CNC et plaqueuses de chants",
+   "parts": [
+    "Palettes de pompes à sec",
+    "Filtres à air",
+    "Sacs d'aspiration"
+   ]
+  },
+  "matbaa": {
+   "name": "Imprimerie et papier",
+   "line": "Machines d'alimentation, de pliage et de coupe du papier",
+   "parts": [
+    "Palettes carbone et fibre",
+    "Filtres à air",
+    "Filtres à huile"
+   ]
+  },
+  "kimya-ilac": {
+   "name": "Chimie et pharmacie",
+   "line": "Vide de process, salles blanches et air comprimé",
+   "parts": [
+    "Filtres HEPA et panneaux",
+    "Filtres d'échappement",
+    "Cartouches sur mesure"
+   ]
+  },
+  "otomotiv-metal": {
+   "name": "Automobile et métallurgie",
+   "line": "Ateliers de peinture, usinage et systèmes hydrauliques",
+   "parts": [
+    "Fluides de coupe",
+    "Filtres hydrauliques",
+    "Accouplements"
+   ]
+  },
+  "enerji-bakim": {
+   "name": "Énergie et maintenance",
+   "line": "Groupes électrogènes, moteurs et organes de transmission",
+   "parts": [
+    "Balais carbone",
+    "Bagues carbone",
+    "Accouplements de compresseur"
+   ]
+  }
+ },
+ "types": {
+  "HEPA filter": "Filtre HEPA",
+  "Hydraulic filter": "Filtre hydraulique",
+  "Panel filter": "Filtre panneau",
+  "Bag filter": "Filtre à poches",
+  "Custom filter": "Filtre sur mesure",
+  "Air filter": "Filtre à air",
+  "Cartridge filter": "Filtre à cartouche",
+  "Glass fibre filter": "Filtre en fibre de verre",
+  "Filter": "Filtre",
+  "Separator filter": "Filtre déshuileur",
+  "Oil filter": "Filtre à huile",
+  "Exhaust filter": "Filtre d'échappement",
+  "Industrial lubricant": "Lubrifiant industriel",
+  "Grease": "Graisse",
+  "Carbon vane": "Palette carbone",
+  "Fibre vane": "Palette fibre",
+  "Carbon brush": "Balai carbone",
+  "Carbon product": "Produit carbone",
+  "Coupling": "Accouplement"
+ },
+ "phrases": {
+  "Non-Destructive Crack Detection Chemicals": "Produits de ressuage pour contrôle non destructif",
+  "Special Purpose Lubricants": "Lubrifiants spéciaux",
+  "Special Purpose Products": "Produits spéciaux",
+  "Multi-Purpose Lubricants": "Lubrifiants multi-usages",
+  "Vacuum Pump Carbon Vane": "Palette carbone de pompe à vide",
+  "Superior Performance": "Performance supérieure",
+  "Corrosion Protection": "Protection anticorrosion",
+  "Dry Film Lubricants": "Lubrifiants à film sec",
+  "Separator Filters": "Filtres déshuileurs",
+  "Mechanical Carbon": "Carbone mécanique",
+  "High Performance": "Haute performance",
+  "Glass Mould Oils": "Huiles de moulage du verre",
+  "Coupling Element": "Élément d'accouplement",
+  "Fully Synthetic": "Entièrement synthétique",
+  "Coupling Rubber": "Élastomère d'accouplement",
+  "Assembly Pastes": "Pâtes de montage",
+  "Exhaust Filters": "Filtres d'échappement",
+  "Carbon Bushings": "Bagues carbone",
+  "Release Agents": "Agents de démoulage",
+  "Exhaust Filter": "Filtre d'échappement",
+  "Carbon Brushes": "Balais carbone",
+  "Other Products": "Autres produits",
+  "Water-Soluble": "Soluble dans l'eau",
+  "Conveyor Oils": "Huiles pour convoyeurs",
+  "Oil Additives": "Additifs pour huile",
+  "Rust Removers": "Dérouillants",
+  "Carbon Rings": "Bagues carbone",
+  "Metalworking": "Travail des métaux",
+  "Emulsifiers": "Émulsifiants",
+  "Vacuum Pump": "Pompe à vide",
+  "Oil Filters": "Filtres à huile",
+  "Air Filters": "Filtres à air",
+  "Glass Fibre": "Fibre de verre",
+  "Oil Filter": "Filtre à huile",
+  "Air Filter": "Filtre à air",
+  "Compressor": "Compresseur",
+  "Separator": "Déshuileur",
+  "Couplings": "Accouplements",
+  "Hydraulic": "Hydraulique",
+  "Cartridge": "Cartouche",
+  "Elements": "Éléments",
+  "Vane Set": "Jeu de palettes",
+  "Coupling": "Accouplement",
+  "Flexible": "Élastique",
+  "Cleaners": "Nettoyants",
+  "Silicone": "Silicone",
+  "Exhaust": "Échappement",
+  "Filters": "Filtres",
+  "Greases": "Graisses",
+  "Bearing": "Roulement",
+  "Cooling": "Refroidissement",
+  "Filter": "Filtre",
+  "Grease": "Graisse",
+  "Basic": "Standard",
+  "Chain": "Chaîne",
+  "Panel": "Panneau",
+  "Vane": "Palette",
+  "Oils": "Huiles",
+  "Gear": "Engrenages",
+  "Size": "Taille",
+  "Hub": "Moyeu",
+  "Oil": "Huile",
+  "Bag": "Poche",
+  "and": "et",
+  "Air": "Air"
+ },
+ "legal": {
+  "kvkk": {
+   "title": "Politique de confidentialité",
+   "lead": "Comment nous traitons vos données personnelles conformément à la loi turque n° 6698 sur la protection des données personnelles (KVKK).",
+   "html": "<h2>1. Responsable du traitement</h2><p>Vos données personnelles sont traitées par Sofilx Filtre (« Sofilx »), Esatpaşa Mah. Bingöl Sok. No:1A, Ataşehir / İstanbul, en qualité de responsable du traitement, dans le cadre décrit ci-dessous.</p>\n<h2>2. Données traitées</h2><ul><li><b>Identité et coordonnées :</b> nom et prénom, société, numéro de téléphone, adresse e-mail, ville.</li><li><b>Détails de la demande :</b> articles de votre liste de devis, quantités, remarques et préférence de livraison.</li><li><b>Sécurité et utilisation :</b> adresse IP, informations sur le navigateur et données de cookies (uniquement dans la mesure de votre consentement).</li></ul>\n<h2>3. Finalités</h2><ul><li>Recevoir et étudier vos demandes de devis et vous adresser des devis,</li><li>Gérer les commandes, la livraison et le service après-vente,</li><li>Répondre à vos demandes et réclamations,</li><li>Respecter nos obligations légales,</li><li>Avec votre consentement, mesurer l'utilisation du site et améliorer nos services.</li></ul>\n<h2>4. Bases juridiques</h2><p>Les données sont traitées sur la base de l'exécution d'un contrat, du respect d'obligations légales et de nos intérêts légitimes (art. 5/2 de la KVKK), et, pour les cookies de mesure d'audience, sur la base de votre consentement explicite (art. 5/1).</p>\n<h2>5. Transferts</h2><p>Vos données peuvent être communiquées aux prestataires de services d'e-mail/de formulaire utilisés pour l'acheminement du formulaire de devis, à notre hébergeur, aux sociétés de transport et, lorsque la loi l'exige, aux autorités compétentes, conformément aux art. 8 et 9 de la KVKK. Certains prestataires peuvent stocker des données hors de Turquie.</p>\n<h2>6. Conservation</h2><p>Les données sont conservées aussi longtemps que la finalité l'exige et pendant les délais de prescription légaux ; elles sont ensuite supprimées, détruites ou anonymisées.</p>\n<h2>7. Vos droits</h2><p>En vertu de l'art. 11 de la KVKK, vous pouvez savoir si vos données sont traitées, demander des informations, connaître la finalité du traitement et les destinataires, demander la rectification ou l'effacement, vous opposer aux décisions automatisées et demander réparation en cas de traitement illicite.</p>\n<h2>8. Contact</h2><p>Adressez vos demandes à <a href=\"mailto:info@sofilx.com\">info@sofilx.com</a> ou par écrit à Esatpaşa Mah. Bingöl Sok. No:1A, Ataşehir / İstanbul. Les demandes sont traitées gratuitement dans un délai de 30 jours.</p>"
+  },
+  "cookies": {
+   "title": "Politique de cookies",
+   "lead": "Quels cookies nous utilisons sur ce site, pourquoi, et comment gérer vos préférences.",
+   "html": "<h2>Qu'est-ce qu'un cookie ?</h2><p>Les cookies sont de petits fichiers texte enregistrés dans votre navigateur par les sites que vous visitez. Le stockage local du navigateur peut être utilisé à des fins similaires.</p>\n<h2>Cookies utilisés</h2><table><thead><tr><th>Type</th><th>Finalité</th><th>Durée</th><th>Consentement</th></tr></thead><tbody>\n<tr><td>Strictement nécessaires (stockage local)</td><td>Conserver votre liste de devis et votre préférence en matière de cookies dans votre navigateur</td><td>Jusqu'à leur suppression</td><td>Non requis</td></tr>\n<tr><td>Mesure d'audience (Google Tag Manager / Google Analytics)</td><td>Mesurer les visites, les pages consultées et les sources de trafic</td><td>Jusqu'à 2 ans</td><td>Uniquement avec votre consentement</td></tr></tbody></table>\n<h2>Gérer vos préférences</h2><p>Acceptez les cookies de mesure d'audience ou continuez avec les seuls cookies nécessaires grâce au bandeau affiché lors de votre première visite. Vous pouvez modifier votre choix à tout moment via <b>Paramètres des cookies</b> en bas de chaque page, ou supprimer les cookies dans les paramètres de votre navigateur.</p>\n<h2>Contact</h2><p>Questions : <a href=\"mailto:info@sofilx.com\">info@sofilx.com</a>. Consultez également notre <a href=\"/fr/privacy\">Politique de confidentialité</a>.</p>"
+  }
+ }
+}

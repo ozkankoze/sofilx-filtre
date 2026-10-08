@@ -1,0 +1,602 @@
+{
+ "t": {
+  "lang": "nl",
+  "locale": "nl_NL",
+  "home": "Home",
+  "nav": {
+   "products": "Producten",
+   "sectors": "Branches",
+   "brands": "Merken",
+   "custom": "Maatwerkfilters",
+   "about": "Over ons",
+   "refs": "Referenties",
+   "contact": "Contact"
+  },
+  "topRight": "Uit voorraad dezelfde dag verzonden · OEM / equivalent",
+  "searchPh": "Voer een onderdeelnummer of kruisreferentie in",
+  "list": "Offertelijst",
+  "addToList": "Toevoegen aan offertelijst",
+  "inList": "In lijst",
+  "addMore": "In lijst · nog één toevoegen",
+  "viewAll": "Alles bekijken",
+  "allProducts": "Alle producten",
+  "products": "Producten",
+  "stockIn": "Op voorraad",
+  "muadil": "Equivalent",
+  "original": "OEM",
+  "sofilxMade": "Sofilx",
+  "waAsk": "Vraag via WhatsApp",
+  "waQuote": "Offerte via WhatsApp",
+  "heroKick": "Filters voor compressoren · vacuümpompen",
+  "heroH1a": "Het juiste filter.",
+  "heroH1b": "Machines blijven draaien.",
+  "heroP": "OEM- en equivalente filters, schoepen en smeermiddelen voor compressoren en vacuümpompen van meer dan 40 merken. Zoek onderdelen op nummer, zet ze op uw lijst en ontvang één offerte voor alles.",
+  "heroBtn": "Producten bekijken",
+  "cardKick": "Sofilx · filtratie",
+  "cardGroups": "productgroepen",
+  "cardFoot": "Alle producten bekijken",
+  "chipRef": [
+   "Kruisreferentie",
+   "Onderdelen in seconden gevonden"
+  ],
+  "chipBrand": [
+   "40+ merken",
+   "OEM en equivalent"
+  ],
+  "searchBtn": "Onderdelen zoeken",
+  "example": "Probeer",
+  "searchHeroPh": "Onderdeelnummer, kruisreferentie of pomptype",
+  "facts": [
+   [
+    "Verzending dezelfde dag",
+    "Voor artikelen op voorraad"
+   ],
+   [
+    "40+ merken",
+    "Compressoren en vacuümpompen"
+   ],
+   [
+    "OEM en equivalent",
+    "Gematcht via kruisreferentie"
+   ],
+   [
+    "Eén formulier, één offerte",
+    "Prijzen voor uw hele lijst"
+   ]
+  ],
+  "groupsH": "Productgroepen",
+  "groupsP": "Kies uw machinetype of zoek hierboven op onderdeelnummer.",
+  "sectorsH": "Per branche",
+  "sectorsP": "Kies uw branche en zie welke onderdelen op de machines het vaakst worden vervangen.",
+  "howH": "In drie stappen naar een offerte",
+  "howP": "Geen account nodig. Uw lijst wordt in uw browser bewaard.",
+  "how": [
+   [
+    "Zet op uw lijst",
+    "Gebruik de + naast elk product om de benodigde onderdelen met aantallen toe te voegen."
+   ],
+   [
+    "Vul uw gegevens in",
+    "Voer uw bedrijfs- en contactgegevens in en voeg opmerkingen bij artikelen toe."
+   ],
+   [
+    "Ontvang uw offerte",
+    "Prijzen en levertijden ontvangt u per e-mail, meestal dezelfde werkdag."
+   ]
+  ],
+  "popularH": "Veel aangevraagd",
+  "oilsH": "Industriële smeermiddelen",
+  "oilsP": "Compressor-, vacuümpomp-, hydraulische en tandwielolie en vetten.",
+  "oilsBtn": "Smeermiddelen bekijken",
+  "customH": "Op maat gemaakt",
+  "customP": "Niet in de catalogus? Wij maken filters op basis van tekeningen, monsters of typeplaatgegevens.",
+  "customBtn": "Maatwerkfilter aanvragen",
+  "helpH": "Klantenservice",
+  "helpP": "Vragen over prijs, voorraad, een bestelling of een technisch detail? Kies het juiste kanaal en wij nemen snel contact met u op.",
+  "helpHours": "<b>Tijdens kantooruren</b> telefonisch en via WhatsApp<br>Offertelijsten en e-mail 24/7",
+  "help": [
+   [
+    "Prijs en voorraad opvragen",
+    "Zet artikelen op uw lijst en vraag één offerte aan",
+    "Offertelijst →"
+   ],
+   [
+    "Vragen over uw bestelling",
+    "Verzending, levertijd, facturatie en levering",
+    "WhatsApp →"
+   ],
+   [
+    "Het juiste onderdeel vinden",
+    "Zoeken op onderdeelnummer of kruisreferentie",
+    "Zoeken →"
+   ],
+   [
+    "Technische ondersteuning",
+    "Compatibiliteit, afmetingen en equivalenten",
+    "+90 216 606 32 06 →"
+   ],
+   [
+    "Maatwerk aanvragen",
+    "Op basis van tekening, monster of typeplaat",
+    "Maatwerkfilters →"
+   ]
+  ],
+  "filters": "Filters",
+  "productGroup": "Productgroep",
+  "brand": "Merk",
+  "type": "Type",
+  "clear": "Filters wissen",
+  "searchInList": "Zoeken in deze lijst",
+  "sort": [
+   "Aanbevolen",
+   "Naam A–Z"
+  ],
+  "items": "producten",
+  "noResult": "Geen producten gevonden met deze filters. Vermeld het onderdeelnummer in het offerteformulier; wij kunnen het ook leveren als het niet in de catalogus staat.",
+  "tabs": {
+   "uyum": "Geschikt voor",
+   "teknik": "Specificaties",
+   "aciklama": "Omschrijving",
+   "genel": "Algemene informatie",
+   "teslimat": "Levering",
+   "iade": "Annulering & retour",
+   "sss": "Veelgestelde vragen"
+  },
+  "compatBrands": "Geschikte merken",
+  "compatModels": "Geschikte modellen",
+  "noModels": [
+   "Modellenlijst in voorbereiding",
+   "Stuur ons een foto van het typeplaatje of de modelnaam van uw machine en wij controleren de compatibiliteit.",
+   "Foto typeplaat sturen"
+  ],
+  "partNo": "Onderdeelnummer",
+  "crossRef": "Kruisreferenties",
+  "sofilxNo": "Sofilx-code",
+  "size": "Afmetingen",
+  "setSize": "Set",
+  "setUnit": "-delige set",
+  "ptype": "Producttype",
+  "group": "Productgroep",
+  "usedIn": "Branches",
+  "drawTop": "Bovenaanzicht",
+  "drawSide": "Zijaanzicht",
+  "drawNote": "Afmetingen in mm · niet op schaal",
+  "drawThumb": "Maattekening",
+  "photo": "Foto",
+  "notes": [
+   [
+    "Verzending dezelfde dag",
+    "Voor artikelen op voorraad"
+   ],
+   [
+    "Compatibiliteitscontrole",
+    "Gecontroleerd vóór de offerte"
+   ],
+   [
+    "Verkoop op factuur",
+    "Zakelijke betaling"
+   ]
+  ],
+  "share": "Delen",
+  "copyCode": "Code kopiëren",
+  "related": "Gerelateerde producten",
+  "compatible": "Geschikt voor",
+  "type2": "Type",
+  "genel": "<p><b>OEM en equivalent.</b> Sofilx levert zowel originele fabrieksonderdelen als equivalente onderdelen met dezelfde afmetingen en prestaties. Op elke offerteregel staat welke van de twee het is.</p><p><b>Kruisreferenties.</b> De vermelde nummers dienen om het zoeken te vergemakkelijken. Merknamen worden uitsluitend gebruikt om compatibiliteit aan te geven.</p><p class=\"disclaimer\">Kruisreferentie-, technische en compatibiliteitsinformatie wordt ter informatie verstrekt; voor de juistheid en volledigheid ervan wordt niet ingestaan. Volg bij de keuze van onderdelen altijd de aanbevelingen van de machinefabrikant en de bedrijfsomstandigheden.</p>",
+  "teslimat": [
+   [
+    "Artikelen op voorraad",
+    "Bestellingen die tijdens kantooruren worden bevestigd, worden dezelfde dag verzonden."
+   ],
+   [
+    "Op bestelling",
+    "Levertijden staan per regel in de offerte vermeld."
+   ],
+   [
+    "Leveringsopties",
+    "Vaste koerier, koerier binnen Istanbul op dezelfde dag of afhalen in ons magazijn in Ataşehir."
+   ]
+  ],
+  "iade": "<p>De retourvoorwaarden voor ongebruikte artikelen in ongeopende verpakking staan in de orderbevestiging. Op maat gemaakte artikelen kunnen niet worden geretourneerd.</p><p>Voor retouren en omruilingen kunt u <a href=\"/nl/contact\">contact met ons opnemen</a>.</p>",
+  "faq": [
+   [
+    "Kan een equivalent onderdeel het OEM-onderdeel vervangen?",
+    "Equivalente onderdelen worden zo gekozen dat afmetingen en prestaties overeenkomen met het origineel. Houd bij kritische toepassingen ook rekening met de aanbeveling van de machinefabrikant; wij controleren de match samen met u vóór de offerte."
+   ],
+   [
+    "Ik weet mijn onderdeelnummer niet. Wat nu?",
+    "Stuur via WhatsApp een foto van het typeplaatje of van het oude onderdeel en wij zoeken het juiste onderdeel voor u."
+   ],
+   [
+    "Waarom worden er geen prijzen getoond?",
+    "Prijzen hangen af van aantal, keuze voor OEM of equivalent en voorraad. Stuur uw offertelijst en u ontvangt per regel actuele prijzen en levertijden."
+   ],
+   [
+    "Facturatie en betaling?",
+    "Alle verkopen worden gefactureerd. De betalingsvoorwaarden staan in de offerte."
+   ]
+  ],
+  "quoteH": "Offertelijst",
+  "quoteEmpty": "Uw lijst is leeg. Voeg producten toe met + of beschrijf wat u nodig hebt in het opmerkingenveld.",
+  "quoteP": "Controleer de aantallen en vul uw gegevens in.",
+  "form": {
+   "h": "Bedrijf en contactpersoon",
+   "sub": "Wij stellen uw offerte op basis van deze gegevens op.",
+   "company": "Bedrijf",
+   "name": "Volledige naam",
+   "phone": "Telefoon",
+   "email": "E-mail",
+   "city": "Plaats / land",
+   "delivery": "Levering",
+   "note": "Opmerking",
+   "notePh": "Onderdelen die niet in de lijst staan, gewenste levertijd, betalingsvoorwaarden",
+   "kvkk": "Ik heb de <a href=\"/nl/privacy\" target=\"_blank\">privacyverklaring</a> over de verwerking van mijn persoonsgegevens voor het opstellen van een offerte gelezen.",
+   "submit": "Offerte aanvragen",
+   "sending": "Verzenden…",
+   "wa": "Lijst via WhatsApp sturen",
+   "notePer": "Opmerking: machinemodel, serienummer, urgentie",
+   "errCompany": "Vul uw bedrijfsnaam in.",
+   "errName": "Vul uw naam in.",
+   "errPhone": "Telefoonnummer ontbreekt.",
+   "errEmail": "Vul een geldig e-mailadres in.",
+   "errKvkk": "Vink het vakje aan om verder te gaan.",
+   "cities": [
+    "Nederland",
+    "België",
+    "Duitsland",
+    "Overig Europa",
+    "Overig"
+   ],
+   "deliveries": [
+    "Koerier",
+    "Afhalen in magazijn",
+    "Expediteur"
+   ],
+   "photoTip": "U kunt via WhatsApp een foto van het typeplaatje of het onderdeel sturen."
+  },
+  "okH": "Uw offerteaanvraag is ontvangen",
+  "okP": "Uw aanvraag is doorgestuurd naar ons verkoopteam en u hebt een samenvatting per e-mail ontvangen. Wij reageren meestal dezelfde werkdag.",
+  "okTrk": "Vermeld deze referentie in uw correspondentie.",
+  "newList": "Nieuwe lijst starten",
+  "failMsg": "Verzenden mislukt. Probeer het opnieuw of stuur de lijst via WhatsApp.",
+  "drawerEmpty": "Uw lijst is leeg. Gebruik + bij producten om ze toe te voegen.",
+  "lines": "regels",
+  "pcs": "st.",
+  "backToProducts": "Terug naar producten",
+  "requestQuote": "Offerte aanvragen",
+  "added": "toegevoegd aan uw lijst",
+  "seeList": "Lijst bekijken",
+  "copied": "Gekopieerd",
+  "cookie": {
+   "text": "Wij gebruiken cookies om uw ervaring te verbeteren en bezoeken te meten. Strikt noodzakelijke cookies staan altijd aan.",
+   "more": "Cookiebeleid",
+   "accept": "Accepteren",
+   "reject": "Alleen noodzakelijke"
+  },
+  "footP": "Filters voor compressoren en vacuümpompen, schoepen, industriële smeermiddelen en koppelingen. Uit voorraad dezelfde dag verzonden.",
+  "footLegal": "Kruisreferentie-, maat- en compatibiliteitsinformatie wordt ter informatie verstrekt; voor de juistheid en volledigheid ervan wordt niet ingestaan. Volg bij de keuze van onderdelen de aanbevelingen van de machinefabrikant. Merknamen bij equivalente producten worden uitsluitend gebruikt om compatibiliteit aan te geven.",
+  "rights": "Alle rechten voorbehouden.",
+  "kvkkL": "Privacyverklaring",
+  "cookieL": "Cookiebeleid",
+  "customerCenter": "Klantenservice",
+  "nf": [
+   "Pagina niet gevonden",
+   "De pagina die u zoekt is mogelijk verplaatst of verwijderd. Zoek uw onderdeel op nummer of bekijk de productgroepen.",
+   "Terug naar home"
+  ],
+  "x": {
+   "siteTitle": "Sofilx | Filters voor compressoren en vacuümpompen",
+   "skip": "Naar inhoud",
+   "mainMenu": "Hoofdmenu",
+   "language": "Taal",
+   "cookieSettings": "Cookie-instellingen",
+   "waHello": "Hallo, ik wil graag een offerte.",
+   "waFloat": "WhatsApp",
+   "waProduct": "Hallo, kan ik prijs en voorraad krijgen voor ",
+   "waList": "Hallo, ik wil graag een offerte voor:",
+   "examples": [
+    "Oliefilter",
+    "Koolstofschoep",
+    "Luchtfilter",
+    "HEPA"
+   ],
+   "homeDesc": "OEM- en equivalente filters voor compressoren en vacuümpompen, koolstof- en fiberschoepen, industriële smeermiddelen en koppelingen. Zoek op onderdeelnummer en ontvang één offerte voor uw hele lijst.",
+   "productsDesc": "Alle producten van Sofilx: filters voor compressoren en vacuümpompen, koolstof- en fiberschoepen, smeermiddelen, koppelingen.",
+   "catDesc": "{cat}: OEM- en equivalente onderdelen met kruisreferenties. Uit voorraad dezelfde dag verzonden, offerte via één formulier.",
+   "catBrandTitle": "{brand} {cat}",
+   "catBrandDesc": "{cat} geschikt voor {brand}, met onderdeelnummers en kruisreferenties. Vraag een offerte aan bij Sofilx.",
+   "crossShort": "Kruisref.",
+   "qty": "Aantal",
+   "dec": ",",
+   "descCompat": "{type} geschikt voor {brand}-machines.",
+   "descSofilx": "{type} geleverd door Sofilx.",
+   "descFits": "Geschikt voor {n} modellen, waaronder {list}.",
+   "descDims": "Afmetingen: {d}.",
+   "reqQuote": "Vraag een offerte aan bij Sofilx.",
+   "origDetails": "Originele technische gegevens (Turks)",
+   "sectorIntro": "Dit zijn de onderdelen die onderhoudsteams in deze branche het vaakst aanvragen. Staat iets er niet bij? Voeg het onderdeelnummer of een foto van het typeplaatje toe aan uw offerteaanvraag.",
+   "addAll": "Alles aan offertelijst toevoegen",
+   "mostReplaced": "Meest vervangen",
+   "otherSectors": "Andere branches",
+   "brandsLead": "Kies het merk van uw machine en zie de filters, schoepen, smeermiddelen en koppelingen in één lijst.",
+   "brandsDesc": "Merken geleverd door Sofilx: Busch, Becker, Elmo Rietschle, Leybold, Kaeser en meer.",
+   "brandDesc": "Filters, schoepen en reserveonderdelen geschikt voor {brand}, met kruisreferenties. Vraag een offerte aan bij Sofilx.",
+   "customH1": "Maatwerkfilters",
+   "customLead": "Wij maken patroon-, zak-, lucht-, hydraulische en glasvezelfilters op basis van tekeningen, monsters of typeplaatgegevens. Zet een product op uw lijst en vermeld de afmetingen in de opmerking.",
+   "customDesc": "Op maat gemaakte filters: patroon-, zak-, lucht-, hydraulische en glasvezelfilters volgens uw afmetingen.",
+   "customNeed": "Wat wij nodig hebben voor een offerte",
+   "customRows": [
+    [
+     "Afmetingen",
+     "Buitendiameter, binnendiameter, lengte (mm)"
+    ],
+    [
+     "Filterfijnheid",
+     "µm of klasse (F9, H13 enz.)"
+    ],
+    [
+     "Filtermedium",
+     "Cellulose, polyester, glasvezel, rvs-gaas"
+    ],
+    [
+     "Eindkappen en afdichtingen",
+     "Materiaal en type aansluiting"
+    ],
+    [
+     "Aantal en levertijd",
+     "Eerste levering en jaarlijkse behoefte"
+    ]
+   ],
+   "aboutH1": "Het juiste onderdeel, op het juiste moment",
+   "aboutLead": "Bij Sofilx Filtre leveren wij zowel producten van ons eigen merk als die van de toonaangevende merken in de branche, met als doel de klanttevredenheid te verhogen en via duurzame groei blijvende waarde te creëren.",
+   "aboutBlocks": [
+    [
+     "Ervaring en kennis",
+     "Via ons brede distributienetwerk leveren wij kwaliteitsproducten van betrouwbare merken uit voorraad, snel en tegen concurrerende prijzen. Daarbij combineren wij jarenlange ervaring met betrouwbare service en klanttevredenheid."
+    ],
+    [
+     "Onze missie",
+     "Onze klanten het juiste, hoogwaardige product op het juiste moment leveren en via duurzame groei blijvende waarde in de branche creëren."
+    ],
+    [
+     "Onze visie",
+     "De leverancier zijn aan wie men als eerste denkt voor industriële filtratie en verbruiksonderdelen."
+    ]
+   ],
+   "aboutStats": [
+    "producten in de catalogus",
+    "merken",
+    "productgroepen",
+    "Dezelfde dag",
+    "verzonden uit voorraad"
+   ],
+   "visit": "Bezoek ons",
+   "refsLead": "Van verpakkingslijnen tot CNC-werkplaatsen: wij leveren onderhoudsonderdelen aan producenten in heel Turkije.",
+   "refsDesc": "Referenties van Sofilx en de branches die wij bedienen.",
+   "served": "Branches die wij bedienen",
+   "servedP": "Onderhoudsteams in deze branches vertrouwen op Sofilx voor filters, schoepen en smeermiddelen.",
+   "work": "Werk met ons samen",
+   "workP": "Stuur uw onderdelenlijst; u ontvangt per regel prijzen en levertijden.",
+   "address": "Adres",
+   "phone": "Telefoon",
+   "email": "E-mail",
+   "directions": "Routebeschrijving",
+   "cityName": "Ataşehir, Istanbul",
+   "openMaps": "Openen in Google Maps",
+   "contactLead": "Neem contact met ons op per telefoon, WhatsApp of e-mail; u kunt uw offertelijst ook hier versturen.",
+   "contactDesc": "Contact met Sofilx: {addr}. Telefoon {phone}, {email}."
+  }
+ },
+ "cats": {
+  "kompresor-filtreleri": {
+   "name": "Compressorfilters",
+   "short": "Lucht-, olie- en separatorfilters"
+  },
+  "vakum-pompasi-filtreleri": {
+   "name": "Vacuümpompfilters",
+   "short": "Olie-, lucht- en uitlaatfilters"
+  },
+  "karbon-paletler": {
+   "name": "Koolstofschoepen",
+   "short": "Voor droogdraaiende vacuümpompen"
+  },
+  "fiber-paletler": {
+   "name": "Fiberschoepen",
+   "short": "Voor oliegesmeerde vacuümpompen"
+  },
+  "endustriyel-yaglar": {
+   "name": "Industriële smeermiddelen",
+   "short": "Compressor- en hydraulische olie, vetten en speciale oliën"
+  },
+  "endustriyel-filtreler": {
+   "name": "Industriële filters",
+   "short": "HEPA-, paneel-, zak- en hydraulische filters"
+  },
+  "ozel-uretim-filtreler": {
+   "name": "Maatwerkfilters",
+   "short": "Patroon-, zak- en luchtfilters op maat"
+  },
+  "karbon-burc-ve-komurler": {
+   "name": "Koolborstels & koolstoflagerbussen",
+   "short": "Koolborstels, technisch koolstof"
+  },
+  "kompresor-kaplinleri": {
+   "name": "Compressorkoppelingen",
+   "short": "Flexibele en koppelbegrenzende koppelingen"
+  }
+ },
+ "sectors": {
+  "ambalaj": {
+   "name": "Verpakking",
+   "line": "Vacuümverpakken, thermovormen en vullijnen",
+   "parts": [
+    "Olie- en uitlaatfilters voor vacuümpompen",
+    "Koolstofschoepen",
+    "Vacuümpompolie"
+   ]
+  },
+  "gida": {
+   "name": "Voedingsmiddelen & dranken",
+   "line": "Verpakken, vullen, drogen en perslucht",
+   "parts": [
+    "Vacuümpompfilters",
+    "Compressorfilters",
+    "Food-grade smeermiddelen"
+   ]
+  },
+  "plastik": {
+   "name": "Kunststof & rubber",
+   "line": "Spuitgieten, extrusie en materiaaltransport",
+   "parts": [
+    "Luchtfilters voor vacuümpompen",
+    "Compressorfilters",
+    "Lossingsmiddelen en hydraulische olie"
+   ]
+  },
+  "agac-isleme": {
+   "name": "Houtbewerking & CNC",
+   "line": "CNC-vacuümtafels en kantenlijmen",
+   "parts": [
+    "Schoepen voor droogdraaiende pompen",
+    "Luchtfilters",
+    "Stofzakken"
+   ]
+  },
+  "matbaa": {
+   "name": "Druk & papier",
+   "line": "Papierinvoer-, vouw- en snijmachines",
+   "parts": [
+    "Koolstof- en fiberschoepen",
+    "Luchtfilters",
+    "Oliefilters"
+   ]
+  },
+  "kimya-ilac": {
+   "name": "Chemie & farma",
+   "line": "Procesvacuüm, cleanrooms en perslucht",
+   "parts": [
+    "HEPA- en paneelfilters",
+    "Uitlaatfilters",
+    "Filterpatronen op maat"
+   ]
+  },
+  "otomotiv-metal": {
+   "name": "Automotive & metaal",
+   "line": "Spuiterijen, verspaning en hydraulische systemen",
+   "parts": [
+    "Metaalbewerkingsvloeistoffen",
+    "Hydraulische filters",
+    "Koppelingen"
+   ]
+  },
+  "enerji-bakim": {
+   "name": "Energie & onderhoud",
+   "line": "Generatoren, motoren en aandrijvingen",
+   "parts": [
+    "Koolborstels",
+    "Koolstoflagerbussen",
+    "Compressorkoppelingen"
+   ]
+  }
+ },
+ "types": {
+  "HEPA filter": "HEPA-filter",
+  "Hydraulic filter": "Hydraulisch filter",
+  "Panel filter": "Paneelfilter",
+  "Bag filter": "Zakfilter",
+  "Custom filter": "Maatwerkfilter",
+  "Air filter": "Luchtfilter",
+  "Cartridge filter": "Filterpatroon",
+  "Glass fibre filter": "Glasvezelfilter",
+  "Filter": "Filter",
+  "Separator filter": "Separatorfilter",
+  "Oil filter": "Oliefilter",
+  "Exhaust filter": "Uitlaatfilter",
+  "Industrial lubricant": "Industrieel smeermiddel",
+  "Grease": "Vet",
+  "Carbon vane": "Koolstofschoep",
+  "Fibre vane": "Fiberschoep",
+  "Carbon brush": "Koolborstel",
+  "Carbon product": "Koolstofproduct",
+  "Coupling": "Koppeling"
+ },
+ "phrases": {
+  "Non-Destructive Crack Detection Chemicals": "Chemicaliën voor niet-destructief scheuronderzoek",
+  "Special Purpose Lubricants": "Speciale smeermiddelen",
+  "Special Purpose Products": "Speciale producten",
+  "Multi-Purpose Lubricants": "Multifunctionele smeermiddelen",
+  "Vacuum Pump Carbon Vane": "Koolstofschoep voor vacuümpomp",
+  "Superior Performance": "Topprestatie",
+  "Corrosion Protection": "Corrosiebescherming",
+  "Dry Film Lubricants": "Droogfilmsmeermiddelen",
+  "Separator Filters": "Separatorfilters",
+  "Mechanical Carbon": "Technisch koolstof",
+  "High Performance": "High-performance",
+  "Glass Mould Oils": "Glasvormolie",
+  "Coupling Element": "Koppelingselement",
+  "Fully Synthetic": "Volsynthetisch",
+  "Coupling Rubber": "Koppelingsrubber",
+  "Assembly Pastes": "Montagepasta's",
+  "Exhaust Filters": "Uitlaatfilters",
+  "Carbon Bushings": "Koolstoflagerbussen",
+  "Release Agents": "Lossingsmiddelen",
+  "Exhaust Filter": "Uitlaatfilter",
+  "Carbon Brushes": "Koolborstels",
+  "Other Products": "Overige producten",
+  "Water-Soluble": "Wateroplosbaar",
+  "Conveyor Oils": "Transportbandolie",
+  "Oil Additives": "Olieadditieven",
+  "Rust Removers": "Roestverwijderaars",
+  "Carbon Rings": "Koolstofringen",
+  "Metalworking": "Metaalbewerking",
+  "Emulsifiers": "Emulgatoren",
+  "Vacuum Pump": "Vacuümpomp",
+  "Oil Filters": "Oliefilters",
+  "Air Filters": "Luchtfilters",
+  "Glass Fibre": "Glasvezel",
+  "Oil Filter": "Oliefilter",
+  "Air Filter": "Luchtfilter",
+  "Compressor": "Compressor",
+  "Separator": "Separator",
+  "Couplings": "Koppelingen",
+  "Hydraulic": "Hydraulisch",
+  "Cartridge": "Patroon",
+  "Elements": "Elementen",
+  "Vane Set": "Schoepenset",
+  "Coupling": "Koppeling",
+  "Flexible": "Flexibel",
+  "Cleaners": "Reinigers",
+  "Silicone": "Siliconen",
+  "Exhaust": "Uitlaat",
+  "Filters": "Filters",
+  "Greases": "Vetten",
+  "Bearing": "Lager",
+  "Cooling": "Koeling",
+  "Filter": "Filter",
+  "Grease": "Vet",
+  "Basic": "Basis",
+  "Chain": "Ketting",
+  "Panel": "Paneel",
+  "Vane": "Schoep",
+  "Oils": "Oliën",
+  "Gear": "Tandwiel",
+  "Size": "Maat",
+  "Hub": "Naaf",
+  "Oil": "Olie",
+  "Bag": "Zak",
+  "and": "en",
+  "Air": "Lucht"
+ },
+ "legal": {
+  "kvkk": {
+   "title": "Privacyverklaring",
+   "lead": "Hoe wij uw persoonsgegevens verwerken op grond van de Turkse Wet nr. 6698 inzake de bescherming van persoonsgegevens (KVKK).",
+   "html": "<h2>1. Verwerkingsverantwoordelijke</h2><p>Uw persoonsgegevens worden verwerkt door Sofilx Filtre (“Sofilx”), Esatpaşa Mah. Bingöl Sok. No:1A, Ataşehir / İstanbul, als verwerkingsverantwoordelijke, binnen de hieronder beschreven reikwijdte.</p>\n<h2>2. Gegevens die wij verwerken</h2><ul><li><b>Identiteit en contact:</b> volledige naam, bedrijf, telefoonnummer, e-mailadres, plaats.</li><li><b>Gegevens van de aanvraag:</b> artikelen op uw offertelijst, aantallen, opmerkingen en leveringsvoorkeur.</li><li><b>Beveiliging en gebruik:</b> IP-adres, browsergegevens en cookiegegevens (alleen voor zover u toestemming geeft).</li></ul>\n<h2>3. Doeleinden</h2><ul><li>Het ontvangen en beoordelen van uw offerteaanvragen en het toesturen van offertes,</li><li>Het afhandelen van bestellingen, levering en after-sales,</li><li>Het beantwoorden van uw verzoeken en klachten,</li><li>Het voldoen aan onze wettelijke verplichtingen,</li><li>Met uw toestemming: het meten van het sitegebruik en het verbeteren van onze diensten.</li></ul>\n<h2>4. Rechtsgronden</h2><p>Gegevens worden verwerkt op grond van de uitvoering van een overeenkomst, het voldoen aan wettelijke verplichtingen en onze gerechtvaardigde belangen (KVKK art. 5/2), en voor analytische cookies op basis van uw uitdrukkelijke toestemming (art. 5/1).</p>\n<h2>5. Doorgifte</h2><p>Uw gegevens kunnen, in overeenstemming met KVKK art. 8 en 9, worden gedeeld met e-mail-/formulierdienstverleners die worden gebruikt om het offerteformulier te verzenden, onze hostingprovider, transportbedrijven en, waar wettelijk vereist, bevoegde autoriteiten. Sommige dienstverleners kunnen gegevens buiten Turkije opslaan.</p>\n<h2>6. Bewaartermijn</h2><p>Gegevens worden bewaard zolang het doel dat vereist en gedurende de wettelijke verjaringstermijnen; daarna worden ze gewist, vernietigd of geanonimiseerd.</p>\n<h2>7. Uw rechten</h2><p>Op grond van KVKK art. 11 kunt u vragen of uw gegevens worden verwerkt, informatie opvragen, het doel van de verwerking en de ontvangers te weten komen, rectificatie of verwijdering verzoeken, bezwaar maken tegen geautomatiseerde besluiten en schadevergoeding eisen bij onrechtmatige verwerking.</p>\n<h2>8. Contact</h2><p>Stuur uw verzoeken naar <a href=\"mailto:info@sofilx.com\">info@sofilx.com</a> of schriftelijk naar Esatpaşa Mah. Bingöl Sok. No:1A, Ataşehir / İstanbul. Verzoeken worden kosteloos binnen 30 dagen beantwoord.</p>"
+  },
+  "cookies": {
+   "title": "Cookiebeleid",
+   "lead": "Welke cookies wij op deze site gebruiken, waarom, en hoe u uw voorkeuren kunt beheren.",
+   "html": "<h2>Wat zijn cookies?</h2><p>Cookies zijn kleine tekstbestanden die websites die u bezoekt in uw browser opslaan. De lokale opslag van de browser kan voor vergelijkbare doeleinden worden gebruikt.</p>\n<h2>Cookies die wij gebruiken</h2><table><thead><tr><th>Type</th><th>Doel</th><th>Duur</th><th>Toestemming</th></tr></thead><tbody>\n<tr><td>Strikt noodzakelijk (lokale opslag)</td><td>Bewaren van uw offertelijst en cookievoorkeur in uw browser</td><td>Tot u ze verwijdert</td><td>Niet vereist</td></tr>\n<tr><td>Analytisch (Google Tag Manager / Google Analytics)</td><td>Meten van bezoeken, bekeken pagina's en verkeersbronnen</td><td>Maximaal 2 jaar</td><td>Alleen met uw toestemming</td></tr></tbody></table>\n<h2>Uw voorkeuren beheren</h2><p>Accepteer analytische cookies of ga verder met alleen noodzakelijke cookies via de banner die bij uw eerste bezoek verschijnt. U kunt uw keuze op elk moment wijzigen via <b>Cookie-instellingen</b> onderaan elke pagina, of cookies verwijderen in uw browserinstellingen.</p>\n<h2>Contact</h2><p>Vragen: <a href=\"mailto:info@sofilx.com\">info@sofilx.com</a>. Zie ook onze <a href=\"/nl/privacy\">Privacyverklaring</a>.</p>"
+  }
+ }
+}

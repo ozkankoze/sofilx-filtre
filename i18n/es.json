@@ -1,0 +1,602 @@
+{
+ "t": {
+  "lang": "es",
+  "locale": "es_ES",
+  "home": "Inicio",
+  "nav": {
+   "products": "Productos",
+   "sectors": "Sectores",
+   "brands": "Marcas",
+   "custom": "Filtros a medida",
+   "about": "Empresa",
+   "refs": "Referencias",
+   "contact": "Contacto"
+  },
+  "topRight": "Envío desde stock el mismo día · Original / equivalente",
+  "searchPh": "Escriba una referencia o equivalencia",
+  "list": "Lista de presupuesto",
+  "addToList": "Añadir a la lista",
+  "inList": "En la lista",
+  "addMore": "En la lista · añadir otro",
+  "viewAll": "Ver todo",
+  "allProducts": "Todos los productos",
+  "products": "Productos",
+  "stockIn": "En stock",
+  "muadil": "Equivalente",
+  "original": "Original",
+  "sofilxMade": "Sofilx",
+  "waAsk": "Consultar por WhatsApp",
+  "waQuote": "Pedir presupuesto por WhatsApp",
+  "heroKick": "Filtros para compresores · bombas de vacío",
+  "heroH1a": "El filtro correcto.",
+  "heroH1b": "Sus máquinas, siempre en marcha.",
+  "heroP": "Filtros, paletas y lubricantes originales y equivalentes para compresores y bombas de vacío de más de 40 marcas. Busque por referencia, añada a su lista y reciba un único presupuesto para todo.",
+  "heroBtn": "Ver productos",
+  "cardKick": "Sofilx · filtración",
+  "cardGroups": "grupos de productos",
+  "cardFoot": "Ver todos los productos",
+  "chipRef": [
+   "Equivalencias",
+   "Encuentre recambios en segundos"
+  ],
+  "chipBrand": [
+   "Más de 40 marcas",
+   "Original y equivalente"
+  ],
+  "searchBtn": "Buscar recambios",
+  "example": "Pruebe",
+  "searchHeroPh": "Referencia, equivalencia o modelo de bomba",
+  "facts": [
+   [
+    "Envío el mismo día",
+    "Para artículos en stock"
+   ],
+   [
+    "Más de 40 marcas",
+    "Compresores y bombas de vacío"
+   ],
+   [
+    "Original y equivalente",
+    "Identificados por equivalencia"
+   ],
+   [
+    "Un formulario, un presupuesto",
+    "Precios para toda su lista"
+   ]
+  ],
+  "groupsH": "Grupos de productos",
+  "groupsP": "Elija su tipo de máquina o busque arriba por referencia.",
+  "sectorsH": "Por sector",
+  "sectorsP": "Elija su sector para ver los recambios que se sustituyen con más frecuencia en sus máquinas.",
+  "howH": "Su presupuesto en tres pasos",
+  "howP": "Sin necesidad de registrarse. Su lista se guarda en su navegador.",
+  "how": [
+   [
+    "Añada a su lista",
+    "Use el + junto a cada producto para añadir los recambios que necesita, con sus cantidades."
+   ],
+   [
+    "Indique sus datos",
+    "Introduzca los datos de su empresa y de contacto y añada notas a las líneas."
+   ],
+   [
+    "Reciba su presupuesto",
+    "Precios y plazos de entrega por e-mail, normalmente el mismo día laborable."
+   ]
+  ],
+  "popularH": "Los más solicitados",
+  "oilsH": "Lubricantes industriales",
+  "oilsP": "Aceites para compresores, bombas de vacío, hidráulicos y de engranajes, y grasas.",
+  "oilsBtn": "Ver lubricantes",
+  "customH": "Fabricados a medida",
+  "customP": "¿No está en el catálogo? Fabricamos filtros a partir de planos, muestras o datos de la etiqueta.",
+  "customBtn": "Solicitar filtro a medida",
+  "helpH": "Centro de atención al cliente",
+  "helpP": "¿Dudas sobre precio, stock, un pedido o un detalle técnico? Elija el canal adecuado y le responderemos rápidamente.",
+  "helpHours": "<b>En horario laboral</b> por teléfono y WhatsApp<br>Listas de presupuesto y e-mail 24/7",
+  "help": [
+   [
+    "Consultar precio y stock",
+    "Añada artículos a su lista y solicite un único presupuesto",
+    "Lista de presupuesto →"
+   ],
+   [
+    "Consultar sobre su pedido",
+    "Envío, plazo, facturación y entrega",
+    "WhatsApp →"
+   ],
+   [
+    "Encontrar el recambio",
+    "Búsqueda por referencia o equivalencia",
+    "Buscar →"
+   ],
+   [
+    "Soporte técnico",
+    "Compatibilidad, dimensiones y equivalencias",
+    "+90 216 606 32 06 →"
+   ],
+   [
+    "Solicitar fabricación a medida",
+    "A partir de plano, muestra o etiqueta",
+    "Filtros a medida →"
+   ]
+  ],
+  "filters": "Filtros",
+  "productGroup": "Grupo de productos",
+  "brand": "Marca",
+  "type": "Tipo",
+  "clear": "Borrar filtros",
+  "searchInList": "Buscar en esta lista",
+  "sort": [
+   "Recomendados",
+   "Nombre A–Z"
+  ],
+  "items": "productos",
+  "noResult": "Ningún producto coincide con estos filtros. Indique la referencia en el formulario de presupuesto; podemos conseguirla aunque no figure en el catálogo.",
+  "tabs": {
+   "uyum": "Equipos compatibles",
+   "teknik": "Especificaciones",
+   "aciklama": "Descripción",
+   "genel": "Información general",
+   "teslimat": "Entrega",
+   "iade": "Cancelación y devoluciones",
+   "sss": "Preguntas frecuentes"
+  },
+  "compatBrands": "Marcas compatibles",
+  "compatModels": "Modelos compatibles",
+  "noModels": [
+   "Lista de modelos en preparación",
+   "Envíenos una foto de la placa de características o el nombre del modelo y comprobaremos la compatibilidad.",
+   "Enviar foto de la placa"
+  ],
+  "partNo": "Referencia",
+  "crossRef": "Equivalencias",
+  "sofilxNo": "Código Sofilx",
+  "size": "Dimensiones",
+  "setSize": "Juego",
+  "setUnit": " piezas por juego",
+  "ptype": "Tipo de producto",
+  "group": "Grupo de productos",
+  "usedIn": "Sectores",
+  "drawTop": "Vista superior",
+  "drawSide": "Vista lateral",
+  "drawNote": "Medidas en mm · sin escala",
+  "drawThumb": "Plano de dimensiones",
+  "photo": "Foto",
+  "notes": [
+   [
+    "Envío el mismo día",
+    "Para artículos en stock"
+   ],
+   [
+    "Comprobación de compatibilidad",
+    "Verificada antes de presupuestar"
+   ],
+   [
+    "Venta con factura",
+    "Pago para empresas"
+   ]
+  ],
+  "share": "Compartir",
+  "copyCode": "Copiar código",
+  "related": "Productos relacionados",
+  "compatible": "Compatible con",
+  "type2": "Tipo",
+  "genel": "<p><b>Original y equivalente.</b> Sofilx suministra tanto recambios originales del fabricante como recambios equivalentes con las mismas dimensiones y prestaciones. Cada línea del presupuesto indica de cuál se trata.</p><p><b>Equivalencias.</b> Las referencias indicadas se facilitan para simplificar la búsqueda. Los nombres de marca se utilizan únicamente para indicar la compatibilidad.</p><p class=\"disclaimer\">La información de equivalencias, técnica y de compatibilidad se ofrece a título orientativo; no se garantiza su exactitud ni su integridad. Siga siempre las recomendaciones del fabricante del equipo y las condiciones de servicio al seleccionar recambios.</p>",
+  "teslimat": [
+   [
+    "Artículos en stock",
+    "Los pedidos confirmados en horario laboral se envían el mismo día."
+   ],
+   [
+    "Fabricación bajo pedido",
+    "Los plazos de entrega se indican línea por línea en el presupuesto."
+   ],
+   [
+    "Opciones de entrega",
+    "Mensajería concertada, mensajería urgente en Estambul en el día o recogida en nuestro almacén de Ataşehir."
+   ]
+  ],
+  "iade": "<p>Las condiciones de devolución de artículos sin usar y en su embalaje original cerrado se indican en la confirmación del pedido. Los artículos fabricados a medida no admiten devolución.</p><p>Para devoluciones y cambios, <a href=\"/es/contact\">contacte con nosotros</a>.</p>",
+  "faq": [
+   [
+    "¿Puede un recambio equivalente sustituir al original?",
+    "Los recambios equivalentes se seleccionan para igualar las dimensiones y prestaciones del original. En aplicaciones críticas tenga en cuenta también la recomendación del fabricante del equipo; comprobamos la equivalencia con usted antes de presupuestar."
+   ],
+   [
+    "No conozco la referencia. ¿Qué hago?",
+    "Envíe por WhatsApp una foto de la placa de la máquina o de la pieza usada y encontraremos el recambio adecuado."
+   ],
+   [
+    "¿Por qué no se muestran precios?",
+    "Los precios dependen de la cantidad, de la elección entre original o equivalente y del stock. Envíe su lista y le responderemos con precios y plazos actualizados para cada línea."
+   ],
+   [
+    "¿Facturación y pago?",
+    "Todas las ventas se facturan. Las condiciones de pago se indican en el presupuesto."
+   ]
+  ],
+  "quoteH": "Lista de presupuesto",
+  "quoteEmpty": "Su lista está vacía. Añada productos con + o describa lo que necesita en el campo de notas.",
+  "quoteP": "Revise las cantidades e indique sus datos.",
+  "form": {
+   "h": "Empresa y contacto",
+   "sub": "Preparamos su presupuesto con estos datos.",
+   "company": "Empresa",
+   "name": "Nombre y apellidos",
+   "phone": "Teléfono",
+   "email": "E-mail",
+   "city": "Ciudad / país",
+   "delivery": "Entrega",
+   "note": "Notas",
+   "notePh": "Recambios que no están en la lista, plazo requerido, condiciones de pago",
+   "kvkk": "He leído el <a href=\"/es/privacy\" target=\"_blank\">aviso de privacidad</a> sobre el tratamiento de mis datos personales para la elaboración del presupuesto.",
+   "submit": "Solicitar presupuesto",
+   "sending": "Enviando…",
+   "wa": "Enviar lista por WhatsApp",
+   "notePer": "Nota: modelo de máquina, n.º de serie, urgencia",
+   "errCompany": "Indique el nombre de la empresa.",
+   "errName": "Indique su nombre.",
+   "errPhone": "Falta el número de teléfono.",
+   "errEmail": "Indique un e-mail válido.",
+   "errKvkk": "Marque la casilla para continuar.",
+   "cities": [
+    "España",
+    "Latinoamérica",
+    "Turquía",
+    "Resto de Europa",
+    "Otro"
+   ],
+   "deliveries": [
+    "Mensajería",
+    "Recogida en almacén",
+    "Transitario"
+   ],
+   "photoTip": "Puede enviarnos por WhatsApp una foto de la placa de la máquina o de la pieza."
+  },
+  "okH": "Hemos recibido su solicitud de presupuesto",
+  "okP": "Su solicitud se ha enviado a nuestro equipo comercial y le hemos enviado un resumen por e-mail. Normalmente respondemos el mismo día laborable.",
+  "okTrk": "Indique esta referencia en sus comunicaciones.",
+  "newList": "Empezar una nueva lista",
+  "failMsg": "No se ha podido enviar. Inténtelo de nuevo o envíe la lista por WhatsApp.",
+  "drawerEmpty": "Su lista está vacía. Use + en los productos para añadirlos.",
+  "lines": "líneas",
+  "pcs": "uds.",
+  "backToProducts": "Volver a productos",
+  "requestQuote": "Solicitar presupuesto",
+  "added": "añadido a su lista",
+  "seeList": "Ver lista",
+  "copied": "Copiado",
+  "cookie": {
+   "text": "Utilizamos cookies para mejorar su experiencia y medir las visitas. Las cookies estrictamente necesarias están siempre activas.",
+   "more": "Política de cookies",
+   "accept": "Aceptar",
+   "reject": "Solo necesarias"
+  },
+  "footP": "Filtros para compresores y bombas de vacío, paletas, lubricantes industriales y acoplamientos. Envío desde stock el mismo día.",
+  "footLegal": "La información de equivalencias, dimensiones y compatibilidad se ofrece a título orientativo; no se garantiza su exactitud ni su integridad. Siga las recomendaciones del fabricante del equipo al seleccionar recambios. Los nombres de marca en productos equivalentes se utilizan únicamente para indicar la compatibilidad.",
+  "rights": "Todos los derechos reservados.",
+  "kvkkL": "Aviso de privacidad",
+  "cookieL": "Política de cookies",
+  "customerCenter": "Atención al cliente",
+  "nf": [
+   "Página no encontrada",
+   "Es posible que la página que busca se haya movido o eliminado. Busque su recambio por referencia o consulte los grupos de productos.",
+   "Volver al inicio"
+  ],
+  "x": {
+   "siteTitle": "Sofilx | Filtros para compresores y bombas de vacío",
+   "skip": "Saltar al contenido",
+   "mainMenu": "Menú principal",
+   "language": "Idioma",
+   "cookieSettings": "Configuración de cookies",
+   "waHello": "Hola, quisiera solicitar un presupuesto.",
+   "waFloat": "WhatsApp",
+   "waProduct": "Hola, ¿podrían indicarme precio y stock de ",
+   "waList": "Hola, quisiera un presupuesto para:",
+   "examples": [
+    "Filtro de aceite",
+    "Paleta de carbono",
+    "Filtro de aire",
+    "HEPA"
+   ],
+   "homeDesc": "Filtros originales y equivalentes para compresores y bombas de vacío, paletas de carbono y de fibra, lubricantes industriales y acoplamientos. Busque por referencia y reciba un único presupuesto para toda su lista.",
+   "productsDesc": "Todos los productos Sofilx: filtros para compresores y bombas de vacío, paletas de carbono y de fibra, lubricantes, acoplamientos.",
+   "catDesc": "{cat}: recambios originales y equivalentes con equivalencias. Envío desde stock el mismo día, presupuesto con un solo formulario.",
+   "catBrandTitle": "{cat} {brand}",
+   "catBrandDesc": "{cat} compatibles con {brand}, con referencias y equivalencias. Solicite presupuesto a Sofilx.",
+   "crossShort": "Equiv.",
+   "qty": "Cantidad",
+   "dec": ",",
+   "descCompat": "{type} compatible con equipos {brand}.",
+   "descSofilx": "{type} suministrado por Sofilx.",
+   "descFits": "Compatible con {n} modelos, entre ellos {list}.",
+   "descDims": "Dimensiones: {d}.",
+   "reqQuote": "Solicite presupuesto a Sofilx.",
+   "origDetails": "Datos técnicos originales (en turco)",
+   "sectorIntro": "Estos son los recambios que más solicitan los equipos de mantenimiento de este sector. Para lo que no figure aquí, añada la referencia o una foto de la placa a su solicitud de presupuesto.",
+   "addAll": "Añadir todo a la lista",
+   "mostReplaced": "Los más sustituidos",
+   "otherSectors": "Otros sectores",
+   "brandsLead": "Elija la marca de su máquina para ver sus filtros, paletas, lubricantes y acoplamientos en una sola lista.",
+   "brandsDesc": "Marcas que suministra Sofilx: Busch, Becker, Elmo Rietschle, Leybold, Kaeser y más.",
+   "brandDesc": "Filtros, paletas y recambios compatibles con {brand}, con equivalencias. Solicite presupuesto a Sofilx.",
+   "customH1": "Filtros a medida",
+   "customLead": "Fabricamos filtros de cartucho, de bolsa, de aire, hidráulicos y de fibra de vidrio a partir de planos, muestras o datos de la etiqueta. Añada un producto a su lista e indique las dimensiones en la nota.",
+   "customDesc": "Filtros fabricados a medida: de cartucho, de bolsa, de aire, hidráulicos y de fibra de vidrio según sus dimensiones.",
+   "customNeed": "Qué necesitamos para presupuestar",
+   "customRows": [
+    [
+     "Dimensiones",
+     "Diámetro exterior, diámetro interior, longitud (mm)"
+    ],
+    [
+     "Grado de filtración",
+     "µm o clase (F9, H13, etc.)"
+    ],
+    [
+     "Medio filtrante",
+     "Celulosa, poliéster, fibra de vidrio, malla de acero inoxidable"
+    ],
+    [
+     "Tapas y juntas",
+     "Material y tipo de conexión"
+    ],
+    [
+     "Cantidad y plazo",
+     "Primera entrega y consumo anual"
+    ]
+   ],
+   "aboutH1": "El recambio correcto, en el momento justo",
+   "aboutLead": "En Sofilx Filtre suministramos tanto productos de nuestra propia marca como de las marcas líderes del sector, con el objetivo de aumentar la satisfacción de nuestros clientes y crear valor duradero mediante un crecimiento sostenible.",
+   "aboutBlocks": [
+    [
+     "Experiencia y conocimiento",
+     "Gracias a nuestra amplia red de distribución, entregamos con rapidez y a precios competitivos productos de calidad de marcas fiables que mantenemos en stock, uniendo años de experiencia, una política de servicio fiable y la satisfacción del cliente."
+    ],
+    [
+     "Nuestra misión",
+     "Entregar a nuestros clientes el producto correcto y de calidad en el momento justo, y crear valor duradero en el sector mediante un crecimiento sostenible."
+    ],
+    [
+     "Nuestra visión",
+     "Ser el primer proveedor en el que se piense para filtración industrial y consumibles."
+    ]
+   ],
+   "aboutStats": [
+    "productos en catálogo",
+    "marcas",
+    "grupos de productos",
+    "En el día",
+    "envío desde stock"
+   ],
+   "visit": "Visítenos",
+   "refsLead": "Desde líneas de envasado hasta talleres CNC, suministramos recambios de mantenimiento a fabricantes de toda Turquía.",
+   "refsDesc": "Referencias de Sofilx y sectores atendidos.",
+   "served": "Sectores que atendemos",
+   "servedP": "Los equipos de mantenimiento de estos sectores confían en Sofilx para filtros, paletas y lubricantes.",
+   "work": "Trabaje con nosotros",
+   "workP": "Envíenos su lista de recambios; le respondemos con precios y plazos línea por línea.",
+   "address": "Dirección",
+   "phone": "Teléfono",
+   "email": "E-mail",
+   "directions": "Cómo llegar",
+   "cityName": "Ataşehir, Estambul",
+   "openMaps": "Abrir en Google Maps",
+   "contactLead": "Contacte con nosotros por teléfono, WhatsApp o e-mail; también puede enviar su lista de presupuesto desde aquí.",
+   "contactDesc": "Contacto Sofilx: {addr}. Teléfono {phone}, {email}."
+  }
+ },
+ "cats": {
+  "kompresor-filtreleri": {
+   "name": "Filtros para compresores",
+   "short": "Filtros de aire, de aceite y separadores"
+  },
+  "vakum-pompasi-filtreleri": {
+   "name": "Filtros para bombas de vacío",
+   "short": "Filtros de aceite, de aire y de escape"
+  },
+  "karbon-paletler": {
+   "name": "Paletas de carbono",
+   "short": "Para bombas de vacío en seco"
+  },
+  "fiber-paletler": {
+   "name": "Paletas de fibra",
+   "short": "Para bombas de vacío lubricadas con aceite"
+  },
+  "endustriyel-yaglar": {
+   "name": "Lubricantes industriales",
+   "short": "Aceites para compresores, hidráulicos, especiales y grasas"
+  },
+  "endustriyel-filtreler": {
+   "name": "Filtros industriales",
+   "short": "HEPA, de panel, de bolsa e hidráulicos"
+  },
+  "ozel-uretim-filtreler": {
+   "name": "Filtros a medida",
+   "short": "Filtros de cartucho, de bolsa y de aire a medida"
+  },
+  "karbon-burc-ve-komurler": {
+   "name": "Escobillas y casquillos de carbono",
+   "short": "Escobillas de carbón, carbono técnico"
+  },
+  "kompresor-kaplinleri": {
+   "name": "Acoplamientos para compresores",
+   "short": "Acoplamientos elásticos y de par"
+  }
+ },
+ "sectors": {
+  "ambalaj": {
+   "name": "Envasado",
+   "line": "Envasado al vacío, termoformado y líneas de llenado",
+   "parts": [
+    "Filtros de aceite y de escape para bombas de vacío",
+    "Paletas de carbono",
+    "Aceites para bombas de vacío"
+   ]
+  },
+  "gida": {
+   "name": "Alimentación y bebidas",
+   "line": "Envasado, llenado, secado y aire comprimido",
+   "parts": [
+    "Filtros para bombas de vacío",
+    "Filtros para compresores",
+    "Lubricantes de grado alimentario"
+   ]
+  },
+  "plastik": {
+   "name": "Plástico y caucho",
+   "line": "Inyección, extrusión y transporte de material",
+   "parts": [
+    "Filtros de aire para bombas de vacío",
+    "Filtros para compresores",
+    "Desmoldeantes y aceites hidráulicos"
+   ]
+  },
+  "agac-isleme": {
+   "name": "Madera y CNC",
+   "line": "Mesas de vacío CNC y chapeadoras de cantos",
+   "parts": [
+    "Paletas para bombas en seco",
+    "Filtros de aire",
+    "Bolsas de aspiración"
+   ]
+  },
+  "matbaa": {
+   "name": "Artes gráficas y papel",
+   "line": "Alimentadores de papel, plegadoras y guillotinas",
+   "parts": [
+    "Paletas de carbono y de fibra",
+    "Filtros de aire",
+    "Filtros de aceite"
+   ]
+  },
+  "kimya-ilac": {
+   "name": "Química y farmacia",
+   "line": "Vacío de proceso, salas blancas y aire comprimido",
+   "parts": [
+    "Filtros HEPA y de panel",
+    "Filtros de escape",
+    "Cartuchos a medida"
+   ]
+  },
+  "otomotiv-metal": {
+   "name": "Automoción y metal",
+   "line": "Cabinas de pintura, mecanizado y sistemas hidráulicos",
+   "parts": [
+    "Fluidos de corte y mecanizado",
+    "Filtros hidráulicos",
+    "Acoplamientos"
+   ]
+  },
+  "enerji-bakim": {
+   "name": "Energía y mantenimiento",
+   "line": "Generadores, motores y equipos de accionamiento",
+   "parts": [
+    "Escobillas de carbón",
+    "Casquillos de carbono",
+    "Acoplamientos para compresores"
+   ]
+  }
+ },
+ "types": {
+  "HEPA filter": "Filtro HEPA",
+  "Hydraulic filter": "Filtro hidráulico",
+  "Panel filter": "Filtro de panel",
+  "Bag filter": "Filtro de bolsa",
+  "Custom filter": "Filtro a medida",
+  "Air filter": "Filtro de aire",
+  "Cartridge filter": "Filtro de cartucho",
+  "Glass fibre filter": "Filtro de fibra de vidrio",
+  "Filter": "Filtro",
+  "Separator filter": "Filtro separador",
+  "Oil filter": "Filtro de aceite",
+  "Exhaust filter": "Filtro de escape",
+  "Industrial lubricant": "Lubricante industrial",
+  "Grease": "Grasa",
+  "Carbon vane": "Paleta de carbono",
+  "Fibre vane": "Paleta de fibra",
+  "Carbon brush": "Escobilla de carbón",
+  "Carbon product": "Producto de carbono",
+  "Coupling": "Acoplamiento"
+ },
+ "phrases": {
+  "Non-Destructive Crack Detection Chemicals": "Productos para detección de grietas no destructiva",
+  "Special Purpose Lubricants": "Lubricantes especiales",
+  "Special Purpose Products": "Productos especiales",
+  "Multi-Purpose Lubricants": "Lubricantes multiuso",
+  "Vacuum Pump Carbon Vane": "Paleta de carbono para bomba de vacío",
+  "Superior Performance": "Rendimiento superior",
+  "Corrosion Protection": "Protección anticorrosiva",
+  "Dry Film Lubricants": "Lubricantes de película seca",
+  "Separator Filters": "Filtros separadores",
+  "Mechanical Carbon": "Carbono técnico",
+  "High Performance": "Alto rendimiento",
+  "Glass Mould Oils": "Aceites para moldes de vidrio",
+  "Coupling Element": "Elemento de acoplamiento",
+  "Fully Synthetic": "Totalmente sintético",
+  "Coupling Rubber": "Elastómero de acoplamiento",
+  "Assembly Pastes": "Pastas de montaje",
+  "Exhaust Filters": "Filtros de escape",
+  "Carbon Bushings": "Casquillos de carbono",
+  "Release Agents": "Desmoldeantes",
+  "Exhaust Filter": "Filtro de escape",
+  "Carbon Brushes": "Escobillas de carbón",
+  "Other Products": "Otros productos",
+  "Water-Soluble": "Hidrosoluble",
+  "Conveyor Oils": "Aceites para cadenas transportadoras",
+  "Oil Additives": "Aditivos para aceite",
+  "Rust Removers": "Desoxidantes",
+  "Carbon Rings": "Anillos de carbono",
+  "Metalworking": "Mecanizado",
+  "Emulsifiers": "Emulsionantes",
+  "Vacuum Pump": "Bomba de vacío",
+  "Oil Filters": "Filtros de aceite",
+  "Air Filters": "Filtros de aire",
+  "Glass Fibre": "Fibra de vidrio",
+  "Oil Filter": "Filtro de aceite",
+  "Air Filter": "Filtro de aire",
+  "Compressor": "Compresor",
+  "Separator": "Separador",
+  "Couplings": "Acoplamientos",
+  "Hydraulic": "Hidráulico",
+  "Cartridge": "Cartucho",
+  "Elements": "Elementos",
+  "Vane Set": "Juego de paletas",
+  "Coupling": "Acoplamiento",
+  "Flexible": "Elástico",
+  "Cleaners": "Limpiadores",
+  "Silicone": "Silicona",
+  "Exhaust": "Escape",
+  "Filters": "Filtros",
+  "Greases": "Grasas",
+  "Bearing": "Rodamientos",
+  "Cooling": "Refrigeración",
+  "Filter": "Filtro",
+  "Grease": "Grasa",
+  "Basic": "Básico",
+  "Chain": "Cadenas",
+  "Panel": "Panel",
+  "Vane": "Paleta",
+  "Oils": "Aceites",
+  "Gear": "Engranajes",
+  "Size": "Tamaño",
+  "Hub": "Cubo",
+  "Oil": "Aceite",
+  "Bag": "Bolsa",
+  "and": "y",
+  "Air": "Aire"
+ },
+ "legal": {
+  "kvkk": {
+   "title": "Aviso de privacidad",
+   "lead": "Cómo tratamos sus datos personales conforme a la Ley turca n.º 6698 de Protección de Datos Personales (KVKK).",
+   "html": "<h2>1. Responsable del tratamiento</h2><p>Sus datos personales son tratados por Sofilx Filtre («Sofilx»), Esatpaşa Mah. Bingöl Sok. No:1A, Ataşehir / İstanbul, como responsable del tratamiento, en el ámbito descrito a continuación.</p>\n<h2>2. Datos que tratamos</h2><ul><li><b>Identificación y contacto:</b> nombre y apellidos, empresa, número de teléfono, dirección de e-mail, ciudad.</li><li><b>Datos de la solicitud:</b> artículos de su lista de presupuesto, cantidades, notas y preferencia de entrega.</li><li><b>Seguridad y uso:</b> dirección IP, información del navegador y datos de cookies (solo en la medida en que usted lo consienta).</li></ul>\n<h2>3. Finalidades</h2><ul><li>Recibir y evaluar sus solicitudes de presupuesto y enviarle presupuestos,</li><li>Gestionar pedidos, entregas y procesos de posventa,</li><li>Responder a sus solicitudes y reclamaciones,</li><li>Cumplir nuestras obligaciones legales,</li><li>Con su consentimiento, medir el uso del sitio y mejorar nuestros servicios.</li></ul>\n<h2>4. Bases jurídicas</h2><p>Los datos se tratan sobre la base de la ejecución de un contrato, el cumplimiento de obligaciones legales y nuestros intereses legítimos (art. 5/2 KVKK) y, en el caso de las cookies analíticas, sobre la base de su consentimiento explícito (art. 5/1).</p>\n<h2>5. Transferencias</h2><p>Sus datos pueden compartirse con los proveedores de servicios de e-mail/formularios utilizados para enviar el formulario de presupuesto, nuestro proveedor de alojamiento, empresas de transporte y, cuando la ley lo exija, las autoridades competentes, de conformidad con los arts. 8 y 9 KVKK. Algunos proveedores pueden almacenar datos fuera de Turquía.</p>\n<h2>6. Conservación</h2><p>Los datos se conservan durante el tiempo que exija la finalidad y los plazos legales de prescripción; después se suprimen, destruyen o anonimizan.</p>\n<h2>7. Sus derechos</h2><p>Conforme al art. 11 KVKK, puede preguntar si se tratan sus datos, solicitar información, conocer la finalidad del tratamiento y los destinatarios, solicitar su rectificación o supresión, oponerse a decisiones automatizadas y reclamar una indemnización por tratamiento ilícito.</p>\n<h2>8. Contacto</h2><p>Envíe sus solicitudes a <a href=\"mailto:info@sofilx.com\">info@sofilx.com</a> o por escrito a Esatpaşa Mah. Bingöl Sok. No:1A, Ataşehir / İstanbul. Las solicitudes se responden gratuitamente en un plazo de 30 días.</p>"
+  },
+  "cookies": {
+   "title": "Política de cookies",
+   "lead": "Qué cookies utilizamos en este sitio, por qué y cómo puede gestionar sus preferencias.",
+   "html": "<h2>¿Qué son las cookies?</h2><p>Las cookies son pequeños archivos de texto que los sitios web que visita almacenan en su navegador. El almacenamiento local del navegador puede utilizarse con fines similares.</p>\n<h2>Cookies que utilizamos</h2><table><thead><tr><th>Tipo</th><th>Finalidad</th><th>Duración</th><th>Consentimiento</th></tr></thead><tbody>\n<tr><td>Estrictamente necesarias (almacenamiento local)</td><td>Conservar su lista de presupuesto y su preferencia de cookies en el navegador</td><td>Hasta que las elimine</td><td>No necesario</td></tr>\n<tr><td>Analíticas (Google Tag Manager / Google Analytics)</td><td>Medir visitas, páginas vistas y fuentes de tráfico</td><td>Hasta 2 años</td><td>Solo con su consentimiento</td></tr></tbody></table>\n<h2>Gestión de sus preferencias</h2><p>Acepte las cookies analíticas o continúe solo con las necesarias mediante el banner que se muestra en su primera visita. Puede cambiar su elección en cualquier momento en <b>Configuración de cookies</b>, al pie de cada página, o eliminar las cookies desde la configuración de su navegador.</p>\n<h2>Contacto</h2><p>Consultas: <a href=\"mailto:info@sofilx.com\">info@sofilx.com</a>. Consulte también nuestro <a href=\"/es/privacy\">Aviso de privacidad</a>.</p>"
+  }
+ }
+}

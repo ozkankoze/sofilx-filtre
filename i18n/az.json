@@ -1,0 +1,602 @@
+{
+ "t": {
+  "lang": "az",
+  "locale": "az_AZ",
+  "home": "Ana səhifə",
+  "nav": {
+   "products": "Məhsullar",
+   "sectors": "Sahələr",
+   "brands": "Brendlər",
+   "custom": "Sifarişlə filtrlər",
+   "about": "Haqqımızda",
+   "refs": "İstinadlar",
+   "contact": "Əlaqə"
+  },
+  "topRight": "Anbardan eyni gün göndəriş · OEM / analoq",
+  "searchPh": "Hissə nömrəsi və ya çarpaz istinad yazın",
+  "list": "Təklif siyahısı",
+  "addToList": "Təklif siyahısına əlavə et",
+  "inList": "Siyahıdadır",
+  "addMore": "Siyahıdadır · bir dənə də əlavə et",
+  "viewAll": "Hamısına bax",
+  "allProducts": "Bütün məhsullar",
+  "products": "Məhsullar",
+  "stockIn": "Anbarda var",
+  "muadil": "Analoq",
+  "original": "OEM",
+  "sofilxMade": "Sofilx",
+  "waAsk": "WhatsApp-da soruşun",
+  "waQuote": "WhatsApp-da təklif alın",
+  "heroKick": "Kompressor · vakuum nasosu filtrləri",
+  "heroH1a": "Düzgün filtr.",
+  "heroH1b": "Maşınlar fasiləsiz işləsin.",
+  "heroP": "40-dan çox brendin kompressor və vakuum nasosları üçün OEM və analoq filtrlər, kürəklər və sürtkü yağları. Hissələri nömrəyə görə tapın, siyahınıza əlavə edin və hamısı üçün bir təklif alın.",
+  "heroBtn": "Məhsullara baxın",
+  "cardKick": "Sofilx · filtrasiya",
+  "cardGroups": "məhsul qrupu",
+  "cardFoot": "Bütün məhsullara baxın",
+  "chipRef": [
+   "Çarpaz istinad",
+   "Hissələri saniyələr içində tapın"
+  ],
+  "chipBrand": [
+   "40+ brend",
+   "OEM və analoq"
+  ],
+  "searchBtn": "Hissə axtar",
+  "example": "Sınayın",
+  "searchHeroPh": "Hissə nömrəsi, çarpaz istinad və ya nasos modeli",
+  "facts": [
+   [
+    "Eyni gün göndəriş",
+    "Anbarda olan mallar üçün"
+   ],
+   [
+    "40+ brend",
+    "Kompressorlar və vakuum nasosları"
+   ],
+   [
+    "OEM və analoq",
+    "Çarpaz istinadla uyğunlaşdırılır"
+   ],
+   [
+    "Bir forma, bir təklif",
+    "Bütün siyahınız üçün qiymətlər"
+   ]
+  ],
+  "groupsH": "Məhsul qrupları",
+  "groupsP": "Maşın növünü seçin və ya yuxarıda hissə nömrəsi ilə axtarın.",
+  "sectorsH": "Sahələr üzrə",
+  "sectorsP": "Sahənizi seçin və həmin sahənin maşınlarında ən çox dəyişdirilən hissələri görün.",
+  "howH": "Üç addımda təklif",
+  "howP": "Hesab tələb olunmur. Siyahınız brauzerinizdə saxlanılır.",
+  "how": [
+   [
+    "Siyahınıza əlavə edin",
+    "Hər məhsulun yanındakı + ilə lazım olan hissələri miqdarı ilə birlikdə əlavə edin."
+   ],
+   [
+    "Məlumatlarınızı qeyd edin",
+    "Şirkət və əlaqə məlumatlarınızı daxil edin, mövqelərə qeyd əlavə edin."
+   ],
+   [
+    "Təklifinizi alın",
+    "Qiymətlər və çatdırılma müddətləri e-poçtla, adətən elə həmin iş günü göndərilir."
+   ]
+  ],
+  "popularH": "Ən çox sorğu edilənlər",
+  "oilsH": "Sənaye sürtkü yağları",
+  "oilsP": "Kompressor, vakuum nasosu, hidravlik, reduktor yağları və sürtkülər.",
+  "oilsBtn": "Sürtkü yağlarına baxın",
+  "customH": "Ölçünüzə uyğun istehsal",
+  "customP": "Kataloqda yoxdur? Filtrləri çertyoj, nümunə və ya etiket məlumatlarına əsasən istehsal edirik.",
+  "customBtn": "Sifarişlə filtr tələb et",
+  "helpH": "Müştəri dəstək mərkəzi",
+  "helpP": "Qiymət, stok, sifariş və ya texniki detal barədə sualınız var? Uyğun kanalı seçin, sizə tez cavab verək.",
+  "helpHours": "<b>İş saatlarında</b> telefon və WhatsApp ilə<br>Təklif siyahıları və e-poçt 24/7",
+  "help": [
+   [
+    "Qiymət və stok öyrənin",
+    "Mövqeləri siyahıya əlavə edib bir təklif istəyin",
+    "Təklif siyahısı →"
+   ],
+   [
+    "Sifarişiniz barədə soruşun",
+    "Göndəriş, müddət, faktura və çatdırılma",
+    "WhatsApp →"
+   ],
+   [
+    "Lazım olan hissəni tapın",
+    "Hissə nömrəsi və ya çarpaz istinadla axtarış",
+    "Axtar →"
+   ],
+   [
+    "Texniki dəstək alın",
+    "Uyğunluq, ölçülər və analoq seçimi",
+    "+90 216 606 32 06 →"
+   ],
+   [
+    "Sifarişlə istehsal tələb edin",
+    "Çertyoj, nümunə və ya etiketə əsasən",
+    "Sifarişlə filtrlər →"
+   ]
+  ],
+  "filters": "Filtrlər",
+  "productGroup": "Məhsul qrupu",
+  "brand": "Brend",
+  "type": "Növ",
+  "clear": "Filtrləri təmizlə",
+  "searchInList": "Bu siyahıda axtar",
+  "sort": [
+   "Tövsiyə olunan",
+   "Ad A–Z"
+  ],
+  "items": "məhsul",
+  "noResult": "Bu filtrlərə uyğun məhsul yoxdur. Hissə nömrəsini təklif formasına yazın; kataloqda olmasa belə, onu tədarük edə bilərik.",
+  "tabs": {
+   "uyum": "Uyğun avadanlıq",
+   "teknik": "Texniki göstəricilər",
+   "aciklama": "Təsvir",
+   "genel": "Ümumi məlumat",
+   "teslimat": "Çatdırılma",
+   "iade": "Ləğv və qaytarma",
+   "sss": "TVS"
+  },
+  "compatBrands": "Uyğun brendlər",
+  "compatModels": "Uyğun modellər",
+  "noModels": [
+   "Model siyahısı hazırlanır",
+   "Maşın etiketinin fotosunu və ya model adını göndərin, uyğunluğu yoxlayaq.",
+   "Etiket fotosunu göndər"
+  ],
+  "partNo": "Hissə nömrəsi",
+  "crossRef": "Çarpaz istinadlar",
+  "sofilxNo": "Sofilx kodu",
+  "size": "Ölçülər",
+  "setSize": "Dəst",
+  "setUnit": " ədədlik dəst",
+  "ptype": "Məhsul növü",
+  "group": "Məhsul qrupu",
+  "usedIn": "Sahələr",
+  "drawTop": "Yuxarıdan görünüş",
+  "drawSide": "Yandan görünüş",
+  "drawNote": "Ölçülər mm ilə · miqyasa uyğun deyil",
+  "drawThumb": "Ölçü çertyoju",
+  "photo": "Foto",
+  "notes": [
+   [
+    "Eyni gün göndəriş",
+    "Anbarda olan mallar üçün"
+   ],
+   [
+    "Uyğunluq yoxlaması",
+    "Təklifdən əvvəl yoxlanılır"
+   ],
+   [
+    "Fakturalı satış",
+    "Korporativ ödəniş"
+   ]
+  ],
+  "share": "Paylaş",
+  "copyCode": "Kodu kopyala",
+  "related": "Əlaqəli məhsullar",
+  "compatible": "Uyğundur",
+  "type2": "Növ",
+  "genel": "<p><b>OEM və analoq.</b> Sofilx həm orijinal istehsalçı hissələrini, həm də eyni ölçü və performansa malik analoq hissələri tədarük edir. Təklifin hər sətrində hansı olduğu göstərilir.</p><p><b>Çarpaz istinadlar.</b> Göstərilən nömrələr axtarışı asanlaşdırmaq üçündür. Brend adları yalnız uyğunluğu göstərmək üçün istifadə olunur.</p><p class=\"disclaimer\">Çarpaz istinad, texniki və uyğunluq məlumatları rahatlıq üçün təqdim olunur; onların dəqiqliyi və tamlığı zəmanət verilmir. Hissə seçərkən həmişə avadanlıq istehsalçısının tövsiyələrinə və istismar şəraitinə əməl edin.</p>",
+  "teslimat": [
+   [
+    "Anbarda olan mallar",
+    "İş saatlarında təsdiqlənən sifarişlər elə həmin gün göndərilir."
+   ],
+   [
+    "Sifarişlə istehsal",
+    "Çatdırılma müddətləri təklifdə hər sətir üzrə göstərilir."
+   ],
+   [
+    "Çatdırılma variantları",
+    "Müqaviləli kuryer, İstanbul daxilində eyni gün kuryer və ya Ataşehir anbarımızdan götürmə."
+   ]
+  ],
+  "iade": "<p>Açılmamış qablaşdırmada istifadə olunmamış malların qaytarılma şərtləri sifariş təsdiqində göstərilir. Sifarişlə hazırlanmış mallar geri qaytarılmır.</p><p>Qaytarma və dəyişdirmə üçün <a href=\"/az/contact\">bizimlə əlaqə saxlayın</a>.</p>",
+  "faq": [
+   [
+    "Analoq hissə OEM hissəni əvəz edə bilərmi?",
+    "Analoq hissələr orijinalın ölçü və performansına uyğun seçilir. Kritik tətbiqlərdə avadanlıq istehsalçısının tövsiyəsini də nəzərə alın; təklifdən əvvəl uyğunluğu sizinlə birlikdə yoxlayırıq."
+   ],
+   [
+    "Hissə nömrəmi bilmirəm. Nə etməliyəm?",
+    "Maşın etiketinin və ya köhnə hissənin fotosunu WhatsApp-a göndərin, düzgün hissəni tapaq."
+   ],
+   [
+    "Niyə qiymətlər göstərilmir?",
+    "Qiymətlər miqdardan, OEM və ya analoq seçimindən və stokdan asılıdır. Təklif siyahınızı göndərin, hər sətir üçün aktual qiymət və müddətlərlə cavab verək."
+   ],
+   [
+    "Faktura və ödəniş?",
+    "Bütün satışlar fakturalıdır. Ödəniş şərtləri təklifdə göstərilir."
+   ]
+  ],
+  "quoteH": "Təklif siyahısı",
+  "quoteEmpty": "Siyahınız boşdur. Məhsulları + ilə əlavə edin və ya ehtiyacınızı qeyd sahəsində yazın.",
+  "quoteP": "Miqdarları yoxlayın və məlumatlarınızı qeyd edin.",
+  "form": {
+   "h": "Şirkət və əlaqə",
+   "sub": "Təklifinizi bu məlumatlar əsasında hazırlayırıq.",
+   "company": "Şirkət",
+   "name": "Ad və soyad",
+   "phone": "Telefon",
+   "email": "E-poçt",
+   "city": "Şəhər / ölkə",
+   "delivery": "Çatdırılma",
+   "note": "Qeyd",
+   "notePh": "Siyahıda olmayan hissələr, tələb olunan müddət, ödəniş şərtləri",
+   "kvkk": "Təklif hazırlanması üçün şəxsi məlumatlarımın emalına dair <a href=\"/az/privacy\" target=\"_blank\">məxfilik bildirişini</a> oxudum.",
+   "submit": "Təklif istə",
+   "sending": "Göndərilir…",
+   "wa": "Siyahını WhatsApp-da göndər",
+   "notePer": "Qeyd: maşın modeli, seriya nömrəsi, təcililik",
+   "errCompany": "Şirkət adını daxil edin.",
+   "errName": "Adınızı daxil edin.",
+   "errPhone": "Telefon nömrəsi yoxdur.",
+   "errEmail": "Düzgün e-poçt daxil edin.",
+   "errKvkk": "Davam etmək üçün qutunu işarələyin.",
+   "cities": [
+    "Bakı",
+    "Azərbaycan – digər",
+    "Türkiyə",
+    "Avropa",
+    "Digər"
+   ],
+   "deliveries": [
+    "Kuryer",
+    "Anbardan götürmə",
+    "Ekspeditor"
+   ],
+   "photoTip": "Maşın etiketinin və ya hissənin fotosunu WhatsApp-da göndərə bilərsiniz."
+  },
+  "okH": "Təklif sorğunuz qəbul edildi",
+  "okP": "Sorğunuz satış komandamıza ötürüldü və xülasəsi e-poçtunuza göndərildi. Adətən elə həmin iş günü cavab veririk.",
+  "okTrk": "Yazışmalarınızda bu istinad nömrəsini qeyd edin.",
+  "newList": "Yeni siyahıya başla",
+  "failMsg": "Göndərmək mümkün olmadı. Yenidən cəhd edin və ya siyahını WhatsApp-da göndərin.",
+  "drawerEmpty": "Siyahınız boşdur. Əlavə etmək üçün məhsullarda + düyməsindən istifadə edin.",
+  "lines": "sətir",
+  "pcs": "əd.",
+  "backToProducts": "Məhsullara qayıt",
+  "requestQuote": "Təklif istə",
+  "added": "siyahınıza əlavə edildi",
+  "seeList": "Siyahıya bax",
+  "copied": "Kopyalandı",
+  "cookie": {
+   "text": "Təcrübənizi yaxşılaşdırmaq və ziyarətləri ölçmək üçün kukilərdən istifadə edirik. Zəruri kukilər həmişə aktivdir.",
+   "more": "Kuki siyasəti",
+   "accept": "Qəbul et",
+   "reject": "Yalnız zəruri"
+  },
+  "footP": "Kompressor və vakuum nasosu filtrləri, kürəklər, sənaye sürtkü yağları və muftalar. Anbardan eyni gün göndəriş.",
+  "footLegal": "Çarpaz istinad, ölçü və uyğunluq məlumatları rahatlıq üçün təqdim olunur; onların dəqiqliyi və tamlığı zəmanət verilmir. Hissə seçərkən avadanlıq istehsalçısının tövsiyələrinə əməl edin. Analoq məhsullarda brend adları yalnız uyğunluğu göstərmək üçün istifadə olunur.",
+  "rights": "Bütün hüquqlar qorunur.",
+  "kvkkL": "Məxfilik bildirişi",
+  "cookieL": "Kuki siyasəti",
+  "customerCenter": "Müştəri dəstək mərkəzi",
+  "nf": [
+   "Səhifə tapılmadı",
+   "Axtardığınız səhifə köçürülmüş və ya silinmiş ola bilər. Hissəni nömrəyə görə axtarın və ya məhsul qruplarına baxın.",
+   "Ana səhifəyə qayıt"
+  ],
+  "x": {
+   "siteTitle": "Sofilx | Kompressor və vakuum nasosu filtrləri",
+   "skip": "Məzmuna keç",
+   "mainMenu": "Əsas menyu",
+   "language": "Dil",
+   "cookieSettings": "Kuki parametrləri",
+   "waHello": "Salam, təklif almaq istəyirəm.",
+   "waFloat": "WhatsApp",
+   "waProduct": "Salam, qiymət və stok məlumatı ala bilərəmmi: ",
+   "waList": "Salam, aşağıdakılar üçün təklif almaq istəyirəm:",
+   "examples": [
+    "Yağ filtri",
+    "Karbon kürək",
+    "Hava filtri",
+    "HEPA"
+   ],
+   "homeDesc": "OEM və analoq kompressor və vakuum nasosu filtrləri, karbon və fiber kürəklər, sənaye sürtkü yağları və muftalar. Hissə nömrəsi ilə axtarın və bütün siyahınız üçün bir təklif alın.",
+   "productsDesc": "Bütün Sofilx məhsulları: kompressor və vakuum nasosu filtrləri, karbon və fiber kürəklər, sürtkü yağları, muftalar.",
+   "catDesc": "{cat}: çarpaz istinadlı OEM və analoq hissələr. Anbardan eyni gün göndəriş, bir forma ilə təklif.",
+   "catBrandTitle": "{brand} {cat}",
+   "catBrandDesc": "{brand} ilə uyğun {cat}, hissə nömrələri və çarpaz istinadlarla. Sofilx-dən təklif istəyin.",
+   "crossShort": "Çarpaz ist.",
+   "qty": "Miqdar",
+   "dec": ",",
+   "descCompat": "{brand} avadanlığı ilə uyğun {type}.",
+   "descSofilx": "Sofilx tərəfindən tədarük edilən {type}.",
+   "descFits": "{list} daxil olmaqla {n} modelə uyğundur.",
+   "descDims": "Ölçülər: {d}.",
+   "reqQuote": "Sofilx-dən təklif istəyin.",
+   "origDetails": "Orijinal texniki məlumatlar (türkcə)",
+   "sectorIntro": "Bunlar bu sahədəki texniki xidmət komandalarının ən çox sorğu etdiyi hissələrdir. Siyahıda olmayanlar üçün təklif sorğunuza hissə nömrəsini və ya etiket fotosunu əlavə edin.",
+   "addAll": "Hamısını təklif siyahısına əlavə et",
+   "mostReplaced": "Ən çox dəyişdirilənlər",
+   "otherSectors": "Digər sahələr",
+   "brandsLead": "Maşınınızın brendini seçin və onun filtrlərini, kürəklərini, sürtkü yağlarını və muftalarını bir siyahıda görün.",
+   "brandsDesc": "Sofilx-in tədarük etdiyi brendlər: Busch, Becker, Elmo Rietschle, Leybold, Kaeser və digərləri.",
+   "brandDesc": "{brand} ilə uyğun filtrlər, kürəklər və ehtiyat hissələri, çarpaz istinadlarla. Sofilx-dən təklif istəyin.",
+   "customH1": "Sifarişlə filtrlər",
+   "customLead": "Kartric, torba, hava, hidravlik və şüşə lifli filtrləri çertyoj, nümunə və ya etiket məlumatlarına əsasən istehsal edirik. Siyahınıza məhsul əlavə edin və ölçüləri qeyddə yazın.",
+   "customDesc": "Sifarişlə hazırlanan filtrlər: ölçülərinizə uyğun kartric, torba, hava, hidravlik və şüşə lifli filtrlər.",
+   "customNeed": "Təklif üçün nə lazımdır",
+   "customRows": [
+    [
+     "Ölçülər",
+     "Xarici diametr, daxili diametr, uzunluq (mm)"
+    ],
+    [
+     "Filtrasiya dərəcəsi",
+     "µm və ya sinif (F9, H13 və s.)"
+    ],
+    [
+     "Filtr materialı",
+     "Sellüloza, poliester, şüşə lif, paslanmayan polad tor"
+    ],
+    [
+     "Qapaqlar və kipləşdiricilər",
+     "Material və birləşmə növü"
+    ],
+    [
+     "Miqdar və müddət",
+     "İlk çatdırılma və illik tələbat"
+    ]
+   ],
+   "aboutH1": "Düzgün hissə, düzgün vaxtda",
+   "aboutLead": "Sofilx Filtre olaraq həm öz brendimizin məhsullarını, həm də sənayenin aparıcı brendlərinin məhsullarını tədarük edir, müştəri məmnuniyyətini artırmağı və davamlı inkişafla uzunmüddətli dəyər yaratmağı hədəfləyirik.",
+   "aboutBlocks": [
+    [
+     "Təcrübə və bilik",
+     "Anbarımızdakı etibarlı brendlərin keyfiyyətli məhsullarını geniş distribusiya şəbəkəmiz vasitəsilə tez və rəqabətli qiymətlərlə çatdırırıq; illərin təcrübəsini etibarlı xidmət siyasəti və müştəri məmnuniyyəti ilə birləşdiririk."
+    ],
+    [
+     "Missiyamız",
+     "Müştərilərimizə düzgün və keyfiyyətli məhsulu düzgün vaxtda çatdırmaq və davamlı inkişafla sənayedə uzunmüddətli dəyər yaratmaq."
+    ],
+    [
+     "Vizyonumuz",
+     "Sənaye filtrasiyası və sərf hissələri üzrə ilk ağla gələn təchizatçı olmaq."
+    ]
+   ],
+   "aboutStats": [
+    "kataloqda məhsul",
+    "brend",
+    "məhsul qrupu",
+    "Eyni gün",
+    "anbardan göndəriş"
+   ],
+   "visit": "Bizə gəlin",
+   "refsLead": "Qablaşdırma xətlərindən CNC sexlərinə qədər Türkiyə üzrə istehsalçılara texniki xidmət hissələri tədarük edirik.",
+   "refsDesc": "Sofilx istinadları və xidmət göstərdiyimiz sahələr.",
+   "served": "Xidmət göstərdiyimiz sahələr",
+   "servedP": "Bu sahələrdəki texniki xidmət komandaları filtrlər, kürəklər və sürtkü yağları üçün Sofilx-ə etibar edir.",
+   "work": "Bizimlə işləyin",
+   "workP": "Hissə siyahınızı göndərin; hər sətir üzrə qiymət və müddətlərlə cavab veririk.",
+   "address": "Ünvan",
+   "phone": "Telefon",
+   "email": "E-poçt",
+   "directions": "Yol tarifi",
+   "cityName": "Ataşehir, İstanbul",
+   "openMaps": "Google Maps-də aç",
+   "contactLead": "Bizimlə telefon, WhatsApp və ya e-poçt vasitəsilə əlaqə saxlayın; təklif siyahınızı buradan da göndərə bilərsiniz.",
+   "contactDesc": "Sofilx ilə əlaqə: {addr}. Telefon {phone}, {email}."
+  }
+ },
+ "cats": {
+  "kompresor-filtreleri": {
+   "name": "Kompressor filtrləri",
+   "short": "Hava, yağ və separator filtrləri"
+  },
+  "vakum-pompasi-filtreleri": {
+   "name": "Vakuum nasosu filtrləri",
+   "short": "Yağ, hava və işlənmiş qaz filtrləri"
+  },
+  "karbon-paletler": {
+   "name": "Karbon kürəklər",
+   "short": "Quru işləyən vakuum nasosları üçün"
+  },
+  "fiber-paletler": {
+   "name": "Fiber kürəklər",
+   "short": "Yağla işləyən vakuum nasosları üçün"
+  },
+  "endustriyel-yaglar": {
+   "name": "Sənaye sürtkü yağları",
+   "short": "Kompressor, hidravlik yağları, sürtkülər və xüsusi yağlar"
+  },
+  "endustriyel-filtreler": {
+   "name": "Sənaye filtrləri",
+   "short": "HEPA, panel, torba və hidravlik"
+  },
+  "ozel-uretim-filtreler": {
+   "name": "Sifarişlə filtrlər",
+   "short": "Ölçüyə uyğun kartric, torba və hava filtrləri"
+  },
+  "karbon-burc-ve-komurler": {
+   "name": "Karbon fırçalar və vtulkalar",
+   "short": "Karbon fırçalar, mexaniki karbon"
+  },
+  "kompresor-kaplinleri": {
+   "name": "Kompressor muftaları",
+   "short": "Elastik və fırlanma momenti muftaları"
+  }
+ },
+ "sectors": {
+  "ambalaj": {
+   "name": "Qablaşdırma",
+   "line": "Vakuum qablaşdırma, termoformalama və doldurma xətləri",
+   "parts": [
+    "Vakuum nasosu yağ və işlənmiş qaz filtrləri",
+    "Karbon kürəklər",
+    "Vakuum nasosu yağları"
+   ]
+  },
+  "gida": {
+   "name": "Qida və içkilər",
+   "line": "Qablaşdırma, doldurma, qurutma və sıxılmış hava",
+   "parts": [
+    "Vakuum nasosu filtrləri",
+    "Kompressor filtrləri",
+    "Qida dərəcəli sürtkü yağları"
+   ]
+  },
+  "plastik": {
+   "name": "Plastik və rezin",
+   "line": "Təzyiq altında tökmə, ekstruziya və material daşınması",
+   "parts": [
+    "Vakuum nasosu hava filtrləri",
+    "Kompressor filtrləri",
+    "Qəlib ayırıcılar və hidravlik yağlar"
+   ]
+  },
+  "agac-isleme": {
+   "name": "Ağac emalı və CNC",
+   "line": "CNC vakuum masaları və kənar örtmə",
+   "parts": [
+    "Quru işləyən nasos kürəkləri",
+    "Hava filtrləri",
+    "Toz toplama torbaları"
+   ]
+  },
+  "matbaa": {
+   "name": "Mətbəə və kağız",
+   "line": "Kağız ötürmə, qatlama və kəsmə maşınları",
+   "parts": [
+    "Karbon və fiber kürəklər",
+    "Hava filtrləri",
+    "Yağ filtrləri"
+   ]
+  },
+  "kimya-ilac": {
+   "name": "Kimya və əczaçılıq",
+   "line": "Proses vakuumu, təmiz otaqlar və sıxılmış hava",
+   "parts": [
+    "HEPA və panel filtrlər",
+    "İşlənmiş qaz filtrləri",
+    "Sifarişlə kartriclər"
+   ]
+  },
+  "otomotiv-metal": {
+   "name": "Avtomobil və metal",
+   "line": "Boyaxanalar, mexaniki emal və hidravlik sistemlər",
+   "parts": [
+    "Metal emalı mayeləri",
+    "Hidravlik filtrlər",
+    "Muftalar"
+   ]
+  },
+  "enerji-bakim": {
+   "name": "Enerji və texniki xidmət",
+   "line": "Generatorlar, mühərriklər və ötürücü avadanlıq",
+   "parts": [
+    "Karbon fırçalar",
+    "Karbon vtulkalar",
+    "Kompressor muftaları"
+   ]
+  }
+ },
+ "types": {
+  "HEPA filter": "HEPA filtr",
+  "Hydraulic filter": "Hidravlik filtr",
+  "Panel filter": "Panel filtr",
+  "Bag filter": "Torba filtr",
+  "Custom filter": "Sifarişlə filtr",
+  "Air filter": "Hava filtri",
+  "Cartridge filter": "Kartric filtr",
+  "Glass fibre filter": "Şüşə lifli filtr",
+  "Filter": "Filtr",
+  "Separator filter": "Separator filtri",
+  "Oil filter": "Yağ filtri",
+  "Exhaust filter": "İşlənmiş qaz filtri",
+  "Industrial lubricant": "Sənaye sürtkü yağı",
+  "Grease": "Sürtkü",
+  "Carbon vane": "Karbon kürək",
+  "Fibre vane": "Fiber kürək",
+  "Carbon brush": "Karbon fırça",
+  "Carbon product": "Karbon məhsul",
+  "Coupling": "Mufta"
+ },
+ "phrases": {
+  "Non-Destructive Crack Detection Chemicals": "Dağıdıcı olmayan çat aşkarlama kimyəvi maddələri",
+  "Special Purpose Lubricants": "Xüsusi təyinatlı sürtkü yağları",
+  "Special Purpose Products": "Xüsusi təyinatlı məhsullar",
+  "Multi-Purpose Lubricants": "Çoxməqsədli sürtkü yağları",
+  "Vacuum Pump Carbon Vane": "Vakuum nasosu karbon kürəyi",
+  "Superior Performance": "Üstün performans",
+  "Corrosion Protection": "Korroziyadan qoruma",
+  "Dry Film Lubricants": "Quru təbəqəli sürtkülər",
+  "Separator Filters": "Separator filtrləri",
+  "Mechanical Carbon": "Mexaniki karbon",
+  "High Performance": "Yüksək performans",
+  "Glass Mould Oils": "Şüşə qəlibi yağları",
+  "Coupling Element": "Mufta elementi",
+  "Fully Synthetic": "Tam sintetik",
+  "Coupling Rubber": "Mufta rezini",
+  "Assembly Pastes": "Montaj pastaları",
+  "Exhaust Filters": "İşlənmiş qaz filtrləri",
+  "Carbon Bushings": "Karbon vtulkalar",
+  "Release Agents": "Qəlib ayırıcılar",
+  "Exhaust Filter": "İşlənmiş qaz filtri",
+  "Carbon Brushes": "Karbon fırçalar",
+  "Other Products": "Digər məhsullar",
+  "Water-Soluble": "Suda həll olunan",
+  "Conveyor Oils": "Konveyer yağları",
+  "Oil Additives": "Yağ aşqarları",
+  "Rust Removers": "Pas təmizləyiciləri",
+  "Carbon Rings": "Karbon halqalar",
+  "Metalworking": "Metal emalı",
+  "Emulsifiers": "Emulqatorlar",
+  "Vacuum Pump": "Vakuum nasosu",
+  "Oil Filters": "Yağ filtrləri",
+  "Air Filters": "Hava filtrləri",
+  "Glass Fibre": "Şüşə lif",
+  "Oil Filter": "Yağ filtri",
+  "Air Filter": "Hava filtri",
+  "Compressor": "Kompressor",
+  "Separator": "Separator",
+  "Couplings": "Muftalar",
+  "Hydraulic": "Hidravlik",
+  "Cartridge": "Kartric",
+  "Elements": "Elementlər",
+  "Vane Set": "Kürək dəsti",
+  "Coupling": "Mufta",
+  "Flexible": "Elastik",
+  "Cleaners": "Təmizləyicilər",
+  "Silicone": "Silikon",
+  "Exhaust": "İşlənmiş qaz",
+  "Filters": "Filtrlər",
+  "Greases": "Sürtkülər",
+  "Bearing": "Podşipnik",
+  "Cooling": "Soyutma",
+  "Filter": "Filtr",
+  "Grease": "Sürtkü",
+  "Basic": "Əsas",
+  "Chain": "Zəncir",
+  "Panel": "Panel",
+  "Vane": "Kürək",
+  "Oils": "Yağlar",
+  "Gear": "Reduktor",
+  "Size": "Ölçü",
+  "Hub": "Göbək",
+  "Oil": "Yağ",
+  "Bag": "Torba",
+  "and": "və",
+  "Air": "Hava"
+ },
+ "legal": {
+  "kvkk": {
+   "title": "Məxfilik bildirişi",
+   "lead": "Şəxsi məlumatlarınızı Türkiyənin 6698 nömrəli Şəxsi Məlumatların Qorunması Qanununa (KVKK) əsasən necə emal edirik.",
+   "html": "<h2>1. Məlumat nəzarətçisi</h2><p>Şəxsi məlumatlarınız məlumat nəzarətçisi qismində Sofilx Filtre (“Sofilx”), Esatpaşa Mah. Bingöl Sok. No:1A, Ataşehir / İstanbul tərəfindən aşağıda təsvir olunan çərçivədə emal edilir.</p>\n<h2>2. Emal etdiyimiz məlumatlar</h2><ul><li><b>Şəxsiyyət və əlaqə:</b> ad və soyad, şirkət, telefon nömrəsi, e-poçt ünvanı, şəhər.</li><li><b>Sorğu təfərrüatları:</b> təklif siyahınızdakı mövqelər, miqdarlar, qeydlər və çatdırılma üstünlüyü.</li><li><b>Təhlükəsizlik və istifadə:</b> IP ünvanı, brauzer məlumatları və kuki məlumatları (yalnız razılıq verdiyiniz həcmdə).</li></ul>\n<h2>3. Məqsədlər</h2><ul><li>Təklif sorğularınızı qəbul etmək, qiymətləndirmək və sizə təkliflər göndərmək,</li><li>Sifariş, çatdırılma və satış sonrası prosesləri həyata keçirmək,</li><li>Müraciət və şikayətlərinizə cavab vermək,</li><li>Qanuni öhdəliklərimizi yerinə yetirmək,</li><li>Razılığınızla saytdan istifadəni ölçmək və xidmətlərimizi təkmilləşdirmək.</li></ul>\n<h2>4. Hüquqi əsaslar</h2><p>Məlumatlar müqavilənin icrası, qanuni öhdəliklərin yerinə yetirilməsi və qanuni maraqlarımız (KVKK m. 5/2), analitik kukilər üçün isə açıq razılığınız (m. 5/1) əsasında emal edilir.</p>\n<h2>5. Ötürmələr</h2><p>Məlumatlarınız KVKK-nın 8-ci və 9-cu maddələrinə uyğun olaraq təklif formasının çatdırılması üçün istifadə olunan e-poçt/forma xidməti təminatçıları, hostinq təminatçımız, daşıma şirkətləri və qanunla tələb olunduqda səlahiyyətli orqanlarla paylaşıla bilər. Bəzi təminatçılar məlumatları Türkiyədən kənarda saxlaya bilər.</p>\n<h2>6. Saxlama</h2><p>Məlumatlar məqsədin tələb etdiyi müddət və qanuni iddia müddətləri ərzində saxlanılır; daha sonra silinir, məhv edilir və ya anonimləşdirilir.</p>\n<h2>7. Hüquqlarınız</h2><p>KVKK-nın 11-ci maddəsinə əsasən məlumatlarınızın emal edilib-edilmədiyini soruşa, məlumat tələb edə, emalın məqsədini və alıcıları öyrənə, düzəliş və ya silinmə tələb edə, avtomatlaşdırılmış qərarlara etiraz edə və qanunsuz emala görə zərərin ödənilməsini tələb edə bilərsiniz.</p>\n<h2>8. Əlaqə</h2><p>Müraciətlərinizi <a href=\"mailto:info@sofilx.com\">info@sofilx.com</a> ünvanına və ya yazılı şəkildə Esatpaşa Mah. Bingöl Sok. No:1A, Ataşehir / İstanbul ünvanına göndərin. Müraciətlər 30 gün ərzində ödənişsiz cavablandırılır.</p>"
+  },
+  "cookies": {
+   "title": "Kuki siyasəti",
+   "lead": "Bu saytda hansı kukilərdən, nə üçün istifadə etdiyimiz və seçimlərinizi necə idarə edə biləcəyiniz.",
+   "html": "<h2>Kukilər nədir?</h2><p>Kukilər ziyarət etdiyiniz veb-saytların brauzerinizdə saxladığı kiçik mətn fayllarıdır. Oxşar məqsədlər üçün brauzerin lokal yaddaşından da istifadə oluna bilər.</p>\n<h2>İstifadə etdiyimiz kukilər</h2><table><thead><tr><th>Növ</th><th>Məqsəd</th><th>Müddət</th><th>Razılıq</th></tr></thead><tbody>\n<tr><td>Zəruri (lokal yaddaş)</td><td>Təklif siyahınızın və kuki seçiminizin brauzerinizdə saxlanılması</td><td>Siz silənə qədər</td><td>Tələb olunmur</td></tr>\n<tr><td>Analitik (Google Tag Manager / Google Analytics)</td><td>Ziyarətlərin, baxılan səhifələrin və trafik mənbələrinin ölçülməsi</td><td>2 ilədək</td><td>Yalnız razılığınızla</td></tr></tbody></table>\n<h2>Seçimlərinizin idarə edilməsi</h2><p>İlk ziyarətinizdə göstərilən bannerdən istifadə edərək analitik kukiləri qəbul edin və ya yalnız zəruri kukilərlə davam edin. Seçiminizi istənilən vaxt hər səhifənin aşağısındakı <b>Kuki parametrləri</b> vasitəsilə dəyişə və ya kukiləri brauzer parametrlərində silə bilərsiniz.</p>\n<h2>Əlaqə</h2><p>Suallar: <a href=\"mailto:info@sofilx.com\">info@sofilx.com</a>. Həmçinin <a href=\"/az/privacy\">Məxfilik bildirişimizə</a> baxın.</p>"
+  }
+ }
+}
