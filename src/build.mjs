@@ -27,6 +27,8 @@ const fill = (s, o) => String(s).replace(/\{(\w+)\}/g, (m, k) => o[k] ?? m);
 
 // ---------- diller ----------
 // Kullanıcının istediği sırayla (dil menüsü bu sırayı izler)
+const FLAG = { tr: 'tr', en: 'gb', fa: 'ir', he: 'il', ar: 'sa', fr: 'fr', de: 'de', es: 'es', ru: 'ru', it: 'it', nl: 'nl', ka: 'ge', mk: 'mk', az: 'az' };
+const flagImg = (l, lazy) => `<img class="flag" src="/img/flags/${FLAG[l]}.svg" alt="" width="20" height="15"${lazy ? ' loading="lazy"' : ''}>`;
 const LANG_META = [
   { L: 'tr', name: 'Türkçe', locale: 'tr_TR' }, { L: 'en', name: 'English', locale: 'en_GB' },
   { L: 'fa', name: 'فارسی', locale: 'fa_IR', rtl: 1 }, { L: 'he', name: 'עברית', locale: 'he_IL', rtl: 1 }, { L: 'ar', name: 'العربية', locale: 'ar_AR', rtl: 1 },
@@ -131,6 +133,8 @@ function copyImages() {
   }
   for (const [k, v] of Object.entries(extra)) { const b = Buffer.from(v.split(',')[1], 'base64'); const ext = v.startsWith('data:image/png') ? 'png' : 'webp'; fs.writeFileSync(path.join(DIST, 'img', `${k}.${ext}`), b); }
   fs.copyFileSync(path.join(ROOT, 'assets/logo.png'), path.join(DIST, 'img/logo.png'));
+  fs.mkdirSync(path.join(DIST, 'img/flags'), { recursive: true });
+  for (const f of fs.readdirSync(path.join(ROOT, 'assets/flags'))) if (f.endsWith('.svg')) fs.copyFileSync(path.join(ROOT, 'assets/flags', f), path.join(DIST, 'img/flags', f));
   fs.writeFileSync(path.join(DIST, 'img/placeholder.svg'), `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#f4f4f9"/><path d="M70 60h60v80H70z" fill="none" stroke="#c7c6d8" stroke-width="4"/><path d="M70 80h60M70 100h60M70 120h60" stroke="#c7c6d8" stroke-width="3"/></svg>`);
 }
 const extraUrl = k => { const v = extra[k]; if (!v) return ''; return `/img/${k}.${v.startsWith('data:image/png') ? 'png' : 'webp'}`; };
@@ -161,7 +165,7 @@ function layout({ L, path: url, route, title, desc, body, jsonld = [], noindex =
   if (!noindex) sitemap.push({ url, route, L });
   const langHref = l => route ? route(l) : U.home(l);
   const hreflang = route ? LANGS.map(l => `<link rel="alternate" hreflang="${l}" href="${abs(route(l))}">`).join('') + `<link rel="alternate" hreflang="x-default" href="${abs(route('tr'))}">` : '';
-  const langLinks = LANGS.map(l => `<a href="${langHref(l)}" hreflang="${l}" lang="${l}"${l === L ? ' aria-current="true"' : ''}>${esc(D[l].meta.name)}</a>`).join('');
+  const langLinks = LANGS.map(l => `<a href="${langHref(l)}" hreflang="${l}" lang="${l}" role="menuitem"${l === L ? ' aria-current="true"' : ''}>${flagImg(l, 1)}<b>${l.toUpperCase()}</b><i>${esc(D[l].meta.name)}</i></a>`).join('');
   const navItem = (k, href) => `<a href="${href}" data-nav="${k}">${t.nav[k]}</a>`;
   const mega = CATS.map(c => `<a href="${U.cat(c.id, L)}"><span class="th"><img src="${imgUrl(catCover[c.id], 1)}" alt="" loading="lazy" width="52" height="52"></span><span><b>${esc(catName(c.id, L))}</b><small>${P.filter(p => p.cat === c.id).length} ${t.items}</small></span></a>`).join('');
   const fonts = FONT_BASE + (FONT_EXTRA[L] ? '&' + FONT_EXTRA[L] : '');
@@ -189,7 +193,7 @@ ${jsonld.map(j => `<script type="application/ld+json">${JSON.stringify(j)}</scri
 <body>
 <a class="skip" href="#main">${x.skip}</a>
 <div class="topbar"><div class="wrap"><a href="tel:${PHONE_INT}" dir="ltr">${I.phone}${phone(L)}</a><a href="https://wa.me/${WA}" target="_blank" rel="noopener" dir="ltr">${I.wa}${mobile(L)}</a><a class="tb-mail" href="mailto:${EMAIL}">${I.mail}${EMAIL}</a><span class="tb-r">${t.topRight}</span>
-<details class="langsw"><summary aria-label="${esc(x.language)}">${I.globe}<span>${L.toUpperCase()}</span>${I.chev}</summary><div class="langmenu">${langLinks}</div></details></div></div>
+<div class="langsw"><button type="button" class="langbtn" id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" aria-label="${esc(x.language)}: ${esc(D[L].meta.name)}">${flagImg(L)}<b>${L.toUpperCase()}</b>${I.chev}</button><div class="langmenu" id="lang-menu" role="menu" hidden>${langLinks}</div></div></div></div>
 <header class="site">
   <div class="wrap">
     <a class="logo" href="${U.home(L)}" aria-label="Sofilx"><img src="/img/logo.png" alt="Sofilx" width="383" height="90"></a>
@@ -204,7 +208,7 @@ ${jsonld.map(j => `<script type="application/ld+json">${JSON.stringify(j)}</scri
     </div>
   </div>
   <div class="searchpanel" id="searchpanel" hidden><div class="wrap"><div class="hsearch">${I.search}<input id="q-top" type="search" autocomplete="off" placeholder="${t.searchPh}" aria-label="${t.searchBtn}"><div class="results" id="res-top" hidden></div></div></div></div>
-  <div class="mnav" id="mnav"><a href="${U.products(L)}">${t.nav.products}</a><a href="${U.sectors(L)}">${t.nav.sectors}</a><a href="${U.brands(L)}">${t.nav.brands}</a><a href="${U.custom(L)}">${t.nav.custom}</a><a href="${U.about(L)}">${t.nav.about}</a><a href="${U.refs(L)}">${t.nav.refs}</a><a href="${U.contact(L)}">${t.nav.contact}</a><div class="mlang"><span>${I.globe}${esc(x.language)}</span><div>${langLinks}</div></div></div>
+  <div class="mnav" id="mnav"><a href="${U.products(L)}">${t.nav.products}</a><a href="${U.sectors(L)}">${t.nav.sectors}</a><a href="${U.brands(L)}">${t.nav.brands}</a><a href="${U.custom(L)}">${t.nav.custom}</a><a href="${U.about(L)}">${t.nav.about}</a><a href="${U.refs(L)}">${t.nav.refs}</a><a href="${U.contact(L)}">${t.nav.contact}</a><div class="mlang"><p>${I.globe}${esc(x.language)}</p><div>${langLinks}</div></div></div>
 </header>
 <main id="main">
 ${body}

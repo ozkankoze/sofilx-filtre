@@ -240,5 +240,11 @@
   $$('[data-try]').forEach(function (b) { b.addEventListener('click', function () { var i = $('#q-hero'); i.value = b.dataset.try; i.focus(); i.dispatchEvent(new Event('input')); }); });
   bindListing(); bindProduct(); bindQuote(); cookies(); badge();
 })();
-/* dil menüsü: dışarı tıklayınca kapat */
-document.addEventListener('click', function (e) { document.querySelectorAll('details.langsw[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); }); });
+/* dil menüsü */
+(function () {
+  var b = document.getElementById('lang-btn'), m = document.getElementById('lang-menu'); if (!b || !m) return;
+  function set(o) { m.hidden = !o; b.setAttribute('aria-expanded', String(o)); }
+  b.addEventListener('click', function (e) { e.stopPropagation(); set(m.hidden); });
+  document.addEventListener('click', function (e) { if (!m.hidden && !m.contains(e.target)) set(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !m.hidden) { set(false); b.focus(); } });
+})();
