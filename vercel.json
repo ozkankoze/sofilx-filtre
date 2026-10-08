@@ -1,0 +1,3297 @@
+{
+ "$schema": "https://openapi.vercel.sh/vercel.json",
+ "buildCommand": "npm run build",
+ "outputDirectory": "dist",
+ "framework": null,
+ "cleanUrls": true,
+ "trailingSlash": false,
+ "redirects": [
+  {
+   "source": "/tr/endustriyel-filtre/hepa-filtreler",
+   "destination": "/urun/hepa-filtreler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/endustriyel-filtre/hidrolik-filtreler",
+   "destination": "/urun/hidrolik-filtreler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/endustriyel-filtre/kaset-filtreler",
+   "destination": "/urun/kaset-filtreler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/endustriyel-filtre/torba-filtreler",
+   "destination": "/urun/torba-filtreler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/ozel-uretim-filtre/hidrolik-filtreler3",
+   "destination": "/urun/hidrolik-filtreler3",
+   "permanent": true
+  },
+  {
+   "source": "/tr/ozel-uretim-filtre/hava-filtreleri",
+   "destination": "/urun/hava-filtreleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/ozel-uretim-filtre/kartus-filtreler",
+   "destination": "/urun/kartus-filtreler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/ozel-uretim-filtre/cam-elyaf-filtreleri",
+   "destination": "/urun/cam-elyaf-filtreleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/ozel-uretim-filtre/torba-filtreler6",
+   "destination": "/urun/torba-filtreler6",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/dalgakiran-kompresor",
+   "destination": "/urun/dalgakiran-kompresor",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/mannhummel-kompresor-seperator-yag-filtre-l-hava-filtre",
+   "destination": "/urun/mannhummel-kompresor-seperator-yag-filtre-l-hava-filtre",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/kaeser-kompresor-seperator--yag-ve-hava-filtreleri",
+   "destination": "/urun/kaeser-kompresor-seperator--yag-ve-hava-filtreleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/kaeser-kompresor-seperator-filtreleri",
+   "destination": "/urun/kaeser-kompresor-seperator-filtreleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/ekomak-kompresor-seperator--yag-ve-hava-filtreleri",
+   "destination": "/urun/ekomak-kompresor-seperator--yag-ve-hava-filtreleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/ekomak-kompresor-seperator-filtreleri",
+   "destination": "/urun/ekomak-kompresor-seperator-filtreleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/abac-kompresor-yag-filtreleri",
+   "destination": "/urun/abac-kompresor-yag-filtreleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/abac-kompresor-seperator-filtreleri",
+   "destination": "/urun/abac-kompresor-seperator-filtreleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/ingersoll-rand-kompresor-seperator--yag-ve-hava-filtreleri",
+   "destination": "/urun/ingersoll-rand-kompresor-seperator--yag-ve-hava-filtreleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/mikropor-mko-elementler",
+   "destination": "/urun/mikropor-mko-elementler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/mikropor-mkon-elementler",
+   "destination": "/urun/mikropor-mkon-elementler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/almig-kompresor-kompresor-yag-filtreleri",
+   "destination": "/urun/almig-kompresor-kompresor-yag-filtreleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/almig-kompresor-seperator-filtreleri",
+   "destination": "/urun/almig-kompresor-seperator-filtreleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/alup-kompresor-yag-filtreleri",
+   "destination": "/urun/alup-kompresor-yag-filtreleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/alup-kompresor-seperator-filtreleri",
+   "destination": "/urun/alup-kompresor-seperator-filtreleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/noitech-kompresor-filtreleri",
+   "destination": "/urun/noitech-kompresor-filtreleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/boge-kompresor-seperator--yag-ve-hava-filtreleri",
+   "destination": "/urun/boge-kompresor-seperator--yag-ve-hava-filtreleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/boge-kompresor-seperator-filtreleri",
+   "destination": "/urun/boge-kompresor-seperator-filtreleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/mark-kompresor-seperator-filtreleri",
+   "destination": "/urun/mark-kompresor-seperator-filtreleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/sullair-kompresor-yag-filtreleri",
+   "destination": "/urun/sullair-kompresor-yag-filtreleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/sullair-kompresor-seperator-filtreleri",
+   "destination": "/urun/sullair-kompresor-seperator-filtreleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/orion-hava-filtreleri",
+   "destination": "/urun/orion-hava-filtreleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/mil-s",
+   "destination": "/urun/mil-s",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-532571826-filtre",
+   "destination": "/urun/busch-532571826-filtre",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-yag-filtresi-0531000001",
+   "destination": "/urun/busch-yag-filtresi-0531000001",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-yag-filtresi-0531000002",
+   "destination": "/urun/busch-yag-filtresi-0531000002",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-yag-filtresi-0531000003",
+   "destination": "/urun/busch-yag-filtresi-0531000003",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-yag-filtresi-0531000005",
+   "destination": "/urun/busch-yag-filtresi-0531000005",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-hava-filtresi-0532000002",
+   "destination": "/urun/busch-hava-filtresi-0532000002",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-hava-filtresi-0532000003",
+   "destination": "/urun/busch-hava-filtresi-0532000003",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-hava-filtresi-0532000004",
+   "destination": "/urun/busch-hava-filtresi-0532000004",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-hava-filtresi-0532000005",
+   "destination": "/urun/busch-hava-filtresi-0532000005",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-hava-filtresi-532006",
+   "destination": "/urun/busch-hava-filtresi-532006",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-hava-filtresi1",
+   "destination": "/urun/busch-hava-filtresi1",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-hava-filtresi",
+   "destination": "/urun/busch-hava-filtresi",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-hava-filtresi-909519-532031-206007",
+   "destination": "/urun/busch-hava-filtresi-909519-532031-206007",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-hava-filtresi-909518-532032-206008",
+   "destination": "/urun/busch-hava-filtresi-909518-532032-206008",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-hava-filtresi-",
+   "destination": "/urun/busch-hava-filtresi-",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-egzoz-filtresi-0532000208",
+   "destination": "/urun/busch-egzoz-filtresi-0532000208",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-egzoz-filtresi-0532000239",
+   "destination": "/urun/busch-egzoz-filtresi-0532000239",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-egzoz-filtre-0532000243",
+   "destination": "/urun/busch-egzoz-filtre-0532000243",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-egzoz-filtresi-0532000248",
+   "destination": "/urun/busch-egzoz-filtresi-0532000248",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-egzoz-filtresi-0532000302",
+   "destination": "/urun/busch-egzoz-filtresi-0532000302",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-yag-filtresi-909704312",
+   "destination": "/urun/becker-yag-filtresi-909704312",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-yag-filtresi-9097050000",
+   "destination": "/urun/becker-yag-filtresi-9097050000",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-yag-filtresi-76530105000",
+   "destination": "/urun/becker-yag-filtresi-76530105000",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-yag-filtresi-76530205000",
+   "destination": "/urun/becker-yag-filtresi-76530205000",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-yag-filtresi-9097080000",
+   "destination": "/urun/becker-yag-filtresi-9097080000",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-909505-00000-",
+   "destination": "/urun/becker-hava-filtresi-909505-00000-",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-909506-00000-",
+   "destination": "/urun/becker-hava-filtresi-909506-00000-",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-909507-",
+   "destination": "/urun/becker-hava-filtresi-909507-",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-909508-0000",
+   "destination": "/urun/becker-hava-filtresi-909508-0000",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-909509-0000",
+   "destination": "/urun/becker-hava-filtresi-909509-0000",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-909510",
+   "destination": "/urun/becker-hava-filtresi-909510",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-909512",
+   "destination": "/urun/becker-hava-filtresi-909512",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-909514",
+   "destination": "/urun/becker-hava-filtresi-909514",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-909516",
+   "destination": "/urun/becker-hava-filtresi-909516",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-909518",
+   "destination": "/urun/becker-hava-filtresi-909518",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-909519",
+   "destination": "/urun/becker-hava-filtresi-909519",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-909521",
+   "destination": "/urun/becker-hava-filtresi-909521",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-909527",
+   "destination": "/urun/becker-hava-filtresi-909527",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-909529",
+   "destination": "/urun/becker-hava-filtresi-909529",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-909534",
+   "destination": "/urun/becker-hava-filtresi-909534",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-317856---317856-600",
+   "destination": "/urun/rietschle-hava-filtresi-317856---317856-600",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-317896",
+   "destination": "/urun/rietschle-hava-filtresi-317896",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-317900",
+   "destination": "/urun/rietschle-hava-filtresi-317900",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-317901",
+   "destination": "/urun/rietschle-hava-filtresi-317901",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/-rietschle-hava-filtresi-317957",
+   "destination": "/urun/-rietschle-hava-filtresi-317957",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-317960",
+   "destination": "/urun/rietschle-hava-filtresi-317960",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-317984---317984-600",
+   "destination": "/urun/rietschle-hava-filtresi-317984---317984-600",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-317985",
+   "destination": "/urun/rietschle-hava-filtresi-317985",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-318010",
+   "destination": "/urun/rietschle-hava-filtresi-318010",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-318710",
+   "destination": "/urun/rietschle-hava-filtresi-318710",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-513457",
+   "destination": "/urun/rietschle-hava-filtresi-513457",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-513458",
+   "destination": "/urun/rietschle-hava-filtresi-513458",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-515310",
+   "destination": "/urun/rietschle-hava-filtresi-515310",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-515339",
+   "destination": "/urun/rietschle-hava-filtresi-515339",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-515340",
+   "destination": "/urun/rietschle-hava-filtresi-515340",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-515411",
+   "destination": "/urun/rietschle-hava-filtresi-515411",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-730501",
+   "destination": "/urun/rietschle-hava-filtresi-730501",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-730502",
+   "destination": "/urun/rietschle-hava-filtresi-730502",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-730504",
+   "destination": "/urun/rietschle-hava-filtresi-730504",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-730506",
+   "destination": "/urun/rietschle-hava-filtresi-730506",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/leybold-yag-filtresi-71018858",
+   "destination": "/urun/leybold-yag-filtresi-71018858",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/leybold-yag-filtresi-71212718",
+   "destination": "/urun/leybold-yag-filtresi-71212718",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/leybold-yag-filtresi-71213150",
+   "destination": "/urun/leybold-yag-filtresi-71213150",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/leybold-yag-filtresi-71213158",
+   "destination": "/urun/leybold-yag-filtresi-71213158",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/leybold-yag-filtresi-71214598",
+   "destination": "/urun/leybold-yag-filtresi-71214598",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/leybold-yag-filtresi-71405318",
+   "destination": "/urun/leybold-yag-filtresi-71405318",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/leybold-yag-filtresi-71420980",
+   "destination": "/urun/leybold-yag-filtresi-71420980",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/leybold-filtre-71064763",
+   "destination": "/urun/leybold-filtre-71064763",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/leybold-filtre-71064773",
+   "destination": "/urun/leybold-filtre-71064773",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/leybold-filtre-71232023",
+   "destination": "/urun/leybold-filtre-71232023",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/leybold-filtre-71413280",
+   "destination": "/urun/leybold-filtre-71413280",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/leybold-filtre-71416340",
+   "destination": "/urun/leybold-filtre-71416340",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/leybold-filtre-71417300",
+   "destination": "/urun/leybold-filtre-71417300",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/leybold-filtre-71421180",
+   "destination": "/urun/leybold-filtre-71421180",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/leybold-filtre-971431120",
+   "destination": "/urun/leybold-filtre-971431120",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/gev-yag-filtresi-73017",
+   "destination": "/urun/gev-yag-filtresi-73017",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/general-europe-vacuum-hava-filtresi-",
+   "destination": "/urun/general-europe-vacuum-hava-filtresi-",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/gev-eksoz-filtre-637100050",
+   "destination": "/urun/gev-eksoz-filtre-637100050",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/gev-eksoz-filtre-637100180",
+   "destination": "/urun/gev-eksoz-filtre-637100180",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/gev-eksoz-filtre-637100280",
+   "destination": "/urun/gev-eksoz-filtre-637100280",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/gev-eksoz-filtre-637100350",
+   "destination": "/urun/gev-eksoz-filtre-637100350",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/p-v-r--hava-filtresi",
+   "destination": "/urun/p-v-r--hava-filtresi",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/turbosyn%E2%84%A2-vzf-d-68-rcs-ultra-yuksek-performansli-tam-sentetik-sogutma-kompresor-yagi",
+   "destination": "/urun/turbosyn%E2%84%A2-vzf-d-68-rcs-ultra-yuksek-performansli-tam-sentetik-sogutma-kompresor-yagi",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/coolsyn%E2%84%A2-vzf-d-15-plus-yuksek-performansli-suda-cozunebilen-sogutma-yagi",
+   "destination": "/urun/coolsyn%E2%84%A2-vzf-d-15-plus-yuksek-performansli-suda-cozunebilen-sogutma-yagi",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/coolsyn%E2%84%A2-vzf-d-15-extra-ustun-performansli-suda-cozunebilen-sogutma-yagi",
+   "destination": "/urun/coolsyn%E2%84%A2-vzf-d-15-extra-ustun-performansli-suda-cozunebilen-sogutma-yagi",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/busch-vsc-100-vakum-pompasi-yagi",
+   "destination": "/urun/busch-vsc-100-vakum-pompasi-yagi",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/busch-vm-032-vakum-pompasi-yagi",
+   "destination": "/urun/busch-vm-032-vakum-pompasi-yagi",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/busch-vm-068-vakum-pompasi-yagi",
+   "destination": "/urun/busch-vm-068-vakum-pompasi-yagi",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/busch-vm-100-vakum-pompasi-yagi",
+   "destination": "/urun/busch-vm-100-vakum-pompasi-yagi",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/busch-vs-150-vakum-pompasi-yagi",
+   "destination": "/urun/busch-vs-150-vakum-pompasi-yagi",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/becker-vakum-pompa-yaglari",
+   "destination": "/urun/becker-vakum-pompa-yaglari",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/cok-amacli-yaglayicilar",
+   "destination": "/urun/cok-amacli-yaglayicilar",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/anderol-disli--rulman-ve-zincir-yaglari",
+   "destination": "/urun/anderol-disli--rulman-ve-zincir-yaglari",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/anderol-gres-yaglari",
+   "destination": "/urun/anderol-gres-yaglari",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/anderol-hidrolik-yaglar",
+   "destination": "/urun/anderol-hidrolik-yaglar",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/anderol-kompresor-ve-vakum-pompasi-yaglari",
+   "destination": "/urun/anderol-kompresor-ve-vakum-pompasi-yaglari",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/avia-korozyondan-koruyucu-urunler",
+   "destination": "/urun/avia-korozyondan-koruyucu-urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/avia-metal-isleme-yaglar",
+   "destination": "/urun/avia-metal-isleme-yaglar",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/avia-temizleyiciler",
+   "destination": "/urun/avia-temizleyiciler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/birkosit",
+   "destination": "/urun/birkosit",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/diffi-therm-tahribatsiz-catlak-tespit-kimyasallari",
+   "destination": "/urun/diffi-therm-tahribatsiz-catlak-tespit-kimyasallari",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/diffu-therm-emulgatorler",
+   "destination": "/urun/diffu-therm-emulgatorler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/diffu-therm-temizleyiciler",
+   "destination": "/urun/diffu-therm-temizleyiciler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/filling",
+   "destination": "/urun/filling",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/filling-basic",
+   "destination": "/urun/filling-basic",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/filling-1000",
+   "destination": "/urun/filling-1000",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/filling-2000",
+   "destination": "/urun/filling-2000",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/cam-kalip-yaglari",
+   "destination": "/urun/cam-kalip-yaglari",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/neck-ring-yaglari",
+   "destination": "/urun/neck-ring-yaglari",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/kalip-ayiricilar",
+   "destination": "/urun/kalip-ayiricilar",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/konveyor-yaglari",
+   "destination": "/urun/konveyor-yaglari",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/i-s--yaglari",
+   "destination": "/urun/i-s--yaglari",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/diger-urunler",
+   "destination": "/urun/diger-urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/gresler",
+   "destination": "/urun/gresler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/kuru-film-yaglayicilar",
+   "destination": "/urun/kuru-film-yaglayicilar",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/tahribatsiz-catlak-tespit-kimyasallari",
+   "destination": "/urun/tahribatsiz-catlak-tespit-kimyasallari",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/hidrolik-yaglar",
+   "destination": "/urun/hidrolik-yaglar",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/kompresor-ve-vakum-pompasi-yaglari",
+   "destination": "/urun/kompresor-ve-vakum-pompasi-yaglari",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/disli--rulman-ve-zincir-yaglari",
+   "destination": "/urun/disli--rulman-ve-zincir-yaglari",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/ozel-amacli-urunler",
+   "destination": "/urun/ozel-amacli-urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/silikon-yaglari",
+   "destination": "/urun/silikon-yaglari",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/temizleyiciler",
+   "destination": "/urun/temizleyiciler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/silikon-yaglari6",
+   "destination": "/urun/silikon-yaglari6",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/pas-sokuculer-ve-korozyondan-koruyucu-urunler",
+   "destination": "/urun/pas-sokuculer-ve-korozyondan-koruyucu-urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/montaj-pastalari",
+   "destination": "/urun/montaj-pastalari",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/metal-isleme-yaglari",
+   "destination": "/urun/metal-isleme-yaglari",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/korozyondan-koruyucu-urunler",
+   "destination": "/urun/korozyondan-koruyucu-urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/kalip-ayiricilar5",
+   "destination": "/urun/kalip-ayiricilar5",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/gresler6",
+   "destination": "/urun/gresler6",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/montaj-pastalari8",
+   "destination": "/urun/montaj-pastalari8",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/kuru-film-yaglayicilar4",
+   "destination": "/urun/kuru-film-yaglayicilar4",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/yag-katkilari",
+   "destination": "/urun/yag-katkilari",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/ozel-amacli-yaglayicilar",
+   "destination": "/urun/ozel-amacli-yaglayicilar",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/disli--rulman-ve-zincir-yaglari8",
+   "destination": "/urun/disli--rulman-ve-zincir-yaglari8",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/temizleyiciler4",
+   "destination": "/urun/temizleyiciler4",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/silikon-yaglari7",
+   "destination": "/urun/silikon-yaglari7",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/pas-sokuculer-ve-korozyondan-koruyucu-urunler2",
+   "destination": "/urun/pas-sokuculer-ve-korozyondan-koruyucu-urunler2",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/metal-isleme-yaglari1",
+   "destination": "/urun/metal-isleme-yaglari1",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/ozel-amacli-urunler4",
+   "destination": "/urun/ozel-amacli-urunler4",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/korozyondan-koruyucu-urunler7",
+   "destination": "/urun/korozyondan-koruyucu-urunler7",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/kalip-ayiricilar4",
+   "destination": "/urun/kalip-ayiricilar4",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urun/hidrolik-yaglar5",
+   "destination": "/urun/hidrolik-yaglar5",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---wn-124-003",
+   "destination": "/urun/becker-vakum-palet-komuru---wn-124-003",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---wn-124-031",
+   "destination": "/urun/becker-vakum-palet-komuru---wn-124-031",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---wn-124-032",
+   "destination": "/urun/becker-vakum-palet-komuru---wn-124-032",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---wn-124-033",
+   "destination": "/urun/becker-vakum-palet-komuru---wn-124-033",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-palet---wn-124-034",
+   "destination": "/urun/becker-palet---wn-124-034",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---wn-124-082",
+   "destination": "/urun/becker-vakum-palet-komuru---wn-124-082",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90131500008-wn-124-089",
+   "destination": "/urun/becker-vakum-palet-komuru---90131500008-wn-124-089",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90131600008-wn-124-090",
+   "destination": "/urun/becker-vakum-palet-komuru---90131600008-wn-124-090",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90131700008-wn-124-094",
+   "destination": "/urun/becker-vakum-palet-komuru---90131700008-wn-124-094",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90130800008-wn-124-104",
+   "destination": "/urun/becker-vakum-palet-komuru---90130800008-wn-124-104",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90133100007-wn-124-116",
+   "destination": "/urun/becker-vakum-palet-komuru---90133100007-wn-124-116",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90134700007-wn-124-120",
+   "destination": "/urun/becker-vakum-palet-komuru---90134700007-wn-124-120",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru-90135200007-wn-124-161",
+   "destination": "/urun/becker-vakum-palet-komuru-90135200007-wn-124-161",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90134900007-wn-124-162",
+   "destination": "/urun/becker-vakum-palet-komuru---90134900007-wn-124-162",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90136100005-wn-124-183",
+   "destination": "/urun/becker-vakum-palet-komuru---90136100005-wn-124-183",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90137200007-wn-124-195",
+   "destination": "/urun/becker-vakum-palet-komuru---90137200007-wn-124-195",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90136701005-wn-124-196",
+   "destination": "/urun/becker-vakum-palet-komuru---90136701005-wn-124-196",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90137301008-wn-124-205",
+   "destination": "/urun/becker-vakum-palet-komuru---90137301008-wn-124-205",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90138700005-wn-124-219",
+   "destination": "/urun/becker-vakum-palet-komuru---90138700005-wn-124-219",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90138800005-wn-124-220",
+   "destination": "/urun/becker-vakum-palet-komuru---90138800005-wn-124-220",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1025-c-sd-1025-c-dc-0025-c-olcu-68-5444-mm1",
+   "destination": "/urun/busch-palet---sv-1025-c-sd-1025-c-dc-0025-c-olcu-68-5444-mm1",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1016-b-sd-1016b-sv-1016-c-sd-1016-c-olcu-63354-mm",
+   "destination": "/urun/busch-palet---sv-1016-b-sd-1016b-sv-1016-c-sd-1016-c-olcu-63354-mm",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---dc-0040-c-sv---sd-1040-b-sv---sd-1040-c-olcu-95444-mm",
+   "destination": "/urun/busch-palet---dc-0040-c-sv---sd-1040-b-sv---sd-1040-c-olcu-95444-mm",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1025-c-sd-1025-c-dc-0025-c-olcu-68-5444-mm",
+   "destination": "/urun/busch-palet---sv-1025-c-sd-1025-c-dc-0025-c-olcu-68-5444-mm",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1010-c-sd-1010-c-olcu-4036-54-mm4",
+   "destination": "/urun/busch-palet---sv-1010-c-sd-1010-c-olcu-4036-54-mm4",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1010-c-sd-1010-c-olcu-4036-54-mm",
+   "destination": "/urun/busch-palet---sv-1010-c-sd-1010-c-olcu-4036-54-mm",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1025-c-sd-1025-c-dc-0025-c-olcu-68-5444-mm-",
+   "destination": "/urun/busch-palet---sv-1025-c-sd-1025-c-dc-0025-c-olcu-68-5444-mm-",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-0722522489-0722000489-palet-seti",
+   "destination": "/urun/busch-0722522489-0722000489-palet-seti",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet--dc-0040-c-sv---sd-1040-b-sv---sd-1040-c-olcu-95444-mm",
+   "destination": "/urun/busch-palet--dc-0040-c-sv---sd-1040-b-sv---sd-1040-c-olcu-95444-mm",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1016-b-sd-1016b-sv-1016-c-sd-1016-c-olcu-63354-mm-",
+   "destination": "/urun/busch-palet---sv-1016-b-sd-1016b-sv-1016-c-sd-1016-c-olcu-63354-mm-",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet-sv-1025-b-sd-1025-b-olcu-9836-54-mm",
+   "destination": "/urun/busch-palet-sv-1025-b-sd-1025-b-olcu-9836-54-mm",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1100c-sd-1100c-dc-0100c-olcu-249-5-40-3-8-mm",
+   "destination": "/urun/busch-palet---sv-1100c-sd-1100c-dc-0100c-olcu-249-5-40-3-8-mm",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1140-c-sd-1140-c-dc-0140-c-olcu-239-5453-8-mm",
+   "destination": "/urun/busch-palet---sv-1140-c-sd-1140-c-dc-0140-c-olcu-239-5453-8-mm",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-0722544213-0722207620-palet-seti",
+   "destination": "/urun/busch-0722544213-0722207620-palet-seti",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---dc-0040-c-sv---sd-1040-b-sv---sd-1040-c-olcu-95444-mm-",
+   "destination": "/urun/busch-palet---dc-0040-c-sv---sd-1040-b-sv---sd-1040-c-olcu-95444-mm-",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1008-a-olcu-27344-mm",
+   "destination": "/urun/busch-palet---sv-1008-a-olcu-27344-mm",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet-sv-1003-d-olcu-20193-mm-",
+   "destination": "/urun/busch-palet-sv-1003-d-olcu-20193-mm-",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet--sv-1016-b-sd-1016b-sv-1016-c-sd-1016-c-olcu-63354-mm",
+   "destination": "/urun/busch-palet--sv-1016-b-sd-1016b-sv-1016-c-sd-1016-c-olcu-63354-mm",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1010-b-sd-1010b-olcu-55273-mm",
+   "destination": "/urun/busch-palet---sv-1010-b-sd-1010b-olcu-55273-mm",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sd-1063-b-sv-1063-b-dc-0063-olcu-135444-mm",
+   "destination": "/urun/busch-palet---sd-1063-b-sv-1063-b-dc-0063-olcu-135444-mm",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---529267-529268",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---529267-529268",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---523777-528802",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---523777-528802",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---528401",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---528401",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---526627-525421-523885",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---526627-525421-523885",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---526577",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---526577",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---527134-526393",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---527134-526393",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---527133-526392",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---527133-526392",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---526315",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---526315",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---526311",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---526311",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---526098-527958",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---526098-527958",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---525351-525977",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---525351-525977",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---524142",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---524142",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---524009-507108",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---524009-507108",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---507107-524007",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---507107-524007",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/rietschle-palet---vft-180-dft-180-olcu-240556-mm7",
+   "destination": "/urun/rietschle-palet---vft-180-dft-180-olcu-240556-mm7",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---524003-5235565",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---524003-5235565",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---524002",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---524002",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---523880",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---523880",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---523778-526886-5238515",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---523778-526886-5238515",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---523778-526886-523851",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---523778-526886-523851",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/orion-vakum-pompasi-paletleri",
+   "destination": "/urun/orion-vakum-pompasi-paletleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90057900006",
+   "destination": "/urun/becker-palet-seti-90057900006",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90050500003",
+   "destination": "/urun/becker-palet-seti-90050500003",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90050600003",
+   "destination": "/urun/becker-palet-seti-90050600003",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90050700003",
+   "destination": "/urun/becker-palet-seti-90050700003",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90050800005",
+   "destination": "/urun/becker-palet-seti-90050800005",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90051100003",
+   "destination": "/urun/becker-palet-seti-90051100003",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90051200003",
+   "destination": "/urun/becker-palet-seti-90051200003",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90051900004",
+   "destination": "/urun/becker-palet-seti-90051900004",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90052500004",
+   "destination": "/urun/becker-palet-seti-90052500004",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90052600004",
+   "destination": "/urun/becker-palet-seti-90052600004",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90052800003",
+   "destination": "/urun/becker-palet-seti-90052800003",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90054300005",
+   "destination": "/urun/becker-palet-seti-90054300005",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90055000005",
+   "destination": "/urun/becker-palet-seti-90055000005",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90055100005",
+   "destination": "/urun/becker-palet-seti-90055100005",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90055600005",
+   "destination": "/urun/becker-palet-seti-90055600005",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90056100003",
+   "destination": "/urun/becker-palet-seti-90056100003",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90057600008",
+   "destination": "/urun/becker-palet-seti-90057600008",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90057800006",
+   "destination": "/urun/becker-palet-seti-90057800006",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90058000003",
+   "destination": "/urun/becker-palet-seti-90058000003",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90058100003",
+   "destination": "/urun/becker-palet-seti-90058100003",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0722000270",
+   "destination": "/urun/busch-palet-seti-0722000270",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/-busch-palet-seti-0722000300",
+   "destination": "/urun/-busch-palet-seti-0722000300",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0722000330",
+   "destination": "/urun/busch-palet-seti-0722000330",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0722000360",
+   "destination": "/urun/busch-palet-seti-0722000360",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0-722000452",
+   "destination": "/urun/busch-palet-seti-0-722000452",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0722000453",
+   "destination": "/urun/busch-palet-seti-0722000453",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0722000454",
+   "destination": "/urun/busch-palet-seti-0722000454",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0722000455",
+   "destination": "/urun/busch-palet-seti-0722000455",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0722000456",
+   "destination": "/urun/busch-palet-seti-0722000456",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0722000457",
+   "destination": "/urun/busch-palet-seti-0722000457",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0722515895",
+   "destination": "/urun/busch-palet-seti-0722515895",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0722516573",
+   "destination": "/urun/busch-palet-seti-0722516573",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0722516729",
+   "destination": "/urun/busch-palet-seti-0722516729",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0724000573-",
+   "destination": "/urun/busch-palet-seti-0724000573-",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0724105206",
+   "destination": "/urun/busch-palet-seti-0724105206",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0724118303",
+   "destination": "/urun/busch-palet-seti-0724118303",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0724118546",
+   "destination": "/urun/busch-palet-seti-0724118546",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/elmo-rietschle-525400-palet-seti",
+   "destination": "/urun/elmo-rietschle-525400-palet-seti",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/elmo-rietschle-567046-palet-seti",
+   "destination": "/urun/elmo-rietschle-567046-palet-seti",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/elmo-rietschle-palet-setleri",
+   "destination": "/urun/elmo-rietschle-palet-setleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/gev-palet-seti-gev-40100-gev-palet-seti-gev-40065-",
+   "destination": "/urun/gev-palet-seti-gev-40100-gev-palet-seti-gev-40065-",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/leybold-sogevac-71214310-palet-seti",
+   "destination": "/urun/leybold-sogevac-71214310-palet-seti",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/leybold-sogevac-71234370-palet-seti",
+   "destination": "/urun/leybold-sogevac-71234370-palet-seti",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/leybold-sogevac-71401060-palet-seti",
+   "destination": "/urun/leybold-sogevac-71401060-palet-seti",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/leybold-sogevac-71401070-palet-seti",
+   "destination": "/urun/leybold-sogevac-71401070-palet-seti",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/leybold-sogevac-71401510-palet-seti",
+   "destination": "/urun/leybold-sogevac-71401510-palet-seti",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/leybold-sogevac-71412000-palet-seti",
+   "destination": "/urun/leybold-sogevac-71412000-palet-seti",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/leybold-sogevac-71412020-palet-seti",
+   "destination": "/urun/leybold-sogevac-71412020-palet-seti",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/leybold-sogevac-71413150-palet-seti",
+   "destination": "/urun/leybold-sogevac-71413150-palet-seti",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/leybold-sogevac-71416290-palet-seti",
+   "destination": "/urun/leybold-sogevac-71416290-palet-seti",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/leybold-sogevac-71416750-palet-seti",
+   "destination": "/urun/leybold-sogevac-71416750-palet-seti",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/leybold-sogevac-71418750-palet-seti",
+   "destination": "/urun/leybold-sogevac-71418750-palet-seti",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/leybold-sogevac-971424540-palet-seti",
+   "destination": "/urun/leybold-sogevac-971424540-palet-seti",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/leybold-sogevac-sv-585-palet-seti-71029380-",
+   "destination": "/urun/leybold-sogevac-sv-585-palet-seti-71029380-",
+   "permanent": true
+  },
+  {
+   "source": "/tr/ekkb/elektrik-komurleri",
+   "destination": "/urun/elektrik-komurleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/ekkb/mekanik-karbon--karbon-burclar---karbon-ringler",
+   "destination": "/urun/mekanik-karbon--karbon-burclar---karbon-ringler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/atlas-copco-1310072261-kaplin",
+   "destination": "/urun/atlas-copco-1310072261-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/atlas-copco-1604076100-kaplin",
+   "destination": "/urun/atlas-copco-1604076100-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/atlas-copco-1604475400-kaplin",
+   "destination": "/urun/atlas-copco-1604475400-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/atlas-copco-1613688500-kaplin",
+   "destination": "/urun/atlas-copco-1613688500-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/atlas-copco-1615622900-kaplin",
+   "destination": "/urun/atlas-copco-1615622900-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/atlas-copco-1615648800-kaplin",
+   "destination": "/urun/atlas-copco-1615648800-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/atlas-copco-1615682500-kaplin",
+   "destination": "/urun/atlas-copco-1615682500-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/atlas-copco-57777286-kaplin-elemani",
+   "destination": "/urun/atlas-copco-57777286-kaplin-elemani",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/atlas-copco-kaplin-gobegi-1604074500",
+   "destination": "/urun/atlas-copco-kaplin-gobegi-1604074500",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/atlas-copco-kaplin-gobegi-1604077400",
+   "destination": "/urun/atlas-copco-kaplin-gobegi-1604077400",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/atlas-copco-kaplin-1615606401",
+   "destination": "/urun/atlas-copco-kaplin-1615606401",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/atlas-copco-kaplin---1202871300",
+   "destination": "/urun/atlas-copco-kaplin---1202871300",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/metal-kaplin-ingersoll-rand---atlas-copco-2635703750",
+   "destination": "/urun/metal-kaplin-ingersoll-rand---atlas-copco-2635703750",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/atlas-copco-1615667500-kaplin",
+   "destination": "/urun/atlas-copco-1615667500-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/atlas-copco-1619551000-kaplin",
+   "destination": "/urun/atlas-copco-1619551000-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/centaflex-2a-2019608-778322-kaplin",
+   "destination": "/urun/centaflex-2a-2019608-778322-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/centaflex-1a-2019608-778322-kaplin",
+   "destination": "/urun/centaflex-1a-2019608-778322-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/centaflex-4a-2019608-778322-kaplin",
+   "destination": "/urun/centaflex-4a-2019608-778322-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/centaflex-8a-2019608-778322-kaplin",
+   "destination": "/urun/centaflex-8a-2019608-778322-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/centaflex-12a-2019608-778322-kaplin",
+   "destination": "/urun/centaflex-12a-2019608-778322-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/centaflex-16a-2019608-778322-kaplin",
+   "destination": "/urun/centaflex-16a-2019608-778322-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/centaflex-50a-2019608-778322-kaplin",
+   "destination": "/urun/centaflex-50a-2019608-778322-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/centaflex-a---as-serisi",
+   "destination": "/urun/centaflex-a---as-serisi",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/centaflex-b-serisi-kaplinleri",
+   "destination": "/urun/centaflex-b-serisi-kaplinleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/centaflex-h-serisi-kaplinleri",
+   "destination": "/urun/centaflex-h-serisi-kaplinleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/centaflex-k-serisi-kaplinler",
+   "destination": "/urun/centaflex-k-serisi-kaplinler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/centaflex-x-serisi-kaplinler",
+   "destination": "/urun/centaflex-x-serisi-kaplinler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/dodge-d-flex-4je-004210-",
+   "destination": "/urun/dodge-d-flex-4je-004210-",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/dodge-004246-d-flex-5jes-kaplin",
+   "destination": "/urun/dodge-004246-d-flex-5jes-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/dodge-004214-d-flex-6je-kaplin",
+   "destination": "/urun/dodge-004214-d-flex-6je-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/dodge-004216-d-flex-7je-kaplin",
+   "destination": "/urun/dodge-004216-d-flex-7je-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/dodge-004218-d-flex-8je-kaplin",
+   "destination": "/urun/dodge-004218-d-flex-8je-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/dodge-004220-d-flex-9je-kaplin",
+   "destination": "/urun/dodge-004220-d-flex-9je-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/dodge-004222-d-flex-10je-kaplin",
+   "destination": "/urun/dodge-004222-d-flex-10je-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/dodge-011307-ph87",
+   "destination": "/urun/dodge-011307-ph87",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/dodge-011267-ph96-kaplin",
+   "destination": "/urun/dodge-011267-ph96-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/dodge-011230-ph116-kaplin",
+   "destination": "/urun/dodge-011230-ph116-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/dodge-011231-ph131-kaplin",
+   "destination": "/urun/dodge-011231-ph131-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/dodge-011270-ph172-kaplin",
+   "destination": "/urun/dodge-011270-ph172-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/dodge-ph192-011236---011271",
+   "destination": "/urun/dodge-ph192-011236---011271",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/dodge-ph213-011239-kaplin",
+   "destination": "/urun/dodge-ph213-011239-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/dodge-ph252-011242-kaplin",
+   "destination": "/urun/dodge-ph252-011242-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/ingersoll-rand-22351720-kaplin",
+   "destination": "/urun/ingersoll-rand-22351720-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/ingersoll-rand-46492955-kaplin",
+   "destination": "/urun/ingersoll-rand-46492955-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/ingersoll-rand-46492971-kaplin",
+   "destination": "/urun/ingersoll-rand-46492971-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/doosan-k9000415-%E2%80%93-elastik-kaplin",
+   "destination": "/urun/doosan-k9000415-%E2%80%93-elastik-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/ingersoll-rand-bj-1333-21-%E2%80%93-lord-kaplin",
+   "destination": "/urun/ingersoll-rand-bj-1333-21-%E2%80%93-lord-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/ingersoll-rand-doosan-36865012-kaplin",
+   "destination": "/urun/ingersoll-rand-doosan-36865012-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/ingersoll-rand---doosan-k9000415-lc-5229-10-lord-kaplin",
+   "destination": "/urun/ingersoll-rand---doosan-k9000415-lc-5229-10-lord-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/escogear-cmm-100-komple-kaplin",
+   "destination": "/urun/escogear-cmm-100-komple-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/hrc-70-komple-set",
+   "destination": "/urun/hrc-70-komple-set",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/hrc-70-kaplin",
+   "destination": "/urun/hrc-70-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/hrc-90-komple-set",
+   "destination": "/urun/hrc-90-komple-set",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/hrc-90-kaplin",
+   "destination": "/urun/hrc-90-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/hrc-110-kaplin-komple-set",
+   "destination": "/urun/hrc-110-kaplin-komple-set",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/hrc-110-kaplin",
+   "destination": "/urun/hrc-110-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/hrc-130-kaplin-komple-set",
+   "destination": "/urun/hrc-130-kaplin-komple-set",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/hrc-130-kaplin",
+   "destination": "/urun/hrc-130-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/hrc-150-kaplin-komple-set",
+   "destination": "/urun/hrc-150-kaplin-komple-set",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/hrc-150-kaplin",
+   "destination": "/urun/hrc-150-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/hrc-180-kaplin-komple-set",
+   "destination": "/urun/hrc-180-kaplin-komple-set",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/hrc-180-kaplin",
+   "destination": "/urun/hrc-180-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/hrc-230-kaplin-komple-set",
+   "destination": "/urun/hrc-230-kaplin-komple-set",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/hrc-230-kaplin",
+   "destination": "/urun/hrc-230-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/hrc-280-kaplin-komple-set",
+   "destination": "/urun/hrc-280-kaplin-komple-set",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/hrc-280-kaplin",
+   "destination": "/urun/hrc-280-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/arpex-s06-195",
+   "destination": "/urun/arpex-s06-195",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/arpex-s06-240",
+   "destination": "/urun/arpex-s06-240",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/arpex-s06-255",
+   "destination": "/urun/arpex-s06-255",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/arpex-s06-280",
+   "destination": "/urun/arpex-s06-280",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/arpex-s06-372",
+   "destination": "/urun/arpex-s06-372",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/arpex-s06-442",
+   "destination": "/urun/arpex-s06-442",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/arpex-k430-180",
+   "destination": "/urun/arpex-k430-180",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/elpex-320-2-kaplin-set",
+   "destination": "/urun/elpex-320-2-kaplin-set",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/elpex-b-210-kaplin",
+   "destination": "/urun/elpex-b-210-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/elpex-s-est-220-nn-kaplin",
+   "destination": "/urun/elpex-s-est-220-nn-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/n-eupex-58",
+   "destination": "/urun/n-eupex-58",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/n-eupex-68",
+   "destination": "/urun/n-eupex-68",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/n-eupex-95",
+   "destination": "/urun/n-eupex-95",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/n-eupex-125",
+   "destination": "/urun/n-eupex-125",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/n-eupex-140",
+   "destination": "/urun/n-eupex-140",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/n-eupex-225",
+   "destination": "/urun/n-eupex-225",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/n-eupex-280",
+   "destination": "/urun/n-eupex-280",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/n-eupex-ds-118",
+   "destination": "/urun/n-eupex-ds-118",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/n-eupex-ds-194",
+   "destination": "/urun/n-eupex-ds-194",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/n-eupex-ds-194-",
+   "destination": "/urun/n-eupex-ds-194-",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/goetze-giubo-81894-kaplin",
+   "destination": "/urun/goetze-giubo-81894-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/goetze-88248-giubo-kaplin",
+   "destination": "/urun/goetze-88248-giubo-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/goetze-88259-giubo-kaplin",
+   "destination": "/urun/goetze-88259-giubo-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/goetze-88260-giubo",
+   "destination": "/urun/goetze-88260-giubo",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/goetze-88261-giubo-kaplin",
+   "destination": "/urun/goetze-88261-giubo-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/goetze-88262-giubo-kaplin",
+   "destination": "/urun/goetze-88262-giubo-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/goetze-88263-giubo-kaplin",
+   "destination": "/urun/goetze-88263-giubo-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/goetze-88264-giubo-kaplin",
+   "destination": "/urun/goetze-88264-giubo-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/goetze-88265-giubo-kaplin",
+   "destination": "/urun/goetze-88265-giubo-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/goetze-88272-giubo-kaplin",
+   "destination": "/urun/goetze-88272-giubo-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/goetze-88266-giubo-kaplin",
+   "destination": "/urun/goetze-88266-giubo-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/goetze-88331-giubo-kaplin",
+   "destination": "/urun/goetze-88331-giubo-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/goetze-88502-giubo-kaplin",
+   "destination": "/urun/goetze-88502-giubo-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/goetze-88551-giubo-kaplin",
+   "destination": "/urun/goetze-88551-giubo-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/goetze-88613-giubo-kaplin",
+   "destination": "/urun/goetze-88613-giubo-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/goetze-880890-giubo-kaplin",
+   "destination": "/urun/goetze-880890-giubo-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/gummi-a-105-kaplin",
+   "destination": "/urun/gummi-a-105-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/gummi-a-95-kaplin",
+   "destination": "/urun/gummi-a-95-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/gummi-a-60-kaplin",
+   "destination": "/urun/gummi-a-60-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/gummi-a-50-kaplin",
+   "destination": "/urun/gummi-a-50-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/gummi-a-35-kaplin",
+   "destination": "/urun/gummi-a-35-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/gummi-a-30-kaplin",
+   "destination": "/urun/gummi-a-30-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/gummi-a-25-kaplin",
+   "destination": "/urun/gummi-a-25-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/gummi-a-20-kaplin",
+   "destination": "/urun/gummi-a-20-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/gummi-a-45-komple-kaplin-",
+   "destination": "/urun/gummi-a-45-komple-kaplin-",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/gummi-a-45-kaplin",
+   "destination": "/urun/gummi-a-45-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/gummi-a-90-kaplin",
+   "destination": "/urun/gummi-a-90-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/gummi-a-80-kaplin",
+   "destination": "/urun/gummi-a-80-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/gummi-a-70-kaplin",
+   "destination": "/urun/gummi-a-70-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/hayes-sc-075-01-sae-7-5-kaplin",
+   "destination": "/urun/hayes-sc-075-01-sae-7-5-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/hayes-c-075-sae-7-5-kaplin",
+   "destination": "/urun/hayes-c-075-sae-7-5-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/hayes-c-010-qa-sae-10-kaplin",
+   "destination": "/urun/hayes-c-010-qa-sae-10-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/jac-rf-135-kaplin",
+   "destination": "/urun/jac-rf-135-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/jac-rf-180-kaplin",
+   "destination": "/urun/jac-rf-180-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/jac-rf-265-kaplin",
+   "destination": "/urun/jac-rf-265-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/jac-rf-210-kaplin",
+   "destination": "/urun/jac-rf-210-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/jac-rf-340-kaplin",
+   "destination": "/urun/jac-rf-340-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/jac-rf-185-kaplin-",
+   "destination": "/urun/jac-rf-185-kaplin-",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/jac-rf-160-kaplin",
+   "destination": "/urun/jac-rf-160-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/jac-rf-140-kaplin",
+   "destination": "/urun/jac-rf-140-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/jac-rf-120-kaplin",
+   "destination": "/urun/jac-rf-120-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/jac-rf-100-kaplin",
+   "destination": "/urun/jac-rf-100-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/jac-rf-265-kaplin5",
+   "destination": "/urun/jac-rf-265-kaplin5",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/jac-rf-220",
+   "destination": "/urun/jac-rf-220",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/jurid-s29s-kaplin",
+   "destination": "/urun/jurid-s29s-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/jurid-s31s-kaplin",
+   "destination": "/urun/jurid-s31s-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/bowex-elastik-kaplin",
+   "destination": "/urun/bowex-elastik-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/reich-arcusaflex-ac-h-6-1-sp-nt-12014700470509-kaplin",
+   "destination": "/urun/reich-arcusaflex-ac-h-6-1-sp-nt-12014700470509-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/reich-arcusaflex-ac-h-6-sn-12010700410004-kaplin",
+   "destination": "/urun/reich-arcusaflex-ac-h-6-sn-12010700410004-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/reich-arcusaflex-ac-h-6-1-st-komple-12014700410034-kaplin",
+   "destination": "/urun/reich-arcusaflex-ac-h-6-1-st-komple-12014700410034-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/arcusaflex-ac-h-5-1-wx-12018500610003-kaplin",
+   "destination": "/urun/arcusaflex-ac-h-5-1-wx-12018500610003-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/reich-arcusaflex-ac-h-6-nn-12010700410003-kaplin",
+   "destination": "/urun/reich-arcusaflex-ac-h-6-nn-12010700410003-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/reich-arcusaflex-ac-h-7-nn-12010800410003-kaplin",
+   "destination": "/urun/reich-arcusaflex-ac-h-7-nn-12010800410003-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/arcusaflex-ac-t-2-6-st-12012300510034-kaplin",
+   "destination": "/urun/arcusaflex-ac-t-2-6-st-12012300510034-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/arcusaflex-ac-t-6-5-st-12017700510034-kaplin",
+   "destination": "/urun/arcusaflex-ac-t-6-5-st-12017700510034-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/rexnord-omega-kaplin",
+   "destination": "/urun/rexnord-omega-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/rexnord-viva-kaplin",
+   "destination": "/urun/rexnord-viva-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/ru-steel-01-ca1-kaplin-lastigi",
+   "destination": "/urun/ru-steel-01-ca1-kaplin-lastigi",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/ru-steel-01-ca3-kaplin-lastigi",
+   "destination": "/urun/ru-steel-01-ca3-kaplin-lastigi",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/ru-steel-01-ca1-kaplin-lastigi1",
+   "destination": "/urun/ru-steel-01-ca1-kaplin-lastigi1",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/ru-steel-01-ca2-kaplin-lastigi",
+   "destination": "/urun/ru-steel-01-ca2-kaplin-lastigi",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/stromag-periflex-disk-kaplin-ps-27",
+   "destination": "/urun/stromag-periflex-disk-kaplin-ps-27",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/stromag-periflex-disk-kaplin-ps-34",
+   "destination": "/urun/stromag-periflex-disk-kaplin-ps-34",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/kaeser-5-3129-3-kaplin",
+   "destination": "/urun/kaeser-5-3129-3-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-egzoz-filtresi-0532000304",
+   "destination": "/urun/busch-egzoz-filtresi-0532000304",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-egzoz-filtresi-0532105216",
+   "destination": "/urun/busch-egzoz-filtresi-0532105216",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-egzoz-filtresi-0532105302",
+   "destination": "/urun/busch-egzoz-filtresi-0532105302",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-egzoz-filtresi-0532127413",
+   "destination": "/urun/busch-egzoz-filtresi-0532127413",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-egzoz-filtresi-0532140151",
+   "destination": "/urun/busch-egzoz-filtresi-0532140151",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-egzoz-filtresi-0532140152",
+   "destination": "/urun/busch-egzoz-filtresi-0532140152",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-egzoz-filtre-0532140153",
+   "destination": "/urun/busch-egzoz-filtre-0532140153",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-egzoz-filtre-0532140155",
+   "destination": "/urun/busch-egzoz-filtre-0532140155",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-egzoz-filtre-0532140156",
+   "destination": "/urun/busch-egzoz-filtre-0532140156",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-egzoz-filtre-0532140157",
+   "destination": "/urun/busch-egzoz-filtre-0532140157",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-egzoz-filtre-0532140154",
+   "destination": "/urun/busch-egzoz-filtre-0532140154",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-egzoz-filtre-0532140158",
+   "destination": "/urun/busch-egzoz-filtre-0532140158",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-egzoz-filtre-0532140159",
+   "destination": "/urun/busch-egzoz-filtre-0532140159",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-egzoz-filtre-0532000051---5322-21",
+   "destination": "/urun/busch-egzoz-filtre-0532000051---5322-21",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-egzoz-filtre-0532140160",
+   "destination": "/urun/busch-egzoz-filtre-0532140160",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/busch-egzoz-filtresi-d000103418",
+   "destination": "/urun/busch-egzoz-filtresi-d000103418",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-909540",
+   "destination": "/urun/becker-hava-filtresi-909540",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-909541",
+   "destination": "/urun/becker-hava-filtresi-909541",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-909542",
+   "destination": "/urun/becker-hava-filtresi-909542",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-909559",
+   "destination": "/urun/becker-hava-filtresi-909559",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-909564",
+   "destination": "/urun/becker-hava-filtresi-909564",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-909568",
+   "destination": "/urun/becker-hava-filtresi-909568",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-909580",
+   "destination": "/urun/becker-hava-filtresi-909580",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-909581",
+   "destination": "/urun/becker-hava-filtresi-909581",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-909587",
+   "destination": "/urun/becker-hava-filtresi-909587",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-909596",
+   "destination": "/urun/becker-hava-filtresi-909596",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-909597",
+   "destination": "/urun/becker-hava-filtresi-909597",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-9095101",
+   "destination": "/urun/becker-hava-filtresi-9095101",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-9095102",
+   "destination": "/urun/becker-hava-filtresi-9095102",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-84040105",
+   "destination": "/urun/becker-hava-filtresi-84040105",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-84040107",
+   "destination": "/urun/becker-hava-filtresi-84040107",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-84040110",
+   "destination": "/urun/becker-hava-filtresi-84040110",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi",
+   "destination": "/urun/becker-hava-filtresi",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-90950501",
+   "destination": "/urun/becker-hava-filtresi-90950501",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-90950601",
+   "destination": "/urun/becker-hava-filtresi-90950601",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-90950701",
+   "destination": "/urun/becker-hava-filtresi-90950701",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-90950801",
+   "destination": "/urun/becker-hava-filtresi-90950801",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-90950901",
+   "destination": "/urun/becker-hava-filtresi-90950901",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-90953401",
+   "destination": "/urun/becker-hava-filtresi-90953401",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-hava-filtresi-90954001",
+   "destination": "/urun/becker-hava-filtresi-90954001",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-eksoz-filtre-965440",
+   "destination": "/urun/becker-eksoz-filtre-965440",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-eksoz-filtre-965416",
+   "destination": "/urun/becker-eksoz-filtre-965416",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-eksoz-filtre-965415",
+   "destination": "/urun/becker-eksoz-filtre-965415",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-eksoz-filtre-965414",
+   "destination": "/urun/becker-eksoz-filtre-965414",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-eksoz-filtre-965413",
+   "destination": "/urun/becker-eksoz-filtre-965413",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-eksoz-filtre-965412",
+   "destination": "/urun/becker-eksoz-filtre-965412",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-eksoz-filtre-965408",
+   "destination": "/urun/becker-eksoz-filtre-965408",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-eksoz-filtre-965411",
+   "destination": "/urun/becker-eksoz-filtre-965411",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-eksoz-filtre-965410",
+   "destination": "/urun/becker-eksoz-filtre-965410",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-eksoz-filtre-904009",
+   "destination": "/urun/becker-eksoz-filtre-904009",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-eksoz-filtre-965407",
+   "destination": "/urun/becker-eksoz-filtre-965407",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-eksoz-filtre-965406",
+   "destination": "/urun/becker-eksoz-filtre-965406",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-eksoz-filtre-965404",
+   "destination": "/urun/becker-eksoz-filtre-965404",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-eksoz-filtre-965403",
+   "destination": "/urun/becker-eksoz-filtre-965403",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-eksoz-filtre-965402",
+   "destination": "/urun/becker-eksoz-filtre-965402",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-eksoz-filtre-965401",
+   "destination": "/urun/becker-eksoz-filtre-965401",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/becker-eksoz-filtre-852901",
+   "destination": "/urun/becker-eksoz-filtre-852901",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-730507",
+   "destination": "/urun/rietschle-hava-filtresi-730507",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-730508",
+   "destination": "/urun/rietschle-hava-filtresi-730508",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-730511",
+   "destination": "/urun/rietschle-hava-filtresi-730511",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-730514",
+   "destination": "/urun/rietschle-hava-filtresi-730514",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-730517--731324",
+   "destination": "/urun/rietschle-hava-filtresi-730517--731324",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-730519",
+   "destination": "/urun/rietschle-hava-filtresi-730519",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-730524",
+   "destination": "/urun/rietschle-hava-filtresi-730524",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-730542",
+   "destination": "/urun/rietschle-hava-filtresi-730542",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-731137---731137-600",
+   "destination": "/urun/rietschle-hava-filtresi-731137---731137-600",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-731142---7311426000",
+   "destination": "/urun/rietschle-hava-filtresi-731142---7311426000",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-731143",
+   "destination": "/urun/rietschle-hava-filtresi-731143",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-731145",
+   "destination": "/urun/rietschle-hava-filtresi-731145",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-731148",
+   "destination": "/urun/rietschle-hava-filtresi-731148",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-731190",
+   "destination": "/urun/rietschle-hava-filtresi-731190",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-731191",
+   "destination": "/urun/rietschle-hava-filtresi-731191",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/rietschle-hava-filtresi-731719",
+   "destination": "/urun/rietschle-hava-filtresi-731719",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/elmo-rietschle-eksoz-filtre-730507",
+   "destination": "/urun/elmo-rietschle-eksoz-filtre-730507",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/elmo-rietschle-eksoz-filtre-731311",
+   "destination": "/urun/elmo-rietschle-eksoz-filtre-731311",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/elmo-rietschle-eksoz-filtre-731399",
+   "destination": "/urun/elmo-rietschle-eksoz-filtre-731399",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/elmo-rietschle-eksoz-filtre-731400",
+   "destination": "/urun/elmo-rietschle-eksoz-filtre-731400",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/elmo-rietschle-eksoz-filtre-731-401",
+   "destination": "/urun/elmo-rietschle-eksoz-filtre-731-401",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/elmo-rietschle-eksoz-filtre-731468",
+   "destination": "/urun/elmo-rietschle-eksoz-filtre-731468",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtre/elmo-rietschle-eksoz-filtre-731-630",
+   "destination": "/urun/elmo-rietschle-eksoz-filtre-731-630",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90139600007-wn-124-243",
+   "destination": "/urun/becker-vakum-palet-komuru---90139600007-wn-124-243",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90139700007-wn-124-244",
+   "destination": "/urun/becker-vakum-palet-komuru---90139700007-wn-124-244",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---wn-124-247-901399",
+   "destination": "/urun/becker-vakum-palet-komuru---wn-124-247-901399",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90132400004-wn-124-249",
+   "destination": "/urun/becker-vakum-palet-komuru---90132400004-wn-124-249",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90132500005-wn-124-250",
+   "destination": "/urun/becker-vakum-palet-komuru---90132500005-wn-124-250",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90140100004-wn-124-252",
+   "destination": "/urun/becker-vakum-palet-komuru---90140100004-wn-124-252",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90140200004-wn-124-253",
+   "destination": "/urun/becker-vakum-palet-komuru---90140200004-wn-124-253",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sd-1080b-dc-0080-b-sv-1080b-olcu-170444-mm",
+   "destination": "/urun/busch-palet---sd-1080b-dc-0080-b-sv-1080b-olcu-170444-mm",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1006-b-sd-1006-b-olcu-55254-mm",
+   "destination": "/urun/busch-palet---sv-1006-b-sd-1006-b-olcu-55254-mm",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1002-b-olcu-35263-mm",
+   "destination": "/urun/busch-palet---sv-1002-b-olcu-35263-mm",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1025-b-sd-1025-b-olcu-9836-54-mm",
+   "destination": "/urun/busch-palet---sv-1025-b-sd-1025-b-olcu-9836-54-mm",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru--523777-528802",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru--523777-528802",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---524004-523557",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---524004-523557",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---524003-523556",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---524003-523556",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---523474",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---523474",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---523399",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---523399",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---522716",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---522716",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---518943",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---518943",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---516093",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---516093",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---515642-",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---515642-",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---513878",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---513878",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---513702",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---513702",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---513455",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---513455",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---513431",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---513431",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---507110-",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---507110-",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---520201-507109-524011",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---520201-507109-524011",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---524009",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---524009",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---507107",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---507107",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---507106",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---507106",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---507051",
+   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---507051",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90058300003",
+   "destination": "/urun/becker-palet-seti-90058300003",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90058500003",
+   "destination": "/urun/becker-palet-seti-90058500003",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90058600004",
+   "destination": "/urun/becker-palet-seti-90058600004",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90058700008",
+   "destination": "/urun/becker-palet-seti-90058700008",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90058800004",
+   "destination": "/urun/becker-palet-seti-90058800004",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90058900004",
+   "destination": "/urun/becker-palet-seti-90058900004",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/zapex-zw-128-kaplin",
+   "destination": "/urun/zapex-zw-128-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplin/zapex-zw-175-kaplin",
+   "destination": "/urun/zapex-zw-175-kaplin",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtreler/atlas-copco-kaplinleri",
+   "destination": "/urunler/kompresor-filtreleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtreler/dalgakiran",
+   "destination": "/urunler/kompresor-filtreleri/dalgakiran",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtreler/mann-filter",
+   "destination": "/urunler/kompresor-filtreleri/mann-filter",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtreler/kaeser",
+   "destination": "/urunler/kompresor-filtreleri/kaeser",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtreler/ekomak",
+   "destination": "/urunler/kompresor-filtreleri/ekomak",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtreler/abac",
+   "destination": "/urunler/kompresor-filtreleri/abac",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtreler/ingersoll-rand",
+   "destination": "/urunler/kompresor-filtreleri/ingersoll-rand",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtreler/mikropor",
+   "destination": "/urunler/kompresor-filtreleri/mikropor",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtreler/almig",
+   "destination": "/urunler/kompresor-filtreleri/almig",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtreler/alup",
+   "destination": "/urunler/kompresor-filtreleri/alup",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtreler/noitech",
+   "destination": "/urunler/kompresor-filtreleri/noitech",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtreler/boge",
+   "destination": "/urunler/kompresor-filtreleri/boge",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtreler/mark",
+   "destination": "/urunler/kompresor-filtreleri/mark",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtreler/sullair",
+   "destination": "/urunler/kompresor-filtreleri/sullair",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtreler/orion",
+   "destination": "/urunler/vakum-pompasi-filtreleri/orion",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtreler/mil-s",
+   "destination": "/urunler/vakum-pompasi-filtreleri/mil-s",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtreler/busch5",
+   "destination": "/urunler/vakum-pompasi-filtreleri/busch",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtreler/becker8",
+   "destination": "/urunler/vakum-pompasi-filtreleri/becker",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtreler/elmo-rietschle",
+   "destination": "/urunler/vakum-pompasi-filtreleri/elmo-rietschle",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtreler/leybold",
+   "destination": "/urunler/vakum-pompasi-filtreleri/leybold",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtreler/g-e-v",
+   "destination": "/urunler/vakum-pompasi-filtreleri/g-e-v",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtreler/p-v-r-",
+   "destination": "/urunler/vakum-pompasi-filtreleri/p-v-r",
+   "permanent": true
+  },
+  {
+   "source": "/tr/endustriyel-yaglar/texol-chemical",
+   "destination": "/urunler/endustriyel-yaglar/texol-chemical",
+   "permanent": true
+  },
+  {
+   "source": "/tr/endustriyel-yaglar/busch",
+   "destination": "/urunler/endustriyel-yaglar/busch",
+   "permanent": true
+  },
+  {
+   "source": "/tr/endustriyel-yaglar/becker",
+   "destination": "/urunler/endustriyel-yaglar/becker",
+   "permanent": true
+  },
+  {
+   "source": "/tr/endustriyel-yaglar/anderol",
+   "destination": "/urunler/endustriyel-yaglar/anderol",
+   "permanent": true
+  },
+  {
+   "source": "/tr/endustriyel-yaglar/avia",
+   "destination": "/urunler/endustriyel-yaglar/avia",
+   "permanent": true
+  },
+  {
+   "source": "/tr/endustriyel-yaglar/birkosit",
+   "destination": "/urunler/endustriyel-yaglar/birkosit",
+   "permanent": true
+  },
+  {
+   "source": "/tr/endustriyel-yaglar/diffu-therm",
+   "destination": "/urunler/endustriyel-yaglar/diffu-therm",
+   "permanent": true
+  },
+  {
+   "source": "/tr/endustriyel-yaglar/filling",
+   "destination": "/urunler/endustriyel-yaglar/filling",
+   "permanent": true
+  },
+  {
+   "source": "/tr/endustriyel-yaglar/glassline",
+   "destination": "/urunler/endustriyel-yaglar/glassline",
+   "permanent": true
+  },
+  {
+   "source": "/tr/endustriyel-yaglar/moly",
+   "destination": "/urunler/endustriyel-yaglar/moly",
+   "permanent": true
+  },
+  {
+   "source": "/tr/endustriyel-yaglar/oks",
+   "destination": "/urunler/endustriyel-yaglar/oks",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vp-paletler/becker9",
+   "destination": "/urunler/karbon-paletler/becker",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vp-paletler/busch4",
+   "destination": "/urunler/karbon-paletler/busch",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vp-paletler/elmo-rietschle1",
+   "destination": "/urunler/karbon-paletler/elmo-rietschle",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vp-paletler/g-e-v6",
+   "destination": "/urunler/karbon-paletler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vp-paletler/leybold4",
+   "destination": "/urunler/karbon-paletler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vp-paletler/orion6",
+   "destination": "/urunler/karbon-paletler/orion",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-paletler/becker98",
+   "destination": "/urunler/fiber-paletler/becker",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-paletler/busch3",
+   "destination": "/urunler/fiber-paletler/busch",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-paletler/elmo-rietschle6",
+   "destination": "/urunler/fiber-paletler/elmo-rietschle",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-paletler/gev",
+   "destination": "/urunler/fiber-paletler/g-e-v",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-paletler/leybold1",
+   "destination": "/urunler/fiber-paletler/leybold",
+   "permanent": true
+  },
+  {
+   "source": "/tr/elektrik-komurleri-karbon-burc/elektrik-komurleri---karbon-burc",
+   "destination": "/urunler/karbon-burc-ve-komurler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/elektrik-komurleri-karbon-burc/mekanik-karbon--karbon-burclar---karbon-ringler",
+   "destination": "/urunler/karbon-burc-ve-komurler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri/atlas-copco2",
+   "destination": "/urunler/kompresor-kaplinleri/atlas-copco",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri/centa",
+   "destination": "/urunler/kompresor-kaplinleri/centa",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri/dodge",
+   "destination": "/urunler/kompresor-kaplinleri/dodge",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri/doosan-ingersoll",
+   "destination": "/urunler/kompresor-kaplinleri/doosan-ingersoll",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri/esco",
+   "destination": "/urunler/kompresor-kaplinleri/esco",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri/fenner",
+   "destination": "/urunler/kompresor-kaplinleri/fenner",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri/flender",
+   "destination": "/urunler/kompresor-kaplinleri/flender",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri/goetze",
+   "destination": "/urunler/kompresor-kaplinleri/goetze",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri/gummi",
+   "destination": "/urunler/kompresor-kaplinleri/gummi",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri/hayes",
+   "destination": "/urunler/kompresor-kaplinleri/hayes",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri/jac",
+   "destination": "/urunler/kompresor-kaplinleri/jac",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri/jurid",
+   "destination": "/urunler/kompresor-kaplinleri/jurid",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri/ktr",
+   "destination": "/urunler/kompresor-kaplinleri/ktr",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri/reic-kupplungen",
+   "destination": "/urunler/kompresor-kaplinleri/reich-kupplungen",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri/renold",
+   "destination": "/urunler/kompresor-kaplinleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri/rexnord",
+   "destination": "/urunler/kompresor-kaplinleri/rexnord",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri/ru-steel",
+   "destination": "/urunler/kompresor-kaplinleri/ru-steel",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri/rd-marine",
+   "destination": "/urunler/kompresor-kaplinleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri/samiflex",
+   "destination": "/urunler/kompresor-kaplinleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri/kaeser5",
+   "destination": "/urunler/kompresor-kaplinleri/kaeser",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri/stromag",
+   "destination": "/urunler/kompresor-kaplinleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri/tb-wood-s",
+   "destination": "/urunler/kompresor-kaplinleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri/tschan",
+   "destination": "/urunler/kompresor-kaplinleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri/twin-disk",
+   "destination": "/urunler/kompresor-kaplinleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri/transfluid",
+   "destination": "/urunler/kompresor-kaplinleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri/vulkan",
+   "destination": "/urunler/kompresor-kaplinleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri/zf",
+   "destination": "/urunler/kompresor-kaplinleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtreler-kategori",
+   "destination": "/urunler/kompresor-filtreleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi-filtreler-kategori",
+   "destination": "/urunler/vakum-pompasi-filtreleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr/endustriyel-filtreler-kategori",
+   "destination": "/urunler/endustriyel-filtreler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/ozel-uretim-filtreler-kategori",
+   "destination": "/urunler/ozel-uretim-filtreler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/endustriyel-yaglar-kategori",
+   "destination": "/urunler/endustriyel-yaglar",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vp-paletler-kategori",
+   "destination": "/urunler/karbon-paletler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-paletler-kategori",
+   "destination": "/urunler/fiber-paletler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/elektrik-komurleri-karbon-burc-kategori",
+   "destination": "/urunler/karbon-burc-ve-komurler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-kaplinleri-kategori",
+   "destination": "/urunler/kompresor-kaplinleri",
+   "permanent": true
+  },
+  {
+   "source": "/tr",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/tr/hakkimizda",
+   "destination": "/kurumsal",
+   "permanent": true
+  },
+  {
+   "source": "/tr/misyonumuz",
+   "destination": "/kurumsal",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vizyonumuz",
+   "destination": "/kurumsal",
+   "permanent": true
+  },
+  {
+   "source": "/tr/iletisim",
+   "destination": "/iletisim",
+   "permanent": true
+  },
+  {
+   "source": "/tr/markalar",
+   "destination": "/markalar",
+   "permanent": true
+  },
+  {
+   "source": "/tr/teklif-al",
+   "destination": "/teklif",
+   "permanent": true
+  },
+  {
+   "source": "/tr/:path*",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/en/:old(.*-kategori)",
+   "destination": "/en/products",
+   "permanent": true
+  }
+ ],
+ "headers": [
+  {
+   "source": "/img/(.*)",
+   "headers": [
+    {
+     "key": "Cache-Control",
+     "value": "public, max-age=31536000, immutable"
+    }
+   ]
+  },
+  {
+   "source": "/assets/(.*)",
+   "headers": [
+    {
+     "key": "Cache-Control",
+     "value": "public, max-age=31536000, immutable"
+    }
+   ]
+  },
+  {
+   "source": "/(.*)",
+   "headers": [
+    {
+     "key": "X-Content-Type-Options",
+     "value": "nosniff"
+    },
+    {
+     "key": "Referrer-Policy",
+     "value": "strict-origin-when-cross-origin"
+    },
+    {
+     "key": "X-Frame-Options",
+     "value": "SAMEORIGIN"
+    }
+   ]
+  }
+ ]
+}

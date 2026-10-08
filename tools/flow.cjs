@@ -1,0 +1,13 @@
+const { chromium } = require('playwright');
+(async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:1366,height:900}});const errs=[];p.on('pageerror',e=>errs.push(e.message));
+await p.goto('http://localhost:4321/');await p.click('#ck-accept').catch(()=>{});
+await p.fill('#q-hero','0531 000 001');await p.waitForTimeout(800);console.log('hero results:',await p.$$eval('#res-hero .r b',x=>x.slice(0,3).map(e=>e.textContent)));
+await p.fill('#q-hero','VTR 140');await p.waitForTimeout(400);console.log('VTR:',await p.$$eval('#res-hero .r b',x=>x.slice(0,3).map(e=>e.textContent)));
+await p.goto('http://localhost:4321/urunler?q=909508');await p.waitForTimeout(800);console.log('list q:',await p.textContent('#f-count'));
+await p.goto('http://localhost:4321/urunler/karbon-paletler');await p.click('.card .quick');await p.waitForTimeout(300);await p.click('#filters input[data-g=brand]');await p.waitForTimeout(200);console.log('filter:',await p.textContent('#f-count'),'badge',await p.textContent('#badge'));
+await p.goto('http://localhost:4321/urun/busch-yag-filtresi-0531000001');await p.click('#pd-add');await p.waitForTimeout(700);console.log('drawer lines',await p.$$eval('#drawer-list .line',x=>x.length));await p.click('#close-cart');await p.waitForTimeout(300);
+await p.click('[data-tab=uyum]');console.log('models shown',await p.$$eval('#tab-uyum .mgrid span',x=>x.length));
+await p.goto('http://localhost:4321/sektorler/ambalaj');await p.click('#add-all');await p.waitForTimeout(400);console.log('after add-all badge',await p.textContent('#badge'));
+await p.goto('http://localhost:4321/teklif');await p.waitForTimeout(300);console.log('quote lines',await p.$$eval('.qline',x=>x.length));
+await p.fill('#f-firma','Test A.Ş.');await p.fill('#f-ad','Test Kişi');await p.fill('#f-tel','05551112233');await p.fill('#f-mail','test@example.com');await p.check('#f-kvkk');await p.click('#q-submit');await p.waitForTimeout(500);console.log('msg:',await p.textContent('#form-msg'),'hidden?',await p.$eval('#form-msg',e=>e.hidden));
+console.log('errors',errs);await b.close();})();
