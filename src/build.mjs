@@ -13,10 +13,10 @@ const GTM_ID = process.env.GTM_ID || 'GTM-56P6SPBF';
 // Google Ads (AW-615899386). Dönüşüm etiketleri gelince yalnızca aşağıdaki 4 satırı doldurun (ör. 'AbC123xyz').
 const ADS_ID = 'AW-615899386';
 const ADS_LABELS = {
-  whatsapp: '', // FILTRE - WhatsApp Tiklama
-  telefon: '',  // FILTRE - Telefon Tiklama
-  eposta: '',   // FILTRE - E-posta Tiklama
-  form: '',     // FILTRE - Teklif Formu
+  whatsapp: 'AW-615899386/BgV2CLekxZUdEPrB16UC', // FILTRE - WhatsApp Tiklama
+  telefon: 'AW-615899386/6EzTCLqkxZUdEPrB16UC',  // FILTRE - Telefon Tiklama
+  eposta: 'AW-615899386/KoSQCL2kxZUdEPrB16UC',   // FILTRE - E-posta Tiklama
+  form: 'AW-615899386/5RqVCMCkxZUdEPrB16UC',     // FILTRE - Teklif Formu
 };
 // Consent Mode v2: çerez onayı yoksa reklam/analitik depolama 'denied' başlar; 'Kabul et' ile 'granted' olur.
 const ADS_HEAD = `<!-- Google tag (gtag.js) - Google Ads ${ADS_ID} -->
@@ -25,7 +25,7 @@ const ADS_HEAD = `<!-- Google tag (gtag.js) - Google Ads ${ADS_ID} -->
 (function(){var c=null;try{c=JSON.parse(localStorage.getItem('sofilx-consent'))}catch(e){}var g=c==='all'?'granted':'denied';gtag('consent','default',{ad_storage:g,ad_user_data:g,ad_personalization:g,analytics_storage:g,wait_for_update:500});})();
 gtag('js',new Date());gtag('config','${ADS_ID}');</script>
 <script>(function(){var ID='${ADS_ID}',L=${JSON.stringify(ADS_LABELS)};
-function gonder(t){if(!t||!L[t]||typeof gtag!=='function')return;gtag('event','conversion',{send_to:ID+'/'+L[t]});}
+function gonder(t){if(!t||!L[t]||typeof gtag!=='function')return;gtag('event','conversion',{send_to:L[t].indexOf('/')>-1?L[t]:ID+'/'+L[t]});}
 function tur(u){if(!u)return null;u=String(u).toLowerCase();if(u.indexOf('wa.me')>-1||u.indexOf('whatsapp')>-1)return'whatsapp';if(u.indexOf('tel:')===0)return'telefon';if(u.indexOf('mailto:')===0)return'eposta';return null;}
 document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href]'):null;if(a)gonder(tur(a.getAttribute('href')));},true);
 var _o=window.open;window.open=function(u){gonder(tur(u));return _o.apply(window,arguments);};
