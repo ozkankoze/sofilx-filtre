@@ -47,6 +47,9 @@ const fill = (s, o) => String(s).replace(/\{(\w+)\}/g, (m, k) => o[k] ?? m);
 
 // ---------- diller ----------
 // Kullanıcının istediği sırayla (dil menüsü bu sırayı izler)
+// Alt bilgi: tasarımcı imzası
+const CREDIT_LABEL = { tr: 'Web tasarım', en: 'Web design', fa: 'طراحی وب', he: 'עיצוב אתרים', ar: 'تصميم المواقع', fr: 'Conception web', de: 'Webdesign', es: 'Diseño web', ru: 'Веб-дизайн', it: 'Web design', nl: 'Webdesign', ka: 'ვებ-დიზაინი', mk: 'Веб-дизајн', az: 'Veb dizayn' };
+const credit = L => `<span class="credit">${CREDIT_LABEL[L] || CREDIT_LABEL.en}: <a href="https://www.medya333.com/" target="_blank" rel="noopener">Medya 333</a></span>`;
 const FLAG = { tr: 'tr', en: 'gb', fa: 'ir', he: 'il', ar: 'sa', fr: 'fr', de: 'de', es: 'es', ru: 'ru', it: 'it', nl: 'nl', ka: 'ge', mk: 'mk', az: 'az' };
 const flagImg = (l, lazy) => `<img class="flag" src="/img/flags/${FLAG[l]}.svg" alt="" width="20" height="15"${lazy ? ' loading="lazy"' : ''}>`;
 const LANG_META = [
@@ -241,7 +244,7 @@ ${body}
     <div><h4>Sofilx</h4><a href="${U.about(L)}">${t.nav.about}</a><a href="${U.sectors(L)}">${t.nav.sectors}</a><a href="${U.brands(L)}">${t.nav.brands}</a><a href="${U.refs(L)}">${t.nav.refs}</a><a href="${U.custom(L)}">${t.nav.custom}</a><a href="${U.quote(L)}">${t.list}</a><a href="${U.contact(L)}">${t.customerCenter}</a></div>
     <div><h4>${t.nav.contact}</h4><p>${ADDRESS}</p><p><a href="tel:${PHONE_INT}" dir="ltr">${phone(L)}</a><a href="https://wa.me/${WA}" target="_blank" rel="noopener"><span dir="ltr">${mobile(L)}</span> · WhatsApp</a></p><p><a href="mailto:${EMAIL}">${EMAIL}</a></p></div>
   </div>
-  <div class="legal"><div class="wrap"><span>© <span id="yr">${new Date().getFullYear()}</span> Sofilx. ${t.rights}</span><span class="legal-links"><a href="${U.kvkk(L)}">${t.kvkkL}</a><a href="${U.cookies(L)}">${t.cookieL}</a><button type="button" class="linkbtn" id="cookie-open">${x.cookieSettings}</button></span></div><div class="wrap note">${t.footLegal}</div></div>
+  <div class="legal"><div class="wrap"><span>© <span id="yr">${new Date().getFullYear()}</span> Sofilx. ${t.rights}</span><span class="legal-links"><a href="${U.kvkk(L)}">${t.kvkkL}</a><a href="${U.cookies(L)}">${t.cookieL}</a><button type="button" class="linkbtn" id="cookie-open">${x.cookieSettings}</button></span>${credit(L)}</div><div class="wrap note">${t.footLegal}</div></div>
 </footer>
 <a class="wa-float" href="https://wa.me/${WA}?text=${encodeURIComponent(x.waHello)}" target="_blank" rel="noopener" aria-label="WhatsApp">${I.wa}<span>${x.waFloat}</span></a>
 <div class="mbar"><a class="btn btn-line" href="${U.products(L)}">${t.nav.products}</a><a class="btn btn-dark" href="${U.quote(L)}">${t.list} · <span id="mcount">0</span></a></div>

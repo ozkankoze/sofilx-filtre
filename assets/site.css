@@ -715,3 +715,13 @@ html,body{overflow-x:clip}
 [dir=rtl] .h2copy .hl{background:linear-gradient(transparent 72%,#16133a 72%)}
 html[lang=ru] .h2copy h1,html[lang=mk] .h2copy h1,html[lang=de] .h2copy h1,html[lang=fr] .h2copy h1,html[lang=es] .h2copy h1,html[lang=it] .h2copy h1,html[lang=nl] .h2copy h1,html[lang=az] .h2copy h1{font-size:clamp(44px,5.8vw,88px)}
 @media (max-width:680px){[dir=rtl] .h2copy h1,html[lang=ka] .h2copy h1{font-size:36px}html:not([lang=tr]):not([lang=en]) .h2copy h1{font-size:42px}}
+
+/* alt bilgi: telif / yasal linkler / tasarımcı imzası tek satır */
+footer.site .legal .wrap{display:flex;justify-content:space-between;align-items:center;gap:10px 28px;flex-wrap:wrap;padding-block:18px}
+footer.site .legal .wrap.note{display:block;padding-block:0 24px;max-width:1280px}
+footer.site .legal a{display:inline;padding:0;font-size:inherit}
+footer.site .legal .legal-links{align-items:center}
+footer.site .legal .credit{white-space:nowrap}
+footer.site .legal .credit a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+footer.site .legal .credit a:hover{opacity:.8}
+@media (max-width:680px){footer.site .legal .wrap{flex-direction:column;align-items:flex-start}}
