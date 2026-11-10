@@ -22,3 +22,12 @@ node src/build.mjs && node tools/serve.mjs   # http://localhost:4321
 
 ## Ürün ekleme / güncelleme
 `data/catalog.json` içindeki ürünleri düzenleyin ya da `tools/normalize.py` ile yeniden üretin, sonra build alın. `vercel.json` yönlendirmeleri değiştiyse yerelde `node src/build.mjs` çalıştırıp `vercel.json` dosyasını da commit edin.
+
+## Parça kataloğu (Filtre Pazarlama, ~97 bin ürün)
+
+- Veri: `data/fp/` (sıkıştırılmış). Ürün sayfaları statik üretilmez; `api/catalog.mjs` sunucu fonksiyonu istek anında üretir, Vercel CDN'i 1 gün önbelleğe alır.
+- Adresler: `/parcalar`, `/parcalar/{grup}`, `/parca/{ürün}` ve diğer dillerde `/{dil}/parts`, `/{dil}/parts/{grup}`, `/{dil}/part/{ürün}`.
+- Görseller tedarikçiden `/pimg/...` vekil adresiyle gelir (vercel.json rewrite); dosya saklanmaz.
+- Çeviriler: `i18n/fp/{dil}.json` (ürün tipi ifadeleri, grup adları, arayüz). Kontrol: `node tools/check-fp-i18n.mjs en de ...`
+- Güncelleme: `sh tools/fp-fetch.sh` → `npm run build` → commit + push.
+- Yerel test: `npm run build && node tools/serve.mjs` → http://localhost:4321/parcalar

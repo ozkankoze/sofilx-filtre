@@ -2,6 +2,7 @@
 // Diller: TR kökte, diğerleri /{dil}/ altında (İngilizce yol adlarıyla).
 import fs from 'node:fs';
 import path from 'node:path';
+import zlib from 'node:zlib';
 import { T as TT, CATS, SECTORS } from './i18n.mjs';
 import { pages as LEGAL } from './legal.mjs';
 
@@ -102,6 +103,16 @@ for (const m of LANG_META.slice(2)) {
 const LANGS = LANG_META.map(m => m.L).filter(L => D[L]);
 const rtl = L => !!D[L].meta.rtl;
 
+// ---------- Filtre Pazarlama parça kataloğu (sayfalar sunucuda üretilir: api/catalog.mjs) ----------
+const FP_DIR = path.join(ROOT, 'data/fp');
+const FP_IDX = JSON.parse(zlib.gunzipSync(fs.readFileSync(path.join(FP_DIR, 'idx.json.gz'))).toString());
+const FP_COUNT = FP_IDX.length;
+const FP_CATS = JSON.parse(fs.readFileSync(path.join(FP_DIR, 'cats.json'), 'utf8'));
+const FP_T = Object.fromEntries(LANGS.map(L => [L, JSON.parse(fs.readFileSync(path.join(ROOT, `i18n/fp/${L}.json`), 'utf8'))]));
+const FP_PH = Object.keys(FP_T.tr.phrases);
+const fpImg = rel => rel ? `/pimg/${rel}` : '/img/placeholder.svg';
+const fpNum = (n, L) => n.toLocaleString(L === 'tr' ? 'tr-TR' : L === 'en' ? 'en-GB' : L);
+
 const catName = (id, L) => D[L].cats[id].name;
 const catShort = (id, L) => D[L].cats[id].short;
 const secName = (s, L) => D[L].sectors[s.id].name;
@@ -139,6 +150,9 @@ const U = {
   quote: L => L === 'tr' ? '/teklif' : `${base(L)}/quote`,
   kvkk: L => L === 'tr' ? '/kvkk' : `${base(L)}/privacy`,
   cookies: L => L === 'tr' ? '/cerez-politikasi' : `${base(L)}/cookies`,
+  parts: L => L === 'tr' ? '/parcalar' : `${base(L)}/parts`,
+  partCat: (c, L) => `${U.parts(L)}/${c}`,
+  part: (s, L) => L === 'tr' ? `/parca/${s}` : `${base(L)}/part/${s}`,
 };
 const fileFor = u => u === '/' ? 'index.html' : u.replace(/^\//, '') + '.html';
 const abs = u => SITE + (u === '/' ? '/' : u);
@@ -181,15 +195,16 @@ const I = {
 
 // ---------- sayfa iskeleti ----------
 // route: dil -> bu sayfanın o dildeki adresi (hreflang ve dil menüsü için)
-function layout({ L, path: url, route, title, desc, body, jsonld = [], noindex = false, ogImg }) {
+function layout({ L, path: url, route, title, desc, body, jsonld = [], noindex = false, ogImg, shell = false, headExtra = '' }) {
   const t = D[L].t, x = t.x;
   const fullTitle = title ? `${title} | Sofilx` : x.siteTitle;
   const canon = abs(url);
-  if (!noindex) sitemap.push({ url, route, L });
+  if (!noindex && !shell) sitemap.push({ url, route, L });
   const langHref = l => route ? route(l) : U.home(l);
   const hreflang = route ? LANGS.map(l => `<link rel="alternate" hreflang="${l}" href="${abs(route(l))}">`).join('') + `<link rel="alternate" hreflang="x-default" href="${abs(route('tr'))}">` : '';
   const langLinks = LANGS.map(l => `<a href="${langHref(l)}" hreflang="${l}" lang="${l}" role="menuitem"${l === L ? ' aria-current="true"' : ''}>${flagImg(l, 1)}<b>${l.toUpperCase()}</b><i>${esc(D[l].meta.name)}</i></a>`).join('');
   const navItem = (k, href) => `<a href="${href}" data-nav="${k}">${t.nav[k]}</a>`;
+  const megaAll = `<a class="mega-all" href="${U.parts(L)}"><span><b>${esc(FP_T[L].ui.catalog)}</b><small>${fpNum(FP_COUNT, L)} ${esc(FP_T[L].ui.parts)}</small></span>${I.arrow}</a>`;
   const mega = CATS.map(c => `<a href="${U.cat(c.id, L)}"><span class="th"><img src="${imgUrl(catCover[c.id], 1)}" alt="" loading="lazy" width="52" height="52"></span><span><b>${esc(catName(c.id, L))}</b><small>${P.filter(p => p.cat === c.id).length} ${t.items}</small></span></a>`).join('');
   const fonts = FONT_BASE + (FONT_EXTRA[L] ? '&' + FONT_EXTRA[L] : '');
   return `<!doctype html>
@@ -211,8 +226,8 @@ ${hreflang}
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?${fonts}&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=${BUILD}">
-${jsonld.map(j => `<script type="application/ld+json">${JSON.stringify(j)}</script>`).join('\n')}
-<script>window.SFX=${JSON.stringify({ L, w3f: WEB3FORMS_KEY, gtm: GTM_ID, wa: WA, quote: U.quote(L), products: U.products(L), t: { added: t.added, seeList: t.seeList, inList: t.inList, addToList: t.addToList, addMore: t.addMore, drawerEmpty: t.drawerEmpty, lines: t.lines, pcs: t.pcs, requestQuote: t.requestQuote, backToProducts: t.backToProducts, copied: t.copied, failMsg: t.failMsg, sending: t.form.sending, submit: t.form.submit, notePer: t.form.notePer, items: t.items, noResult: t.noResult, viewAll: t.viewAll, waList: x.waList } })}</script>
+${jsonld.map(j => `<script type="application/ld+json">${JSON.stringify(j)}</script>`).join('\n')}${headExtra}
+<script>window.SFX=${JSON.stringify({ L, w3f: WEB3FORMS_KEY, gtm: GTM_ID, wa: WA, quote: U.quote(L), products: U.products(L), parts: U.parts(L), t: { fromCatalog: FP_T[L].ui.fromCatalog, moreResults: FP_T[L].ui.moreResults, catPh: FP_T[L].ui.searchPh, added: t.added, seeList: t.seeList, inList: t.inList, addToList: t.addToList, addMore: t.addMore, drawerEmpty: t.drawerEmpty, lines: t.lines, pcs: t.pcs, requestQuote: t.requestQuote, backToProducts: t.backToProducts, copied: t.copied, failMsg: t.failMsg, sending: t.form.sending, submit: t.form.submit, notePer: t.form.notePer, items: t.items, noResult: t.noResult, viewAll: t.viewAll, waList: x.waList } })}</script>
 </head>
 <body>
 <a class="skip" href="#main">${x.skip}</a>
@@ -222,7 +237,7 @@ ${jsonld.map(j => `<script type="application/ld+json">${JSON.stringify(j)}</scri
   <div class="wrap">
     <a class="logo" href="${U.home(L)}" aria-label="Sofilx"><img src="/img/logo.png" alt="Sofilx" width="383" height="90"></a>
     <nav class="main" aria-label="${esc(x.mainMenu)}">
-      <div class="mega-wrap"><a href="${U.products(L)}" class="mega-btn" data-nav="products">${t.nav.products} ${I.chev}</a><div class="mega">${mega}</div></div>
+      <div class="mega-wrap"><a href="${U.products(L)}" class="mega-btn" data-nav="products">${t.nav.products} ${I.chev}</a><div class="mega">${mega}${megaAll}</div></div>
       ${navItem('sectors', U.sectors(L))}${navItem('brands', U.brands(L))}${navItem('custom', U.custom(L))}${navItem('about', U.about(L))}${navItem('refs', U.refs(L))}${navItem('contact', U.contact(L))}
     </nav>
     <div class="hicons">
@@ -232,7 +247,7 @@ ${jsonld.map(j => `<script type="application/ld+json">${JSON.stringify(j)}</scri
     </div>
   </div>
   <div class="searchpanel" id="searchpanel" hidden><div class="wrap"><div class="hsearch">${I.search}<input id="q-top" type="search" autocomplete="off" placeholder="${t.searchPh}" aria-label="${t.searchBtn}"><div class="results" id="res-top" hidden></div></div></div></div>
-  <div class="mnav" id="mnav"><a href="${U.products(L)}">${t.nav.products}</a><a href="${U.sectors(L)}">${t.nav.sectors}</a><a href="${U.brands(L)}">${t.nav.brands}</a><a href="${U.custom(L)}">${t.nav.custom}</a><a href="${U.about(L)}">${t.nav.about}</a><a href="${U.refs(L)}">${t.nav.refs}</a><a href="${U.contact(L)}">${t.nav.contact}</a><div class="mlang"><p>${I.globe}${esc(x.language)}</p><div>${langLinks}</div></div></div>
+  <div class="mnav" id="mnav"><a href="${U.products(L)}">${t.nav.products}</a><a href="${U.parts(L)}">${esc(FP_T[L].ui.catalogShort)}</a><a href="${U.sectors(L)}">${t.nav.sectors}</a><a href="${U.brands(L)}">${t.nav.brands}</a><a href="${U.custom(L)}">${t.nav.custom}</a><a href="${U.about(L)}">${t.nav.about}</a><a href="${U.refs(L)}">${t.nav.refs}</a><a href="${U.contact(L)}">${t.nav.contact}</a><div class="mlang"><p>${I.globe}${esc(x.language)}</p><div>${langLinks}</div></div></div>
 </header>
 <main id="main">
 ${body}
@@ -240,7 +255,7 @@ ${body}
 <footer class="site">
   <div class="wrap">
     <div><a class="logo" href="${U.home(L)}"><img src="/img/logo.png" alt="Sofilx" width="383" height="90" loading="lazy"></a><p>${t.footP}</p></div>
-    <div><h4>${t.products}</h4>${CATS.map(c => `<a href="${U.cat(c.id, L)}">${esc(catName(c.id, L))}</a>`).join('')}</div>
+    <div><h4>${t.products}</h4>${CATS.map(c => `<a href="${U.cat(c.id, L)}">${esc(catName(c.id, L))}</a>`).join('')}<a href="${U.parts(L)}">${esc(FP_T[L].ui.catalog)}</a></div>
     <div><h4>Sofilx</h4><a href="${U.about(L)}">${t.nav.about}</a><a href="${U.sectors(L)}">${t.nav.sectors}</a><a href="${U.brands(L)}">${t.nav.brands}</a><a href="${U.refs(L)}">${t.nav.refs}</a><a href="${U.custom(L)}">${t.nav.custom}</a><a href="${U.quote(L)}">${t.list}</a><a href="${U.contact(L)}">${t.customerCenter}</a></div>
     <div><h4>${t.nav.contact}</h4><p>${ADDRESS}</p><p><a href="tel:${PHONE_INT}" dir="ltr">${phone(L)}</a><a href="https://wa.me/${WA}" target="_blank" rel="noopener"><span dir="ltr">${mobile(L)}</span> · WhatsApp</a></p><p><a href="mailto:${EMAIL}">${EMAIL}</a></p></div>
   </div>
@@ -282,6 +297,14 @@ function sectorTile(s, L) {
 const orgLd = { '@context': 'https://schema.org', '@type': 'Organization', name: 'Sofilx', url: SITE, logo: SITE + '/img/logo.png', email: EMAIL, telephone: '+90 216 606 32 06', address: { '@type': 'PostalAddress', streetAddress: 'Esatpaşa Mah. Bingöl Sok. No:1A', addressLocality: 'Ataşehir', addressRegion: 'İstanbul', addressCountry: 'TR' }, contactPoint: [{ '@type': 'ContactPoint', telephone: '+90 216 606 32 06', contactType: 'sales', availableLanguage: ['Turkish', 'English'] }] };
 
 // ---------- sayfalar ----------
+function fpCatTile(c, L) {
+  return `<a class="pcat" href="${U.partCat(c.s, L)}"><span class="ph">${c.img ? `<img src="${fpImg(c.img.replace(/(\.\w+)$/, '-300x300$1'))}" alt="" loading="lazy" width="300" height="300" onerror="this.onerror=null;this.src='${fpImg(c.img)}'">` : ''}</span><span class="nm"><b>${esc(FP_T[L].cats[c.s] || c.s)}</b><small>${fpNum(c.n, L)} ${esc(FP_T[L].ui.parts)}</small></span></a>`;
+}
+function fpHomeSection(L) {
+  const u = FP_T[L].ui;
+  return `<section class="block"><div class="wrap"><div class="sec-head"><div><h2>${esc(u.catalog)}</h2><p>${esc(fill(u.catalogLead, { n: fpNum(FP_COUNT, L) }))}</p></div><a class="link" href="${U.parts(L)}">${t_viewAll(L)} ${I.arrow}</a></div><div class="pcats">${FP_CATS.filter(c => c.img).slice(0, 12).map(c => fpCatTile(c, L)).join('')}</div></div></section>`;
+}
+const t_viewAll = L => D[L].t.viewAll;
 function pageHome(L) {
   const t = D[L].t, x = t.x, url = U.home(L);
   const popular = ['vakum-pompasi-filtreleri', 'karbon-paletler', 'fiber-paletler', 'kompresor-filtreleri'].flatMap(c => P.filter(p => p.cat === c && p.img && p.models.length).slice(0, 2));
@@ -301,6 +324,7 @@ function pageHome(L) {
    <div class="facts">${t.facts.map(f => `<div><b>${f[0]}</b><span>${f[1]}</span></div>`).join('')}</div></div></section>
  <section class="block"><div class="wrap"><div class="sec-head"><div><h2>${t.groupsH}</h2><p>${t.groupsP}</p></div><a class="link" href="${U.products(L)}">${t.allProducts} ${I.arrow}</a></div>
   <div class="cats">${CATS.map(c => `<a class="cat" href="${U.cat(c.id, L)}"><div class="ph"><img src="${imgUrl(catCover[c.id])}" alt="${esc(catName(c.id, L))}" loading="lazy" width="900" height="900"></div><div class="meta"><div><h3>${esc(catName(c.id, L))}</h3><small>${esc(catShort(c.id, L))} · ${P.filter(p => p.cat === c.id).length} ${t.items}</small></div><span class="arrow">${I.arrow}</span></div></a>`).join('')}</div></div></section>
+ ${fpHomeSection(L)}
  <section class="block"><div class="wrap"><div class="sec-head"><div><h2>${t.sectorsH}</h2><p>${t.sectorsP}</p></div><a class="link" href="${U.sectors(L)}">${t.viewAll} ${I.arrow}</a></div><div class="sectors">${SECTORS.map(s => sectorTile(s, L)).join('')}</div></div></section>
  <section class="block"><div class="wrap"><div class="sec-head"><div><h2>${t.howH}</h2><p>${t.howP}</p></div></div><div class="how">${t.how.map((h, i) => `<div><span class="n">0${i + 1}</span><h3>${h[0]}</h3><p>${h[1]}</p></div>`).join('')}</div></div></section>
  <section class="block"><div class="wrap"><div class="sec-head"><div><h2>${t.popularH}</h2></div><a class="link" href="${U.products(L)}">${t.allProducts} ${I.arrow}</a></div><div class="cards">${popular.map(p => card(p, L)).join('')}</div></div></section>
@@ -523,6 +547,26 @@ function searchIndex() {
     write(`assets/search-${L}.json`, JSON.stringify(idx));
   }
 }
+// Sunucu tarafı parça sayfaları için her dilde sayfa iskeleti ve metinler
+function writeFpRuntime() {
+  const out = path.join(FP_DIR, 'shell'); fs.mkdirSync(out, { recursive: true });
+  const ui = {};
+  for (const L of LANGS) {
+    const html = layout({ L, path: '/__PATH__', route: l => `/__R_${l}__`, title: '__TITLE__', desc: '__DESC__', body: '__BODY__', jsonld: [], ogImg: '__OGIMG__', shell: true, headExtra: '__HEAD__' });
+    fs.writeFileSync(path.join(out, `${L}.html`), html);
+    const t = D[L].t, x = t.x;
+    ui[L] = { fp: FP_T[L].ui, cats: FP_T[L].cats, ph: FP_PH.map(k => FP_T[L].phrases[k]), rtl: rtl(L),
+      t: { home: t.home, addToList: t.addToList, waAsk: t.waAsk, share: t.share, copyCode: t.copyCode, notes: t.notes, tabs: t.tabs, compatBrands: t.compatBrands, partNo: t.partNo, ptype: t.ptype, group: t.group, genel: t.genel, teslimat: t.teslimat, iade: t.iade, faq: t.faq, photo: t.photo, related: t.related, items: t.items, list: t.list, searchBtn: t.searchBtn, noModels: t.noModels, qty: x.qty, waProduct: x.waProduct, reqQuote: x.reqQuote, crossShort: x.crossShort, sofilxNo: t.sofilxNo, products: t.products },
+      base: { home: U.home(L), parts: U.parts(L), part: U.part('__S__', L), partCat: U.partCat('__C__', L), quote: U.quote(L) } };
+  }
+  ui.langs = LANGS;
+  fs.writeFileSync(path.join(FP_DIR, 'ui.json'), JSON.stringify(ui));
+  // Sofilx'in kendi ürünleri de katalog aramasında çıksın
+  const own = {};
+  for (const L of LANGS) own[L] = P.map(p => [nm(p, L), [...p.codes, ...p.equiv].join(' | '), p.models.join(' | '), p.brand, typeName(p, L), imgUrl(p.img, 1), U.product(p, L), p.id]);
+  fs.writeFileSync(path.join(FP_DIR, 'own.json.gz'), zlib.gzipSync(JSON.stringify(own)));
+}
+const FP_SM_SIZE = 40000;
 function writeSitemap() {
   const today = new Date().toISOString().slice(0, 10);
   const files = [];
@@ -532,6 +576,8 @@ function writeSitemap() {
     write(`sitemap-${L}.xml`, `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urls}\n</urlset>`);
     files.push(`sitemap-${L}.xml`);
   }
+  const fpPages = Math.ceil((FP_COUNT + FP_CATS.length + 1) / FP_SM_SIZE);
+  for (const L of LANGS) for (let n = 1; n <= fpPages; n++) files.push(`sitemap-parts-${L}-${n}.xml`);
   write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${files.map(f => `<sitemap><loc>${SITE}/${f}</loc><lastmod>${today}</lastmod></sitemap>`).join('\n')}\n</sitemapindex>`);
   write('robots.txt', `User-agent: *\nAllow: /\nDisallow: /teklif\n${LANGS.filter(l => l !== 'tr').map(l => `Disallow: /${l}/quote`).join('\n')}\n\nSitemap: ${SITE}/sitemap.xml\n`);
 }
@@ -545,6 +591,19 @@ function writeVercel() {
   const wild = red.filter(r => r.source.includes(':path*')); const rest = red.filter(r => !r.source.includes(':path*'));
   const cfg = { $schema: 'https://openapi.vercel.sh/vercel.json', buildCommand: 'npm run build', outputDirectory: 'dist', framework: null, cleanUrls: true, trailingSlash: false, redirects: [...rest, ...wild.filter(w => w.source !== '/en/:path*')], headers: [{ source: '/img/(.*)', headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }] }, { source: '/assets/(.*)', headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }] }, { source: '/(.*)', headers: [{ key: 'X-Content-Type-Options', value: 'nosniff' }, { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' }, { key: 'X-Frame-Options', value: 'SAMEORIGIN' }] }] };
   cfg.redirects.push({ source: '/en/:old(.*-kategori)', destination: '/en/products', permanent: true });
+  // parça kataloğu: sunucu fonksiyonu + tedarikçi görsellerinin vekil adresi
+  const LX = LANGS.filter(l => l !== 'tr').join('|');
+  cfg.rewrites = [
+    { source: '/parcalar', destination: '/api/catalog?view=home&L=tr' },
+    { source: '/parcalar/:cat', destination: '/api/catalog?view=cat&L=tr&cat=:cat' },
+    { source: '/parca/:slug', destination: '/api/catalog?view=part&L=tr&slug=:slug' },
+    { source: `/:L(${LX})/parts`, destination: '/api/catalog?view=home&L=:L' },
+    { source: `/:L(${LX})/parts/:cat`, destination: '/api/catalog?view=cat&L=:L&cat=:cat' },
+    { source: `/:L(${LX})/part/:slug`, destination: '/api/catalog?view=part&L=:L&slug=:slug' },
+    { source: `/sitemap-parts-:L(tr|${LX})-:n.xml`, destination: '/api/catalog?view=sitemap&L=:L&n=:n' },
+    { source: '/pimg/:path*', destination: 'https://www.filtrepazarlama.com/wp-content/uploads/:path*' },
+  ];
+  cfg.functions = { 'api/catalog.mjs': { includeFiles: 'data/fp/**', memory: 1024, maxDuration: 15 } };
   fs.writeFileSync(path.join(ROOT, 'vercel.json'), JSON.stringify(cfg, null, 1));
   console.log('redirects', cfg.redirects.length);
 }
@@ -561,5 +620,5 @@ for (const L of LANGS) {
   if (ONLY && !ONLY.includes(L)) continue;
   pageHome(L); pageProducts(L); P.forEach(p => pageProduct(p, L)); pageSectors(L); pageBrands(L); pageCustom(L); pageAbout(L); pageRefs(L); pageContact(L); pageQuote(L); pageLegal(L);
 }
-page404(); searchIndex(); writeSitemap(); writeVercel();
+page404(); searchIndex(); writeFpRuntime(); writeSitemap(); writeVercel();
 console.log('langs', LANGS.join(','), 'pages', sitemap.length, 'products', P.length, 'web3forms', WEB3FORMS_KEY ? 'set' : 'MISSING');

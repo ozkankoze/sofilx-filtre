@@ -79,19 +79,32 @@
   }
   function search(q) { return (IDX || []).map(function (p) { return [p, score(p, q)]; }).filter(function (x) { return x[1] > 0; }).sort(function (a, b) { return b[1] - a[1]; }).map(function (x) { return x[0]; }); }
   function hl(text, q) { var raw = String(text), k = norm(q).trim(), i = norm(raw).indexOf(k); if (!k || i < 0) return esc(raw); return esc(raw.slice(0, i)) + '<mark>' + esc(raw.slice(i, i + k.length)) + '</mark>' + esc(raw.slice(i + k.length)); }
-  function goList(q) { location.href = S.products + '?q=' + encodeURIComponent(q); }
+  function goList(q) { location.href = (S.parts || S.products) + '?q=' + encodeURIComponent(q); }
+  // katalog (sunucu) araması: yerel sonuçların altına eklenir
+  var RC = {}, rTimer = null;
+  function remote(q, cb) { if (!S.parts) return; if (RC[q]) return cb(RC[q]); clearTimeout(rTimer); rTimer = setTimeout(function () { fetch('/api/catalog?view=sj&L=' + L + '&q=' + encodeURIComponent(q)).then(function (r) { return r.json(); }).then(function (j) { RC[q] = j; cb(j); }).catch(function () { }); }, 220); }
   function bindSearch(input, box) {
     if (!input || !box) return; var act = -1, list = [];
     function draw() {
       var q = input.value; if (!q.trim()) { box.hidden = true; return; }
       loadIdx().then(function () {
-        var all = search(q); list = all.slice(0, 7);
-        if (!list.length) { box.innerHTML = '<div class="foot" style="border:0">' + esc(t.noResult) + '</div>'; box.hidden = false; return; }
+        var all = search(q); list = all.slice(0, 5);
+        function more(j) {
+          if (input.value !== q) return;
+          var have = {}; list.forEach(function (p) { have[p.u] = 1; });
+          var extra = (j.items || []).filter(function (x) { return !have[x.u]; }).slice(0, list.length ? 5 : 8);
+          var html = list.length ? box.innerHTML.replace(/<div class="foot">[\s\S]*$/, '') : '';
+          if (extra.length) { html += '<div class="rhead">' + esc(t.fromCatalog || '') + '</div>' + extra.map(function (x) { return '<a class="r" href="' + x.u + '"><span class="th"><img src="' + x.im + '" alt="" loading="lazy"></span><div><b>' + hl(x.n, q) + '</b><small>' + esc(x.t) + (x.c ? ' · <span class="mono">' + hl(x.c, q) + '</span>' : '') + '</small></div><span class="go-i">' + ICON.arrow + '</span></a>'; }).join(''); list = list.concat(extra); }
+          if (!list.length) { box.innerHTML = '<div class="foot" style="border:0">' + esc(t.noResult) + '</div>'; box.hidden = false; return; }
+          html += '<div class="foot"><a class="link" href="' + (j.more || (S.parts + '?q=' + encodeURIComponent(q))) + '">' + (j.total ? j.total + ' · ' : '') + esc(t.moreResults || t.viewAll) + ' ' + ICON.arrow + '</a></div>';
+          box.innerHTML = html; box.hidden = false;
+        }
+        if (!list.length) { box.innerHTML = '<div class="foot" style="border:0">…</div>'; box.hidden = false; remote(q, more); return; }
         box.innerHTML = list.map(function (p, i) {
           var tq = tight(q), cm = (p.c || '').split(' | ').filter(function (c) { return tq.length > 2 && tight(c).indexOf(tq) > -1; })[0], mm = (p.m || '').split(' | ').filter(function (m) { return tq.length > 2 && tight(m).indexOf(tq) > -1; })[0];
           return '<a class="r' + (i === act ? ' act' : '') + '" href="' + p.u + '"><span class="th"><img src="' + p.im + '" alt=""></span><div><b>' + hl(p.n, q) + '</b><small>' + esc(p.b) + ' · ' + esc(p.t) + (cm ? ' · <span class="mono">' + hl(cm, q) + '</span>' : '') + (mm ? ' · ' + hl(mm, q) : '') + '</small></div><span class="go-i">' + ICON.arrow + '</span></a>';
-        }).join('') + '<div class="foot"><a class="link" href="' + S.products + '?q=' + encodeURIComponent(q) + '">' + all.length + ' · ' + esc(t.viewAll) + ' ' + ICON.arrow + '</a></div>';
-        box.hidden = false;
+        }).join('') + '<div class="foot"><a class="link" href="' + (S.parts || S.products) + '?q=' + encodeURIComponent(q) + '">' + esc(t.moreResults || t.viewAll) + ' ' + ICON.arrow + '</a></div>';
+        box.hidden = false; remote(q, more);
       });
     }
     input.addEventListener('input', function () { act = -1; draw(); });
@@ -179,7 +192,7 @@
       if (ok && !cart.length && !$('#f-not').value.trim()) { toast(lead.dataset.empty, true); ok = false; }
       if (!ok) return;
       var d = new Date(), no = 'SFX-' + String(d.getFullYear()).slice(2) + String(d.getMonth() + 1).padStart(2, '0') + String(d.getDate()).padStart(2, '0') + '-' + Math.floor(1000 + Math.random() * 9000);
-      var lines = cart.map(function (l, i) { return (i + 1) + ') ' + l.name + (l.code ? ' [' + l.code + ']' : '') + ' × ' + l.qty + (l.note ? ' — Not: ' + l.note : '') + '\n   ' + location.origin + '/urun/' + l.id; }).join('\n');
+      var lines = cart.map(function (l, i) { return (i + 1) + ') ' + l.name + (l.code ? ' [' + l.code + ']' : '') + ' × ' + l.qty + (l.note ? ' — Not: ' + l.note : '') + '\n   ' + location.origin + (String(l.id).indexOf('p:') === 0 ? '/parca/' + String(l.id).slice(2) : '/urun/' + l.id); }).join('\n');
       var payload = { access_key: S.w3f, subject: 'Teklif talebi ' + no + ' — ' + $('#f-firma').value.trim() + ' (' + cart.length + ' kalem)', from_name: 'Sofilx web sitesi', replyto: $('#f-mail').value.trim(), 'Takip no': no, 'Firma': $('#f-firma').value.trim(), 'Ad soyad': $('#f-ad').value.trim(), 'Telefon': $('#f-tel').value.trim(), 'E-posta': $('#f-mail').value.trim(), 'Şehir': $('#f-sehir').value, 'Teslimat': $('#f-teslim').value, 'Dil': L.toUpperCase(), 'Ürünler': lines || '-', 'Not': $('#f-not').value.trim() || '-', botcheck: form.botcheck.checked };
       var btn = $('#q-submit'), msg = $('#form-msg'); btn.disabled = true; btn.textContent = t.sending; msg.hidden = true;
       if (!S.w3f) { btn.disabled = false; btn.textContent = t.submit; msg.textContent = t.failMsg; msg.hidden = false; return; }

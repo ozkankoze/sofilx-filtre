@@ -725,3 +725,30 @@ footer.site .legal .credit{white-space:nowrap}
 footer.site .legal .credit a{color:#fff;text-decoration:underline;text-underline-offset:3px}
 footer.site .legal .credit a:hover{opacity:.8}
 @media (max-width:680px){footer.site .legal .wrap{flex-direction:column;align-items:flex-start}}
+
+/* ---------- parça kataloğu ---------- */
+.mega a.mega-all{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;margin-top:4px;padding:12px 14px;background:var(--brand);color:#fff;border-radius:var(--r-sm)}
+.mega a.mega-all b{color:#fff}.mega a.mega-all small{color:rgba(255,255,255,.75);display:block}
+.mega a.mega-all svg{width:18px;height:18px}
+.mega a.mega-all:hover{background:var(--brand-hover)}
+.pcats{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.pcat{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;text-decoration:none;color:var(--ink);background:var(--bg);transition:border-color .15s,transform .15s}
+.pcat:hover{border-color:var(--brand);transform:translateY(-2px)}
+.pcat .ph{aspect-ratio:4/3;background:var(--tile);display:grid;place-items:center;overflow:hidden}
+.pcat .ph img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;padding:10px}
+.pcat .nm{padding:10px 12px 12px;display:flex;flex-direction:column;gap:2px}
+.pcat .nm b{font-size:14px;line-height:1.25;font-weight:600}
+.pcat .nm small{font-size:12.5px;color:var(--muted)}
+.catsearch{display:flex;align-items:center;gap:8px;border:1px solid var(--line-2);border-radius:12px;padding:6px 6px 6px 14px;background:var(--bg);margin:0 0 26px;max-width:760px}
+.catsearch>svg{width:18px;height:18px;color:var(--muted);flex:none}
+.catsearch input{flex:1;min-width:0;border:0;background:transparent;height:44px;font-size:16px;outline:none}
+.pager{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:28px 0 0;font-size:14px;color:var(--muted)}
+.cgroups{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.cgroups>div{background:var(--tile);border-radius:10px;padding:12px 14px}
+.cgroups h4{margin:0 0 4px;font-size:13.5px;color:var(--brand)}
+.cgroups p{margin:0;font-family:var(--f-mono);font-size:12.5px;color:var(--muted);word-break:break-word}
+#tab-uyum h3{font-size:16px;margin:0 0 14px}
+.results .rhead{padding:8px 14px 4px;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);border-top:1px solid var(--line)}
+.results .rhead:first-child{border-top:0}
+.card .ph img[src^="/pimg/"]{object-fit:contain;mix-blend-mode:multiply}
+@media (max-width:680px){.pcats{grid-template-columns:repeat(2,1fr)}.catsearch .btn{padding:0 14px}}
