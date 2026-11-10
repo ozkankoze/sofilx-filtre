@@ -11,6 +11,7 @@ function match(src, url) {
 http.createServer((q, r) => {
   const [p, qs] = q.url.split('?'); const u = decodeURIComponent(p);
   if (u === '/api/catalog') { q.query = Object.fromEntries(new URLSearchParams(qs || '')); return catalog(q, r); }
+  { const sf = path.join(D, u); if (u.startsWith('/pimg/') && fs.existsSync(sf)) { r.writeHead(200, { 'Content-Type': 'image/webp' }); return fs.createReadStream(sf).pipe(r); } }
   for (const rw of cfg.rewrites || []) {
     const m = match(rw.source, u); if (!m) continue;
     let dest = rw.destination; for (const [k, v] of Object.entries(m)) dest = dest.split(':' + k + '*').join(v).split(':' + k).join(v);

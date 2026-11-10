@@ -589,7 +589,7 @@ function writeVercel() {
   for (const c of data.cats) add(c.old, U.cat(c.cat, 'tr'));
   [['/tr', '/'], ['/tr/hakkimizda', '/kurumsal'], ['/tr/misyonumuz', '/kurumsal'], ['/tr/vizyonumuz', '/kurumsal'], ['/tr/iletisim', '/iletisim'], ['/tr/markalar', '/markalar'], ['/tr/teklif-al', '/teklif'], ['/en/:path*', '/en'], ['/tr/:path*', '/urunler']].forEach(([a, b]) => add(a, b));
   const wild = red.filter(r => r.source.includes(':path*')); const rest = red.filter(r => !r.source.includes(':path*'));
-  const cfg = { $schema: 'https://openapi.vercel.sh/vercel.json', buildCommand: 'npm run build', outputDirectory: 'dist', framework: null, cleanUrls: true, trailingSlash: false, redirects: [...rest, ...wild.filter(w => w.source !== '/en/:path*')], headers: [{ source: '/img/(.*)', headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }] }, { source: '/assets/(.*)', headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }] }, { source: '/(.*)', headers: [{ key: 'X-Content-Type-Options', value: 'nosniff' }, { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' }, { key: 'X-Frame-Options', value: 'SAMEORIGIN' }] }] };
+  const cfg = { $schema: 'https://openapi.vercel.sh/vercel.json', buildCommand: 'npm run build', outputDirectory: 'dist', framework: null, cleanUrls: true, trailingSlash: false, redirects: [...rest, ...wild.filter(w => w.source !== '/en/:path*')], headers: [{ source: '/pimg/(.*)', headers: [{ key: 'Cache-Control', value: 'public, max-age=604800, stale-while-revalidate=2592000' }] }, { source: '/img/(.*)', headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }] }, { source: '/assets/(.*)', headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }] }, { source: '/(.*)', headers: [{ key: 'X-Content-Type-Options', value: 'nosniff' }, { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' }, { key: 'X-Frame-Options', value: 'SAMEORIGIN' }] }] };
   cfg.redirects.push({ source: '/en/:old(.*-kategori)', destination: '/en/products', permanent: true });
   // parça kataloğu: sunucu fonksiyonu + tedarikçi görsellerinin vekil adresi
   const LX = LANGS.filter(l => l !== 'tr').join('|');
@@ -615,6 +615,8 @@ copyImages();
 fs.copyFileSync(path.join(ROOT, 'assets/site.css'), path.join(DIST, 'assets/site.css'));
 fs.copyFileSync(path.join(ROOT, 'assets/site.js'), path.join(DIST, 'assets/site.js'));
 fs.copyFileSync(path.join(ROOT, 'assets/favicon.png'), path.join(DIST, 'favicon.png'));
+// static/ altındaki dosyalar olduğu gibi kopyalanır (ör. filigranı temizlenmiş katalog görselleri: static/pimg → /pimg, tedarikçi vekilinin önüne geçer)
+if (fs.existsSync(path.join(ROOT, 'static'))) fs.cpSync(path.join(ROOT, 'static'), DIST, { recursive: true });
 const ONLY = process.env.LANGS ? process.env.LANGS.split(',') : null; // hızlı test: LANGS=tr,ar
 for (const L of LANGS) {
   if (ONLY && !ONLY.includes(L)) continue;
