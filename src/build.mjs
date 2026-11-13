@@ -279,7 +279,7 @@ const kindLabel = (p, L) => { const k = kindOf(p), t = D[L].t; return k === 'Mua
 function card(p, L) {
   const t = D[L].t, n = nm(p, L);
   return `<article class="card" data-id="${p.id}" data-name="${esc(n)}" data-code="${esc(codeLine(p))}" data-img="${imgUrl(p.img, 1)}" data-url="${U.product(p, L)}" data-brand="${esc(p.brand)}" data-type="${esc(typeName(p, L))}" data-cat="${p.cat}">
-  <div class="phw"><a class="ph" href="${U.product(p, L)}"><img src="${imgUrl(p.img, 1)}" alt="${esc(n)}" loading="lazy" width="440" height="440"><span class="tag">${kindLabel(p, L)}</span></a>
+  <div class="phw"><a class="ph" href="${U.product(p, L)}"><img src="${imgUrl(p.img, 1)}" alt="${esc(n)}" loading="lazy" width="440" height="440">${kindOf(p) === 'Muadil' ? '' : `<span class="tag">${kindLabel(p, L)}</span>`}</a>
   <button class="quick" type="button" data-add="${p.id}" aria-label="${t.addToList}" title="${t.addToList}">${I.plus}</button></div>
   <div class="info"><span class="brandname">${esc(p.brand)}</span><h3><a href="${U.product(p, L)}">${esc(n)}</a></h3>${p.codes.length ? `<span class="code" dir="ltr">${esc(codeLine(p))}</span>` : ''}</div></article>`;
 }
@@ -423,7 +423,7 @@ function pageProduct(p, L) {
   const body = `<div class="wrap">${crumbs(crumbItems)}
  <div class="pd" data-id="${p.id}" data-name="${esc(n)}" data-code="${esc(codeLine(p))}" data-img="${imgUrl(p.img, 1)}" data-url="${url}">
   <div class="gal"><div class="gallery" id="gal-main"><img src="${imgUrl(p.img)}" alt="${esc(n)}" width="900" height="900" fetchpriority="high"></div>${thumbs.length > 1 ? `<div class="thumbs">${thumbs.join('')}</div>` : ''}<template id="dimtpl">${dimSvg(p, L)}</template></div>
-  <div><div class="kicker"><span class="pill">${kindLabel(p, L)}</span><span class="stock">${esc(p.brand)}</span></div>
+  <div><div class="kicker">${kindOf(p) === 'Muadil' ? '' : `<span class="pill">${kindLabel(p, L)}</span>`}<span class="stock">${esc(p.brand)}</span></div>
   <h1>${esc(n)}</h1>${p.codes.length && !p.codes.every(c => n.includes(c)) ? `<div class="codeline" dir="ltr">${esc(codeLine(p))}</div>` : ''}
   <dl class="quick-sp">${p.models.length ? `<dt>${t.compatible}</dt><dd><span dir="ltr">${esc(p.models.slice(0, 3).join(', '))}</span>${p.models.length > 3 ? ` <a href="#tab-uyum" data-goto="uyum">+${p.models.length - 3}</a>` : ''}</dd>` : ''}${xr.length ? `<dt>${x.crossShort}</dt><dd class="mono" dir="ltr">${esc(xr.slice(0, 3).join(' · '))}</dd>` : ''}${sof.length ? `<dt>${t.sofilxNo}</dt><dd class="mono" dir="ltr">${esc(sof.join(' · '))}</dd>` : ''}${p.dims ? `<dt>${t.size}</dt><dd dir="ltr">${fmtD(p.dims)}</dd>` : ''}<dt>${t.type2}</dt><dd>${esc(ty)}</dd></dl>
   <div class="buy"><div class="buyrow"><div class="qty"><button type="button" data-step="-1" aria-label="-">−</button><input id="pd-qty" type="number" min="1" value="1" aria-label="${x.qty}"><button type="button" data-step="1" aria-label="+">+</button></div><button class="btn btn-dark" type="button" id="pd-add">${t.addToList}</button></div>
