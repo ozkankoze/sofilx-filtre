@@ -3255,6 +3255,36 @@
    "source": "/en/:old(.*-kategori)",
    "destination": "/en/products",
    "permanent": true
+  },
+  {
+   "source": "/parcalar",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/parts",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/parcalar/:p*",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/parca/:p*",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/parts/:p*",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/part/:p*",
+   "destination": "/:L/products",
+   "permanent": true
   }
  ],
  "headers": [
@@ -3302,46 +3332,5 @@
     }
    ]
   }
- ],
- "rewrites": [
-  {
-   "source": "/parcalar",
-   "destination": "/api/catalog?view=home&L=tr"
-  },
-  {
-   "source": "/parcalar/:cat",
-   "destination": "/api/catalog?view=cat&L=tr&cat=:cat"
-  },
-  {
-   "source": "/parca/:slug",
-   "destination": "/api/catalog?view=part&L=tr&slug=:slug"
-  },
-  {
-   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/parts",
-   "destination": "/api/catalog?view=home&L=:L"
-  },
-  {
-   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/parts/:cat",
-   "destination": "/api/catalog?view=cat&L=:L&cat=:cat"
-  },
-  {
-   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/part/:slug",
-   "destination": "/api/catalog?view=part&L=:L&slug=:slug"
-  },
-  {
-   "source": "/sitemap-parts-:L(tr|en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)-:n.xml",
-   "destination": "/api/catalog?view=sitemap&L=:L&n=:n"
-  },
-  {
-   "source": "/pimg/:path*",
-   "destination": "https://www.filtrepazarlama.com/wp-content/uploads/:path*"
-  }
- ],
- "functions": {
-  "api/catalog.mjs": {
-   "includeFiles": "data/fp/**",
-   "memory": 1024,
-   "maxDuration": 15
-  }
- }
+ ]
 }

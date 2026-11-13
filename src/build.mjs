@@ -105,9 +105,11 @@ const rtl = L => !!D[L].meta.rtl;
 
 // ---------- Filtre Pazarlama parça kataloğu (sayfalar sunucuda üretilir: api/catalog.mjs) ----------
 const FP_DIR = path.join(ROOT, 'data/fp');
-const FP_IDX = JSON.parse(zlib.gunzipSync(fs.readFileSync(path.join(FP_DIR, 'idx.json.gz'))).toString());
+// data/fp yoksa katalog tamamen kapalıdır (ana sayfa bölümü, menü bağlantıları, sunucu sayfaları, site haritaları)
+const FP_ON = fs.existsSync(path.join(FP_DIR, 'idx.json.gz'));
+const FP_IDX = FP_ON ? JSON.parse(zlib.gunzipSync(fs.readFileSync(path.join(FP_DIR, 'idx.json.gz'))).toString()) : [];
 const FP_COUNT = FP_IDX.length;
-const FP_CATS = JSON.parse(fs.readFileSync(path.join(FP_DIR, 'cats.json'), 'utf8'));
+const FP_CATS = FP_ON ? JSON.parse(fs.readFileSync(path.join(FP_DIR, 'cats.json'), 'utf8')) : [];
 const FP_T = Object.fromEntries(LANGS.map(L => [L, JSON.parse(fs.readFileSync(path.join(ROOT, `i18n/fp/${L}.json`), 'utf8'))]));
 const FP_PH = Object.keys(FP_T.tr.phrases);
 const fpImg = rel => rel ? `/pimg/${rel}` : '/img/placeholder.svg';
@@ -204,7 +206,7 @@ function layout({ L, path: url, route, title, desc, body, jsonld = [], noindex =
   const hreflang = route ? LANGS.map(l => `<link rel="alternate" hreflang="${l}" href="${abs(route(l))}">`).join('') + `<link rel="alternate" hreflang="x-default" href="${abs(route('tr'))}">` : '';
   const langLinks = LANGS.map(l => `<a href="${langHref(l)}" hreflang="${l}" lang="${l}" role="menuitem"${l === L ? ' aria-current="true"' : ''}>${flagImg(l, 1)}<b>${l.toUpperCase()}</b><i>${esc(D[l].meta.name)}</i></a>`).join('');
   const navItem = (k, href) => `<a href="${href}" data-nav="${k}">${t.nav[k]}</a>`;
-  const megaAll = `<a class="mega-all" href="${U.parts(L)}"><span><b>${esc(FP_T[L].ui.catalog)}</b><small>${fpNum(FP_COUNT, L)} ${esc(FP_T[L].ui.parts)}</small></span>${I.arrow}</a>`;
+  const megaAll = !FP_ON ? '' : `<a class="mega-all" href="${U.parts(L)}"><span><b>${esc(FP_T[L].ui.catalog)}</b><small>${fpNum(FP_COUNT, L)} ${esc(FP_T[L].ui.parts)}</small></span>${I.arrow}</a>`;
   const mega = CATS.map(c => `<a href="${U.cat(c.id, L)}"><span class="th"><img src="${imgUrl(catCover[c.id], 1)}" alt="" loading="lazy" width="52" height="52"></span><span><b>${esc(catName(c.id, L))}</b><small>${P.filter(p => p.cat === c.id).length} ${t.items}</small></span></a>`).join('');
   const fonts = FONT_BASE + (FONT_EXTRA[L] ? '&' + FONT_EXTRA[L] : '');
   return `<!doctype html>
@@ -227,7 +229,7 @@ ${hreflang}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?${fonts}&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=${BUILD}">
 ${jsonld.map(j => `<script type="application/ld+json">${JSON.stringify(j)}</script>`).join('\n')}${headExtra}
-<script>window.SFX=${JSON.stringify({ L, w3f: WEB3FORMS_KEY, gtm: GTM_ID, wa: WA, quote: U.quote(L), products: U.products(L), parts: U.parts(L), t: { fromCatalog: FP_T[L].ui.fromCatalog, moreResults: FP_T[L].ui.moreResults, catPh: FP_T[L].ui.searchPh, added: t.added, seeList: t.seeList, inList: t.inList, addToList: t.addToList, addMore: t.addMore, drawerEmpty: t.drawerEmpty, lines: t.lines, pcs: t.pcs, requestQuote: t.requestQuote, backToProducts: t.backToProducts, copied: t.copied, failMsg: t.failMsg, sending: t.form.sending, submit: t.form.submit, notePer: t.form.notePer, items: t.items, noResult: t.noResult, viewAll: t.viewAll, waList: x.waList } })}</script>
+<script>window.SFX=${JSON.stringify({ L, w3f: WEB3FORMS_KEY, gtm: GTM_ID, wa: WA, quote: U.quote(L), products: U.products(L), parts: FP_ON ? U.parts(L) : undefined, t: { fromCatalog: FP_T[L].ui.fromCatalog, moreResults: FP_T[L].ui.moreResults, catPh: FP_T[L].ui.searchPh, added: t.added, seeList: t.seeList, inList: t.inList, addToList: t.addToList, addMore: t.addMore, drawerEmpty: t.drawerEmpty, lines: t.lines, pcs: t.pcs, requestQuote: t.requestQuote, backToProducts: t.backToProducts, copied: t.copied, failMsg: t.failMsg, sending: t.form.sending, submit: t.form.submit, notePer: t.form.notePer, items: t.items, noResult: t.noResult, viewAll: t.viewAll, waList: x.waList } })}</script>
 </head>
 <body>
 <a class="skip" href="#main">${x.skip}</a>
@@ -247,7 +249,7 @@ ${jsonld.map(j => `<script type="application/ld+json">${JSON.stringify(j)}</scri
     </div>
   </div>
   <div class="searchpanel" id="searchpanel" hidden><div class="wrap"><div class="hsearch">${I.search}<input id="q-top" type="search" autocomplete="off" placeholder="${t.searchPh}" aria-label="${t.searchBtn}"><div class="results" id="res-top" hidden></div></div></div></div>
-  <div class="mnav" id="mnav"><a href="${U.products(L)}">${t.nav.products}</a><a href="${U.parts(L)}">${esc(FP_T[L].ui.catalogShort)}</a><a href="${U.sectors(L)}">${t.nav.sectors}</a><a href="${U.brands(L)}">${t.nav.brands}</a><a href="${U.custom(L)}">${t.nav.custom}</a><a href="${U.about(L)}">${t.nav.about}</a><a href="${U.refs(L)}">${t.nav.refs}</a><a href="${U.contact(L)}">${t.nav.contact}</a><div class="mlang"><p>${I.globe}${esc(x.language)}</p><div>${langLinks}</div></div></div>
+  <div class="mnav" id="mnav"><a href="${U.products(L)}">${t.nav.products}</a>${FP_ON ? `<a href="${U.parts(L)}">${esc(FP_T[L].ui.catalogShort)}</a>` : ''}<a href="${U.sectors(L)}">${t.nav.sectors}</a><a href="${U.brands(L)}">${t.nav.brands}</a><a href="${U.custom(L)}">${t.nav.custom}</a><a href="${U.about(L)}">${t.nav.about}</a><a href="${U.refs(L)}">${t.nav.refs}</a><a href="${U.contact(L)}">${t.nav.contact}</a><div class="mlang"><p>${I.globe}${esc(x.language)}</p><div>${langLinks}</div></div></div>
 </header>
 <main id="main">
 ${body}
@@ -255,7 +257,7 @@ ${body}
 <footer class="site">
   <div class="wrap">
     <div><a class="logo" href="${U.home(L)}"><img src="/img/logo.png" alt="Sofilx" width="383" height="90" loading="lazy"></a><p>${t.footP}</p></div>
-    <div><h4>${t.products}</h4>${CATS.map(c => `<a href="${U.cat(c.id, L)}">${esc(catName(c.id, L))}</a>`).join('')}<a href="${U.parts(L)}">${esc(FP_T[L].ui.catalog)}</a></div>
+    <div><h4>${t.products}</h4>${CATS.map(c => `<a href="${U.cat(c.id, L)}">${esc(catName(c.id, L))}</a>`).join('')}${FP_ON ? `<a href="${U.parts(L)}">${esc(FP_T[L].ui.catalog)}</a>` : ''}</div>
     <div><h4>Sofilx</h4><a href="${U.about(L)}">${t.nav.about}</a><a href="${U.sectors(L)}">${t.nav.sectors}</a><a href="${U.brands(L)}">${t.nav.brands}</a><a href="${U.refs(L)}">${t.nav.refs}</a><a href="${U.custom(L)}">${t.nav.custom}</a><a href="${U.quote(L)}">${t.list}</a><a href="${U.contact(L)}">${t.customerCenter}</a></div>
     <div><h4>${t.nav.contact}</h4><p>${ADDRESS}</p><p><a href="tel:${PHONE_INT}" dir="ltr">${phone(L)}</a><a href="https://wa.me/${WA}" target="_blank" rel="noopener"><span dir="ltr">${mobile(L)}</span> · WhatsApp</a></p><p><a href="mailto:${EMAIL}">${EMAIL}</a></p></div>
   </div>
@@ -324,7 +326,7 @@ function pageHome(L) {
    <div class="facts">${t.facts.map(f => `<div><b>${f[0]}</b><span>${f[1]}</span></div>`).join('')}</div></div></section>
  <section class="block"><div class="wrap"><div class="sec-head"><div><h2>${t.groupsH}</h2><p>${t.groupsP}</p></div><a class="link" href="${U.products(L)}">${t.allProducts} ${I.arrow}</a></div>
   <div class="cats">${CATS.map(c => `<a class="cat" href="${U.cat(c.id, L)}"><div class="ph"><img src="${imgUrl(catCover[c.id])}" alt="${esc(catName(c.id, L))}" loading="lazy" width="900" height="900"></div><div class="meta"><div><h3>${esc(catName(c.id, L))}</h3><small>${esc(catShort(c.id, L))} · ${P.filter(p => p.cat === c.id).length} ${t.items}</small></div><span class="arrow">${I.arrow}</span></div></a>`).join('')}</div></div></section>
- ${fpHomeSection(L)}
+ ${FP_ON ? fpHomeSection(L) : ''}
  <section class="block"><div class="wrap"><div class="sec-head"><div><h2>${t.sectorsH}</h2><p>${t.sectorsP}</p></div><a class="link" href="${U.sectors(L)}">${t.viewAll} ${I.arrow}</a></div><div class="sectors">${SECTORS.map(s => sectorTile(s, L)).join('')}</div></div></section>
  <section class="block"><div class="wrap"><div class="sec-head"><div><h2>${t.howH}</h2><p>${t.howP}</p></div></div><div class="how">${t.how.map((h, i) => `<div><span class="n">0${i + 1}</span><h3>${h[0]}</h3><p>${h[1]}</p></div>`).join('')}</div></div></section>
  <section class="block"><div class="wrap"><div class="sec-head"><div><h2>${t.popularH}</h2></div><a class="link" href="${U.products(L)}">${t.allProducts} ${I.arrow}</a></div><div class="cards">${popular.map(p => card(p, L)).join('')}</div></div></section>
@@ -576,7 +578,7 @@ function writeSitemap() {
     write(`sitemap-${L}.xml`, `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urls}\n</urlset>`);
     files.push(`sitemap-${L}.xml`);
   }
-  const fpPages = Math.ceil((FP_COUNT + FP_CATS.length + 1) / FP_SM_SIZE);
+  const fpPages = !FP_ON ? 0 : Math.ceil((FP_COUNT + FP_CATS.length + 1) / FP_SM_SIZE);
   for (const L of LANGS) for (let n = 1; n <= fpPages; n++) files.push(`sitemap-parts-${L}-${n}.xml`);
   write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${files.map(f => `<sitemap><loc>${SITE}/${f}</loc><lastmod>${today}</lastmod></sitemap>`).join('\n')}\n</sitemapindex>`);
   write('robots.txt', `User-agent: *\nAllow: /\nDisallow: /teklif\n${LANGS.filter(l => l !== 'tr').map(l => `Disallow: /${l}/quote`).join('\n')}\n\nSitemap: ${SITE}/sitemap.xml\n`);
@@ -593,6 +595,14 @@ function writeVercel() {
   cfg.redirects.push({ source: '/en/:old(.*-kategori)', destination: '/en/products', permanent: true });
   // parça kataloğu: sunucu fonksiyonu + tedarikçi görsellerinin vekil adresi
   const LX = LANGS.filter(l => l !== 'tr').join('|');
+  if (!FP_ON) {
+    // katalog kaldırıldı: eski adresler ürünler sayfasına yönlenir
+    cfg.redirects.push({ source: '/parcalar', destination: '/urunler', permanent: true }, { source: `/:L(${LX})/parts`, destination: '/:L/products', permanent: true }, { source: '/parcalar/:p*', destination: '/urunler', permanent: true }, { source: '/parca/:p*', destination: '/urunler', permanent: true },
+      { source: `/:L(${LX})/parts/:p*`, destination: '/:L/products', permanent: true }, { source: `/:L(${LX})/part/:p*`, destination: '/:L/products', permanent: true });
+    fs.writeFileSync(path.join(ROOT, 'vercel.json'), JSON.stringify(cfg, null, 1));
+    console.log('redirects', cfg.redirects.length);
+    return;
+  }
   cfg.rewrites = [
     { source: '/parcalar', destination: '/api/catalog?view=home&L=tr' },
     { source: '/parcalar/:cat', destination: '/api/catalog?view=cat&L=tr&cat=:cat' },
@@ -622,5 +632,5 @@ for (const L of LANGS) {
   if (ONLY && !ONLY.includes(L)) continue;
   pageHome(L); pageProducts(L); P.forEach(p => pageProduct(p, L)); pageSectors(L); pageBrands(L); pageCustom(L); pageAbout(L); pageRefs(L); pageContact(L); pageQuote(L); pageLegal(L);
 }
-page404(); searchIndex(); writeFpRuntime(); writeSitemap(); writeVercel();
+page404(); searchIndex(); if (FP_ON) writeFpRuntime(); writeSitemap(); writeVercel();
 console.log('langs', LANGS.join(','), 'pages', sitemap.length, 'products', P.length, 'web3forms', WEB3FORMS_KEY ? 'set' : 'MISSING');

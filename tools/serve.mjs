@@ -3,7 +3,7 @@ import http from 'node:http'; import { spawn } from 'node:child_process'; import
 const D = path.resolve('dist');
 const T = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.webp': 'image/webp', '.png': 'image/png', '.svg': 'image/svg+xml', '.xml': 'application/xml', '.txt': 'text/plain' };
 const cfg = JSON.parse(fs.readFileSync('vercel.json', 'utf8'));
-const { default: catalog } = await import(path.resolve('api/catalog.mjs'));
+const catalog = fs.existsSync('api/catalog.mjs') ? (await import(path.resolve('api/catalog.mjs'))).default : null;
 function match(src, url) {
   const names = []; const re = new RegExp('^' + src.replace(/\./g, '\\.').replace(/:(\w+)(\(([^)]+)\))?(\*)?/g, (m, n, g, alt, star) => { names.push(n); return alt ? `(${alt})` : star ? '(.*)' : '([^/]+?)'; }) + '$');
   const m = url.match(re); if (!m) return null; return Object.fromEntries(names.map((n, i) => [n, m[i + 1]]));
