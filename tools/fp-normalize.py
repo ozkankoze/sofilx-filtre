@@ -9,6 +9,8 @@ PH = list(tr['phrases'].keys()); PHI = {p: i for i, p in enumerate(PH)}
 VOCAB = set(w for p in PH for w in p.split())
 cats_raw = json.load(open(os.path.join(os.path.dirname(SRC), 'cats_all.json')))
 CAT = {c['id']: c for c in cats_raw}
+# Sitede gösterilmeyecek gruplar (bu gruptaki ürünler tamamen çıkarılır)
+EXCLUDE = {'hidrolik-filtre'}
 UP = 'https://www.filtrepazarlama.com/wp-content/uploads/'
 def rel(u): return u.split('/wp-content/uploads/')[-1] if u and '/wp-content/uploads/' in u else ''
 def txt(h): return re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', h))).strip()
@@ -48,6 +50,7 @@ for p in P:
     pre, ph = split_name(name)
     if ph < 0: nophr += 1; pre = name
     cs = [CAT[c['id']]['slug'] for c in p['categories'] if c['id'] in CAT] or ['hidrolik-filtre']
+    if any(c in EXCLUDE for c in cs): continue
     for c in cs: catcount[c] += 1
     imgs = [rel(i['src']) for i in p['images'] if rel(i['src'])]
     th = rel(p['images'][0].get('thumbnail', '')) if p['images'] else ''
