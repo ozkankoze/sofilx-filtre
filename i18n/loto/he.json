@@ -1,0 +1,41 @@
+{
+ "cats": {
+  "emniyet-asma-kilitler": {
+   "name": "מנעולי בטיחות"
+  },
+  "salter-kilitleme-ekipmanlari": {
+   "name": "נעילות למפסקים ומתגים"
+  },
+  "vana-kilitleme-ekipmanlari": {
+   "name": "ציוד נעילת ברזים"
+  },
+  "kablo-kilitleme-ekipmanlari": {
+   "name": "ציוד נעילה בכבל"
+  },
+  "kilit-coklandiricilar": {
+   "name": "מרבי נעילה (Hasp)"
+  },
+  "elektrik-pnomatik-kilitleme-ekipmanlari": {
+   "name": "נעילה חשמלית ופנאומטית"
+  },
+  "lockout-istasyon-canta": {
+   "name": "עמדות LOTO"
+  },
+  "grup-kilit-kutusu": {
+   "name": "קופסאות ותיקי נעילה קבוצתית"
+  },
+  "set-urunler": {
+   "name": "ערכות LOTO"
+  },
+  "tehlike-etiketleri": {
+   "name": "תוויות אזהרה מסכנה"
+  },
+  "ag-og-elektrik-guvenlik-ekipmanlari": {
+   "name": "ציוד בטיחות חשמל מתח נמוך/בינוני"
+  },
+  "yag-ve-kimyasal-emici-kitler": {
+   "name": "ערכות ספיגה לשמן ולכימיקלים"
+  }
+ },
+ "products": {}
+}

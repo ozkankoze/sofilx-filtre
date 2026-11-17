@@ -1,0 +1,41 @@
+{
+ "cats": {
+  "emniyet-asma-kilitler": {
+   "name": "قفل‌های آویز ایمنی"
+  },
+  "salter-kilitleme-ekipmanlari": {
+   "name": "قفل کلید و بریکر"
+  },
+  "vana-kilitleme-ekipmanlari": {
+   "name": "تجهیزات قفل شیر"
+  },
+  "kablo-kilitleme-ekipmanlari": {
+   "name": "تجهیزات قفل کابلی"
+  },
+  "kilit-coklandiricilar": {
+   "name": "قفل‌های چندتایی (هَسپ)"
+  },
+  "elektrik-pnomatik-kilitleme-ekipmanlari": {
+   "name": "قفل برق و پنوماتیک"
+  },
+  "lockout-istasyon-canta": {
+   "name": "ایستگاه‌های LOTO"
+  },
+  "grup-kilit-kutusu": {
+   "name": "جعبه‌ها و کیف‌های قفل گروهی"
+  },
+  "set-urunler": {
+   "name": "کیت‌های LOTO"
+  },
+  "tehlike-etiketleri": {
+   "name": "برچسب‌های هشدار خطر"
+  },
+  "ag-og-elektrik-guvenlik-ekipmanlari": {
+   "name": "تجهیزات ایمنی برق فشار ضعیف/متوسط"
+  },
+  "yag-ve-kimyasal-emici-kitler": {
+   "name": "کیت‌های جاذب روغن و مواد شیمیایی"
+  }
+ },
+ "products": {}
+}

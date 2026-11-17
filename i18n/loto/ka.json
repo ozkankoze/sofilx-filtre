@@ -1,0 +1,41 @@
+{
+ "cats": {
+  "emniyet-asma-kilitler": {
+   "name": "უსაფრთხოების ბოქლომები"
+  },
+  "salter-kilitleme-ekipmanlari": {
+   "name": "ავტომატებისა და ამომრთველების ჩამკეტები"
+  },
+  "vana-kilitleme-ekipmanlari": {
+   "name": "სარქველის ჩამკეტი აღჭურვილობა"
+  },
+  "kablo-kilitleme-ekipmanlari": {
+   "name": "კაბელური ჩამკეტი აღჭურვილობა"
+  },
+  "kilit-coklandiricilar": {
+   "name": "ჩამკეტის მრავლობითი (Hasp)"
+  },
+  "elektrik-pnomatik-kilitleme-ekipmanlari": {
+   "name": "ელექტრო და პნევმატური ჩამკეტები"
+  },
+  "lockout-istasyon-canta": {
+   "name": "LOTO სადგურები"
+  },
+  "grup-kilit-kutusu": {
+   "name": "ჯგუფური ჩაკეტვის ყუთები და ჩანთები"
+  },
+  "set-urunler": {
+   "name": "LOTO ნაკრებები"
+  },
+  "tehlike-etiketleri": {
+   "name": "საშიშროების გამაფრთხილებელი ბარათები"
+  },
+  "ag-og-elektrik-guvenlik-ekipmanlari": {
+   "name": "დაბალი/საშუალო ძაბვის ელექტროუსაფრთხოების აღჭურვილობა"
+  },
+  "yag-ve-kimyasal-emici-kitler": {
+   "name": "ზეთისა და ქიმიკატების შთანმთქმელი ნაკრებები"
+  }
+ },
+ "products": {}
+}

@@ -752,3 +752,22 @@ footer.site .legal .credit a:hover{opacity:.8}
 .results .rhead:first-child{border-top:0}
 .card .ph img[src^="/pimg/"]{object-fit:contain;mix-blend-mode:multiply}
 @media (max-width:680px){.pcats{grid-template-columns:repeat(2,1fr)}.catsearch .btn{padding:0 14px}}
+/* EKED / LOTO ürünleri */
+.loto-cats{margin:4px 0 36px}
+.lead-desc{color:var(--muted);font-size:15.5px;line-height:1.6;margin:10px 0 18px;max-width:60ch}
+.loto-detail{margin-top:56px;max-width:880px}
+.loto-detail>h2{font-size:28px;margin:0 0 16px}
+.loto-detail .prose h3{font-size:18px;margin:28px 0 10px}
+.loto-detail .prose p{line-height:1.7}
+.loto-detail .dfeats{margin:14px 0;padding-inline-start:20px}
+.loto-detail .dfeats li{margin:7px 0;line-height:1.6}
+.loto-detail .dspecs{width:100%;border-collapse:collapse;font-size:14.5px}
+.loto-detail .dspecs th,.loto-detail .dspecs td{text-align:start;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.loto-detail .dspecs th{width:38%;color:var(--muted);font-weight:500;background:var(--soft)}
+.loto-detail .dusage{display:flex;flex-wrap:wrap;gap:8px}
+.loto-detail .dusage span{font-size:13px;background:var(--tile);border:1px solid var(--line);border-radius:999px;padding:5px 12px}
+.loto-src{margin-top:28px;padding:16px 18px;border:1px solid var(--line);border-radius:var(--r);background:var(--soft);font-size:14.5px;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+.loto-src a{display:inline-flex;align-items:center;gap:6px;font-weight:500}
+.loto-src svg{width:16px;height:16px}
+[dir=rtl] .loto-src svg{transform:scaleX(-1)}
+@media (max-width:600px){.loto-detail .dspecs th{width:44%}.loto-detail{margin-top:40px}}

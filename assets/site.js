@@ -192,7 +192,7 @@
       if (ok && !cart.length && !$('#f-not').value.trim()) { toast(lead.dataset.empty, true); ok = false; }
       if (!ok) return;
       var d = new Date(), no = 'SFX-' + String(d.getFullYear()).slice(2) + String(d.getMonth() + 1).padStart(2, '0') + String(d.getDate()).padStart(2, '0') + '-' + Math.floor(1000 + Math.random() * 9000);
-      var lines = cart.map(function (l, i) { return (i + 1) + ') ' + l.name + (l.code ? ' [' + l.code + ']' : '') + ' × ' + l.qty + (l.note ? ' — Not: ' + l.note : '') + '\n   ' + location.origin + (String(l.id).indexOf('p:') === 0 ? '/parca/' + String(l.id).slice(2) : '/urun/' + l.id); }).join('\n');
+      var lines = cart.map(function (l, i) { return (i + 1) + ') ' + l.name + (l.code ? ' [' + l.code + ']' : '') + ' × ' + l.qty + (l.note ? ' — Not: ' + l.note : '') + '\n   ' + location.origin + (l.url || '/urun/' + l.id); }).join('\n');
       var payload = { access_key: S.w3f, subject: 'Teklif talebi ' + no + ' — ' + $('#f-firma').value.trim() + ' (' + cart.length + ' kalem)', from_name: 'Sofilx web sitesi', replyto: $('#f-mail').value.trim(), 'Takip no': no, 'Firma': $('#f-firma').value.trim(), 'Ad soyad': $('#f-ad').value.trim(), 'Telefon': $('#f-tel').value.trim(), 'E-posta': $('#f-mail').value.trim(), 'Şehir': $('#f-sehir').value, 'Teslimat': $('#f-teslim').value, 'Dil': L.toUpperCase(), 'Ürünler': lines || '-', 'Not': $('#f-not').value.trim() || '-', botcheck: form.botcheck.checked };
       var btn = $('#q-submit'), msg = $('#form-msg'); btn.disabled = true; btn.textContent = t.sending; msg.hidden = true;
       if (!S.w3f) { btn.disabled = false; btn.textContent = t.submit; msg.textContent = t.failMsg; msg.hidden = false; return; }

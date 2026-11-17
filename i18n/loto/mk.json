@@ -1,0 +1,41 @@
+{
+ "cats": {
+  "emniyet-asma-kilitler": {
+   "name": "Безбедносни катанци"
+  },
+  "salter-kilitleme-ekipmanlari": {
+   "name": "Блокади за прекинувачи и склопки"
+  },
+  "vana-kilitleme-ekipmanlari": {
+   "name": "Опрема за блокирање вентили"
+  },
+  "kablo-kilitleme-ekipmanlari": {
+   "name": "Опрема за блокирање со кабел"
+  },
+  "kilit-coklandiricilar": {
+   "name": "Повеќекратни заклучувачи (Hasp)"
+  },
+  "elektrik-pnomatik-kilitleme-ekipmanlari": {
+   "name": "Електрично и пневматско заклучување"
+  },
+  "lockout-istasyon-canta": {
+   "name": "LOTO станици"
+  },
+  "grup-kilit-kutusu": {
+   "name": "Кутии и торби за групно заклучување"
+  },
+  "set-urunler": {
+   "name": "LOTO комплети"
+  },
+  "tehlike-etiketleri": {
+   "name": "Етикети за предупредување од опасност"
+  },
+  "ag-og-elektrik-guvenlik-ekipmanlari": {
+   "name": "Опрема за електрична безбедност НН/СН"
+  },
+  "yag-ve-kimyasal-emici-kitler": {
+   "name": "Комплети за апсорпција на масла и хемикалии"
+  }
+ },
+ "products": {}
+}

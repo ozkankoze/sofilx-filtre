@@ -1,0 +1,41 @@
+{
+ "cats": {
+  "emniyet-asma-kilitler": {
+   "name": "أقفال السلامة"
+  },
+  "salter-kilitleme-ekipmanlari": {
+   "name": "أقفال القواطع والمفاتيح"
+  },
+  "vana-kilitleme-ekipmanlari": {
+   "name": "معدات قفل الصمامات"
+  },
+  "kablo-kilitleme-ekipmanlari": {
+   "name": "معدات القفل بالكابل"
+  },
+  "kilit-coklandiricilar": {
+   "name": "مُضاعِفات الأقفال (Hasp)"
+  },
+  "elektrik-pnomatik-kilitleme-ekipmanlari": {
+   "name": "أقفال كهربائية وهوائية"
+  },
+  "lockout-istasyon-canta": {
+   "name": "محطات LOTO"
+  },
+  "grup-kilit-kutusu": {
+   "name": "صناديق وحقائب القفل الجماعي"
+  },
+  "set-urunler": {
+   "name": "أطقم LOTO"
+  },
+  "tehlike-etiketleri": {
+   "name": "بطاقات التحذير من الخطر"
+  },
+  "ag-og-elektrik-guvenlik-ekipmanlari": {
+   "name": "معدات السلامة الكهربائية للجهد المنخفض/المتوسط"
+  },
+  "yag-ve-kimyasal-emici-kitler": {
+   "name": "أطقم امتصاص الزيوت والمواد الكيميائية"
+  }
+ },
+ "products": {}
+}

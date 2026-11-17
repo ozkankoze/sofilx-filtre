@@ -152,6 +152,8 @@ const U = {
   quote: L => L === 'tr' ? '/teklif' : `${base(L)}/quote`,
   kvkk: L => L === 'tr' ? '/kvkk' : `${base(L)}/privacy`,
   cookies: L => L === 'tr' ? '/cerez-politikasi' : `${base(L)}/cookies`,
+  loto: L => L === 'tr' ? '/eked-loto' : `${base(L)}/loto`,
+  lotoItem: (s, L) => `${U.loto(L)}/${s}`,
   parts: L => L === 'tr' ? '/parcalar' : `${base(L)}/parts`,
   partCat: (c, L) => `${U.parts(L)}/${c}`,
   part: (s, L) => L === 'tr' ? `/parca/${s}` : `${base(L)}/part/${s}`,
@@ -197,16 +199,18 @@ const I = {
 
 // ---------- sayfa iskeleti ----------
 // route: dil -> bu sayfanın o dildeki adresi (hreflang ve dil menüsü için)
-function layout({ L, path: url, route, title, desc, body, jsonld = [], noindex = false, ogImg, shell = false, headExtra = '' }) {
+function layout({ L, path: url, route, title, desc, body, jsonld = [], noindex = false, ogImg, shell = false, headExtra = '', canonical, hrefLangs }) {
   const t = D[L].t, x = t.x;
   const fullTitle = title ? `${title} | Sofilx` : x.siteTitle;
-  const canon = abs(url);
-  if (!noindex && !shell) sitemap.push({ url, route, L });
+  const canon = canonical || abs(url);
+  if (!noindex && !shell && !canonical) sitemap.push({ url, route, L, langs: hrefLangs });
   const langHref = l => route ? route(l) : U.home(l);
-  const hreflang = route ? LANGS.map(l => `<link rel="alternate" hreflang="${l}" href="${abs(route(l))}">`).join('') + `<link rel="alternate" hreflang="x-default" href="${abs(route('tr'))}">` : '';
+  const HL = hrefLangs || LANGS;
+  const hreflang = canonical ? '' : route && hrefLangs ? HL.map(l => `<link rel="alternate" hreflang="${l}" href="${abs(route(l))}">`).join('') : route ? LANGS.map(l => `<link rel="alternate" hreflang="${l}" href="${abs(route(l))}">`).join('') + `<link rel="alternate" hreflang="x-default" href="${abs(route('tr'))}">` : '';
   const langLinks = LANGS.map(l => `<a href="${langHref(l)}" hreflang="${l}" lang="${l}" role="menuitem"${l === L ? ' aria-current="true"' : ''}>${flagImg(l, 1)}<b>${l.toUpperCase()}</b><i>${esc(D[l].meta.name)}</i></a>`).join('');
   const navItem = (k, href) => `<a href="${href}" data-nav="${k}">${t.nav[k]}</a>`;
-  const megaAll = !FP_ON ? '' : `<a class="mega-all" href="${U.parts(L)}"><span><b>${esc(FP_T[L].ui.catalog)}</b><small>${fpNum(FP_COUNT, L)} ${esc(FP_T[L].ui.parts)}</small></span>${I.arrow}</a>`;
+  const megaLoto = `<a class="mega-all" href="${U.loto(L)}"><span><b>${esc(LT(L).title)}</b><small>${LOTO_P.length} ${esc(D[L].t.items)}</small></span>${I.arrow}</a>`;
+  const megaAll = !FP_ON ? megaLoto : `<a class="mega-all" href="${U.parts(L)}"><span><b>${esc(FP_T[L].ui.catalog)}</b><small>${fpNum(FP_COUNT, L)} ${esc(FP_T[L].ui.parts)}</small></span>${I.arrow}</a>`;
   const mega = CATS.map(c => `<a href="${U.cat(c.id, L)}"><span class="th"><img src="${imgUrl(catCover[c.id], 1)}" alt="" loading="lazy" width="52" height="52"></span><span><b>${esc(catName(c.id, L))}</b><small>${P.filter(p => p.cat === c.id).length} ${t.items}</small></span></a>`).join('');
   const fonts = FONT_BASE + (FONT_EXTRA[L] ? '&' + FONT_EXTRA[L] : '');
   return `<!doctype html>
@@ -222,7 +226,7 @@ ${noindex ? '<meta name="robots" content="noindex">' : ''}
 ${hreflang}
 <meta property="og:type" content="website"><meta property="og:site_name" content="Sofilx"><meta property="og:locale" content="${D[L].meta.locale}">
 <meta property="og:title" content="${esc(fullTitle)}"><meta property="og:description" content="${esc(desc)}"><meta property="og:url" content="${canon}">
-<meta property="og:image" content="${SITE}${ogImg || extraUrl('hero')}">
+<meta property="og:image" content="${ogImg && ogImg.startsWith('http') ? ogImg : SITE + (ogImg || extraUrl('hero'))}">
 <meta name="theme-color" content="#27235d">
 <link rel="icon" href="/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -249,7 +253,7 @@ ${jsonld.map(j => `<script type="application/ld+json">${JSON.stringify(j)}</scri
     </div>
   </div>
   <div class="searchpanel" id="searchpanel" hidden><div class="wrap"><div class="hsearch">${I.search}<input id="q-top" type="search" autocomplete="off" placeholder="${t.searchPh}" aria-label="${t.searchBtn}"><div class="results" id="res-top" hidden></div></div></div></div>
-  <div class="mnav" id="mnav"><a href="${U.products(L)}">${t.nav.products}</a>${FP_ON ? `<a href="${U.parts(L)}">${esc(FP_T[L].ui.catalogShort)}</a>` : ''}<a href="${U.sectors(L)}">${t.nav.sectors}</a><a href="${U.brands(L)}">${t.nav.brands}</a><a href="${U.custom(L)}">${t.nav.custom}</a><a href="${U.about(L)}">${t.nav.about}</a><a href="${U.refs(L)}">${t.nav.refs}</a><a href="${U.contact(L)}">${t.nav.contact}</a><div class="mlang"><p>${I.globe}${esc(x.language)}</p><div>${langLinks}</div></div></div>
+  <div class="mnav" id="mnav"><a href="${U.products(L)}">${t.nav.products}</a><a href="${U.loto(L)}">${esc(LT(L).short)}</a>${FP_ON ? `<a href="${U.parts(L)}">${esc(FP_T[L].ui.catalogShort)}</a>` : ''}<a href="${U.sectors(L)}">${t.nav.sectors}</a><a href="${U.brands(L)}">${t.nav.brands}</a><a href="${U.custom(L)}">${t.nav.custom}</a><a href="${U.about(L)}">${t.nav.about}</a><a href="${U.refs(L)}">${t.nav.refs}</a><a href="${U.contact(L)}">${t.nav.contact}</a><div class="mlang"><p>${I.globe}${esc(x.language)}</p><div>${langLinks}</div></div></div>
 </header>
 <main id="main">
 ${body}
@@ -257,7 +261,7 @@ ${body}
 <footer class="site">
   <div class="wrap">
     <div><a class="logo" href="${U.home(L)}"><img src="/img/logo.png" alt="Sofilx" width="383" height="90" loading="lazy"></a><p>${t.footP}</p></div>
-    <div><h4>${t.products}</h4>${CATS.map(c => `<a href="${U.cat(c.id, L)}">${esc(catName(c.id, L))}</a>`).join('')}${FP_ON ? `<a href="${U.parts(L)}">${esc(FP_T[L].ui.catalog)}</a>` : ''}</div>
+    <div><h4>${t.products}</h4>${CATS.map(c => `<a href="${U.cat(c.id, L)}">${esc(catName(c.id, L))}</a>`).join('')}${FP_ON ? `<a href="${U.parts(L)}">${esc(FP_T[L].ui.catalog)}</a>` : ''}<a href="${U.loto(L)}">${esc(LT(L).title)}</a></div>
     <div><h4>Sofilx</h4><a href="${U.about(L)}">${t.nav.about}</a><a href="${U.sectors(L)}">${t.nav.sectors}</a><a href="${U.brands(L)}">${t.nav.brands}</a><a href="${U.refs(L)}">${t.nav.refs}</a><a href="${U.custom(L)}">${t.nav.custom}</a><a href="${U.quote(L)}">${t.list}</a><a href="${U.contact(L)}">${t.customerCenter}</a></div>
     <div><h4>${t.nav.contact}</h4><p>${ADDRESS}</p><p><a href="tel:${PHONE_INT}" dir="ltr">${phone(L)}</a><a href="https://wa.me/${WA}" target="_blank" rel="noopener"><span dir="ltr">${mobile(L)}</span> · WhatsApp</a></p><p><a href="mailto:${EMAIL}">${EMAIL}</a></p></div>
   </div>
@@ -298,6 +302,81 @@ function sectorTile(s, L) {
 }
 const orgLd = { '@context': 'https://schema.org', '@type': 'Organization', name: 'Sofilx', url: SITE, logo: SITE + '/img/logo.png', email: EMAIL, telephone: '+90 216 606 32 06', address: { '@type': 'PostalAddress', streetAddress: 'Esatpaşa Mah. Bingöl Sok. No:1A', addressLocality: 'Ataşehir', addressRegion: 'İstanbul', addressCountry: 'TR' }, contactPoint: [{ '@type': 'ContactPoint', telephone: '+90 216 606 32 06', contactType: 'sales', availableLanguage: ['Turkish', 'English'] }] };
 
+// ---------- EKED / LOTO ürünleri (kaynak: sofilxloto.com; tools/loto-sync.sh ile güncellenir) ----------
+const LOTO = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/loto/loto.json'), 'utf8'));
+const LOTO_P = LOTO.products, LOTO_C = LOTO.cats;
+const LOTO_UI = JSON.parse(fs.readFileSync(path.join(ROOT, 'i18n/loto-ui.json'), 'utf8'));
+const LOTO_X = Object.fromEntries(LANGS.map(L => [L, fs.existsSync(path.join(ROOT, `i18n/loto/${L}.json`)) ? JSON.parse(fs.readFileSync(path.join(ROOT, `i18n/loto/${L}.json`), 'utf8')) : { cats: {}, products: {} }]));
+const LOTO_SRC = ['tr', 'en', 'de', 'es', 'fr', 'it', 'nl', 'ru', 'az']; // sofilxloto.com'un dilleri
+const LOTO_OWN = LANGS.filter(l => !LOTO_SRC.includes(l)); // yalnızca bu sitede olan diller: canonical burası
+const LT = L => LOTO_UI[L] || LOTO_UI.en;
+const lotoTx = (p, L) => p.t[L] || (LOTO_X[L].products || {})[p.s] || null;
+const lotoT = (p, L) => lotoTx(p, L) || p.t.en;
+const lotoName = (p, L) => lotoT(p, L).name;
+const lotoCatName = (c, L) => { const k = LOTO_C.find(z => z.s === c); return k.t[L] ? k.t[L].name : (LOTO_X[L].cats[c] || {}).name || k.t.en.name; };
+const lotoImg = (f, thumb) => `/img/loto/${thumb ? f.replace(/\.webp$/, '-k.webp') : f}`;
+const lotoCanon = (p, L) => LOTO_SRC.includes(L) ? `https://www.sofilxloto.com${L === 'tr' ? '' : '/' + L}${p}` : undefined;
+const lotoLangs = L => LOTO_SRC.includes(L) ? undefined : LOTO_OWN;
+function lotoCard(p, L) {
+  const t = D[L].t, n = lotoName(p, L), u = U.lotoItem(p.s, L), cn = lotoCatName(p.cat, L), fb = !lotoTx(p, L);
+  return `<article class="card" data-id="l:${p.s}" data-name="${esc(n)}" data-code="${esc(p.code)}" data-img="${lotoImg(p.imgs[0], 1)}" data-url="${u}" data-brand="Sofilx LOTO" data-type="${esc(cn)}" data-cat="${p.cat}">
+  <div class="phw"><a class="ph" href="${u}"><img src="${lotoImg(p.imgs[0], 1)}" alt="${esc(p.code + ' ' + n)}" loading="lazy" width="520" height="520"></a>
+  <button class="quick" type="button" data-add="l:${p.s}" aria-label="${t.addToList}" title="${t.addToList}">${I.plus}</button></div>
+  <div class="info"><span class="brandname">Sofilx LOTO</span><h3><a href="${u}"${fb ? ' lang="en" dir="ltr"' : ''}>${esc(n)}</a></h3><span class="code" dir="ltr">${esc(p.code)}</span></div></article>`;
+}
+function lotoHomeSection(L) {
+  const u = LT(L), t = D[L].t;
+  return `<section class="block"><div class="wrap"><div class="sec-head"><div><h2>${esc(u.title)}</h2><p>${esc(fill(u.lead, { n: LOTO_P.length }))}</p></div><a class="link" href="${U.loto(L)}">${t.viewAll} ${I.arrow}</a></div>
+  <div class="pcats">${LOTO_C.map(c => `<a class="pcat" href="${U.lotoItem(c.s, L)}"><span class="ph"><img src="${lotoImg(c.img, 1)}" alt="" loading="lazy" width="300" height="300"></span><span class="nm"><b>${esc(lotoCatName(c.s, L))}</b><small>${LOTO_P.filter(p => p.cat === c.s).length} ${esc(t.items)}</small></span></a>`).join('')}</div></div></section>`;
+}
+function lotoListing({ L, url, route, title, h1, sub, items, crumbItems, desc, canonical, showCats }) {
+  const t = D[L].t;
+  const opt = (v, label, n) => `<label class="opt"><input type="checkbox" data-g="cat" value="${esc(v)}"><span>${esc(label)}</span><span class="c">${n}</span></label>`;
+  const body = `<div class="wrap">${crumbs(crumbItems)}
+ <div class="cat-head"><div><h1>${esc(h1)}</h1><p>${esc(sub)}</p></div></div>
+ ${showCats ? `<div class="pcats loto-cats">${LOTO_C.map(c => `<a class="pcat" href="${U.lotoItem(c.s, L)}"><span class="ph"><img src="${lotoImg(c.img, 1)}" alt="" loading="lazy" width="300" height="300"></span><span class="nm"><b>${esc(lotoCatName(c.s, L))}</b><small>${LOTO_P.filter(p => p.cat === c.s).length} ${esc(t.items)}</small></span></a>`).join('')}</div>` : ''}
+ <div class="cat-layout"><aside class="filters" id="filters">
+  <div class="inlinesearch">${I.search}<input id="f-q" type="search" placeholder="${t.searchInList}" aria-label="${t.searchInList}"></div>
+  ${showCats ? `<div><h4>${t.productGroup}</h4>${LOTO_C.map(c => opt(c.s, lotoCatName(c.s, L), items.filter(p => p.cat === c.s).length)).join('')}</div>` : ''}
+  <button class="btn btn-line btn-sm" type="button" id="f-clear">${t.clear}</button></aside>
+ <div style="min-width:0"><div class="toolbar"><span id="f-count">${items.length} ${t.items}</span><div style="display:flex;gap:8px"><button class="btn btn-line btn-sm filter-toggle" type="button" id="f-toggle">${t.filters}</button><select id="f-sort" aria-label="Sort"><option value="rel">${t.sort[0]}</option><option value="az">${t.sort[1]}</option></select></div></div>
+ <div class="cards grid-auto" id="grid">${items.map(p => lotoCard(p, L)).join('')}</div><div class="empty" id="grid-empty" hidden>${t.noResult}</div></div></div></div>`;
+  write(fileFor(url), layout({ L, path: url, route, title, desc, body, canonical, hrefLangs: lotoLangs(L), ogImg: lotoImg(items[0].imgs[0]), jsonld: [crumbLd(crumbItems)] }));
+}
+function pageLoto(L) {
+  const t = D[L].t, x = t.x, u = LT(L), home = [t.home, U.home(L)], root = [u.title, U.loto(L)];
+  lotoListing({ L, url: U.loto(L), route: U.loto, title: u.title, h1: u.title, sub: fill(u.lead, { n: LOTO_P.length }), items: LOTO_P, crumbItems: [home, root], desc: u.desc, canonical: lotoCanon('/urunler', L), showCats: true });
+  for (const c of LOTO_C) {
+    const items = LOTO_P.filter(p => p.cat === c.s), cn = lotoCatName(c.s, L), cd = c.t[L] ? c.t[L].desc : '';
+    lotoListing({ L, url: U.lotoItem(c.s, L), route: l => U.lotoItem(c.s, l), title: `${cn} | ${u.short}`, h1: cn, sub: `${items.length} ${t.items}`, items, crumbItems: [home, root, [cn, U.lotoItem(c.s, L)]], desc: cd || `${cn}. ${u.desc}`, canonical: lotoCanon('/' + c.s, L) });
+  }
+  for (const p of LOTO_P) {
+    const n = lotoName(p, L), tx = lotoT(p, L), fb = !lotoTx(p, L), url = U.lotoItem(p.s, L), cn = lotoCatName(p.cat, L);
+    const crumbItems = [home, root, [cn, U.lotoItem(p.cat, L)], [p.code, url]];
+    const waTxt = encodeURIComponent(x.waProduct + `${p.code} ${n} – ${SITE}${url}`);
+    const thumbs = p.imgs.map((f, i) => `<button class="thumb${i === 0 ? ' on' : ''}" type="button" data-src="${lotoImg(f)}" aria-label="${t.photo} ${i + 1}"><img src="${lotoImg(f, 1)}" alt="" width="84" height="84" loading="lazy"></button>`);
+    const rel = LOTO_P.filter(z => z.cat === p.cat && z.s !== p.s).slice(0, 4);
+    const fbAttr = fb ? ' lang="en" dir="ltr"' : '';
+    const srcLink = `https://www.sofilxloto.com${LOTO_SRC.includes(L) && L !== 'tr' ? '/' + L : ''}/${p.s}`;
+    const body = `<div class="wrap">${crumbs(crumbItems)}
+ <div class="pd" data-id="l:${p.s}" data-name="${esc(n)}" data-code="${esc(p.code)}" data-img="${lotoImg(p.imgs[0], 1)}" data-url="${url}">
+  <div class="gal"><div class="gallery" id="gal-main"><img src="${lotoImg(p.imgs[0])}" alt="${esc(p.code + ' ' + n)}" width="1000" height="1000" fetchpriority="high"></div>${thumbs.length > 1 ? `<div class="thumbs">${thumbs.join('')}</div>` : ''}</div>
+  <div><div class="kicker"><span class="pill">Sofilx LOTO</span><span class="stock"><a href="${U.lotoItem(p.cat, L)}">${esc(cn)}</a></span></div>
+  <h1${fbAttr}>${esc(n)}</h1><div class="codeline" dir="ltr">${esc(p.code)}</div>
+  <p class="lead-desc"${fbAttr}>${esc(tx.desc)}</p>
+  <div class="buy"><div class="buyrow"><div class="qty"><button type="button" data-step="-1" aria-label="-">−</button><input id="pd-qty" type="number" min="1" value="1" aria-label="${x.qty}"><button type="button" data-step="1" aria-label="+">+</button></div><button class="btn btn-dark" type="button" id="pd-add">${t.addToList}</button></div>
+   <a class="btn btn-line wa" href="https://wa.me/${WA}?text=${waTxt}" target="_blank" rel="noopener">${I.wa} ${t.waAsk}</a>
+   <div class="notes">${t.notes.map(z => `<div><b>${z[0]}</b>${z[1]}</div>`).join('')}</div>
+   <div class="share"><span>${t.share}</span><a href="https://wa.me/?text=${encodeURIComponent(p.code + ' ' + n + ' – ' + SITE + url)}" target="_blank" rel="noopener" aria-label="WhatsApp">${I.wa}</a><button type="button" data-copy="${esc(p.code)}">${t.copyCode}</button></div></div>
+ </div></div>
+ <section class="loto-detail"><h2>${esc(u.detail)}</h2><div class="prose rich"${fbAttr}>${tx.detail}</div>
+  <p class="loto-src">${esc(u.brandNote)} <a href="${srcLink}" target="_blank" rel="noopener">${esc(u.visit)} ${I.arrow}</a></p></section>
+ ${rel.length ? `<section class="block" style="padding-top:56px"><div class="sec-head"><h2 style="font-size:32px">${esc(u.other)}</h2><a class="link" href="${U.lotoItem(p.cat, L)}">${t.viewAll} ${I.arrow}</a></div><div class="cards">${rel.map(r => lotoCard(r, L)).join('')}</div></section>` : ''}</div>`;
+    const ld = { '@context': 'https://schema.org', '@type': 'Product', name: `${p.code} ${n}`, sku: p.code, mpn: p.code, image: p.imgs.map(f => SITE + lotoImg(f)), description: tx.desc, brand: { '@type': 'Brand', name: 'Sofilx LOTO' }, category: cn };
+    write(fileFor(url), layout({ L, path: url, route: l => U.lotoItem(p.s, l), title: `${p.code} ${n}`, desc: clip(tx.desc, 158), body, jsonld: [ld, crumbLd(crumbItems)], ogImg: lotoImg(p.imgs[0]), canonical: lotoCanon('/' + p.s, fb ? 'en' : L), hrefLangs: lotoLangs(L) }));  // çevrilmemiş ürün: İngilizce kaynağı gösterir
+  }
+}
+
 // ---------- sayfalar ----------
 function fpCatTile(c, L) {
   return `<a class="pcat" href="${U.partCat(c.s, L)}"><span class="ph">${c.img ? `<img src="${fpImg(c.img.replace(/(\.\w+)$/, '-300x300$1'))}" alt="" loading="lazy" width="300" height="300" onerror="this.onerror=null;this.src='${fpImg(c.img)}'">` : ''}</span><span class="nm"><b>${esc(FP_T[L].cats[c.s] || c.s)}</b><small>${fpNum(c.n, L)} ${esc(FP_T[L].ui.parts)}</small></span></a>`;
@@ -327,6 +406,7 @@ function pageHome(L) {
  <section class="block"><div class="wrap"><div class="sec-head"><div><h2>${t.groupsH}</h2><p>${t.groupsP}</p></div><a class="link" href="${U.products(L)}">${t.allProducts} ${I.arrow}</a></div>
   <div class="cats">${CATS.map(c => `<a class="cat" href="${U.cat(c.id, L)}"><div class="ph"><img src="${imgUrl(catCover[c.id])}" alt="${esc(catName(c.id, L))}" loading="lazy" width="900" height="900"></div><div class="meta"><div><h3>${esc(catName(c.id, L))}</h3><small>${esc(catShort(c.id, L))} · ${P.filter(p => p.cat === c.id).length} ${t.items}</small></div><span class="arrow">${I.arrow}</span></div></a>`).join('')}</div></div></section>
  ${FP_ON ? fpHomeSection(L) : ''}
+ ${lotoHomeSection(L)}
  <section class="block"><div class="wrap"><div class="sec-head"><div><h2>${t.sectorsH}</h2><p>${t.sectorsP}</p></div><a class="link" href="${U.sectors(L)}">${t.viewAll} ${I.arrow}</a></div><div class="sectors">${SECTORS.map(s => sectorTile(s, L)).join('')}</div></div></section>
  <section class="block"><div class="wrap"><div class="sec-head"><div><h2>${t.howH}</h2><p>${t.howP}</p></div></div><div class="how">${t.how.map((h, i) => `<div><span class="n">0${i + 1}</span><h3>${h[0]}</h3><p>${h[1]}</p></div>`).join('')}</div></div></section>
  <section class="block"><div class="wrap"><div class="sec-head"><div><h2>${t.popularH}</h2></div><a class="link" href="${U.products(L)}">${t.allProducts} ${I.arrow}</a></div><div class="cards">${popular.map(p => card(p, L)).join('')}</div></div></section>
@@ -546,6 +626,7 @@ function page404() {
 function searchIndex() {
   for (const L of LANGS) {
     const idx = P.map(p => ({ i: p.id, n: nm(p, L), c: [...p.codes, ...p.equiv].join(' | '), m: p.models.join(' | '), b: p.brand, t: typeName(p, L), ...(L === 'tr' || L === 'en' ? {} : { k: p.typeEn + ' ' + enName(p) }), g: catName(p.cat, L), im: imgUrl(p.img, 1), u: U.product(p, L) }));
+    for (const p of LOTO_P) idx.push({ i: 'l:' + p.s, n: lotoName(p, L), c: p.code, m: '', b: 'Sofilx LOTO', t: lotoCatName(p.cat, L), g: LT(L).short, im: lotoImg(p.imgs[0], 1), u: U.lotoItem(p.s, L) });
     write(`assets/search-${L}.json`, JSON.stringify(idx));
   }
 }
@@ -573,7 +654,7 @@ function writeSitemap() {
   const today = new Date().toISOString().slice(0, 10);
   const files = [];
   for (const L of LANGS) {
-    const urls = sitemap.filter(s => s.L === L).map(s => `<url><loc>${abs(s.url)}</loc><lastmod>${today}</lastmod>${s.route ? LANGS.map(l => `<xhtml:link rel="alternate" hreflang="${l}" href="${abs(s.route(l))}"/>`).join('') + `<xhtml:link rel="alternate" hreflang="x-default" href="${abs(s.route('tr'))}"/>` : ''}</url>`).join('\n');
+    const urls = sitemap.filter(s => s.L === L).map(s => `<url><loc>${abs(s.url)}</loc><lastmod>${today}</lastmod>${s.route ? (s.langs || LANGS).map(l => `<xhtml:link rel="alternate" hreflang="${l}" href="${abs(s.route(l))}"/>`).join('') + (s.langs ? '' : `<xhtml:link rel="alternate" hreflang="x-default" href="${abs(s.route('tr'))}"/>`) : ''}</url>`).join('\n');
     if (!urls) continue;
     write(`sitemap-${L}.xml`, `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urls}\n</urlset>`);
     files.push(`sitemap-${L}.xml`);
@@ -630,7 +711,7 @@ if (fs.existsSync(path.join(ROOT, 'static'))) fs.cpSync(path.join(ROOT, 'static'
 const ONLY = process.env.LANGS ? process.env.LANGS.split(',') : null; // hızlı test: LANGS=tr,ar
 for (const L of LANGS) {
   if (ONLY && !ONLY.includes(L)) continue;
-  pageHome(L); pageProducts(L); P.forEach(p => pageProduct(p, L)); pageSectors(L); pageBrands(L); pageCustom(L); pageAbout(L); pageRefs(L); pageContact(L); pageQuote(L); pageLegal(L);
+  pageHome(L); pageProducts(L); P.forEach(p => pageProduct(p, L)); pageSectors(L); pageBrands(L); pageCustom(L); pageAbout(L); pageRefs(L); pageContact(L); pageQuote(L); pageLegal(L); pageLoto(L);
 }
 page404(); searchIndex(); if (FP_ON) writeFpRuntime(); writeSitemap(); writeVercel();
 console.log('langs', LANGS.join(','), 'pages', sitemap.length, 'products', P.length, 'web3forms', WEB3FORMS_KEY ? 'set' : 'MISSING');
