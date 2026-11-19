@@ -3332,5 +3332,42 @@
     }
    ]
   }
- ]
+ ],
+ "rewrites": [
+  {
+   "source": "/kod-arama",
+   "destination": "/api/xref?view=list&L=tr"
+  },
+  {
+   "source": "/kod-arama/:t",
+   "destination": "/api/xref?view=type&L=tr&t=:t"
+  },
+  {
+   "source": "/kod/:slug",
+   "destination": "/api/xref?view=item&L=tr&slug=:slug"
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/code-search",
+   "destination": "/api/xref?view=list&L=:L"
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/code-search/:t",
+   "destination": "/api/xref?view=type&L=:L&t=:t"
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/code/:slug",
+   "destination": "/api/xref?view=item&L=:L&slug=:slug"
+  },
+  {
+   "source": "/sitemap-kod-:L(tr|en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)-:n.xml",
+   "destination": "/api/xref?view=sitemap&L=:L&n=:n"
+  }
+ ],
+ "functions": {
+  "api/xref.mjs": {
+   "includeFiles": "data/xref/**",
+   "memory": 1024,
+   "maxDuration": 15
+  }
+ }
 }

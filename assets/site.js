@@ -82,7 +82,7 @@
   function goList(q) { location.href = (S.parts || S.products) + '?q=' + encodeURIComponent(q); }
   // katalog (sunucu) araması: yerel sonuçların altına eklenir
   var RC = {}, rTimer = null;
-  function remote(q, cb) { if (!S.parts) return; if (RC[q]) return cb(RC[q]); clearTimeout(rTimer); rTimer = setTimeout(function () { fetch('/api/catalog?view=sj&L=' + L + '&q=' + encodeURIComponent(q)).then(function (r) { return r.json(); }).then(function (j) { RC[q] = j; cb(j); }).catch(function () { }); }, 220); }
+  function remote(q, cb) { if (!S.parts) return; if (RC[q]) return cb(RC[q]); clearTimeout(rTimer); rTimer = setTimeout(function () { fetch('/api/xref?view=sj&L=' + L + '&q=' + encodeURIComponent(q)).then(function (r) { return r.json(); }).then(function (j) { RC[q] = j; cb(j); }).catch(function () { }); }, 220); }
   function bindSearch(input, box) {
     if (!input || !box) return; var act = -1, list = [];
     function draw() {
@@ -141,6 +141,12 @@
       else if (hits) ordered.sort(function (a, b) { return (rank[a.dataset.id] || 9999) - (rank[b.dataset.id] || 9999); });
       ordered.forEach(function (c) { grid.appendChild(c); });
       $('#f-count').textContent = shown + ' ' + t.items; $('#grid-empty').hidden = shown > 0;
+      var ge = $('#grid-empty'); if (ge && !ge.dataset.base) ge.dataset.base = ge.innerHTML;
+      if (ge) ge.innerHTML = ge.dataset.base;
+      if (hits && !shown && S.parts) remote(q, function (j) {
+        if (!j.items || !j.items.length || fq && fq.value !== q) return;
+        ge.innerHTML = '<div class="rhead" style="text-align:start;margin-bottom:10px">' + esc(t.fromCatalog || '') + '</div><div class="xr-hits">' + j.items.map(function (x) { return '<a class="r" href="' + x.u + '"><span class="th"><img src="' + x.im + '" alt="" loading="lazy"></span><div><b>' + esc(x.n) + '</b><small>' + esc(x.t) + (x.c ? ' · <span class="mono">' + esc(x.c) + '</span>' : '') + '</small></div></a>'; }).join('') + '</div><a class="btn btn-dark btn-sm" style="margin-top:14px" href="' + j.more + '">' + esc(t.inCatalog || t.moreResults) + ' (' + j.total + ')</a>';
+      });
     }
     $('#filters').addEventListener('change', function (e) { var c = e.target; if (c.dataset && c.dataset.g) { var a = f[c.dataset.g]; if (c.checked) a.push(c.value); else a.splice(a.indexOf(c.value), 1); apply(); } });
     if (fq) fq.addEventListener('input', function () { q = fq.value; apply(); });

@@ -152,6 +152,9 @@ const U = {
   quote: L => L === 'tr' ? '/teklif' : `${base(L)}/quote`,
   kvkk: L => L === 'tr' ? '/kvkk' : `${base(L)}/privacy`,
   cookies: L => L === 'tr' ? '/cerez-politikasi' : `${base(L)}/cookies`,
+  xref: L => L === 'tr' ? '/kod-arama' : `${base(L)}/code-search`,
+  xrefType: (t, L) => `${U.xref(L)}/${t}`,
+  xrefItem: (s, L) => L === 'tr' ? `/kod/${s}` : `${base(L)}/code/${s}`,
   loto: L => L === 'tr' ? '/eked-loto' : `${base(L)}/loto`,
   lotoItem: (s, L) => `${U.loto(L)}/${s}`,
   parts: L => L === 'tr' ? '/parcalar' : `${base(L)}/parts`,
@@ -210,7 +213,8 @@ function layout({ L, path: url, route, title, desc, body, jsonld = [], noindex =
   const langLinks = LANGS.map(l => `<a href="${langHref(l)}" hreflang="${l}" lang="${l}" role="menuitem"${l === L ? ' aria-current="true"' : ''}>${flagImg(l, 1)}<b>${l.toUpperCase()}</b><i>${esc(D[l].meta.name)}</i></a>`).join('');
   const navItem = (k, href) => `<a href="${href}" data-nav="${k}">${t.nav[k]}</a>`;
   const megaLoto = `<a class="mega-all" href="${U.loto(L)}"><span><b>${esc(LT(L).title)}</b><small>${LOTO_P.length} ${esc(D[L].t.items)}</small></span>${I.arrow}</a>`;
-  const megaAll = !FP_ON ? megaLoto : `<a class="mega-all" href="${U.parts(L)}"><span><b>${esc(FP_T[L].ui.catalog)}</b><small>${fpNum(FP_COUNT, L)} ${esc(FP_T[L].ui.parts)}</small></span>${I.arrow}</a>`;
+  const megaXref = `<a class="mega-all" href="${U.xref(L)}"><span><b>${esc(XR[L].title)}</b><small>${fpNum(XREF_N, L)} ${esc(XR[L].items)}</small></span>${I.arrow}</a>`;
+  const megaAll = !FP_ON ? megaXref + megaLoto : `<a class="mega-all" href="${U.parts(L)}"><span><b>${esc(FP_T[L].ui.catalog)}</b><small>${fpNum(FP_COUNT, L)} ${esc(FP_T[L].ui.parts)}</small></span>${I.arrow}</a>`;
   const mega = CATS.map(c => `<a href="${U.cat(c.id, L)}"><span class="th"><img src="${imgUrl(catCover[c.id], 1)}" alt="" loading="lazy" width="52" height="52"></span><span><b>${esc(catName(c.id, L))}</b><small>${P.filter(p => p.cat === c.id).length} ${t.items}</small></span></a>`).join('');
   const fonts = FONT_BASE + (FONT_EXTRA[L] ? '&' + FONT_EXTRA[L] : '');
   return `<!doctype html>
@@ -233,7 +237,7 @@ ${hreflang}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?${fonts}&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v=${BUILD}">
 ${jsonld.map(j => `<script type="application/ld+json">${JSON.stringify(j)}</script>`).join('\n')}${headExtra}
-<script>window.SFX=${JSON.stringify({ L, w3f: WEB3FORMS_KEY, gtm: GTM_ID, wa: WA, quote: U.quote(L), products: U.products(L), parts: FP_ON ? U.parts(L) : undefined, t: { fromCatalog: FP_T[L].ui.fromCatalog, moreResults: FP_T[L].ui.moreResults, catPh: FP_T[L].ui.searchPh, added: t.added, seeList: t.seeList, inList: t.inList, addToList: t.addToList, addMore: t.addMore, drawerEmpty: t.drawerEmpty, lines: t.lines, pcs: t.pcs, requestQuote: t.requestQuote, backToProducts: t.backToProducts, copied: t.copied, failMsg: t.failMsg, sending: t.form.sending, submit: t.form.submit, notePer: t.form.notePer, items: t.items, noResult: t.noResult, viewAll: t.viewAll, waList: x.waList } })}</script>
+<script>window.SFX=${JSON.stringify({ L, w3f: WEB3FORMS_KEY, gtm: GTM_ID, wa: WA, quote: U.quote(L), products: U.products(L), parts: U.xref(L), t: { fromCatalog: XR[L].fromCatalog, moreResults: FP_T[L].ui.moreResults, catPh: XR[L].searchPh, inCatalog: XR[L].searchInCatalog, added: t.added, seeList: t.seeList, inList: t.inList, addToList: t.addToList, addMore: t.addMore, drawerEmpty: t.drawerEmpty, lines: t.lines, pcs: t.pcs, requestQuote: t.requestQuote, backToProducts: t.backToProducts, copied: t.copied, failMsg: t.failMsg, sending: t.form.sending, submit: t.form.submit, notePer: t.form.notePer, items: t.items, noResult: t.noResult, viewAll: t.viewAll, waList: x.waList } })}</script>
 </head>
 <body>
 <a class="skip" href="#main">${x.skip}</a>
@@ -253,7 +257,7 @@ ${jsonld.map(j => `<script type="application/ld+json">${JSON.stringify(j)}</scri
     </div>
   </div>
   <div class="searchpanel" id="searchpanel" hidden><div class="wrap"><div class="hsearch">${I.search}<input id="q-top" type="search" autocomplete="off" placeholder="${t.searchPh}" aria-label="${t.searchBtn}"><div class="results" id="res-top" hidden></div></div></div></div>
-  <div class="mnav" id="mnav"><a href="${U.products(L)}">${t.nav.products}</a><a href="${U.loto(L)}">${esc(LT(L).short)}</a>${FP_ON ? `<a href="${U.parts(L)}">${esc(FP_T[L].ui.catalogShort)}</a>` : ''}<a href="${U.sectors(L)}">${t.nav.sectors}</a><a href="${U.brands(L)}">${t.nav.brands}</a><a href="${U.custom(L)}">${t.nav.custom}</a><a href="${U.about(L)}">${t.nav.about}</a><a href="${U.refs(L)}">${t.nav.refs}</a><a href="${U.contact(L)}">${t.nav.contact}</a><div class="mlang"><p>${I.globe}${esc(x.language)}</p><div>${langLinks}</div></div></div>
+  <div class="mnav" id="mnav"><a href="${U.products(L)}">${t.nav.products}</a><a href="${U.xref(L)}">${esc(XR[L].title)}</a><a href="${U.loto(L)}">${esc(LT(L).short)}</a>${FP_ON ? `<a href="${U.parts(L)}">${esc(FP_T[L].ui.catalogShort)}</a>` : ''}<a href="${U.sectors(L)}">${t.nav.sectors}</a><a href="${U.brands(L)}">${t.nav.brands}</a><a href="${U.custom(L)}">${t.nav.custom}</a><a href="${U.about(L)}">${t.nav.about}</a><a href="${U.refs(L)}">${t.nav.refs}</a><a href="${U.contact(L)}">${t.nav.contact}</a><div class="mlang"><p>${I.globe}${esc(x.language)}</p><div>${langLinks}</div></div></div>
 </header>
 <main id="main">
 ${body}
@@ -261,7 +265,7 @@ ${body}
 <footer class="site">
   <div class="wrap">
     <div><a class="logo" href="${U.home(L)}"><img src="/img/logo.png" alt="Sofilx" width="383" height="90" loading="lazy"></a><p>${t.footP}</p></div>
-    <div><h4>${t.products}</h4>${CATS.map(c => `<a href="${U.cat(c.id, L)}">${esc(catName(c.id, L))}</a>`).join('')}${FP_ON ? `<a href="${U.parts(L)}">${esc(FP_T[L].ui.catalog)}</a>` : ''}<a href="${U.loto(L)}">${esc(LT(L).title)}</a></div>
+    <div><h4>${t.products}</h4>${CATS.map(c => `<a href="${U.cat(c.id, L)}">${esc(catName(c.id, L))}</a>`).join('')}${FP_ON ? `<a href="${U.parts(L)}">${esc(FP_T[L].ui.catalog)}</a>` : ''}<a href="${U.xref(L)}">${esc(XR[L].title)}</a><a href="${U.loto(L)}">${esc(LT(L).title)}</a></div>
     <div><h4>Sofilx</h4><a href="${U.about(L)}">${t.nav.about}</a><a href="${U.sectors(L)}">${t.nav.sectors}</a><a href="${U.brands(L)}">${t.nav.brands}</a><a href="${U.refs(L)}">${t.nav.refs}</a><a href="${U.custom(L)}">${t.nav.custom}</a><a href="${U.quote(L)}">${t.list}</a><a href="${U.contact(L)}">${t.customerCenter}</a></div>
     <div><h4>${t.nav.contact}</h4><p>${ADDRESS}</p><p><a href="tel:${PHONE_INT}" dir="ltr">${phone(L)}</a><a href="https://wa.me/${WA}" target="_blank" rel="noopener"><span dir="ltr">${mobile(L)}</span> · WhatsApp</a></p><p><a href="mailto:${EMAIL}">${EMAIL}</a></p></div>
   </div>
@@ -301,6 +305,24 @@ function sectorTile(s, L) {
   return `<a class="sector" href="${U.sector(s, L)}"><div><h3>${esc(secName(s, L))}</h3><p>${esc(secLine(s, L))}</p></div><div class="thumbs">${ps.map(p => `<span><img src="${imgUrl(p.img, 1)}" alt="" loading="lazy" width="52" height="52"></span>`).join('')}<span class="arrow">${I.arrow}</span></div></a>`;
 }
 const orgLd = { '@context': 'https://schema.org', '@type': 'Organization', name: 'Sofilx', url: SITE, logo: SITE + '/img/logo.png', email: EMAIL, telephone: '+90 216 606 32 06', address: { '@type': 'PostalAddress', streetAddress: 'Esatpaşa Mah. Bingöl Sok. No:1A', addressLocality: 'Ataşehir', addressRegion: 'İstanbul', addressCountry: 'TR' }, contactPoint: [{ '@type': 'ContactPoint', telephone: '+90 216 606 32 06', contactType: 'sales', availableLanguage: ['Turkish', 'English'] }] };
+
+// ---------- Kod arama (çapraz referans; sayfalar sunucuda üretilir: api/xref.mjs) ----------
+const XR = JSON.parse(fs.readFileSync(path.join(ROOT, 'i18n/xref.json'), 'utf8'));
+const XREF = JSON.parse(zlib.gunzipSync(fs.readFileSync(path.join(ROOT, 'data/xref/xref.json.gz'))).toString());
+const XREF_N = XREF.p.length, XREF_OEM = XREF.p.reduce((a, r) => a + r[2].length, 0);
+const XREF_SLUG = { separator: 'separator', air: 'air-filter', oil: 'oil-filter', inline: 'in-line-filter', ows: 'oil-water-separator', hyd: 'hydraulic-filter', vane: 'vane', housing: 'air-filter-housing', panel: 'panel-filter', silencer: 'silencer', gasket: 'gasket', kit: 'service-kit', fuel: 'fuel-filter', part: 'spare-part' };
+function writeXrefRuntime() {
+  const dir = path.join(ROOT, 'data/xref'), out = path.join(dir, 'shell'); fs.mkdirSync(out, { recursive: true });
+  const ui = { langs: LANGS, wa: WA, nOem: XREF_OEM, typeSlug: XREF_SLUG,
+    img: { separator: imgUrl('ceb82a80b312'), air: imgUrl('ebb5abe3c279'), oil: imgUrl('ebb5abe3c279'), inline: imgUrl('5f2e303c1f86'), vane: imgUrl(catCover['karbon-paletler']), part: imgUrl('ebb5abe3c279') } };
+  for (const L of LANGS) {
+    fs.writeFileSync(path.join(out, `${L}.html`), layout({ L, path: '/__PATH__', route: l => `/__R_${l}__`, title: '__TITLE__', desc: '__DESC__', body: '__BODY__', jsonld: [], ogImg: '__OGIMG__', shell: true, headExtra: '__HEAD__' }));
+    const t = D[L].t, x = t.x;
+    ui[L] = { x: XR[L], t: { home: t.home, addToList: t.addToList, waAsk: t.waAsk, share: t.share, copyCode: t.copyCode, notes: t.notes, searchBtn: t.searchBtn, waProduct: x.waProduct },
+      base: { home: U.home(L), list: U.xref(L), type: U.xrefType('__T__', L), item: U.xrefItem('__S__', L) } };
+  }
+  fs.writeFileSync(path.join(dir, 'ui.json'), JSON.stringify(ui));
+}
 
 // ---------- EKED / LOTO ürünleri (kaynak: sofilxloto.com; tools/loto-sync.sh ile güncellenir) ----------
 const LOTO = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/loto/loto.json'), 'utf8'));
@@ -659,6 +681,7 @@ function writeSitemap() {
     write(`sitemap-${L}.xml`, `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urls}\n</urlset>`);
     files.push(`sitemap-${L}.xml`);
   }
+  for (const L of LANGS) files.push(`sitemap-kod-${L}-1.xml`);
   const fpPages = !FP_ON ? 0 : Math.ceil((FP_COUNT + FP_CATS.length + 1) / FP_SM_SIZE);
   for (const L of LANGS) for (let n = 1; n <= fpPages; n++) files.push(`sitemap-parts-${L}-${n}.xml`);
   write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${files.map(f => `<sitemap><loc>${SITE}/${f}</loc><lastmod>${today}</lastmod></sitemap>`).join('\n')}\n</sitemapindex>`);
@@ -676,7 +699,14 @@ function writeVercel() {
   cfg.redirects.push({ source: '/en/:old(.*-kategori)', destination: '/en/products', permanent: true });
   // parça kataloğu: sunucu fonksiyonu + tedarikçi görsellerinin vekil adresi
   const LX = LANGS.filter(l => l !== 'tr').join('|');
+  const XR_RW = [
+    { source: U.xref('tr'), destination: '/api/xref?view=list&L=tr' }, { source: U.xref('tr') + '/:t', destination: '/api/xref?view=type&L=tr&t=:t' }, { source: '/kod/:slug', destination: '/api/xref?view=item&L=tr&slug=:slug' },
+    { source: `/:L(${LX})/code-search`, destination: '/api/xref?view=list&L=:L' }, { source: `/:L(${LX})/code-search/:t`, destination: '/api/xref?view=type&L=:L&t=:t' }, { source: `/:L(${LX})/code/:slug`, destination: '/api/xref?view=item&L=:L&slug=:slug' },
+    { source: `/sitemap-kod-:L(tr|${LX})-:n.xml`, destination: '/api/xref?view=sitemap&L=:L&n=:n' },
+  ];
+  const XR_FN = { 'api/xref.mjs': { includeFiles: 'data/xref/**', memory: 1024, maxDuration: 15 } };
   if (!FP_ON) {
+    cfg.rewrites = XR_RW; cfg.functions = XR_FN;
     // katalog kaldırıldı: eski adresler ürünler sayfasına yönlenir
     cfg.redirects.push({ source: '/parcalar', destination: '/urunler', permanent: true }, { source: `/:L(${LX})/parts`, destination: '/:L/products', permanent: true }, { source: '/parcalar/:p*', destination: '/urunler', permanent: true }, { source: '/parca/:p*', destination: '/urunler', permanent: true },
       { source: `/:L(${LX})/parts/:p*`, destination: '/:L/products', permanent: true }, { source: `/:L(${LX})/part/:p*`, destination: '/:L/products', permanent: true });
@@ -713,5 +743,5 @@ for (const L of LANGS) {
   if (ONLY && !ONLY.includes(L)) continue;
   pageHome(L); pageProducts(L); P.forEach(p => pageProduct(p, L)); pageSectors(L); pageBrands(L); pageCustom(L); pageAbout(L); pageRefs(L); pageContact(L); pageQuote(L); pageLegal(L); pageLoto(L);
 }
-page404(); searchIndex(); if (FP_ON) writeFpRuntime(); writeSitemap(); writeVercel();
+page404(); searchIndex(); if (FP_ON) writeFpRuntime(); writeXrefRuntime(); writeSitemap(); writeVercel();
 console.log('langs', LANGS.join(','), 'pages', sitemap.length, 'products', P.length, 'web3forms', WEB3FORMS_KEY ? 'set' : 'MISSING');
