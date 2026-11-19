@@ -309,6 +309,8 @@ const orgLd = { '@context': 'https://schema.org', '@type': 'Organization', name:
 // ---------- Kod arama (çapraz referans; sayfalar sunucuda üretilir: api/xref.mjs) ----------
 const XR = JSON.parse(fs.readFileSync(path.join(ROOT, 'i18n/xref.json'), 'utf8'));
 const XREF = JSON.parse(zlib.gunzipSync(fs.readFileSync(path.join(ROOT, 'data/xref/xref.json.gz'))).toString());
+const XREF_EX = ['530A60114', 'NB 100015', '1310250233', '6.4001.0'];
+const XREF_BRANDS = Math.floor(new Set(XREF.p.flatMap(r => r[2].map(o => o[0].toLowerCase()))).size / 10) * 10;
 const XREF_N = XREF.p.length, XREF_OEM = XREF.p.reduce((a, r) => a + r[2].length, 0);
 const XREF_SLUG = { separator: 'separator', air: 'air-filter', oil: 'oil-filter', inline: 'in-line-filter', ows: 'oil-water-separator', hyd: 'hydraulic-filter', vane: 'vane', housing: 'air-filter-housing', panel: 'panel-filter', silencer: 'silencer', gasket: 'gasket', kit: 'service-kit', fuel: 'fuel-filter', part: 'spare-part' };
 function writeXrefRuntime() {
@@ -413,17 +415,17 @@ function pageHome(L) {
   const popular = ['vakum-pompasi-filtreleri', 'karbon-paletler', 'fiber-paletler', 'kompresor-filtreleri'].flatMap(c => P.filter(p => p.cat === c && p.img && p.models.length).slice(0, 2));
   const body = `<section class="hero2"><div class="hero2-top"><div class="hero2-bg"></div><div class="wrap hero2-in">
   <div class="h2copy"><span class="kick">${t.heroKick}</span><h1>${t.heroH1a}<br><span class="hl">${t.heroH1b}</span></h1><p>${t.heroP}</p>
-   <div class="h2btns"><a class="btn btn-white" href="${U.products(L)}">${t.heroBtn} ${I.arrow}</a><a class="btn btn-ghostw" href="https://wa.me/${WA}" target="_blank" rel="noopener">${I.wa} ${t.waQuote}</a></div></div>
+   <div class="h2btns"><a class="btn btn-white" href="#q-hero" data-codefocus>${I.search} ${esc(XR[L].codeBtn)}</a><a class="btn btn-ghostw" href="https://wa.me/${WA}" target="_blank" rel="noopener">${I.wa} ${t.waQuote}</a></div></div>
   <div class="h2art"><div class="ring"></div>
    <a class="speccard" href="${U.products(L)}"><div class="sc-photo"><img src="${extraUrl('herocard')}" alt="" width="250" height="250"></div>
     <div class="sc-band"><div><small>${t.cardKick}</small><b>${CATS.length} ${t.cardGroups}</b></div><span class="sc-stock">${t.stockIn}</span></div>
     <ol class="sc-list">${CATS.slice(0, 5).map(c => `<li>${esc(catName(c.id, L))}</li>`).join('')}</ol>
     <div class="sc-foot"><span>${t.cardFoot}</span><span class="sc-plus">${I.arrow}</span></div></a>
    <div class="chip2 c1"><span class="ci">${I.check}</span><div><b>${t.chipBrand[0]}</b><small>${t.chipBrand[1]}</small></div></div>
-   <div class="chip2 c2"><span class="ci">${I.search}</span><div><b>${t.chipRef[0]}</b><small>${t.chipRef[1]}</small></div></div>
+   <a class="chip2 c2" href="#q-hero" data-codefocus><span class="ci">${I.search}</span><div><b>${t.chipRef[0]}</b><small>${t.chipRef[1]}</small></div></a>
   </div></div></div>
-  <div class="wrap"><div class="searchcard"><form id="hero-form" role="search">${I.search.replace('<svg', '<svg class="sicon"')}<input id="q-hero" type="search" autocomplete="off" placeholder="${t.searchHeroPh}" aria-label="${t.searchBtn}"><button class="btn btn-dark" type="submit">${t.searchBtn}</button></form>
-   <div class="tries">${t.example}: ${x.examples.map(e => `<button class="chip" type="button" data-try="${esc(e)}">${esc(e)}</button>`).join('')}</div><div class="results" id="res-hero" hidden></div></div>
+  <div class="wrap"><div class="searchcard codecard"><div class="cc-head"><b>${esc(XR[L].boxTitle)}</b><span class="cc-stats"><span><strong>${fpNum(XREF_OEM, L)}</strong> ${esc(XR[L].codes)}</span><span><strong>${fpNum(XREF_N + P.length + LOTO_P.length, L)}</strong> ${esc(XR[L].items)}</span><span><strong>${fpNum(XREF_BRANDS, L)}+</strong> ${esc(XR[L].brands)}</span></span></div><form id="hero-form" role="search">${I.search.replace('<svg', '<svg class="sicon"')}<input id="q-hero" type="search" autocomplete="off" placeholder="${esc(XR[L].heroPh)}" aria-label="${t.searchBtn}"><button class="btn btn-dark" type="submit">${t.searchBtn}</button></form>
+   <div class="tries">${t.example}: ${XREF_EX.map(e => `<button class="chip" type="button" data-try="${esc(e)}">${esc(e)}</button>`).join('')}</div><div class="results" id="res-hero" hidden></div></div>
    <div class="facts">${t.facts.map(f => `<div><b>${f[0]}</b><span>${f[1]}</span></div>`).join('')}</div></div></section>
  <section class="block"><div class="wrap"><div class="sec-head"><div><h2>${t.groupsH}</h2><p>${t.groupsP}</p></div><a class="link" href="${U.products(L)}">${t.allProducts} ${I.arrow}</a></div>
   <div class="cats">${CATS.map(c => `<a class="cat" href="${U.cat(c.id, L)}"><div class="ph"><img src="${imgUrl(catCover[c.id])}" alt="${esc(catName(c.id, L))}" loading="lazy" width="900" height="900"></div><div class="meta"><div><h3>${esc(catName(c.id, L))}</h3><small>${esc(catShort(c.id, L))} · ${P.filter(p => p.cat === c.id).length} ${t.items}</small></div><span class="arrow">${I.arrow}</span></div></a>`).join('')}</div></div></section>

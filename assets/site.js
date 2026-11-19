@@ -257,6 +257,7 @@
   bindSearch($('#q-top'), $('#res-top'));
   bindSearch($('#q-hero'), $('#res-hero'));
   var hf = $('#hero-form'); if (hf) hf.addEventListener('submit', function (e) { e.preventDefault(); var v = $('#q-hero').value.trim(); if (v) goList(v); });
+  $$('[data-codefocus]').forEach(function (a) { a.addEventListener('click', function (e) { var i = $('#q-hero'); if (!i) return; e.preventDefault(); i.closest('.searchcard').scrollIntoView({ behavior: 'smooth', block: 'center' }); setTimeout(function () { i.focus({ preventScroll: true }); }, 350); }); });
   $$('[data-try]').forEach(function (b) { b.addEventListener('click', function () { var i = $('#q-hero'); i.value = b.dataset.try; i.focus(); i.dispatchEvent(new Event('input')); }); });
   bindListing(); bindProduct(); bindQuote(); cookies(); badge();
 })();
