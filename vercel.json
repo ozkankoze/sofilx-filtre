@@ -3258,22 +3258,27 @@
   },
   {
    "source": "/kod-arama",
-   "destination": "/urunler/kompresorler-ve-pompalar",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/kod-arama/:t",
-   "destination": "/urunler/kompresorler-ve-pompalar/:t",
+   "destination": "/urunler/:t",
+   "permanent": true
+  },
+  {
+   "source": "/urunler/kompresorler-ve-pompalar",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/code-search",
-   "destination": "/:L/products/compressors-and-pumps",
+   "destination": "/:L/products",
    "permanent": true
   },
   {
    "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/code-search/:t",
-   "destination": "/:L/products/compressors-and-pumps/:t",
+   "destination": "/:L/products/:t",
    "permanent": true
   },
   {
@@ -3355,24 +3360,32 @@
  ],
  "rewrites": [
   {
-   "source": "/urunler/kompresorler-ve-pompalar",
+   "source": "/urunler",
    "destination": "/api/xref?view=list&L=tr"
   },
   {
-   "source": "/urunler/kompresorler-ve-pompalar/:t",
+   "source": "/urunler/:t",
    "destination": "/api/xref?view=type&L=tr&t=:t"
+  },
+  {
+   "source": "/urunler/:t/:pb",
+   "destination": "/api/xref?view=type&L=tr&t=:t&pb=:pb"
   },
   {
    "source": "/kod/:slug",
    "destination": "/api/xref?view=item&L=tr&slug=:slug"
   },
   {
-   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/products/compressors-and-pumps",
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/products",
    "destination": "/api/xref?view=list&L=:L"
   },
   {
-   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/products/compressors-and-pumps/:t",
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/products/:t",
    "destination": "/api/xref?view=type&L=:L&t=:t"
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/products/:t/:pb",
+   "destination": "/api/xref?view=type&L=:L&t=:t&pb=:pb"
   },
   {
    "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/code/:slug",

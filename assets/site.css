@@ -804,3 +804,10 @@ a.chip2{text-decoration:none;cursor:pointer;transition:transform .15s}
 a.chip2:hover{transform:translateY(-2px)}
 .h2btns .btn svg{width:20px;height:20px}
 @media (max-width:600px){.cc-head>b{font-size:18px}.cc-stats{gap:10px;font-size:12.5px}.codecard .btn{padding:0 16px}}
+/* tüm ürünler filtreleri */
+.xform.js .xapply{display:none}
+.xform .filters .btn{margin-top:4px}
+.more-b summary{cursor:pointer;font-size:13.5px;color:var(--brand);padding:8px 0;list-style:none}
+.more-b summary::-webkit-details-marker{display:none}
+.more-b summary::after{content:' +'}
+.more-b[open] summary::after{content:' −'}

@@ -152,8 +152,8 @@ const U = {
   quote: L => L === 'tr' ? '/teklif' : `${base(L)}/quote`,
   kvkk: L => L === 'tr' ? '/kvkk' : `${base(L)}/privacy`,
   cookies: L => L === 'tr' ? '/cerez-politikasi' : `${base(L)}/cookies`,
-  xref: L => L === 'tr' ? '/urunler/kompresorler-ve-pompalar' : `${base(L)}/products/compressors-and-pumps`,
-  xrefType: (t, L) => `${U.xref(L)}/${t}`,
+  xref: L => U.products(L),
+  xrefType: (t, L) => `${U.products(L)}/${XREF_SLUG[t]}`,
   xrefItem: (s, L) => L === 'tr' ? `/kod/${s}` : `${base(L)}/code/${s}`,
   loto: L => L === 'tr' ? '/eked-loto' : `${base(L)}/loto`,
   lotoItem: (s, L) => `${U.loto(L)}/${s}`,
@@ -214,9 +214,10 @@ function layout({ L, path: url, route, title, desc, body, jsonld = [], noindex =
   const navItem = (k, href) => `<a href="${href}" data-nav="${k}">${t.nav[k]}</a>`;
   const megaLoto = `<a class="mega-all" href="${U.loto(L)}"><span><b>${esc(LT(L).title)}</b><small>${LOTO_P.length} ${esc(D[L].t.items)}</small></span>${I.arrow}</a>`;
   const megaXrefTile = `<a href="${U.xref(L)}"><span class="th"><img src="${imgUrl('ceb82a80b312', 1)}" alt="" loading="lazy" width="52" height="52"></span><span><b>${esc(XR[L].title)}</b><small>${fpNum(XREF_N, L)} ${t.items}</small></span></a>`;
-  const megaXref = `<a class="mega-all" href="${U.xref(L)}"><span><b>${esc(XR[L].title)}</b><small>${fpNum(XREF_N, L)} ${esc(XR[L].items)}</small></span>${I.arrow}</a>`;
-  const megaAll = !FP_ON ? megaLoto : `<a class="mega-all" href="${U.parts(L)}"><span><b>${esc(FP_T[L].ui.catalog)}</b><small>${fpNum(FP_COUNT, L)} ${esc(FP_T[L].ui.parts)}</small></span>${I.arrow}</a>`;
-  const mega = CATS.map(c => `<a href="${U.cat(c.id, L)}"><span class="th"><img src="${imgUrl(catCover[c.id], 1)}" alt="" loading="lazy" width="52" height="52"></span><span><b>${esc(catName(c.id, L))}</b><small>${P.filter(p => p.cat === c.id).length} ${t.items}</small></span></a>`).join('') + megaXrefTile;
+  const megaXref = `<a class="mega-all" href="${U.xref(L)}"><span><b>${esc(XR[L].title)}</b><small>${fpNum(XREF_N + P.length, L)} ${esc(XR[L].items)}</small></span>${I.arrow}</a>`;
+  const mega = '';
+  const megaAll = !FP_ON ? megaXref + megaLoto : `<a class="mega-all" href="${U.parts(L)}"><span><b>${esc(FP_T[L].ui.catalog)}</b><small>${fpNum(FP_COUNT, L)} ${esc(FP_T[L].ui.parts)}</small></span>${I.arrow}</a>`;
+  const megaOld = CATS.map(c => `<a href="${U.cat(c.id, L)}"><span class="th"><img src="${imgUrl(catCover[c.id], 1)}" alt="" loading="lazy" width="52" height="52"></span><span><b>${esc(catName(c.id, L))}</b><small>${P.filter(p => p.cat === c.id).length} ${t.items}</small></span></a>`).join('') + megaXrefTile;
   const fonts = FONT_BASE + (FONT_EXTRA[L] ? '&' + FONT_EXTRA[L] : '');
   return `<!doctype html>
 <html lang="${L}" dir="${rtl(L) ? 'rtl' : 'ltr'}">
@@ -258,7 +259,7 @@ ${jsonld.map(j => `<script type="application/ld+json">${JSON.stringify(j)}</scri
     </div>
   </div>
   <div class="searchpanel" id="searchpanel" hidden><div class="wrap"><div class="hsearch">${I.search}<input id="q-top" type="search" autocomplete="off" placeholder="${t.searchPh}" aria-label="${t.searchBtn}"><div class="results" id="res-top" hidden></div></div></div></div>
-  <div class="mnav" id="mnav"><a href="${U.products(L)}">${t.nav.products}</a><a href="${U.xref(L)}">${esc(XR[L].title)}</a><a href="${U.loto(L)}">${esc(LT(L).short)}</a>${FP_ON ? `<a href="${U.parts(L)}">${esc(FP_T[L].ui.catalogShort)}</a>` : ''}<a href="${U.sectors(L)}">${t.nav.sectors}</a><a href="${U.brands(L)}">${t.nav.brands}</a><a href="${U.custom(L)}">${t.nav.custom}</a><a href="${U.about(L)}">${t.nav.about}</a><a href="${U.refs(L)}">${t.nav.refs}</a><a href="${U.contact(L)}">${t.nav.contact}</a><div class="mlang"><p>${I.globe}${esc(x.language)}</p><div>${langLinks}</div></div></div>
+  <div class="mnav" id="mnav"><a href="${U.products(L)}">${esc(XR[L].title)}</a><a href="${U.loto(L)}">${esc(LT(L).short)}</a>${FP_ON ? `<a href="${U.parts(L)}">${esc(FP_T[L].ui.catalogShort)}</a>` : ''}<a href="${U.sectors(L)}">${t.nav.sectors}</a><a href="${U.brands(L)}">${t.nav.brands}</a><a href="${U.custom(L)}">${t.nav.custom}</a><a href="${U.about(L)}">${t.nav.about}</a><a href="${U.refs(L)}">${t.nav.refs}</a><a href="${U.contact(L)}">${t.nav.contact}</a><div class="mlang"><p>${I.globe}${esc(x.language)}</p><div>${langLinks}</div></div></div>
 </header>
 <main id="main">
 ${body}
@@ -266,7 +267,7 @@ ${body}
 <footer class="site">
   <div class="wrap">
     <div><a class="logo" href="${U.home(L)}"><img src="/img/logo.png" alt="Sofilx" width="383" height="90" loading="lazy"></a><p>${t.footP}</p></div>
-    <div><h4>${t.products}</h4>${CATS.map(c => `<a href="${U.cat(c.id, L)}">${esc(catName(c.id, L))}</a>`).join('')}${FP_ON ? `<a href="${U.parts(L)}">${esc(FP_T[L].ui.catalog)}</a>` : ''}<a href="${U.xref(L)}">${esc(XR[L].title)}</a><a href="${U.loto(L)}">${esc(LT(L).title)}</a></div>
+    <div><h4>${t.products}</h4>${FP_ON ? `<a href="${U.parts(L)}">${esc(FP_T[L].ui.catalog)}</a>` : ''}<a href="${U.products(L)}">${esc(XR[L].title)}</a><a href="${U.loto(L)}">${esc(LT(L).title)}</a></div>
     <div><h4>Sofilx</h4><a href="${U.about(L)}">${t.nav.about}</a><a href="${U.sectors(L)}">${t.nav.sectors}</a><a href="${U.brands(L)}">${t.nav.brands}</a><a href="${U.refs(L)}">${t.nav.refs}</a><a href="${U.custom(L)}">${t.nav.custom}</a><a href="${U.quote(L)}">${t.list}</a><a href="${U.contact(L)}">${t.customerCenter}</a></div>
     <div><h4>${t.nav.contact}</h4><p>${ADDRESS}</p><p><a href="tel:${PHONE_INT}" dir="ltr">${phone(L)}</a><a href="https://wa.me/${WA}" target="_blank" rel="noopener"><span dir="ltr">${mobile(L)}</span> · WhatsApp</a></p><p><a href="mailto:${EMAIL}">${EMAIL}</a></p></div>
   </div>
@@ -321,9 +322,15 @@ function writeXrefRuntime() {
   for (const L of LANGS) {
     fs.writeFileSync(path.join(out, `${L}.html`), layout({ L, path: '/__PATH__', route: l => `/__R_${l}__`, title: '__TITLE__', desc: '__DESC__', body: '__BODY__', jsonld: [], ogImg: '__OGIMG__', shell: true, headExtra: '__HEAD__' }));
     const t = D[L].t, x = t.x;
-    ui[L] = { x: XR[L], t: { home: t.home, addToList: t.addToList, waAsk: t.waAsk, share: t.share, copyCode: t.copyCode, notes: t.notes, searchBtn: t.searchBtn, waProduct: x.waProduct },
+    ui[L] = { x: XR[L], t: { productGroup: t.productGroup, brand: t.brand, clear: t.clear, filters: t.filters, sort: t.sort, home: t.home, addToList: t.addToList, waAsk: t.waAsk, share: t.share, copyCode: t.copyCode, notes: t.notes, searchBtn: t.searchBtn, waProduct: x.waProduct },
       base: { home: U.home(L), list: U.xref(L), type: U.xrefType('__T__', L), item: U.xrefItem('__S__', L) } };
   }
+  const xc = new Map(); XREF.p.forEach(r => xc.set(XREF.types[r[1]], (xc.get(XREF.types[r[1]]) || 0) + 1));
+  ui.cats = [...CATS.map(c => ({ k: c.id, slug: Object.fromEntries(LANGS.map(l => [l, l === 'tr' ? c.id : catById[c.id].en])), name: Object.fromEntries(LANGS.map(l => [l, catName(c.id, l)])) })),
+    ...XREF.types.filter(t => xc.has(t)).sort((a, b) => xc.get(b) - xc.get(a)).map(t => ({ k: t, slug: Object.fromEntries(LANGS.map(l => [l, XREF_SLUG[t]])), name: Object.fromEntries(LANGS.map(l => [l, XR[l].types[t]])) }))];
+  const own = {};
+  for (const L of LANGS) own[L] = P.map(p => [p.id, nm(p, L), codeLine(p) ? [...p.codes, ...p.equiv].join(' | ') : p.equiv.join(' | '), p.models.join(' | '), p.brand, p.cat, imgUrl(p.img, 1), U.product(p, L), typeName(p, L)]);
+  fs.writeFileSync(path.join(dir, 'own.json.gz'), zlib.gzipSync(JSON.stringify(own)));
   fs.writeFileSync(path.join(dir, 'ui.json'), JSON.stringify(ui));
 }
 
@@ -429,7 +436,7 @@ function pageHome(L) {
    <div class="tries">${t.example}: ${XREF_EX.map(e => `<button class="chip" type="button" data-try="${esc(e)}">${esc(e)}</button>`).join('')}</div><div class="results" id="res-hero" hidden></div></div>
    <div class="facts">${t.facts.map(f => `<div><b>${f[0]}</b><span>${f[1]}</span></div>`).join('')}</div></div></section>
  <section class="block"><div class="wrap"><div class="sec-head"><div><h2>${t.groupsH}</h2><p>${t.groupsP}</p></div><a class="link" href="${U.products(L)}">${t.allProducts} ${I.arrow}</a></div>
-  <div class="cats">${CATS.map(c => `<a class="cat" href="${U.cat(c.id, L)}"><div class="ph"><img src="${imgUrl(catCover[c.id])}" alt="${esc(catName(c.id, L))}" loading="lazy" width="900" height="900"></div><div class="meta"><div><h3>${esc(catName(c.id, L))}</h3><small>${esc(catShort(c.id, L))} · ${P.filter(p => p.cat === c.id).length} ${t.items}</small></div><span class="arrow">${I.arrow}</span></div></a>`).join('')}<a class="cat" href="${U.xref(L)}"><div class="ph"><img src="${imgUrl('ceb82a80b312')}" alt="${esc(XR[L].title)}" loading="lazy" width="900" height="900"></div><div class="meta"><div><h3>${esc(XR[L].title)}</h3><small>${esc(XR[L].short)} · ${fpNum(XREF_N, L)} ${t.items}</small></div><span class="arrow">${I.arrow}</span></div></a></div></div></section>
+  <div class="cats">${CATS.map(c => `<a class="cat" href="${U.cat(c.id, L)}"><div class="ph"><img src="${imgUrl(catCover[c.id])}" alt="${esc(catName(c.id, L))}" loading="lazy" width="900" height="900"></div><div class="meta"><div><h3>${esc(catName(c.id, L))}</h3><small>${esc(catShort(c.id, L))} · ${P.filter(p => p.cat === c.id).length} ${t.items}</small></div><span class="arrow">${I.arrow}</span></div></a>`).join('')}</div></div></section>
  ${FP_ON ? fpHomeSection(L) : ''}
  ${lotoHomeSection(L)}
  <section class="block"><div class="wrap"><div class="sec-head"><div><h2>${t.sectorsH}</h2><p>${t.sectorsP}</p></div><a class="link" href="${U.sectors(L)}">${t.viewAll} ${I.arrow}</a></div><div class="sectors">${SECTORS.map(s => sectorTile(s, L)).join('')}</div></div></section>
@@ -703,13 +710,13 @@ function writeVercel() {
   // parça kataloğu: sunucu fonksiyonu + tedarikçi görsellerinin vekil adresi
   const LX = LANGS.filter(l => l !== 'tr').join('|');
   const XR_RW = [
-    { source: U.xref('tr'), destination: '/api/xref?view=list&L=tr' }, { source: U.xref('tr') + '/:t', destination: '/api/xref?view=type&L=tr&t=:t' }, { source: '/kod/:slug', destination: '/api/xref?view=item&L=tr&slug=:slug' },
-    { source: `/:L(${LX})/products/compressors-and-pumps`, destination: '/api/xref?view=list&L=:L' }, { source: `/:L(${LX})/products/compressors-and-pumps/:t`, destination: '/api/xref?view=type&L=:L&t=:t' }, { source: `/:L(${LX})/code/:slug`, destination: '/api/xref?view=item&L=:L&slug=:slug' },
+    { source: '/urunler', destination: '/api/xref?view=list&L=tr' }, { source: '/urunler/:t', destination: '/api/xref?view=type&L=tr&t=:t' }, { source: '/urunler/:t/:pb', destination: '/api/xref?view=type&L=tr&t=:t&pb=:pb' }, { source: '/kod/:slug', destination: '/api/xref?view=item&L=tr&slug=:slug' },
+    { source: `/:L(${LX})/products`, destination: '/api/xref?view=list&L=:L' }, { source: `/:L(${LX})/products/:t`, destination: '/api/xref?view=type&L=:L&t=:t' }, { source: `/:L(${LX})/products/:t/:pb`, destination: '/api/xref?view=type&L=:L&t=:t&pb=:pb' }, { source: `/:L(${LX})/code/:slug`, destination: '/api/xref?view=item&L=:L&slug=:slug' },
     { source: `/sitemap-kod-:L(tr|${LX})-:n.xml`, destination: '/api/xref?view=sitemap&L=:L&n=:n' },
   ];
   const XR_FN = { 'api/xref.mjs': { includeFiles: 'data/xref/**', memory: 1024, maxDuration: 15 } };
-  cfg.redirects.push({ source: '/kod-arama', destination: U.xref('tr'), permanent: true }, { source: '/kod-arama/:t', destination: U.xref('tr') + '/:t', permanent: true },
-    { source: `/:L(${LX})/code-search`, destination: '/:L/products/compressors-and-pumps', permanent: true }, { source: `/:L(${LX})/code-search/:t`, destination: '/:L/products/compressors-and-pumps/:t', permanent: true });
+  cfg.redirects.push({ source: '/kod-arama', destination: '/urunler', permanent: true }, { source: '/kod-arama/:t', destination: '/urunler/:t', permanent: true }, { source: '/urunler/kompresorler-ve-pompalar', destination: '/urunler', permanent: true },
+    { source: `/:L(${LX})/code-search`, destination: '/:L/products', permanent: true }, { source: `/:L(${LX})/code-search/:t`, destination: '/:L/products/:t', permanent: true });
   if (!FP_ON) {
     cfg.rewrites = XR_RW; cfg.functions = XR_FN;
     // katalog kaldırıldı: eski adresler ürünler sayfasına yönlenir
@@ -746,7 +753,7 @@ if (fs.existsSync(path.join(ROOT, 'static'))) fs.cpSync(path.join(ROOT, 'static'
 const ONLY = process.env.LANGS ? process.env.LANGS.split(',') : null; // hızlı test: LANGS=tr,ar
 for (const L of LANGS) {
   if (ONLY && !ONLY.includes(L)) continue;
-  pageHome(L); pageProducts(L); P.forEach(p => pageProduct(p, L)); pageSectors(L); pageBrands(L); pageCustom(L); pageAbout(L); pageRefs(L); pageContact(L); pageQuote(L); pageLegal(L); pageLoto(L);
+  pageHome(L); P.forEach(p => pageProduct(p, L)); pageSectors(L); pageBrands(L); pageCustom(L); pageAbout(L); pageRefs(L); pageContact(L); pageQuote(L); pageLegal(L); pageLoto(L);
 }
 page404(); searchIndex(); if (FP_ON) writeFpRuntime(); writeXrefRuntime(); writeSitemap(); writeVercel();
 console.log('langs', LANGS.join(','), 'pages', sitemap.length, 'products', P.length, 'web3forms', WEB3FORMS_KEY ? 'set' : 'MISSING');

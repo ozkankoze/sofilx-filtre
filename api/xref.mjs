@@ -36,7 +36,7 @@ const num = (n, L) => Number(n).toLocaleString(L === 'tr' ? 'tr-TR' : L === 'en'
 const u = L => UI[L];
 const x = L => UI[L].x;
 const itemUrl = (r, L) => u(L).base.item.replace('__S__', slugOf(r[0]));
-const typeUrl = (t, L) => u(L).base.type.replace('__T__', UI.typeSlug[t]);
+const typeUrl = (t, L) => catUrl(t, L);
 const listUrl = L => u(L).base.list;
 const typeName = (t, L) => x(L).types[t] || x('en').types[t] || t;
 const imgOf = t => UI.img[t] || UI.img.part;
@@ -90,32 +90,81 @@ function search(q, onlyType) {
   return [...best.entries()].sort((a, b) => b[1][0] - a[1][0] || a[0] - b[0]).map(([i, [s, k]]) => [i, s, codeOf(i, k || tq)]);
 }
 
-// ---------- görünümler ----------
-function typeTiles(L) {
-  return `<div class="pcats">${TYPES.filter(t => BYTYPE.has(t)).sort((a, b) => BYTYPE.get(b).length - BYTYPE.get(a).length).map(t => `<a class="pcat" href="${typeUrl(t, L)}"><span class="ph"><img src="${imgOf(t)}" alt="" loading="lazy"></span><span class="nm"><b>${esc(typeName(t, L))}</b><small>${num(BYTYPE.get(t).length, L)} ${esc(x(L).items)}</small></span></a>`).join('')}</div>`;
+// ---------- tüm ürünler (kendi ürünlerimiz + kod kataloğu) ----------
+// Kategori anahtarları: kendi grupları (ör. kompresor-filtreleri) ve kod kataloğu tipleri (ör. air)
+let OWN = {}, ALL;
+const own = L => OWN[L] || (OWN[L] = JSON.parse(zlib.gunzipSync(fs.readFileSync(path.join(DIR, 'own.json.gz'))).toString())[L]);
+function all() {
+  if (ALL) return ALL;
+  const o = own('tr');
+  ALL = [...o.map((r, i) => ({ o: i, c: r[5], b: [r[4]] })), ...P.map((r, i) => ({ x: i, c: TYPES[r[1]], b: [...new Set(r[2].map(z => z[0]))] }))];
+  BNAME = new Map(); for (const it of ALL) for (const bn of it.b) { const k = bkey(bn); if (k && !BNAME.has(k)) BNAME.set(k, bn); }
+  for (const it of ALL) it.bk = it.b.map(bkey);
+  return ALL;
 }
-function viewList(L, q, pg) {
-  const f = x(L), base = listUrl(L), nOem = UI.nOem;
-  let inner = searchForm(L, base, q);
-  if (q) {
-    const hits = search(q), slice = hits.slice((pg - 1) * PER, pg * PER);
-    inner += `<div class="cat-head"><div><h2 style="font-size:28px">${esc(fill(f.searchTitle, { q }))}</h2><p>${num(hits.length, L)} ${esc(f.items)}</p></div></div>`
-      + (hits.length ? `<div class="cards grid-auto">${slice.map(h => card(h[0], L, h[2])).join('')}</div>${pager(L, base, pg, hits.length, q)}` : `<div class="empty">${esc(f.searchNone)}</div>`);
-  }
-  inner += `<section class="block" style="padding-top:${q ? 56 : 24}px"><div class="sec-head"><div><h2 style="font-size:32px">${esc(f.groups)}</h2></div></div>${typeTiles(L)}</section>`;
-  const items = [[u(L).t.home, u(L).base.home], [f.title, base]];
-  const body = `<div class="wrap">${crumbs(items)}<div class="page-head"><h1>${esc(f.title)}</h1><p>${esc(fill(f.lead, { n: num(P.length, L), c: num(nOem, L) }))}</p></div>${inner}</div>`;
-  return page(L, { path: base, route: l => listUrl(l), title: q ? fill(f.searchTitle, { q }) : f.title, desc: fill(f.desc, { n: num(P.length, L), c: num(nOem, L) }), body, jsonld: [crumbLd(items)], noindex: !!q });
+let BNAME;
+const bkey = b => norm(b).replace(/[^a-z0-9]/g, '');
+const catOf = k => UI.cats.find(c => c.k === k);
+const catSlug = (k, L) => { const c = catOf(k); return c.slug[L] || c.slug.en || c.slug.tr; };
+const catName = (k, L) => { const c = catOf(k); return c.name[L] || c.name.en; };
+const catByPath = (s, L) => UI.cats.find(c => c.slug[L] === s || c.slug.tr === s || c.slug.en === s);
+const brandSlugOf = b => norm(b).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const catUrl = (k, L) => `${listUrl(L)}/${catSlug(k, L)}`;
+
+function ownScore(r, tq, words) {
+  let s = 0; const codes = r[2] ? r[2].split(' | ') : [];
+  if (codes.some(c => tight(c) === tq)) s += 100; else if (tq.length > 2 && codes.some(c => tight(c).includes(tq))) s += 60;
+  if (tq.length > 2 && r[3] && r[3].split(' | ').some(m => tight(m).includes(tq))) s += 40;
+  const hay = norm([r[1], r[4], r[8]].join(' ')); if (words.length && words.every(w => hay.includes(w))) s += 30;
+  return s;
 }
-function viewType(L, ts, q, pg) {
-  const t = Object.keys(UI.typeSlug).find(k => UI.typeSlug[k] === ts); if (!t || !BYTYPE.has(t)) return null;
-  const f = x(L), tn = typeName(t, L), base = typeUrl(t, L);
-  const list = q ? search(q, t) : BYTYPE.get(t).map(i => [i, 0, null]);
-  const slice = list.slice((pg - 1) * PER, pg * PER), nPg = Math.ceil(list.length / PER);
-  const items = [[u(L).t.home, u(L).base.home], [f.title, listUrl(L)], [tn, base]];
-  const body = `<div class="wrap">${crumbs(items)}<div class="cat-head"><div><h1>${esc(tn)}</h1><p>${num(list.length, L)} ${esc(f.items)}</p></div></div>${searchForm(L, base, q)}
-${slice.length ? `<div class="cards grid-auto">${slice.map(h => card(h[0], L, h[2])).join('')}</div>${pager(L, base, pg, list.length, q)}` : `<div class="empty">${esc(f.searchNone)}</div>`}</div>`;
-  return page(L, { path: base + (pg > 1 ? `?p=${pg}` : ''), route: l => typeUrl(t, l), title: pg > 1 ? `${tn} – ${fill(f.page, { p: pg, n: nPg })}` : `${tn} | ${f.title}`, desc: fill(f.desc, { n: num(list.length, L), c: num(UI.nOem, L) }), body, jsonld: [crumbLd(items)], noindex: !!q, ogImg: imgOf(t) });
+function matchAll(q, L) {
+  const items = all(); if (!q) return items.map(it => [it, 0, null]);
+  const tq = tight(q), words = norm(q).trim().split(/\s+/).filter(Boolean), o = own(L), out = [];
+  for (const it of items) if (it.o !== undefined) { const sc = ownScore(o[it.o], tq, words); if (sc) out.push([it, sc + 1, null]); }
+  const xi = new Map(items.filter(it => it.x !== undefined).map(it => [it.x, it]));
+  for (const [i, sc, c] of search(q)) out.push([xi.get(i), sc, c]);
+  return out.sort((a, b) => b[1] - a[1]);
+}
+function ownCard(r, L) {
+  return `<article class="card" data-id="${esc(r[0])}" data-name="${esc(r[1])}" data-code="${esc((r[2] || '').split(' | ')[0])}" data-img="${r[6]}" data-url="${r[7]}">
+<div class="phw"><a class="ph" href="${r[7]}"><img src="${r[6]}" alt="${esc(r[1])}" loading="lazy" width="440" height="440"></a><button class="quick" type="button" data-add="${esc(r[0])}" aria-label="${esc(u(L).t.addToList)}" title="${esc(u(L).t.addToList)}">${I.plus}</button></div>
+<div class="info"><span class="brandname">${esc(r[4])}</span><h3><a href="${r[7]}">${esc(r[1])}</a></h3>${r[2] ? `<span class="code" dir="ltr">${esc(r[2].split(' | ').slice(0, 2).join(' | '))}</span>` : ''}</div></article>`;
+}
+function viewAll(L, { q, pg, ks, bs, sort, pathCat, pathBrand }) {
+  const f = x(L), st = u(L).t, base = listUrl(L);
+  const hits = matchAll(q, L);
+  const kset = new Set(ks), bset = new Set(bs.map(bkey).filter(Boolean));
+  const okC = it => !kset.size || kset.has(it.c), okB = it => !bset.size || it.bk.some(k => bset.has(k));
+  const list = hits.filter(([it]) => okC(it) && okB(it));
+  if (sort === 'az') { const o = own(L); list.sort((a, b) => (a[0].o !== undefined ? o[a[0].o][1] : pname(P[a[0].x], L)).localeCompare(b[0].o !== undefined ? o[b[0].o][1] : pname(P[b[0].x], L), L, { numeric: true })); }
+  const cc = new Map(), bc = new Map();
+  for (const [it] of hits) { if (okB(it)) cc.set(it.c, (cc.get(it.c) || 0) + 1); if (okC(it)) for (const k of new Set(it.bk)) bc.set(k, (bc.get(k) || 0) + 1); }
+  const nPg = Math.max(1, Math.ceil(list.length / PER)); pg = Math.min(pg, nPg);
+  const slice = list.slice((pg - 1) * PER, pg * PER), o = own(L);
+  const cats = UI.cats.filter(c => cc.get(c.k) || kset.has(c.k));
+  const brands = [...bc.entries()].sort((a, b) => b[1] - a[1] || BNAME.get(a[0]).localeCompare(BNAME.get(b[0]))).map(([k, n]) => [k, n]);
+  const selB = brands.filter(([k]) => bset.has(k)), restB = brands.filter(([k]) => !bset.has(k));
+  const opt = (g, v, label, n, on) => `<label class="opt"><input type="checkbox" name="${g}" value="${esc(v)}"${on ? ' checked' : ''}><span>${esc(label)}</span><span class="c">${num(n, L)}</span></label>`;
+  const bOpt = ([k, n]) => opt('b', brandSlugOf(BNAME.get(k)), BNAME.get(k), n, bset.has(k));
+  const title = pathCat ? catName(pathCat, L) + (pathBrand ? ' – ' + BNAME.get(bkey(pathBrand)) : '') : f.title;
+  const items = [[st.home, u(L).base.home], [f.title, base], ...(pathCat ? [[catName(pathCat, L), catUrl(pathCat, L)]] : []), ...(pathBrand ? [[BNAME.get(bkey(pathBrand)) || pathBrand, `${catUrl(pathCat, L)}/${brandSlugOf(pathBrand)}`]] : [])];
+  const keep = new URLSearchParams(); if (q) keep.set('q', q); ks.forEach(k => keep.append('k', k)); bs.forEach(b => keep.append('b', brandSlugOf(b))); if (sort && sort !== 'rel') keep.set('s', sort);
+  const pagerHtml = nPg > 1 ? `<nav class="pager" aria-label="pagination">${pg > 1 ? `<a class="btn btn-line btn-sm" rel="prev" href="${base}?${new URLSearchParams([...keep, ...(pg > 2 ? [['p', pg - 1]] : [])])}">${esc(f.prev)}</a>` : '<span></span>'}<span>${esc(fill(f.page, { p: pg, n: nPg }))}</span>${pg < nPg ? `<a class="btn btn-line btn-sm" rel="next" href="${base}?${new URLSearchParams([...keep, ['p', pg + 1]])}">${esc(f.next)}</a>` : '<span></span>'}</nav>` : '';
+  const cards = slice.map(([it, , c]) => it.o !== undefined ? ownCard(o[it.o], L) : card(it.x, L, c)).join('');
+  const body = `<div class="wrap">${crumbs(items)}
+ <div class="cat-head"><div><h1>${esc(title)}</h1><p>${q ? esc(fill(f.searchTitle, { q })) + ' · ' : ''}${num(list.length, L)} ${esc(f.items)}</p></div></div>
+ <form class="xform" action="${base}" method="get"><div class="cat-layout"><aside class="filters" id="xfilters">
+  <div class="inlinesearch">${I.search}<input name="q" type="search" value="${esc(q)}" placeholder="${esc(f.searchPh)}" aria-label="${esc(st.searchBtn)}" autocomplete="off"></div>
+  <div><h4>${esc(st.productGroup)}</h4>${cats.map(c => opt('k', c.k, catName(c.k, L), cc.get(c.k) || 0, kset.has(c.k))).join('')}</div>
+  ${brands.length ? `<div><h4>${esc(st.brand)}</h4>${[...selB, ...restB.slice(0, Math.max(0, 15 - selB.length))].map(bOpt).join('')}${restB.length > 15 - selB.length ? `<details class="more-b"><summary>${esc(fill(f.allBrands, { n: brands.length }))}</summary>${restB.slice(Math.max(0, 15 - selB.length)).map(bOpt).join('')}</details>` : ''}</div>` : ''}
+  <button class="btn btn-dark btn-sm xapply" type="submit">${esc(st.searchBtn)}</button>
+  ${q || ks.length || bs.length ? `<a class="btn btn-line btn-sm" href="${base}">${esc(st.clear)}</a>` : ''}</aside>
+ <div style="min-width:0"><div class="toolbar"><span>${num(list.length, L)} ${esc(f.items)}</span><div style="display:flex;gap:8px"><button class="btn btn-line btn-sm filter-toggle" type="button" id="xf-toggle">${esc(st.filters)}</button><select name="s" aria-label="Sort"><option value="rel">${esc(st.sort[0])}</option><option value="az"${sort === 'az' ? ' selected' : ''}>${esc(st.sort[1])}</option></select></div></div>
+ ${slice.length ? `<div class="cards grid-auto">${cards}</div>${pagerHtml}` : `<div class="empty">${esc(f.searchNone)}</div>`}</div></div></form></div>`;
+  const filtered = !!(q || bs.length || (ks.length && !pathCat) || ks.length > 1 || sort === 'az');
+  const pth = pathCat ? `${catUrl(pathCat, L)}${pathBrand ? '/' + brandSlugOf(pathBrand) : ''}` : base;
+  return page(L, { path: pth + (pg > 1 && !filtered ? `?p=${pg}` : ''), route: l => pathCat ? `${catUrl(pathCat, l)}${pathBrand ? '/' + brandSlugOf(pathBrand) : ''}` : listUrl(l), title: pg > 1 ? `${title} – ${fill(f.page, { p: pg, n: nPg })}` : title, desc: fill(f.desc, { n: num(list.length, L), c: num(UI.nOem, L) }), body, jsonld: [crumbLd(items)], noindex: filtered });
 }
 function viewItem(L, slug, q) {
   const i = BYSLUG.get(slug); if (i === undefined) return null;
@@ -152,7 +201,7 @@ function viewSj(L, q) {
     items: h.slice(0, 8).map(([i, , c]) => { const r = P[i], t = TYPES[r[1]]; return { n: pname(r, L), u: itemUrl(r, L) + (c ? `?q=${encodeURIComponent(c)}` : ''), im: imgOf(t), c: c || r[0], t: typeName(t, L) }; }) };
 }
 function viewSitemap(L, n) {
-  const urls = [listUrl(L), ...TYPES.filter(t => BYTYPE.has(t)).map(t => typeUrl(t, L)), ...P.map(r => itemUrl(r, L))].slice((n - 1) * SM, n * SM);
+  const urls = [listUrl(L), ...UI.cats.map(c => catUrl(c.k, L)), ...P.map(r => itemUrl(r, L))].slice((n - 1) * SM, n * SM);
   if (!urls.length) return null;
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(z => `<url><loc>${SITE}${esc(z)}</loc></url>`).join('\n')}\n</urlset>`;
 }
@@ -167,12 +216,23 @@ export default function handler(req, res) {
     if (view === 'sj') { res.setHeader('Content-Type', 'application/json; charset=utf-8'); res.setHeader('Cache-Control', cache); return res.end(JSON.stringify(q ? viewSj(L, q) : { total: 0, items: [] })); }
     if (view === 'sitemap') { const s = viewSitemap(L, parseInt(q0.n, 10) || 1); if (!s) { res.statusCode = 404; return res.end('not found'); } res.setHeader('Content-Type', 'application/xml; charset=utf-8'); res.setHeader('Cache-Control', cache); return res.end(s); }
     // tam kod eşleşmesi tek ürüne çıkıyorsa doğrudan ürün sayfasına git
-    if (view === 'list' && q && pg === 1) {
+    if (view === 'list' && q && pg === 1 && !q0.k && !q0.b) {
       const ex = [...new Set(EXACT.get(tight(q)) || [])];
       if (ex.length === 1) { res.statusCode = 302; res.setHeader('Location', itemUrl(P[ex[0]], L) + (tight(P[ex[0]][0]) === tight(q) ? '' : `?q=${encodeURIComponent(q)}`)); res.setHeader('Cache-Control', cache); return res.end(); }
     }
-    let html = view === 'item' ? viewItem(L, String(q0.slug || ''), q) : view === 'type' ? viewType(L, String(q0.t || ''), q, pg) : viewList(L, q, pg);
-    if (!html) { res.statusCode = 404; html = viewList(L, String(q0.slug || '').replace(/-/g, ' '), 1); res.setHeader('Cache-Control', 'public, s-maxage=300'); }
+    const arr = v => v === undefined ? [] : Array.isArray(v) ? v : [v];
+    const sp = new URL(req.url, 'http://x').searchParams;
+    const ks = [...new Set([...arr(q0.k), ...sp.getAll('k')].map(String))].filter(k => catOf(k));
+    const bs = [...new Set([...arr(q0.b), ...sp.getAll('b')].map(String))].filter(Boolean).slice(0, 20);
+    let html;
+    if (view === 'item') html = viewItem(L, String(q0.slug || ''), q);
+    else if (view === 'type') {
+      all(); const c = catByPath(String(q0.t || ''), L);
+      const pb = q0.pb ? String(q0.pb) : '';
+      const pbName = pb ? [...BNAME.values()].find(n => brandSlugOf(n) === pb) : '';
+      html = c && (!pb || pbName) ? viewAll(L, { q, pg, ks: [...new Set([c.k, ...ks])], bs: pbName ? [pbName, ...bs] : bs, sort: q0.s, pathCat: c.k, pathBrand: pbName }) : null;
+    } else { all(); html = viewAll(L, { q, pg, ks, bs, sort: q0.s }); }
+    if (!html) { res.statusCode = 404; all(); html = viewAll(L, { q: String(q0.slug || q0.t || '').replace(/-/g, ' '), pg: 1, ks: [], bs: [] }); res.setHeader('Cache-Control', 'public, s-maxage=300'); }
     else res.setHeader('Cache-Control', view === 'item' && q ? 'public, max-age=300, s-maxage=3600' : cache);
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
     res.end(html);

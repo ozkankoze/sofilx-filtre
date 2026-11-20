@@ -49,7 +49,8 @@
   "codeBtn": "Kodla ara",
   "codes": "orijinal kod",
   "brands": "marka",
-  "short": "Separatör, hava, yağ ve hat filtreleri"
+  "short": "Separatör, hava, yağ ve hat filtreleri",
+  "allBrands": "Tüm markalar ({n})"
  },
  "en": {
   "types": {
@@ -101,7 +102,8 @@
   "codeBtn": "Search by code",
   "codes": "original codes",
   "brands": "brands",
-  "short": "Separators, air, oil and in-line filters"
+  "short": "Separators, air, oil and in-line filters",
+  "allBrands": "All brands ({n})"
  },
  "fa": {
   "types": {
@@ -153,7 +155,8 @@
   "codeBtn": "جستجو با کد",
   "codes": "کد اصلی",
   "brands": "برند",
-  "short": "سپراتور، فیلتر هوا، روغن و خطی"
+  "short": "سپراتور، فیلتر هوا، روغن و خطی",
+  "allBrands": "همه برندها ({n})"
  },
  "he": {
   "types": {
@@ -205,7 +208,8 @@
   "codeBtn": "חיפוש לפי קוד",
   "codes": "קודים מקוריים",
   "brands": "מותגים",
-  "short": "מפרידים, מסנני אוויר, שמן וקו"
+  "short": "מפרידים, מסנני אוויר, שמן וקו",
+  "allBrands": "כל המותגים ({n})"
  },
  "ar": {
   "types": {
@@ -257,7 +261,8 @@
   "codeBtn": "ابحث بالرمز",
   "codes": "رمز أصلي",
   "brands": "علامة تجارية",
-  "short": "فواصل وفلاتر هواء وزيت وخطية"
+  "short": "فواصل وفلاتر هواء وزيت وخطية",
+  "allBrands": "جميع العلامات ({n})"
  },
  "fr": {
   "types": {
@@ -309,7 +314,8 @@
   "codeBtn": "Rechercher par code",
   "codes": "références d'origine",
   "brands": "marques",
-  "short": "Séparateurs, filtres à air, à huile et en ligne"
+  "short": "Séparateurs, filtres à air, à huile et en ligne",
+  "allBrands": "Toutes les marques ({n})"
  },
  "de": {
   "types": {
@@ -361,7 +367,8 @@
   "codeBtn": "Per Code suchen",
   "codes": "Originalnummern",
   "brands": "Marken",
-  "short": "Abscheider, Luft-, Öl- und Leitungsfilter"
+  "short": "Abscheider, Luft-, Öl- und Leitungsfilter",
+  "allBrands": "Alle Marken ({n})"
  },
  "es": {
   "types": {
@@ -413,7 +420,8 @@
   "codeBtn": "Buscar por código",
   "codes": "referencias originales",
   "brands": "marcas",
-  "short": "Separadores, filtros de aire, aceite y de línea"
+  "short": "Separadores, filtros de aire, aceite y de línea",
+  "allBrands": "Todas las marcas ({n})"
  },
  "ru": {
   "types": {
@@ -465,7 +473,8 @@
   "codeBtn": "Поиск по коду",
   "codes": "оригинальных номеров",
   "brands": "марок",
-  "short": "Сепараторы, воздушные, масляные и магистральные фильтры"
+  "short": "Сепараторы, воздушные, масляные и магистральные фильтры",
+  "allBrands": "Все марки ({n})"
  },
  "it": {
   "types": {
@@ -517,7 +526,8 @@
   "codeBtn": "Cerca per codice",
   "codes": "codici originali",
   "brands": "marchi",
-  "short": "Separatori, filtri aria, olio e di linea"
+  "short": "Separatori, filtri aria, olio e di linea",
+  "allBrands": "Tutti i marchi ({n})"
  },
  "nl": {
   "types": {
@@ -569,7 +579,8 @@
   "codeBtn": "Zoek op code",
   "codes": "originele codes",
   "brands": "merken",
-  "short": "Afscheiders, lucht-, olie- en leidingfilters"
+  "short": "Afscheiders, lucht-, olie- en leidingfilters",
+  "allBrands": "Alle merken ({n})"
  },
  "ka": {
   "types": {
@@ -621,7 +632,8 @@
   "codeBtn": "კოდით ძიება",
   "codes": "ორიგინალი კოდი",
   "brands": "ბრენდი",
-  "short": "სეპარატორები, ჰაერის, ზეთისა და ხაზის ფილტრები"
+  "short": "სეპარატორები, ჰაერის, ზეთისა და ხაზის ფილტრები",
+  "allBrands": "ყველა ბრენდი ({n})"
  },
  "mk": {
   "types": {
@@ -673,7 +685,8 @@
   "codeBtn": "Пребарај по код",
   "codes": "оригинални шифри",
   "brands": "марки",
-  "short": "Сепаратори, филтри за воздух, масло и линиски"
+  "short": "Сепаратори, филтри за воздух, масло и линиски",
+  "allBrands": "Сите марки ({n})"
  },
  "az": {
   "types": {
@@ -725,6 +738,7 @@
   "codeBtn": "Kodla axtar",
   "codes": "orijinal kod",
   "brands": "marka",
-  "short": "Separatorlar, hava, yağ və xətt filtrləri"
+  "short": "Separatorlar, hava, yağ və xətt filtrləri",
+  "allBrands": "Bütün markalar ({n})"
  }
 }
