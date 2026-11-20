@@ -75,6 +75,9 @@ const catById = Object.fromEntries(ALL_CATS.map(c => [c.id, c]));
 const brands = [...new Set(P.map(p => p.brand))].filter(b => b !== 'Sofilx').sort((a, b) => a.localeCompare(b, 'tr'));
 const brandSlug = b => slug(b);
 const catCover = {};
+const VANE_IMG = (data.products.find(p => p.cat === 'karbon-paletler' && p.imgs.length && p.models.length) || data.products.find(p => p.cat === 'karbon-paletler' && p.imgs.length)).imgs[0];
+// kod kataloğu ve ana sayfa kartlarında kullanılan, silinen gruplardan kalan görseller
+const KEEP_IMGS = ['ceb82a80b312', 'ebb5abe3c279', '5f2e303c1f86', VANE_IMG];
 for (const c of CATS) { const ps = P.filter(p => p.cat === c.id && p.img); catCover[c.id] = (ps.find(p => p.models.length) || ps[0] || {}).img; }
 const sectorProducts = s => {
   const out = [];
@@ -173,7 +176,7 @@ const sitemap = [];
 const imgUrl = (h, thumb) => h ? `/img/p/${h}${thumb ? '_t' : ''}.webp` : '/img/placeholder.svg';
 function copyImages() {
   fs.mkdirSync(path.join(DIST, 'img/p'), { recursive: true });
-  const used = new Set(P.flatMap(p => p.imgs));
+  const used = new Set([...P.flatMap(p => p.imgs), ...KEEP_IMGS]);
   for (const h of used) for (const suf of ['', '_t']) {
     const src = path.join(CUT, `${h}${suf}.webp`), raw = path.join(ROOT, 'data/raw', `${h}.webp`);
     const dst = path.join(DIST, 'img/p', `${h}${suf}.webp`);
@@ -320,11 +323,13 @@ const XREF_BRANDS = Math.floor(new Set(XREF.p.flatMap(r => r[2].map(o => o[0].to
 const xnorm = v => String(v).toLocaleLowerCase('tr').replace(/ı/g, 'i').replace(/ş/g, 's').replace(/ğ/g, 'g').replace(/ü/g, 'u').replace(/ö/g, 'o').replace(/ç/g, 'c').replace(/î/g, 'i');
 // listede her orijinal kod (marka + kod) ayrı ürün sayfasıdır; orijinal kodu olmayanlar stok koduyla
 const XREF_N = new Set(XREF.p.flatMap(r => r[2].length ? r[2].map(o => xnorm(o[0]).replace(/[^a-z0-9]/g, '') + '|' + xnorm(o[1]).replace(/[\s\-.\/|+*_,()#:]/g, '')) : ['ns|' + r[0]])).size, XREF_OEM = XREF.p.reduce((a, r) => a + r[2].length, 0);
+const XREF_TC = (() => { const seen = new Set(), c = {}; for (const r of XREF.p) { const t = XREF.types[r[1]]; const ks = r[2].length ? r[2].map(o => xnorm(o[0]).replace(/[^a-z0-9]/g, '') + '|' + xnorm(o[1]).replace(/[\s\-.\/|+*_,()#:]/g, '')) : ['ns|' + r[0]]; for (const k of ks) if (!seen.has(k)) { seen.add(k); c[t] = (c[t] || 0) + 1; } } return c; })();
+const XREF_VANE = XREF_TC.vane || 0, XREF_SEP = XREF_TC.separator || 0;
 const XREF_SLUG = { separator: 'separator', air: 'air-filter', oil: 'oil-filter', inline: 'in-line-filter', ows: 'oil-water-separator', hyd: 'hydraulic-filter', vane: 'vane', housing: 'air-filter-housing', panel: 'panel-filter', silencer: 'silencer', gasket: 'gasket', kit: 'service-kit', fuel: 'fuel-filter', part: 'spare-part' };
 function writeXrefRuntime() {
   const dir = path.join(ROOT, 'data/xref'), out = path.join(dir, 'shell'); fs.mkdirSync(out, { recursive: true });
   const ui = { langs: LANGS, wa: WA, nOem: XREF_OEM, typeSlug: XREF_SLUG,
-    img: { separator: imgUrl('ceb82a80b312'), air: imgUrl('ebb5abe3c279'), oil: imgUrl('ebb5abe3c279'), inline: imgUrl('5f2e303c1f86'), vane: imgUrl(catCover['karbon-paletler']), part: imgUrl('ebb5abe3c279') } };
+    img: { separator: imgUrl('ceb82a80b312'), air: imgUrl('ebb5abe3c279'), oil: imgUrl('ebb5abe3c279'), inline: imgUrl('5f2e303c1f86'), vane: imgUrl(VANE_IMG), part: imgUrl('ebb5abe3c279') } };
   for (const L of LANGS) {
     fs.writeFileSync(path.join(out, `${L}.html`), layout({ L, path: '/__PATH__', route: l => `/__R_${l}__`, title: '__TITLE__', desc: '__DESC__', body: '__BODY__', jsonld: [], ogImg: '__OGIMG__', shell: true, headExtra: '__HEAD__' }));
     const t = D[L].t, x = t.x;
@@ -442,7 +447,7 @@ function pageHome(L) {
    <div class="tries">${t.example}: ${XREF_EX.map(e => `<button class="chip" type="button" data-try="${esc(e)}">${esc(e)}</button>`).join('')}</div><div class="results" id="res-hero" hidden></div></div>
    <div class="facts">${t.facts.map(f => `<div><b>${f[0]}</b><span>${f[1]}</span></div>`).join('')}</div></div></section>
  <section class="block"><div class="wrap"><div class="sec-head"><div><h2>${t.groupsH}</h2><p>${t.groupsP}</p></div><a class="link" href="${U.products(L)}">${t.allProducts} ${I.arrow}</a></div>
-  <div class="cats">${CATS.map(c => `<a class="cat" href="${U.cat(c.id, L)}"><div class="ph"><img src="${imgUrl(catCover[c.id])}" alt="${esc(catName(c.id, L))}" loading="lazy" width="900" height="900"></div><div class="meta"><div><h3>${esc(catName(c.id, L))}</h3><small>${esc(catShort(c.id, L))} · ${P.filter(p => p.cat === c.id).length} ${t.items}</small></div><span class="arrow">${I.arrow}</span></div></a>`).join('')}</div></div></section>
+  <div class="cats">${[[XR[L].title, XR[L].short, XREF_N + P.length, U.products(L), 'ebb5abe3c279'], [XR[L].types.vane, catName('vakum-pompasi-filtreleri', L), XREF_VANE, U.xrefType('vane', L), VANE_IMG], [XR[L].types.separator, '', XREF_SEP, U.xrefType('separator', L), 'ceb82a80b312']].map(([n, sub, c, href, img]) => `<a class="cat" href="${href}"><div class="ph"><img src="${imgUrl(img)}" alt="${esc(n)}" loading="lazy" width="900" height="900"></div><div class="meta"><div><h3>${esc(n)}</h3><small>${fpNum(c, L)} ${t.items}</small></div><span class="arrow">${I.arrow}</span></div></a>`).join('')}${''}${[].map(c => `<a class="cat" href="${U.cat(c.id, L)}"><div class="ph"><img src="${imgUrl(catCover[c.id])}" alt="${esc(catName(c.id, L))}" loading="lazy" width="900" height="900"></div><div class="meta"><div><h3>${esc(catName(c.id, L))}</h3><small>${esc(catShort(c.id, L))} · ${P.filter(p => p.cat === c.id).length} ${t.items}</small></div><span class="arrow">${I.arrow}</span></div></a>`).join('')}</div></div></section>
  ${FP_ON ? fpHomeSection(L) : ''}
  ${lotoHomeSection(L)}
  <section class="block"><div class="wrap"><div class="sec-head"><div><h2>${t.sectorsH}</h2><p>${t.sectorsP}</p></div><a class="link" href="${U.sectors(L)}">${t.viewAll} ${I.arrow}</a></div><div class="sectors">${SECTORS.map(s => sectorTile(s, L)).join('')}</div></div></section>
