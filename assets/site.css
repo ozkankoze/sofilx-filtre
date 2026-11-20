@@ -812,3 +812,7 @@ a.chip2:hover{transform:translateY(-2px)}
 .more-b summary::after{content:' +'}
 .more-b[open] summary::after{content:' −'}
 #main.loading .xform .cards{opacity:.45;transition:opacity .15s}
+.bsearch{margin:2px 0 10px}
+.bsearch input{height:38px;font-size:14px}
+.bnone{font-size:13.5px;color:var(--muted);margin:4px 0}
+.bfilter label.opt[hidden]{display:none}

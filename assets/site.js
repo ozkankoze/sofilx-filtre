@@ -285,7 +285,7 @@
       }).catch(function (e) { if (e !== 0) location.href = url; }).then(function () { if (my === busy) main.classList.remove('loading'); });
     }
     fm.classList.add('js');
-    document.addEventListener('change', function (e) { var f = e.target.closest && e.target.closest('form.xform'); if (!f || e.target.name === 'q') return; load(urlOf(f)); });
+    document.addEventListener('change', function (e) { var f = e.target.closest && e.target.closest('form.xform'); if (!f || !e.target.name || e.target.name === 'q') return; load(urlOf(f)); });
     document.addEventListener('input', function (e) { var f = e.target.closest && e.target.closest('form.xform'); if (!f || e.target.name !== 'q') return; clearTimeout(tmr); tmr = setTimeout(function () { load(urlOf(f), true); }, 450); });
     document.addEventListener('submit', function (e) { var f = e.target.closest && e.target.closest('form.xform'); if (!f) return; e.preventDefault(); clearTimeout(tmr); location.href = urlOf(f); });
     document.addEventListener('click', function (e) {
@@ -294,6 +294,15 @@
     });
     document.addEventListener('click', function (e) { var t = e.target.closest && e.target.closest('#xf-toggle'); if (t) { var fl = $('#xfilters'); if (fl) fl.classList.toggle('open'); } });
   })();
+  // marka listesinde arama (form gönderilmez)
+  document.addEventListener('input', function (e) {
+    var i = e.target.closest && e.target.closest('[data-bsearch]'); if (!i) return;
+    var box = i.closest('.bfilter'), q = norm(i.value.trim()), n = 0, more = $('.more-b', box);
+    $$('label.opt', box).forEach(function (l) { var ok = !q || norm(l.textContent).indexOf(q) > -1; l.hidden = !ok; if (ok) n++; });
+    if (more) { if (q) more.open = true; $('summary', more).hidden = !!q; }
+    $('.bnone', box).hidden = n > 0;
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Enter' && e.target.matches && e.target.matches('[data-bsearch]')) e.preventDefault(); });
   $$('[data-codefocus]').forEach(function (a) { a.addEventListener('click', function (e) { var i = $('#q-hero'); if (!i) return; e.preventDefault(); i.closest('.searchcard').scrollIntoView({ behavior: 'smooth', block: 'center' }); setTimeout(function () { i.focus({ preventScroll: true }); }, 350); }); });
   $$('[data-try]').forEach(function (b) { b.addEventListener('click', function () { var i = $('#q-hero'); i.value = b.dataset.try; i.focus(); i.dispatchEvent(new Event('input')); }); });
   bindListing(); bindProduct(); bindQuote(); cookies(); badge();

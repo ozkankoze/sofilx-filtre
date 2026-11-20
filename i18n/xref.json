@@ -50,7 +50,9 @@
   "codes": "orijinal kod",
   "brands": "marka",
   "short": "Separatör, hava, yağ ve hat filtreleri",
-  "allBrands": "Tüm markalar ({n})"
+  "allBrands": "Tüm markalar ({n})",
+  "brandSearch": "Marka ara",
+  "noBrand": "Marka bulunamadı"
  },
  "en": {
   "types": {
@@ -103,7 +105,9 @@
   "codes": "original codes",
   "brands": "brands",
   "short": "Separators, air, oil and in-line filters",
-  "allBrands": "All brands ({n})"
+  "allBrands": "All brands ({n})",
+  "brandSearch": "Search brands",
+  "noBrand": "No brand found"
  },
  "fa": {
   "types": {
@@ -156,7 +160,9 @@
   "codes": "کد اصلی",
   "brands": "برند",
   "short": "سپراتور، فیلتر هوا، روغن و خطی",
-  "allBrands": "همه برندها ({n})"
+  "allBrands": "همه برندها ({n})",
+  "brandSearch": "جستجوی برند",
+  "noBrand": "برندی یافت نشد"
  },
  "he": {
   "types": {
@@ -209,7 +215,9 @@
   "codes": "קודים מקוריים",
   "brands": "מותגים",
   "short": "מפרידים, מסנני אוויר, שמן וקו",
-  "allBrands": "כל המותגים ({n})"
+  "allBrands": "כל המותגים ({n})",
+  "brandSearch": "חיפוש מותג",
+  "noBrand": "לא נמצא מותג"
  },
  "ar": {
   "types": {
@@ -262,7 +270,9 @@
   "codes": "رمز أصلي",
   "brands": "علامة تجارية",
   "short": "فواصل وفلاتر هواء وزيت وخطية",
-  "allBrands": "جميع العلامات ({n})"
+  "allBrands": "جميع العلامات ({n})",
+  "brandSearch": "ابحث عن علامة",
+  "noBrand": "لم يتم العثور على علامة"
  },
  "fr": {
   "types": {
@@ -315,7 +325,9 @@
   "codes": "références d'origine",
   "brands": "marques",
   "short": "Séparateurs, filtres à air, à huile et en ligne",
-  "allBrands": "Toutes les marques ({n})"
+  "allBrands": "Toutes les marques ({n})",
+  "brandSearch": "Rechercher une marque",
+  "noBrand": "Aucune marque trouvée"
  },
  "de": {
   "types": {
@@ -368,7 +380,9 @@
   "codes": "Originalnummern",
   "brands": "Marken",
   "short": "Abscheider, Luft-, Öl- und Leitungsfilter",
-  "allBrands": "Alle Marken ({n})"
+  "allBrands": "Alle Marken ({n})",
+  "brandSearch": "Marke suchen",
+  "noBrand": "Keine Marke gefunden"
  },
  "es": {
   "types": {
@@ -421,7 +435,9 @@
   "codes": "referencias originales",
   "brands": "marcas",
   "short": "Separadores, filtros de aire, aceite y de línea",
-  "allBrands": "Todas las marcas ({n})"
+  "allBrands": "Todas las marcas ({n})",
+  "brandSearch": "Buscar marca",
+  "noBrand": "No se encontró la marca"
  },
  "ru": {
   "types": {
@@ -474,7 +490,9 @@
   "codes": "оригинальных номеров",
   "brands": "марок",
   "short": "Сепараторы, воздушные, масляные и магистральные фильтры",
-  "allBrands": "Все марки ({n})"
+  "allBrands": "Все марки ({n})",
+  "brandSearch": "Поиск марки",
+  "noBrand": "Марка не найдена"
  },
  "it": {
   "types": {
@@ -527,7 +545,9 @@
   "codes": "codici originali",
   "brands": "marchi",
   "short": "Separatori, filtri aria, olio e di linea",
-  "allBrands": "Tutti i marchi ({n})"
+  "allBrands": "Tutti i marchi ({n})",
+  "brandSearch": "Cerca marca",
+  "noBrand": "Nessun marchio trovato"
  },
  "nl": {
   "types": {
@@ -580,7 +600,9 @@
   "codes": "originele codes",
   "brands": "merken",
   "short": "Afscheiders, lucht-, olie- en leidingfilters",
-  "allBrands": "Alle merken ({n})"
+  "allBrands": "Alle merken ({n})",
+  "brandSearch": "Merk zoeken",
+  "noBrand": "Geen merk gevonden"
  },
  "ka": {
   "types": {
@@ -633,7 +655,9 @@
   "codes": "ორიგინალი კოდი",
   "brands": "ბრენდი",
   "short": "სეპარატორები, ჰაერის, ზეთისა და ხაზის ფილტრები",
-  "allBrands": "ყველა ბრენდი ({n})"
+  "allBrands": "ყველა ბრენდი ({n})",
+  "brandSearch": "ბრენდის ძიება",
+  "noBrand": "ბრენდი ვერ მოიძებნა"
  },
  "mk": {
   "types": {
@@ -686,7 +710,9 @@
   "codes": "оригинални шифри",
   "brands": "марки",
   "short": "Сепаратори, филтри за воздух, масло и линиски",
-  "allBrands": "Сите марки ({n})"
+  "allBrands": "Сите марки ({n})",
+  "brandSearch": "Пребарај марка",
+  "noBrand": "Не е пронајдена марка"
  },
  "az": {
   "types": {
@@ -739,6 +765,8 @@
   "codes": "orijinal kod",
   "brands": "marka",
   "short": "Separatorlar, hava, yağ və xətt filtrləri",
-  "allBrands": "Bütün markalar ({n})"
+  "allBrands": "Bütün markalar ({n})",
+  "brandSearch": "Marka axtar",
+  "noBrand": "Marka tapılmadı"
  }
 }
