@@ -16,7 +16,7 @@
    "fuel": "Yakıt Filtresi",
    "part": "Yedek Parça"
   },
-  "title": "Kod Arama",
+  "title": "Kompresörler ve Pompalar",
   "lead": "Kompresör ve vakum pompası yedek parçalarında {n} ürün ve {c} orijinal kod. Orijinal parça numarasını ya da ürün kodunu yazın, karşılığı olan ürünü bulun.",
   "desc": "Kompresör ve vakum pompası separatör, hava, yağ ve hat filtreleri, paletler: {n} ürün, {c} orijinal kodun karşılığı. Kodla arayın, tek formla teklif alın.",
   "searchPh": "Orijinal kod ya da ürün kodu, ör. 530A60114",
@@ -48,7 +48,8 @@
   "heroPh": "Orijinal kod veya ürün kodu, ör. 530A60114",
   "codeBtn": "Kodla ara",
   "codes": "orijinal kod",
-  "brands": "marka"
+  "brands": "marka",
+  "short": "Separatör, hava, yağ ve hat filtreleri"
  },
  "en": {
   "types": {
@@ -67,7 +68,7 @@
    "fuel": "Fuel Filter",
    "part": "Spare Part"
   },
-  "title": "Code Search",
+  "title": "Compressors and Pumps",
   "lead": "{n} compressor and vacuum pump spare parts matching {c} original part numbers. Type the original part number or our product code to find the matching product.",
   "desc": "Separators, air, oil and in-line filters and vanes for compressors and vacuum pumps: {n} products matching {c} original codes. Search by code, request a quote with one form.",
   "searchPh": "Original or product code, e.g. 530A60114",
@@ -99,7 +100,8 @@
   "heroPh": "Original or product code, e.g. 530A60114",
   "codeBtn": "Search by code",
   "codes": "original codes",
-  "brands": "brands"
+  "brands": "brands",
+  "short": "Separators, air, oil and in-line filters"
  },
  "fa": {
   "types": {
@@ -118,7 +120,7 @@
    "fuel": "فیلتر سوخت",
    "part": "قطعه یدکی"
   },
-  "title": "جستجوی کد",
+  "title": "کمپرسورها و پمپ‌ها",
   "lead": "{n} قطعه یدکی کمپرسور و پمپ وکیوم، معادل {c} کد اصلی. کد قطعه اصلی یا کد محصول را وارد کنید تا محصول مربوط را بیابید.",
   "desc": "سپراتور، فیلتر هوا، روغن و خطی و پره برای کمپرسور و پمپ وکیوم: {n} محصول معادل {c} کد اصلی. با کد جستجو کنید و با یک فرم استعلام بگیرید.",
   "searchPh": "کد اصلی یا کد محصول، مثلاً 530A60114",
@@ -150,7 +152,8 @@
   "heroPh": "کد اصلی یا کد محصول، مثلاً 530A60114",
   "codeBtn": "جستجو با کد",
   "codes": "کد اصلی",
-  "brands": "برند"
+  "brands": "برند",
+  "short": "سپراتور، فیلتر هوا، روغن و خطی"
  },
  "he": {
   "types": {
@@ -169,7 +172,7 @@
    "fuel": "מסנן דלק",
    "part": "חלק חילוף"
   },
-  "title": "חיפוש לפי קוד",
+  "title": "מדחסים ומשאבות",
   "lead": "{n} חלקי חילוף למדחסים ולמשאבות ואקום, התואמים ל-{c} מק\"טים מקוריים. הקלידו מק\"ט מקורי או קוד מוצר כדי למצוא את המוצר התואם.",
   "desc": "מפרידים, מסנני אוויר, שמן וקו ולהבים למדחסים ולמשאבות ואקום: {n} מוצרים התואמים ל-{c} קודים מקוריים. חפשו לפי קוד, קבלו הצעת מחיר בטופס אחד.",
   "searchPh": "קוד מקורי או קוד מוצר, למשל 530A60114",
@@ -201,7 +204,8 @@
   "heroPh": "קוד מקורי או קוד מוצר, למשל 530A60114",
   "codeBtn": "חיפוש לפי קוד",
   "codes": "קודים מקוריים",
-  "brands": "מותגים"
+  "brands": "מותגים",
+  "short": "מפרידים, מסנני אוויר, שמן וקו"
  },
  "ar": {
   "types": {
@@ -220,7 +224,7 @@
    "fuel": "فلتر وقود",
    "part": "قطعة غيار"
   },
-  "title": "البحث بالرمز",
+  "title": "الضواغط والمضخات",
   "lead": "{n} قطعة غيار للضواغط ومضخات التفريغ تقابل {c} رمزًا أصليًا. اكتب رقم القطعة الأصلية أو رمز المنتج للعثور على المنتج المقابل.",
   "desc": "فواصل وفلاتر هواء وزيت وفلاتر خطية وريش للضواغط ومضخات التفريغ: {n} منتجًا يقابل {c} رمزًا أصليًا. ابحث بالرمز واطلب عرض سعر بنموذج واحد.",
   "searchPh": "الرمز الأصلي أو رمز المنتج، مثل 530A60114",
@@ -252,7 +256,8 @@
   "heroPh": "الرمز الأصلي أو رمز المنتج، مثل 530A60114",
   "codeBtn": "ابحث بالرمز",
   "codes": "رمز أصلي",
-  "brands": "علامة تجارية"
+  "brands": "علامة تجارية",
+  "short": "فواصل وفلاتر هواء وزيت وخطية"
  },
  "fr": {
   "types": {
@@ -271,7 +276,7 @@
    "fuel": "Filtre à carburant",
    "part": "Pièce détachée"
   },
-  "title": "Recherche par code",
+  "title": "Compresseurs et pompes",
   "lead": "{n} pièces détachées pour compresseurs et pompes à vide correspondant à {c} références d'origine. Saisissez la référence d'origine ou notre code produit pour trouver la pièce correspondante.",
   "desc": "Séparateurs, filtres à air, à huile et en ligne, palettes pour compresseurs et pompes à vide : {n} produits pour {c} références d'origine. Recherchez par code, devis en un formulaire.",
   "searchPh": "Référence d'origine ou code produit, ex. 530A60114",
@@ -303,7 +308,8 @@
   "heroPh": "Référence d'origine ou code produit, ex. 530A60114",
   "codeBtn": "Rechercher par code",
   "codes": "références d'origine",
-  "brands": "marques"
+  "brands": "marques",
+  "short": "Séparateurs, filtres à air, à huile et en ligne"
  },
  "de": {
   "types": {
@@ -322,7 +328,7 @@
    "fuel": "Kraftstofffilter",
    "part": "Ersatzteil"
   },
-  "title": "Codesuche",
+  "title": "Kompressoren und Pumpen",
   "lead": "{n} Ersatzteile für Kompressoren und Vakuumpumpen zu {c} Originalnummern. Geben Sie die Originalteilenummer oder unseren Produktcode ein, um das passende Produkt zu finden.",
   "desc": "Abscheider, Luft-, Öl- und Leitungsfilter sowie Lamellen für Kompressoren und Vakuumpumpen: {n} Produkte zu {c} Originalnummern. Per Code suchen, Angebot mit einem Formular.",
   "searchPh": "Original- oder Produktcode, z. B. 530A60114",
@@ -354,7 +360,8 @@
   "heroPh": "Original- oder Produktcode, z. B. 530A60114",
   "codeBtn": "Per Code suchen",
   "codes": "Originalnummern",
-  "brands": "Marken"
+  "brands": "Marken",
+  "short": "Abscheider, Luft-, Öl- und Leitungsfilter"
  },
  "es": {
   "types": {
@@ -373,7 +380,7 @@
    "fuel": "Filtro de combustible",
    "part": "Repuesto"
   },
-  "title": "Búsqueda por código",
+  "title": "Compresores y bombas",
   "lead": "{n} repuestos para compresores y bombas de vacío que corresponden a {c} referencias originales. Escriba la referencia original o nuestro código de producto para encontrar el producto equivalente.",
   "desc": "Separadores, filtros de aire, aceite y de línea y paletas para compresores y bombas de vacío: {n} productos para {c} referencias originales. Busque por código y pida presupuesto con un formulario.",
   "searchPh": "Referencia original o código de producto, p. ej. 530A60114",
@@ -405,7 +412,8 @@
   "heroPh": "Referencia original o código de producto, p. ej. 530A60114",
   "codeBtn": "Buscar por código",
   "codes": "referencias originales",
-  "brands": "marcas"
+  "brands": "marcas",
+  "short": "Separadores, filtros de aire, aceite y de línea"
  },
  "ru": {
   "types": {
@@ -424,7 +432,7 @@
    "fuel": "Топливный фильтр",
    "part": "Запчасть"
   },
-  "title": "Поиск по коду",
+  "title": "Компрессоры и насосы",
   "lead": "{n} запчастей для компрессоров и вакуумных насосов, соответствующих {c} оригинальным номерам. Введите оригинальный номер детали или наш код товара, чтобы найти подходящий товар.",
   "desc": "Сепараторы, воздушные, масляные и магистральные фильтры, лопатки для компрессоров и вакуумных насосов: {n} товаров для {c} оригинальных номеров. Поиск по коду, запрос цены одной формой.",
   "searchPh": "Оригинальный код или код товара, напр. 530A60114",
@@ -456,7 +464,8 @@
   "heroPh": "Оригинальный код или код товара, напр. 530A60114",
   "codeBtn": "Поиск по коду",
   "codes": "оригинальных номеров",
-  "brands": "марок"
+  "brands": "марок",
+  "short": "Сепараторы, воздушные, масляные и магистральные фильтры"
  },
  "it": {
   "types": {
@@ -475,7 +484,7 @@
    "fuel": "Filtro carburante",
    "part": "Ricambio"
   },
-  "title": "Ricerca per codice",
+  "title": "Compressori e pompe",
   "lead": "{n} ricambi per compressori e pompe per vuoto corrispondenti a {c} codici originali. Inserisci il codice originale o il nostro codice prodotto per trovare il prodotto corrispondente.",
   "desc": "Separatori, filtri aria, olio e di linea e palette per compressori e pompe per vuoto: {n} prodotti per {c} codici originali. Cerca per codice, preventivo con un solo modulo.",
   "searchPh": "Codice originale o codice prodotto, es. 530A60114",
@@ -507,7 +516,8 @@
   "heroPh": "Codice originale o codice prodotto, es. 530A60114",
   "codeBtn": "Cerca per codice",
   "codes": "codici originali",
-  "brands": "marchi"
+  "brands": "marchi",
+  "short": "Separatori, filtri aria, olio e di linea"
  },
  "nl": {
   "types": {
@@ -526,7 +536,7 @@
    "fuel": "Brandstoffilter",
    "part": "Onderdeel"
   },
-  "title": "Zoeken op code",
+  "title": "Compressoren en pompen",
   "lead": "{n} onderdelen voor compressoren en vacuümpompen bij {c} originele nummers. Typ het originele onderdeelnummer of onze productcode om het passende product te vinden.",
   "desc": "Afscheiders, lucht-, olie- en leidingfilters en schoepen voor compressoren en vacuümpompen: {n} producten bij {c} originele codes. Zoek op code, vraag een offerte aan met één formulier.",
   "searchPh": "Originele code of productcode, bijv. 530A60114",
@@ -558,7 +568,8 @@
   "heroPh": "Originele code of productcode, bijv. 530A60114",
   "codeBtn": "Zoek op code",
   "codes": "originele codes",
-  "brands": "merken"
+  "brands": "merken",
+  "short": "Afscheiders, lucht-, olie- en leidingfilters"
  },
  "ka": {
   "types": {
@@ -577,7 +588,7 @@
    "fuel": "საწვავის ფილტრი",
    "part": "სათადარიგო ნაწილი"
   },
-  "title": "კოდით ძიება",
+  "title": "კომპრესორები და ტუმბოები",
   "lead": "{n} სათადარიგო ნაწილი კომპრესორებისა და ვაკუუმ-ტუმბოებისთვის, {c} ორიგინალი კოდის შესაბამისი. შეიყვანეთ ორიგინალი ნაწილის ნომერი ან ჩვენი პროდუქტის კოდი შესაბამისი პროდუქტის საპოვნელად.",
   "desc": "სეპარატორები, ჰაერის, ზეთისა და ხაზის ფილტრები და ფრთები კომპრესორებისა და ვაკუუმ-ტუმბოებისთვის: {n} პროდუქტი {c} ორიგინალი კოდისთვის. მოძებნეთ კოდით, მოითხოვეთ ფასი ერთი ფორმით.",
   "searchPh": "ორიგინალი ან პროდუქტის კოდი, მაგ. 530A60114",
@@ -609,7 +620,8 @@
   "heroPh": "ორიგინალი ან პროდუქტის კოდი, მაგ. 530A60114",
   "codeBtn": "კოდით ძიება",
   "codes": "ორიგინალი კოდი",
-  "brands": "ბრენდი"
+  "brands": "ბრენდი",
+  "short": "სეპარატორები, ჰაერის, ზეთისა და ხაზის ფილტრები"
  },
  "mk": {
   "types": {
@@ -628,7 +640,7 @@
    "fuel": "Филтер за гориво",
    "part": "Резервен дел"
   },
-  "title": "Пребарување по код",
+  "title": "Компресори и пумпи",
   "lead": "{n} резервни делови за компресори и вакуумски пумпи што одговараат на {c} оригинални шифри. Внесете ја оригиналната шифра или нашиот код на производ за да го најдете соодветниот производ.",
   "desc": "Сепаратори, филтри за воздух, масло и линиски филтри и лопатки за компресори и вакуумски пумпи: {n} производи за {c} оригинални шифри. Пребарајте по код, побарајте понуда со еден формулар.",
   "searchPh": "Оригинален код или код на производ, на пр. 530A60114",
@@ -660,7 +672,8 @@
   "heroPh": "Оригинален код или код на производ, на пр. 530A60114",
   "codeBtn": "Пребарај по код",
   "codes": "оригинални шифри",
-  "brands": "марки"
+  "brands": "марки",
+  "short": "Сепаратори, филтри за воздух, масло и линиски"
  },
  "az": {
   "types": {
@@ -679,7 +692,7 @@
    "fuel": "Yanacaq filtri",
    "part": "Ehtiyat hissə"
   },
-  "title": "Kodla axtarış",
+  "title": "Kompressorlar və nasoslar",
   "lead": "Kompressor və vakuum nasosları üçün {c} orijinal koda uyğun {n} ehtiyat hissə. Uyğun məhsulu tapmaq üçün orijinal hissə nömrəsini və ya məhsul kodumuzu yazın.",
   "desc": "Kompressor və vakuum nasosları üçün separatorlar, hava, yağ və xətt filtrləri, pərlər: {c} orijinal koda uyğun {n} məhsul. Kodla axtarın, bir formla təklif alın.",
   "searchPh": "Orijinal kod və ya məhsul kodu, məs. 530A60114",
@@ -711,6 +724,7 @@
   "heroPh": "Orijinal kod və ya məhsul kodu, məs. 530A60114",
   "codeBtn": "Kodla axtar",
   "codes": "orijinal kod",
-  "brands": "marka"
+  "brands": "marka",
+  "short": "Separatorlar, hava, yağ və xətt filtrləri"
  }
 }

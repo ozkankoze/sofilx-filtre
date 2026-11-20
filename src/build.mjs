@@ -152,7 +152,7 @@ const U = {
   quote: L => L === 'tr' ? '/teklif' : `${base(L)}/quote`,
   kvkk: L => L === 'tr' ? '/kvkk' : `${base(L)}/privacy`,
   cookies: L => L === 'tr' ? '/cerez-politikasi' : `${base(L)}/cookies`,
-  xref: L => L === 'tr' ? '/kod-arama' : `${base(L)}/code-search`,
+  xref: L => L === 'tr' ? '/urunler/kompresorler-ve-pompalar' : `${base(L)}/products/compressors-and-pumps`,
   xrefType: (t, L) => `${U.xref(L)}/${t}`,
   xrefItem: (s, L) => L === 'tr' ? `/kod/${s}` : `${base(L)}/code/${s}`,
   loto: L => L === 'tr' ? '/eked-loto' : `${base(L)}/loto`,
@@ -213,9 +213,10 @@ function layout({ L, path: url, route, title, desc, body, jsonld = [], noindex =
   const langLinks = LANGS.map(l => `<a href="${langHref(l)}" hreflang="${l}" lang="${l}" role="menuitem"${l === L ? ' aria-current="true"' : ''}>${flagImg(l, 1)}<b>${l.toUpperCase()}</b><i>${esc(D[l].meta.name)}</i></a>`).join('');
   const navItem = (k, href) => `<a href="${href}" data-nav="${k}">${t.nav[k]}</a>`;
   const megaLoto = `<a class="mega-all" href="${U.loto(L)}"><span><b>${esc(LT(L).title)}</b><small>${LOTO_P.length} ${esc(D[L].t.items)}</small></span>${I.arrow}</a>`;
+  const megaXrefTile = `<a href="${U.xref(L)}"><span class="th"><img src="${imgUrl('ceb82a80b312', 1)}" alt="" loading="lazy" width="52" height="52"></span><span><b>${esc(XR[L].title)}</b><small>${fpNum(XREF_N, L)} ${t.items}</small></span></a>`;
   const megaXref = `<a class="mega-all" href="${U.xref(L)}"><span><b>${esc(XR[L].title)}</b><small>${fpNum(XREF_N, L)} ${esc(XR[L].items)}</small></span>${I.arrow}</a>`;
-  const megaAll = !FP_ON ? megaXref + megaLoto : `<a class="mega-all" href="${U.parts(L)}"><span><b>${esc(FP_T[L].ui.catalog)}</b><small>${fpNum(FP_COUNT, L)} ${esc(FP_T[L].ui.parts)}</small></span>${I.arrow}</a>`;
-  const mega = CATS.map(c => `<a href="${U.cat(c.id, L)}"><span class="th"><img src="${imgUrl(catCover[c.id], 1)}" alt="" loading="lazy" width="52" height="52"></span><span><b>${esc(catName(c.id, L))}</b><small>${P.filter(p => p.cat === c.id).length} ${t.items}</small></span></a>`).join('');
+  const megaAll = !FP_ON ? megaLoto : `<a class="mega-all" href="${U.parts(L)}"><span><b>${esc(FP_T[L].ui.catalog)}</b><small>${fpNum(FP_COUNT, L)} ${esc(FP_T[L].ui.parts)}</small></span>${I.arrow}</a>`;
+  const mega = CATS.map(c => `<a href="${U.cat(c.id, L)}"><span class="th"><img src="${imgUrl(catCover[c.id], 1)}" alt="" loading="lazy" width="52" height="52"></span><span><b>${esc(catName(c.id, L))}</b><small>${P.filter(p => p.cat === c.id).length} ${t.items}</small></span></a>`).join('') + megaXrefTile;
   const fonts = FONT_BASE + (FONT_EXTRA[L] ? '&' + FONT_EXTRA[L] : '');
   return `<!doctype html>
 <html lang="${L}" dir="${rtl(L) ? 'rtl' : 'ltr'}">
@@ -428,7 +429,7 @@ function pageHome(L) {
    <div class="tries">${t.example}: ${XREF_EX.map(e => `<button class="chip" type="button" data-try="${esc(e)}">${esc(e)}</button>`).join('')}</div><div class="results" id="res-hero" hidden></div></div>
    <div class="facts">${t.facts.map(f => `<div><b>${f[0]}</b><span>${f[1]}</span></div>`).join('')}</div></div></section>
  <section class="block"><div class="wrap"><div class="sec-head"><div><h2>${t.groupsH}</h2><p>${t.groupsP}</p></div><a class="link" href="${U.products(L)}">${t.allProducts} ${I.arrow}</a></div>
-  <div class="cats">${CATS.map(c => `<a class="cat" href="${U.cat(c.id, L)}"><div class="ph"><img src="${imgUrl(catCover[c.id])}" alt="${esc(catName(c.id, L))}" loading="lazy" width="900" height="900"></div><div class="meta"><div><h3>${esc(catName(c.id, L))}</h3><small>${esc(catShort(c.id, L))} · ${P.filter(p => p.cat === c.id).length} ${t.items}</small></div><span class="arrow">${I.arrow}</span></div></a>`).join('')}</div></div></section>
+  <div class="cats">${CATS.map(c => `<a class="cat" href="${U.cat(c.id, L)}"><div class="ph"><img src="${imgUrl(catCover[c.id])}" alt="${esc(catName(c.id, L))}" loading="lazy" width="900" height="900"></div><div class="meta"><div><h3>${esc(catName(c.id, L))}</h3><small>${esc(catShort(c.id, L))} · ${P.filter(p => p.cat === c.id).length} ${t.items}</small></div><span class="arrow">${I.arrow}</span></div></a>`).join('')}<a class="cat" href="${U.xref(L)}"><div class="ph"><img src="${imgUrl('ceb82a80b312')}" alt="${esc(XR[L].title)}" loading="lazy" width="900" height="900"></div><div class="meta"><div><h3>${esc(XR[L].title)}</h3><small>${esc(XR[L].short)} · ${fpNum(XREF_N, L)} ${t.items}</small></div><span class="arrow">${I.arrow}</span></div></a></div></div></section>
  ${FP_ON ? fpHomeSection(L) : ''}
  ${lotoHomeSection(L)}
  <section class="block"><div class="wrap"><div class="sec-head"><div><h2>${t.sectorsH}</h2><p>${t.sectorsP}</p></div><a class="link" href="${U.sectors(L)}">${t.viewAll} ${I.arrow}</a></div><div class="sectors">${SECTORS.map(s => sectorTile(s, L)).join('')}</div></div></section>
@@ -703,10 +704,12 @@ function writeVercel() {
   const LX = LANGS.filter(l => l !== 'tr').join('|');
   const XR_RW = [
     { source: U.xref('tr'), destination: '/api/xref?view=list&L=tr' }, { source: U.xref('tr') + '/:t', destination: '/api/xref?view=type&L=tr&t=:t' }, { source: '/kod/:slug', destination: '/api/xref?view=item&L=tr&slug=:slug' },
-    { source: `/:L(${LX})/code-search`, destination: '/api/xref?view=list&L=:L' }, { source: `/:L(${LX})/code-search/:t`, destination: '/api/xref?view=type&L=:L&t=:t' }, { source: `/:L(${LX})/code/:slug`, destination: '/api/xref?view=item&L=:L&slug=:slug' },
+    { source: `/:L(${LX})/products/compressors-and-pumps`, destination: '/api/xref?view=list&L=:L' }, { source: `/:L(${LX})/products/compressors-and-pumps/:t`, destination: '/api/xref?view=type&L=:L&t=:t' }, { source: `/:L(${LX})/code/:slug`, destination: '/api/xref?view=item&L=:L&slug=:slug' },
     { source: `/sitemap-kod-:L(tr|${LX})-:n.xml`, destination: '/api/xref?view=sitemap&L=:L&n=:n' },
   ];
   const XR_FN = { 'api/xref.mjs': { includeFiles: 'data/xref/**', memory: 1024, maxDuration: 15 } };
+  cfg.redirects.push({ source: '/kod-arama', destination: U.xref('tr'), permanent: true }, { source: '/kod-arama/:t', destination: U.xref('tr') + '/:t', permanent: true },
+    { source: `/:L(${LX})/code-search`, destination: '/:L/products/compressors-and-pumps', permanent: true }, { source: `/:L(${LX})/code-search/:t`, destination: '/:L/products/compressors-and-pumps/:t', permanent: true });
   if (!FP_ON) {
     cfg.rewrites = XR_RW; cfg.functions = XR_FN;
     // katalog kaldırıldı: eski adresler ürünler sayfasına yönlenir
