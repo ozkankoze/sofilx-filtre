@@ -388,37 +388,13 @@
   }
  },
  "cats": {
-  "kompresor-filtreleri": {
-   "name": "Compressor Filters",
-   "short": "Air, oil and separator filters"
-  },
   "vakum-pompasi-filtreleri": {
    "name": "Vacuum Pump Filters",
    "short": "Oil, air and exhaust filters"
   },
-  "karbon-paletler": {
-   "name": "Carbon Vanes",
-   "short": "For dry-running vacuum pumps"
-  },
-  "fiber-paletler": {
-   "name": "Fibre Vanes",
-   "short": "For oil-lubricated vacuum pumps"
-  },
   "endustriyel-yaglar": {
    "name": "Industrial Lubricants",
    "short": "Compressor, hydraulic, grease and special oils"
-  },
-  "endustriyel-filtreler": {
-   "name": "Industrial Filters",
-   "short": "HEPA, panel, bag and hydraulic"
-  },
-  "ozel-uretim-filtreler": {
-   "name": "Custom Filters",
-   "short": "Cartridge, bag and air filters to size"
-  },
-  "karbon-burc-ve-komurler": {
-   "name": "Carbon Brushes & Bushings",
-   "short": "Carbon brushes, mechanical carbon"
   },
   "kompresor-kaplinleri": {
    "name": "Compressor Couplings",
@@ -500,24 +476,12 @@
   }
  },
  "types": {
-  "HEPA filter": "HEPA filter",
-  "Hydraulic filter": "Hydraulic filter",
-  "Panel filter": "Panel filter",
-  "Bag filter": "Bag filter",
-  "Custom filter": "Custom filter",
   "Air filter": "Air filter",
-  "Cartridge filter": "Cartridge filter",
-  "Glass fibre filter": "Glass fibre filter",
   "Filter": "Filter",
-  "Separator filter": "Separator filter",
   "Oil filter": "Oil filter",
   "Exhaust filter": "Exhaust filter",
   "Industrial lubricant": "Industrial lubricant",
   "Grease": "Grease",
-  "Carbon vane": "Carbon vane",
-  "Fibre vane": "Fibre vane",
-  "Carbon brush": "Carbon brush",
-  "Carbon product": "Carbon product",
   "Coupling": "Coupling"
  },
  "phrases": {

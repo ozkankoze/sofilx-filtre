@@ -7,156 +7,6 @@
  "trailingSlash": false,
  "redirects": [
   {
-   "source": "/tr/endustriyel-filtre/hepa-filtreler",
-   "destination": "/urun/hepa-filtreler",
-   "permanent": true
-  },
-  {
-   "source": "/tr/endustriyel-filtre/hidrolik-filtreler",
-   "destination": "/urun/hidrolik-filtreler",
-   "permanent": true
-  },
-  {
-   "source": "/tr/endustriyel-filtre/kaset-filtreler",
-   "destination": "/urun/kaset-filtreler",
-   "permanent": true
-  },
-  {
-   "source": "/tr/endustriyel-filtre/torba-filtreler",
-   "destination": "/urun/torba-filtreler",
-   "permanent": true
-  },
-  {
-   "source": "/tr/ozel-uretim-filtre/hidrolik-filtreler3",
-   "destination": "/urun/hidrolik-filtreler3",
-   "permanent": true
-  },
-  {
-   "source": "/tr/ozel-uretim-filtre/hava-filtreleri",
-   "destination": "/urun/hava-filtreleri",
-   "permanent": true
-  },
-  {
-   "source": "/tr/ozel-uretim-filtre/kartus-filtreler",
-   "destination": "/urun/kartus-filtreler",
-   "permanent": true
-  },
-  {
-   "source": "/tr/ozel-uretim-filtre/cam-elyaf-filtreleri",
-   "destination": "/urun/cam-elyaf-filtreleri",
-   "permanent": true
-  },
-  {
-   "source": "/tr/ozel-uretim-filtre/torba-filtreler6",
-   "destination": "/urun/torba-filtreler6",
-   "permanent": true
-  },
-  {
-   "source": "/tr/kompresor-filtre/dalgakiran-kompresor",
-   "destination": "/urun/dalgakiran-kompresor",
-   "permanent": true
-  },
-  {
-   "source": "/tr/kompresor-filtre/mannhummel-kompresor-seperator-yag-filtre-l-hava-filtre",
-   "destination": "/urun/mannhummel-kompresor-seperator-yag-filtre-l-hava-filtre",
-   "permanent": true
-  },
-  {
-   "source": "/tr/kompresor-filtre/kaeser-kompresor-seperator--yag-ve-hava-filtreleri",
-   "destination": "/urun/kaeser-kompresor-seperator--yag-ve-hava-filtreleri",
-   "permanent": true
-  },
-  {
-   "source": "/tr/kompresor-filtre/kaeser-kompresor-seperator-filtreleri",
-   "destination": "/urun/kaeser-kompresor-seperator-filtreleri",
-   "permanent": true
-  },
-  {
-   "source": "/tr/kompresor-filtre/ekomak-kompresor-seperator--yag-ve-hava-filtreleri",
-   "destination": "/urun/ekomak-kompresor-seperator--yag-ve-hava-filtreleri",
-   "permanent": true
-  },
-  {
-   "source": "/tr/kompresor-filtre/ekomak-kompresor-seperator-filtreleri",
-   "destination": "/urun/ekomak-kompresor-seperator-filtreleri",
-   "permanent": true
-  },
-  {
-   "source": "/tr/kompresor-filtre/abac-kompresor-yag-filtreleri",
-   "destination": "/urun/abac-kompresor-yag-filtreleri",
-   "permanent": true
-  },
-  {
-   "source": "/tr/kompresor-filtre/abac-kompresor-seperator-filtreleri",
-   "destination": "/urun/abac-kompresor-seperator-filtreleri",
-   "permanent": true
-  },
-  {
-   "source": "/tr/kompresor-filtre/ingersoll-rand-kompresor-seperator--yag-ve-hava-filtreleri",
-   "destination": "/urun/ingersoll-rand-kompresor-seperator--yag-ve-hava-filtreleri",
-   "permanent": true
-  },
-  {
-   "source": "/tr/kompresor-filtre/mikropor-mko-elementler",
-   "destination": "/urun/mikropor-mko-elementler",
-   "permanent": true
-  },
-  {
-   "source": "/tr/kompresor-filtre/mikropor-mkon-elementler",
-   "destination": "/urun/mikropor-mkon-elementler",
-   "permanent": true
-  },
-  {
-   "source": "/tr/kompresor-filtre/almig-kompresor-kompresor-yag-filtreleri",
-   "destination": "/urun/almig-kompresor-kompresor-yag-filtreleri",
-   "permanent": true
-  },
-  {
-   "source": "/tr/kompresor-filtre/almig-kompresor-seperator-filtreleri",
-   "destination": "/urun/almig-kompresor-seperator-filtreleri",
-   "permanent": true
-  },
-  {
-   "source": "/tr/kompresor-filtre/alup-kompresor-yag-filtreleri",
-   "destination": "/urun/alup-kompresor-yag-filtreleri",
-   "permanent": true
-  },
-  {
-   "source": "/tr/kompresor-filtre/alup-kompresor-seperator-filtreleri",
-   "destination": "/urun/alup-kompresor-seperator-filtreleri",
-   "permanent": true
-  },
-  {
-   "source": "/tr/kompresor-filtre/noitech-kompresor-filtreleri",
-   "destination": "/urun/noitech-kompresor-filtreleri",
-   "permanent": true
-  },
-  {
-   "source": "/tr/kompresor-filtre/boge-kompresor-seperator--yag-ve-hava-filtreleri",
-   "destination": "/urun/boge-kompresor-seperator--yag-ve-hava-filtreleri",
-   "permanent": true
-  },
-  {
-   "source": "/tr/kompresor-filtre/boge-kompresor-seperator-filtreleri",
-   "destination": "/urun/boge-kompresor-seperator-filtreleri",
-   "permanent": true
-  },
-  {
-   "source": "/tr/kompresor-filtre/mark-kompresor-seperator-filtreleri",
-   "destination": "/urun/mark-kompresor-seperator-filtreleri",
-   "permanent": true
-  },
-  {
-   "source": "/tr/kompresor-filtre/sullair-kompresor-yag-filtreleri",
-   "destination": "/urun/sullair-kompresor-yag-filtreleri",
-   "permanent": true
-  },
-  {
-   "source": "/tr/kompresor-filtre/sullair-kompresor-seperator-filtreleri",
-   "destination": "/urun/sullair-kompresor-seperator-filtreleri",
-   "permanent": true
-  },
-  {
    "source": "/tr/vakum-pompasi-filtre/orion-hava-filtreleri",
    "destination": "/urun/orion-hava-filtreleri",
    "permanent": true
@@ -874,591 +724,6 @@
   {
    "source": "/tr/urun/hidrolik-yaglar5",
    "destination": "/urun/hidrolik-yaglar5",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---wn-124-003",
-   "destination": "/urun/becker-vakum-palet-komuru---wn-124-003",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---wn-124-031",
-   "destination": "/urun/becker-vakum-palet-komuru---wn-124-031",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---wn-124-032",
-   "destination": "/urun/becker-vakum-palet-komuru---wn-124-032",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---wn-124-033",
-   "destination": "/urun/becker-vakum-palet-komuru---wn-124-033",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/becker-palet---wn-124-034",
-   "destination": "/urun/becker-palet---wn-124-034",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---wn-124-082",
-   "destination": "/urun/becker-vakum-palet-komuru---wn-124-082",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90131500008-wn-124-089",
-   "destination": "/urun/becker-vakum-palet-komuru---90131500008-wn-124-089",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90131600008-wn-124-090",
-   "destination": "/urun/becker-vakum-palet-komuru---90131600008-wn-124-090",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90131700008-wn-124-094",
-   "destination": "/urun/becker-vakum-palet-komuru---90131700008-wn-124-094",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90130800008-wn-124-104",
-   "destination": "/urun/becker-vakum-palet-komuru---90130800008-wn-124-104",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90133100007-wn-124-116",
-   "destination": "/urun/becker-vakum-palet-komuru---90133100007-wn-124-116",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90134700007-wn-124-120",
-   "destination": "/urun/becker-vakum-palet-komuru---90134700007-wn-124-120",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru-90135200007-wn-124-161",
-   "destination": "/urun/becker-vakum-palet-komuru-90135200007-wn-124-161",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90134900007-wn-124-162",
-   "destination": "/urun/becker-vakum-palet-komuru---90134900007-wn-124-162",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90136100005-wn-124-183",
-   "destination": "/urun/becker-vakum-palet-komuru---90136100005-wn-124-183",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90137200007-wn-124-195",
-   "destination": "/urun/becker-vakum-palet-komuru---90137200007-wn-124-195",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90136701005-wn-124-196",
-   "destination": "/urun/becker-vakum-palet-komuru---90136701005-wn-124-196",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90137301008-wn-124-205",
-   "destination": "/urun/becker-vakum-palet-komuru---90137301008-wn-124-205",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90138700005-wn-124-219",
-   "destination": "/urun/becker-vakum-palet-komuru---90138700005-wn-124-219",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90138800005-wn-124-220",
-   "destination": "/urun/becker-vakum-palet-komuru---90138800005-wn-124-220",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/busch-palet---sv-1025-c-sd-1025-c-dc-0025-c-olcu-68-5444-mm1",
-   "destination": "/urun/busch-palet---sv-1025-c-sd-1025-c-dc-0025-c-olcu-68-5444-mm1",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/busch-palet---sv-1016-b-sd-1016b-sv-1016-c-sd-1016-c-olcu-63354-mm",
-   "destination": "/urun/busch-palet---sv-1016-b-sd-1016b-sv-1016-c-sd-1016-c-olcu-63354-mm",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/busch-palet---dc-0040-c-sv---sd-1040-b-sv---sd-1040-c-olcu-95444-mm",
-   "destination": "/urun/busch-palet---dc-0040-c-sv---sd-1040-b-sv---sd-1040-c-olcu-95444-mm",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/busch-palet---sv-1025-c-sd-1025-c-dc-0025-c-olcu-68-5444-mm",
-   "destination": "/urun/busch-palet---sv-1025-c-sd-1025-c-dc-0025-c-olcu-68-5444-mm",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/busch-palet---sv-1010-c-sd-1010-c-olcu-4036-54-mm4",
-   "destination": "/urun/busch-palet---sv-1010-c-sd-1010-c-olcu-4036-54-mm4",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/busch-palet---sv-1010-c-sd-1010-c-olcu-4036-54-mm",
-   "destination": "/urun/busch-palet---sv-1010-c-sd-1010-c-olcu-4036-54-mm",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/busch-palet---sv-1025-c-sd-1025-c-dc-0025-c-olcu-68-5444-mm-",
-   "destination": "/urun/busch-palet---sv-1025-c-sd-1025-c-dc-0025-c-olcu-68-5444-mm-",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/busch-0722522489-0722000489-palet-seti",
-   "destination": "/urun/busch-0722522489-0722000489-palet-seti",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/busch-palet--dc-0040-c-sv---sd-1040-b-sv---sd-1040-c-olcu-95444-mm",
-   "destination": "/urun/busch-palet--dc-0040-c-sv---sd-1040-b-sv---sd-1040-c-olcu-95444-mm",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/busch-palet---sv-1016-b-sd-1016b-sv-1016-c-sd-1016-c-olcu-63354-mm-",
-   "destination": "/urun/busch-palet---sv-1016-b-sd-1016b-sv-1016-c-sd-1016-c-olcu-63354-mm-",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/busch-palet-sv-1025-b-sd-1025-b-olcu-9836-54-mm",
-   "destination": "/urun/busch-palet-sv-1025-b-sd-1025-b-olcu-9836-54-mm",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/busch-palet---sv-1100c-sd-1100c-dc-0100c-olcu-249-5-40-3-8-mm",
-   "destination": "/urun/busch-palet---sv-1100c-sd-1100c-dc-0100c-olcu-249-5-40-3-8-mm",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/busch-palet---sv-1140-c-sd-1140-c-dc-0140-c-olcu-239-5453-8-mm",
-   "destination": "/urun/busch-palet---sv-1140-c-sd-1140-c-dc-0140-c-olcu-239-5453-8-mm",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/busch-0722544213-0722207620-palet-seti",
-   "destination": "/urun/busch-0722544213-0722207620-palet-seti",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/busch-palet---dc-0040-c-sv---sd-1040-b-sv---sd-1040-c-olcu-95444-mm-",
-   "destination": "/urun/busch-palet---dc-0040-c-sv---sd-1040-b-sv---sd-1040-c-olcu-95444-mm-",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/busch-palet---sv-1008-a-olcu-27344-mm",
-   "destination": "/urun/busch-palet---sv-1008-a-olcu-27344-mm",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/busch-palet-sv-1003-d-olcu-20193-mm-",
-   "destination": "/urun/busch-palet-sv-1003-d-olcu-20193-mm-",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/busch-palet--sv-1016-b-sd-1016b-sv-1016-c-sd-1016-c-olcu-63354-mm",
-   "destination": "/urun/busch-palet--sv-1016-b-sd-1016b-sv-1016-c-sd-1016-c-olcu-63354-mm",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/busch-palet---sv-1010-b-sd-1010b-olcu-55273-mm",
-   "destination": "/urun/busch-palet---sv-1010-b-sd-1010b-olcu-55273-mm",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/busch-palet---sd-1063-b-sv-1063-b-dc-0063-olcu-135444-mm",
-   "destination": "/urun/busch-palet---sd-1063-b-sv-1063-b-dc-0063-olcu-135444-mm",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---529267-529268",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---529267-529268",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---523777-528802",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---523777-528802",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---528401",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---528401",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---526627-525421-523885",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---526627-525421-523885",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---526577",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---526577",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---527134-526393",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---527134-526393",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---527133-526392",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---527133-526392",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---526315",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---526315",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---526311",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---526311",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---526098-527958",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---526098-527958",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---525351-525977",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---525351-525977",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---524142",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---524142",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---524009-507108",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---524009-507108",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---507107-524007",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---507107-524007",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/rietschle-palet---vft-180-dft-180-olcu-240556-mm7",
-   "destination": "/urun/rietschle-palet---vft-180-dft-180-olcu-240556-mm7",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---524003-5235565",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---524003-5235565",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---524002",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---524002",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---523880",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---523880",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---523778-526886-5238515",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---523778-526886-5238515",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---523778-526886-523851",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---523778-526886-523851",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/orion-vakum-pompasi-paletleri",
-   "destination": "/urun/orion-vakum-pompasi-paletleri",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/becker-palet-seti-90057900006",
-   "destination": "/urun/becker-palet-seti-90057900006",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/becker-palet-seti-90050500003",
-   "destination": "/urun/becker-palet-seti-90050500003",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/becker-palet-seti-90050600003",
-   "destination": "/urun/becker-palet-seti-90050600003",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/becker-palet-seti-90050700003",
-   "destination": "/urun/becker-palet-seti-90050700003",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/becker-palet-seti-90050800005",
-   "destination": "/urun/becker-palet-seti-90050800005",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/becker-palet-seti-90051100003",
-   "destination": "/urun/becker-palet-seti-90051100003",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/becker-palet-seti-90051200003",
-   "destination": "/urun/becker-palet-seti-90051200003",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/becker-palet-seti-90051900004",
-   "destination": "/urun/becker-palet-seti-90051900004",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/becker-palet-seti-90052500004",
-   "destination": "/urun/becker-palet-seti-90052500004",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/becker-palet-seti-90052600004",
-   "destination": "/urun/becker-palet-seti-90052600004",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/becker-palet-seti-90052800003",
-   "destination": "/urun/becker-palet-seti-90052800003",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/becker-palet-seti-90054300005",
-   "destination": "/urun/becker-palet-seti-90054300005",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/becker-palet-seti-90055000005",
-   "destination": "/urun/becker-palet-seti-90055000005",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/becker-palet-seti-90055100005",
-   "destination": "/urun/becker-palet-seti-90055100005",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/becker-palet-seti-90055600005",
-   "destination": "/urun/becker-palet-seti-90055600005",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/becker-palet-seti-90056100003",
-   "destination": "/urun/becker-palet-seti-90056100003",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/becker-palet-seti-90057600008",
-   "destination": "/urun/becker-palet-seti-90057600008",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/becker-palet-seti-90057800006",
-   "destination": "/urun/becker-palet-seti-90057800006",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/becker-palet-seti-90058000003",
-   "destination": "/urun/becker-palet-seti-90058000003",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/becker-palet-seti-90058100003",
-   "destination": "/urun/becker-palet-seti-90058100003",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/busch-palet-seti-0722000270",
-   "destination": "/urun/busch-palet-seti-0722000270",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/-busch-palet-seti-0722000300",
-   "destination": "/urun/-busch-palet-seti-0722000300",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/busch-palet-seti-0722000330",
-   "destination": "/urun/busch-palet-seti-0722000330",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/busch-palet-seti-0722000360",
-   "destination": "/urun/busch-palet-seti-0722000360",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/busch-palet-seti-0-722000452",
-   "destination": "/urun/busch-palet-seti-0-722000452",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/busch-palet-seti-0722000453",
-   "destination": "/urun/busch-palet-seti-0722000453",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/busch-palet-seti-0722000454",
-   "destination": "/urun/busch-palet-seti-0722000454",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/busch-palet-seti-0722000455",
-   "destination": "/urun/busch-palet-seti-0722000455",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/busch-palet-seti-0722000456",
-   "destination": "/urun/busch-palet-seti-0722000456",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/busch-palet-seti-0722000457",
-   "destination": "/urun/busch-palet-seti-0722000457",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/busch-palet-seti-0722515895",
-   "destination": "/urun/busch-palet-seti-0722515895",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/busch-palet-seti-0722516573",
-   "destination": "/urun/busch-palet-seti-0722516573",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/busch-palet-seti-0722516729",
-   "destination": "/urun/busch-palet-seti-0722516729",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/busch-palet-seti-0724000573-",
-   "destination": "/urun/busch-palet-seti-0724000573-",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/busch-palet-seti-0724105206",
-   "destination": "/urun/busch-palet-seti-0724105206",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/busch-palet-seti-0724118303",
-   "destination": "/urun/busch-palet-seti-0724118303",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/busch-palet-seti-0724118546",
-   "destination": "/urun/busch-palet-seti-0724118546",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/elmo-rietschle-525400-palet-seti",
-   "destination": "/urun/elmo-rietschle-525400-palet-seti",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/elmo-rietschle-567046-palet-seti",
-   "destination": "/urun/elmo-rietschle-567046-palet-seti",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/elmo-rietschle-palet-setleri",
-   "destination": "/urun/elmo-rietschle-palet-setleri",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/gev-palet-seti-gev-40100-gev-palet-seti-gev-40065-",
-   "destination": "/urun/gev-palet-seti-gev-40100-gev-palet-seti-gev-40065-",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/leybold-sogevac-71214310-palet-seti",
-   "destination": "/urun/leybold-sogevac-71214310-palet-seti",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/leybold-sogevac-71234370-palet-seti",
-   "destination": "/urun/leybold-sogevac-71234370-palet-seti",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/leybold-sogevac-71401060-palet-seti",
-   "destination": "/urun/leybold-sogevac-71401060-palet-seti",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/leybold-sogevac-71401070-palet-seti",
-   "destination": "/urun/leybold-sogevac-71401070-palet-seti",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/leybold-sogevac-71401510-palet-seti",
-   "destination": "/urun/leybold-sogevac-71401510-palet-seti",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/leybold-sogevac-71412000-palet-seti",
-   "destination": "/urun/leybold-sogevac-71412000-palet-seti",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/leybold-sogevac-71412020-palet-seti",
-   "destination": "/urun/leybold-sogevac-71412020-palet-seti",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/leybold-sogevac-71413150-palet-seti",
-   "destination": "/urun/leybold-sogevac-71413150-palet-seti",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/leybold-sogevac-71416290-palet-seti",
-   "destination": "/urun/leybold-sogevac-71416290-palet-seti",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/leybold-sogevac-71416750-palet-seti",
-   "destination": "/urun/leybold-sogevac-71416750-palet-seti",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/leybold-sogevac-71418750-palet-seti",
-   "destination": "/urun/leybold-sogevac-71418750-palet-seti",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/leybold-sogevac-971424540-palet-seti",
-   "destination": "/urun/leybold-sogevac-971424540-palet-seti",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/leybold-sogevac-sv-585-palet-seti-71029380-",
-   "destination": "/urun/leybold-sogevac-sv-585-palet-seti-71029380-",
-   "permanent": true
-  },
-  {
-   "source": "/tr/ekkb/elektrik-komurleri",
-   "destination": "/urun/elektrik-komurleri",
-   "permanent": true
-  },
-  {
-   "source": "/tr/ekkb/mekanik-karbon--karbon-burclar---karbon-ringler",
-   "destination": "/urun/mekanik-karbon--karbon-burclar---karbon-ringler",
    "permanent": true
   },
   {
@@ -2612,186 +1877,6 @@
    "permanent": true
   },
   {
-   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90139600007-wn-124-243",
-   "destination": "/urun/becker-vakum-palet-komuru---90139600007-wn-124-243",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90139700007-wn-124-244",
-   "destination": "/urun/becker-vakum-palet-komuru---90139700007-wn-124-244",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---wn-124-247-901399",
-   "destination": "/urun/becker-vakum-palet-komuru---wn-124-247-901399",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90132400004-wn-124-249",
-   "destination": "/urun/becker-vakum-palet-komuru---90132400004-wn-124-249",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90132500005-wn-124-250",
-   "destination": "/urun/becker-vakum-palet-komuru---90132500005-wn-124-250",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90140100004-wn-124-252",
-   "destination": "/urun/becker-vakum-palet-komuru---90140100004-wn-124-252",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90140200004-wn-124-253",
-   "destination": "/urun/becker-vakum-palet-komuru---90140200004-wn-124-253",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/busch-palet---sd-1080b-dc-0080-b-sv-1080b-olcu-170444-mm",
-   "destination": "/urun/busch-palet---sd-1080b-dc-0080-b-sv-1080b-olcu-170444-mm",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/busch-palet---sv-1006-b-sd-1006-b-olcu-55254-mm",
-   "destination": "/urun/busch-palet---sv-1006-b-sd-1006-b-olcu-55254-mm",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/busch-palet---sv-1002-b-olcu-35263-mm",
-   "destination": "/urun/busch-palet---sv-1002-b-olcu-35263-mm",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/busch-palet---sv-1025-b-sd-1025-b-olcu-9836-54-mm",
-   "destination": "/urun/busch-palet---sv-1025-b-sd-1025-b-olcu-9836-54-mm",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru--523777-528802",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru--523777-528802",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---524004-523557",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---524004-523557",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---524003-523556",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---524003-523556",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---523474",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---523474",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---523399",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---523399",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---522716",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---522716",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---518943",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---518943",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---516093",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---516093",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---515642-",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---515642-",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---513878",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---513878",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---513702",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---513702",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---513455",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---513455",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---513431",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---513431",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---507110-",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---507110-",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---520201-507109-524011",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---520201-507109-524011",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---524009",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---524009",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---507107",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---507107",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---507106",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---507106",
-   "permanent": true
-  },
-  {
-   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---507051",
-   "destination": "/urun/elmo-rietschle-vakum-palet-komuru---507051",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/becker-palet-seti-90058300003",
-   "destination": "/urun/becker-palet-seti-90058300003",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/becker-palet-seti-90058500003",
-   "destination": "/urun/becker-palet-seti-90058500003",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/becker-palet-seti-90058600004",
-   "destination": "/urun/becker-palet-seti-90058600004",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/becker-palet-seti-90058700008",
-   "destination": "/urun/becker-palet-seti-90058700008",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/becker-palet-seti-90058800004",
-   "destination": "/urun/becker-palet-seti-90058800004",
-   "permanent": true
-  },
-  {
-   "source": "/tr/fiber-palet/becker-palet-seti-90058900004",
-   "destination": "/urun/becker-palet-seti-90058900004",
-   "permanent": true
-  },
-  {
    "source": "/tr/kompresor-kaplin/zapex-zw-128-kaplin",
    "destination": "/urun/zapex-zw-128-kaplin",
    "permanent": true
@@ -2802,73 +1887,988 @@
    "permanent": true
   },
   {
+   "source": "/tr/endustriyel-filtre/hepa-filtreler",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/endustriyel-filtre/hidrolik-filtreler",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/endustriyel-filtre/kaset-filtreler",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/endustriyel-filtre/torba-filtreler",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/ozel-uretim-filtre/hidrolik-filtreler3",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/ozel-uretim-filtre/hava-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/ozel-uretim-filtre/kartus-filtreler",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/ozel-uretim-filtre/cam-elyaf-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/ozel-uretim-filtre/torba-filtreler6",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/dalgakiran-kompresor",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/mannhummel-kompresor-seperator-yag-filtre-l-hava-filtre",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/kaeser-kompresor-seperator--yag-ve-hava-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/kaeser-kompresor-seperator-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/ekomak-kompresor-seperator--yag-ve-hava-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/ekomak-kompresor-seperator-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/abac-kompresor-yag-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/abac-kompresor-seperator-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/ingersoll-rand-kompresor-seperator--yag-ve-hava-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/mikropor-mko-elementler",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/mikropor-mkon-elementler",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/almig-kompresor-kompresor-yag-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/almig-kompresor-seperator-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/alup-kompresor-yag-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/alup-kompresor-seperator-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/noitech-kompresor-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/boge-kompresor-seperator--yag-ve-hava-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/boge-kompresor-seperator-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/mark-kompresor-seperator-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/sullair-kompresor-yag-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/kompresor-filtre/sullair-kompresor-seperator-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---wn-124-003",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---wn-124-031",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---wn-124-032",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---wn-124-033",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-palet---wn-124-034",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---wn-124-082",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90131500008-wn-124-089",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90131600008-wn-124-090",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90131700008-wn-124-094",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90130800008-wn-124-104",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90133100007-wn-124-116",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90134700007-wn-124-120",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru-90135200007-wn-124-161",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90134900007-wn-124-162",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90136100005-wn-124-183",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90137200007-wn-124-195",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90136701005-wn-124-196",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90137301008-wn-124-205",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90138700005-wn-124-219",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90138800005-wn-124-220",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1025-c-sd-1025-c-dc-0025-c-olcu-68-5444-mm1",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1016-b-sd-1016b-sv-1016-c-sd-1016-c-olcu-63354-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---dc-0040-c-sv---sd-1040-b-sv---sd-1040-c-olcu-95444-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1025-c-sd-1025-c-dc-0025-c-olcu-68-5444-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1010-c-sd-1010-c-olcu-4036-54-mm4",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1010-c-sd-1010-c-olcu-4036-54-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1025-c-sd-1025-c-dc-0025-c-olcu-68-5444-mm-",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-0722522489-0722000489-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet--dc-0040-c-sv---sd-1040-b-sv---sd-1040-c-olcu-95444-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1016-b-sd-1016b-sv-1016-c-sd-1016-c-olcu-63354-mm-",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet-sv-1025-b-sd-1025-b-olcu-9836-54-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1100c-sd-1100c-dc-0100c-olcu-249-5-40-3-8-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1140-c-sd-1140-c-dc-0140-c-olcu-239-5453-8-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-0722544213-0722207620-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---dc-0040-c-sv---sd-1040-b-sv---sd-1040-c-olcu-95444-mm-",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1008-a-olcu-27344-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet-sv-1003-d-olcu-20193-mm-",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet--sv-1016-b-sd-1016b-sv-1016-c-sd-1016-c-olcu-63354-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1010-b-sd-1010b-olcu-55273-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sd-1063-b-sv-1063-b-dc-0063-olcu-135444-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---529267-529268",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---523777-528802",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---528401",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---526627-525421-523885",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---526577",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---527134-526393",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---527133-526392",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---526315",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---526311",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---526098-527958",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---525351-525977",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---524142",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---524009-507108",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---507107-524007",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/rietschle-palet---vft-180-dft-180-olcu-240556-mm7",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---524003-5235565",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---524002",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---523880",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---523778-526886-5238515",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---523778-526886-523851",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/orion-vakum-pompasi-paletleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90057900006",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90050500003",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90050600003",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90050700003",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90050800005",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90051100003",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90051200003",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90051900004",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90052500004",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90052600004",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90052800003",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90054300005",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90055000005",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90055100005",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90055600005",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90056100003",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90057600008",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90057800006",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90058000003",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90058100003",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0722000270",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/-busch-palet-seti-0722000300",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0722000330",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0722000360",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0-722000452",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0722000453",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0722000454",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0722000455",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0722000456",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0722000457",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0722515895",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0722516573",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0722516729",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0724000573-",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0724105206",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0724118303",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/busch-palet-seti-0724118546",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/elmo-rietschle-525400-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/elmo-rietschle-567046-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/elmo-rietschle-palet-setleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/gev-palet-seti-gev-40100-gev-palet-seti-gev-40065-",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/leybold-sogevac-71214310-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/leybold-sogevac-71234370-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/leybold-sogevac-71401060-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/leybold-sogevac-71401070-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/leybold-sogevac-71401510-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/leybold-sogevac-71412000-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/leybold-sogevac-71412020-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/leybold-sogevac-71413150-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/leybold-sogevac-71416290-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/leybold-sogevac-71416750-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/leybold-sogevac-71418750-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/leybold-sogevac-971424540-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/leybold-sogevac-sv-585-palet-seti-71029380-",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/ekkb/elektrik-komurleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/ekkb/mekanik-karbon--karbon-burclar---karbon-ringler",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90139600007-wn-124-243",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90139700007-wn-124-244",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---wn-124-247-901399",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90132400004-wn-124-249",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90132500005-wn-124-250",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90140100004-wn-124-252",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/becker-vakum-palet-komuru---90140200004-wn-124-253",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sd-1080b-dc-0080-b-sv-1080b-olcu-170444-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1006-b-sd-1006-b-olcu-55254-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1002-b-olcu-35263-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/busch-palet---sv-1025-b-sd-1025-b-olcu-9836-54-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru--523777-528802",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---524004-523557",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---524003-523556",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---523474",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---523399",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---522716",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---518943",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---516093",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---515642-",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---513878",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---513702",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---513455",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---513431",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---507110-",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---520201-507109-524011",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---524009",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---507107",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---507106",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/vakum-pompasi/elmo-rietschle-vakum-palet-komuru---507051",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90058300003",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90058500003",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90058600004",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90058700008",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90058800004",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/tr/fiber-palet/becker-palet-seti-90058900004",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
    "source": "/tr/kompresor-filtreler/atlas-copco-kaplinleri",
-   "destination": "/urunler/kompresor-filtreleri",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/kompresor-filtreler/dalgakiran",
-   "destination": "/urunler/kompresor-filtreleri/dalgakiran",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/kompresor-filtreler/mann-filter",
-   "destination": "/urunler/kompresor-filtreleri/mann-filter",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/kompresor-filtreler/kaeser",
-   "destination": "/urunler/kompresor-filtreleri/kaeser",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/kompresor-filtreler/ekomak",
-   "destination": "/urunler/kompresor-filtreleri/ekomak",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/kompresor-filtreler/abac",
-   "destination": "/urunler/kompresor-filtreleri/abac",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/kompresor-filtreler/ingersoll-rand",
-   "destination": "/urunler/kompresor-filtreleri/ingersoll-rand",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/kompresor-filtreler/mikropor",
-   "destination": "/urunler/kompresor-filtreleri/mikropor",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/kompresor-filtreler/almig",
-   "destination": "/urunler/kompresor-filtreleri/almig",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/kompresor-filtreler/alup",
-   "destination": "/urunler/kompresor-filtreleri/alup",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/kompresor-filtreler/noitech",
-   "destination": "/urunler/kompresor-filtreleri/noitech",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/kompresor-filtreler/boge",
-   "destination": "/urunler/kompresor-filtreleri/boge",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/kompresor-filtreler/mark",
-   "destination": "/urunler/kompresor-filtreleri/mark",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/kompresor-filtreler/sullair",
-   "destination": "/urunler/kompresor-filtreleri/sullair",
+   "destination": "/urunler",
    "permanent": true
   },
   {
@@ -2968,67 +2968,67 @@
   },
   {
    "source": "/tr/vp-paletler/becker9",
-   "destination": "/urunler/karbon-paletler/becker",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/vp-paletler/busch4",
-   "destination": "/urunler/karbon-paletler/busch",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/vp-paletler/elmo-rietschle1",
-   "destination": "/urunler/karbon-paletler/elmo-rietschle",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/vp-paletler/g-e-v6",
-   "destination": "/urunler/karbon-paletler",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/vp-paletler/leybold4",
-   "destination": "/urunler/karbon-paletler",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/vp-paletler/orion6",
-   "destination": "/urunler/karbon-paletler/orion",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/fiber-paletler/becker98",
-   "destination": "/urunler/fiber-paletler/becker",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/fiber-paletler/busch3",
-   "destination": "/urunler/fiber-paletler/busch",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/fiber-paletler/elmo-rietschle6",
-   "destination": "/urunler/fiber-paletler/elmo-rietschle",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/fiber-paletler/gev",
-   "destination": "/urunler/fiber-paletler/g-e-v",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/fiber-paletler/leybold1",
-   "destination": "/urunler/fiber-paletler/leybold",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/elektrik-komurleri-karbon-burc/elektrik-komurleri---karbon-burc",
-   "destination": "/urunler/karbon-burc-ve-komurler",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/elektrik-komurleri-karbon-burc/mekanik-karbon--karbon-burclar---karbon-ringler",
-   "destination": "/urunler/karbon-burc-ve-komurler",
+   "destination": "/urunler",
    "permanent": true
   },
   {
@@ -3168,7 +3168,7 @@
   },
   {
    "source": "/tr/kompresor-filtreler-kategori",
-   "destination": "/urunler/kompresor-filtreleri",
+   "destination": "/urunler",
    "permanent": true
   },
   {
@@ -3178,12 +3178,12 @@
   },
   {
    "source": "/tr/endustriyel-filtreler-kategori",
-   "destination": "/urunler/endustriyel-filtreler",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/ozel-uretim-filtreler-kategori",
-   "destination": "/urunler/ozel-uretim-filtreler",
+   "destination": "/urunler",
    "permanent": true
   },
   {
@@ -3193,17 +3193,17 @@
   },
   {
    "source": "/tr/vp-paletler-kategori",
-   "destination": "/urunler/karbon-paletler",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/fiber-paletler-kategori",
-   "destination": "/urunler/fiber-paletler",
+   "destination": "/urunler",
    "permanent": true
   },
   {
    "source": "/tr/elektrik-komurleri-karbon-burc-kategori",
-   "destination": "/urunler/karbon-burc-ve-komurler",
+   "destination": "/urunler",
    "permanent": true
   },
   {
@@ -3254,6 +3254,1956 @@
   {
    "source": "/en/:old(.*-kategori)",
    "destination": "/en/products",
+   "permanent": true
+  },
+  {
+   "source": "/urunler/kompresor-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/urunler/kompresor-filtreleri/:b",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/products/compressor-filters",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/products/compressor-filters/:b",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urunler/karbon-paletler",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/urunler/karbon-paletler/:b",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/products/carbon-vanes",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/products/carbon-vanes/:b",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urunler/fiber-paletler",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/urunler/fiber-paletler/:b",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/products/fibre-vanes",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/products/fibre-vanes/:b",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urunler/endustriyel-filtreler",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/urunler/endustriyel-filtreler/:b",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/products/industrial-filters",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/products/industrial-filters/:b",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urunler/ozel-uretim-filtreler",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/urunler/ozel-uretim-filtreler/:b",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/products/custom-filters",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/products/custom-filters/:b",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urunler/karbon-burc-ve-komurler",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/urunler/karbon-burc-ve-komurler/:b",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/products/carbon-brushes-bushings",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/products/carbon-brushes-bushings/:b",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/hepa-filtreler",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/hepa-filtreler",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/hidrolik-filtreler",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/hidrolik-filtreler",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/kaset-filtreler",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/kaset-filtreler",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/torba-filtreler",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/torba-filtreler",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/hidrolik-filtreler3",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/hidrolik-filtreler3",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/hava-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/hava-filtreleri",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/kartus-filtreler",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/kartus-filtreler",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/cam-elyaf-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/cam-elyaf-filtreleri",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/torba-filtreler6",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/torba-filtreler6",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/dalgakiran-kompresor",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/dalgakiran-kompresor",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/mannhummel-kompresor-seperator-yag-filtre-l-hava-filtre",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/mannhummel-kompresor-seperator-yag-filtre-l-hava-filtre",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/kaeser-kompresor-seperator--yag-ve-hava-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/kaeser-kompresor-seperator--yag-ve-hava-filtreleri",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/kaeser-kompresor-seperator-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/kaeser-kompresor-seperator-filtreleri",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/ekomak-kompresor-seperator--yag-ve-hava-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/ekomak-kompresor-seperator--yag-ve-hava-filtreleri",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/ekomak-kompresor-seperator-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/ekomak-kompresor-seperator-filtreleri",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/abac-kompresor-yag-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/abac-kompresor-yag-filtreleri",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/abac-kompresor-seperator-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/abac-kompresor-seperator-filtreleri",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/ingersoll-rand-kompresor-seperator--yag-ve-hava-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/ingersoll-rand-kompresor-seperator--yag-ve-hava-filtreleri",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/mikropor-mko-elementler",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/mikropor-mko-elementler",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/mikropor-mkon-elementler",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/mikropor-mkon-elementler",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/almig-kompresor-kompresor-yag-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/almig-kompresor-kompresor-yag-filtreleri",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/almig-kompresor-seperator-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/almig-kompresor-seperator-filtreleri",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/alup-kompresor-yag-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/alup-kompresor-yag-filtreleri",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/alup-kompresor-seperator-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/alup-kompresor-seperator-filtreleri",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/noitech-kompresor-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/noitech-kompresor-filtreleri",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/boge-kompresor-seperator--yag-ve-hava-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/boge-kompresor-seperator--yag-ve-hava-filtreleri",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/boge-kompresor-seperator-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/boge-kompresor-seperator-filtreleri",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/mark-kompresor-seperator-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/mark-kompresor-seperator-filtreleri",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/sullair-kompresor-yag-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/sullair-kompresor-yag-filtreleri",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/sullair-kompresor-seperator-filtreleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/sullair-kompresor-seperator-filtreleri",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-vakum-palet-komuru---wn-124-003",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-vakum-palet-komuru---wn-124-003",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-vakum-palet-komuru---wn-124-031",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-vakum-palet-komuru---wn-124-031",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-vakum-palet-komuru---wn-124-032",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-vakum-palet-komuru---wn-124-032",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-vakum-palet-komuru---wn-124-033",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-vakum-palet-komuru---wn-124-033",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-palet---wn-124-034",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-palet---wn-124-034",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-vakum-palet-komuru---wn-124-082",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-vakum-palet-komuru---wn-124-082",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-vakum-palet-komuru---90131500008-wn-124-089",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-vakum-palet-komuru---90131500008-wn-124-089",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-vakum-palet-komuru---90131600008-wn-124-090",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-vakum-palet-komuru---90131600008-wn-124-090",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-vakum-palet-komuru---90131700008-wn-124-094",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-vakum-palet-komuru---90131700008-wn-124-094",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-vakum-palet-komuru---90130800008-wn-124-104",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-vakum-palet-komuru---90130800008-wn-124-104",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-vakum-palet-komuru---90133100007-wn-124-116",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-vakum-palet-komuru---90133100007-wn-124-116",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-vakum-palet-komuru---90134700007-wn-124-120",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-vakum-palet-komuru---90134700007-wn-124-120",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-vakum-palet-komuru-90135200007-wn-124-161",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-vakum-palet-komuru-90135200007-wn-124-161",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-vakum-palet-komuru---90134900007-wn-124-162",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-vakum-palet-komuru---90134900007-wn-124-162",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-vakum-palet-komuru---90136100005-wn-124-183",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-vakum-palet-komuru---90136100005-wn-124-183",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-vakum-palet-komuru---90137200007-wn-124-195",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-vakum-palet-komuru---90137200007-wn-124-195",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-vakum-palet-komuru---90136701005-wn-124-196",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-vakum-palet-komuru---90136701005-wn-124-196",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-vakum-palet-komuru---90137301008-wn-124-205",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-vakum-palet-komuru---90137301008-wn-124-205",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-vakum-palet-komuru---90138700005-wn-124-219",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-vakum-palet-komuru---90138700005-wn-124-219",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-vakum-palet-komuru---90138800005-wn-124-220",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-vakum-palet-komuru---90138800005-wn-124-220",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet---sv-1025-c-sd-1025-c-dc-0025-c-olcu-68-5444-mm1",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet---sv-1025-c-sd-1025-c-dc-0025-c-olcu-68-5444-mm1",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet---sv-1016-b-sd-1016b-sv-1016-c-sd-1016-c-olcu-63354-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet---sv-1016-b-sd-1016b-sv-1016-c-sd-1016-c-olcu-63354-mm",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet---dc-0040-c-sv---sd-1040-b-sv---sd-1040-c-olcu-95444-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet---dc-0040-c-sv---sd-1040-b-sv---sd-1040-c-olcu-95444-mm",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet---sv-1025-c-sd-1025-c-dc-0025-c-olcu-68-5444-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet---sv-1025-c-sd-1025-c-dc-0025-c-olcu-68-5444-mm",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet---sv-1010-c-sd-1010-c-olcu-4036-54-mm4",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet---sv-1010-c-sd-1010-c-olcu-4036-54-mm4",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet---sv-1010-c-sd-1010-c-olcu-4036-54-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet---sv-1010-c-sd-1010-c-olcu-4036-54-mm",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet---sv-1025-c-sd-1025-c-dc-0025-c-olcu-68-5444-mm-",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet---sv-1025-c-sd-1025-c-dc-0025-c-olcu-68-5444-mm-",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-0722522489-0722000489-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-0722522489-0722000489-palet-seti",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet--dc-0040-c-sv---sd-1040-b-sv---sd-1040-c-olcu-95444-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet--dc-0040-c-sv---sd-1040-b-sv---sd-1040-c-olcu-95444-mm",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet---sv-1016-b-sd-1016b-sv-1016-c-sd-1016-c-olcu-63354-mm-",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet---sv-1016-b-sd-1016b-sv-1016-c-sd-1016-c-olcu-63354-mm-",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet-sv-1025-b-sd-1025-b-olcu-9836-54-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet-sv-1025-b-sd-1025-b-olcu-9836-54-mm",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet---sv-1100c-sd-1100c-dc-0100c-olcu-249-5-40-3-8-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet---sv-1100c-sd-1100c-dc-0100c-olcu-249-5-40-3-8-mm",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet---sv-1140-c-sd-1140-c-dc-0140-c-olcu-239-5453-8-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet---sv-1140-c-sd-1140-c-dc-0140-c-olcu-239-5453-8-mm",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-0722544213-0722207620-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-0722544213-0722207620-palet-seti",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet---dc-0040-c-sv---sd-1040-b-sv---sd-1040-c-olcu-95444-mm-",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet---dc-0040-c-sv---sd-1040-b-sv---sd-1040-c-olcu-95444-mm-",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet---sv-1008-a-olcu-27344-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet---sv-1008-a-olcu-27344-mm",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet-sv-1003-d-olcu-20193-mm-",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet-sv-1003-d-olcu-20193-mm-",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet--sv-1016-b-sd-1016b-sv-1016-c-sd-1016-c-olcu-63354-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet--sv-1016-b-sd-1016b-sv-1016-c-sd-1016-c-olcu-63354-mm",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet---sv-1010-b-sd-1010b-olcu-55273-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet---sv-1010-b-sd-1010b-olcu-55273-mm",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet---sd-1063-b-sv-1063-b-dc-0063-olcu-135444-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet---sd-1063-b-sv-1063-b-dc-0063-olcu-135444-mm",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---529267-529268",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---529267-529268",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---523777-528802",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---523777-528802",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---528401",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---528401",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---526627-525421-523885",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---526627-525421-523885",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---526577",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---526577",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---527134-526393",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---527134-526393",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---527133-526392",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---527133-526392",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---526315",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---526315",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---526311",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---526311",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---526098-527958",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---526098-527958",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---525351-525977",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---525351-525977",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---524142",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---524142",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---524009-507108",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---524009-507108",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---507107-524007",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---507107-524007",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/rietschle-palet---vft-180-dft-180-olcu-240556-mm7",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/rietschle-palet---vft-180-dft-180-olcu-240556-mm7",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---524003-5235565",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---524003-5235565",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---524002",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---524002",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---523880",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---523880",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---523778-526886-5238515",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---523778-526886-5238515",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---523778-526886-523851",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---523778-526886-523851",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/orion-vakum-pompasi-paletleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/orion-vakum-pompasi-paletleri",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-palet-seti-90057900006",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-palet-seti-90057900006",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-palet-seti-90050500003",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-palet-seti-90050500003",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-palet-seti-90050600003",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-palet-seti-90050600003",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-palet-seti-90050700003",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-palet-seti-90050700003",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-palet-seti-90050800005",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-palet-seti-90050800005",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-palet-seti-90051100003",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-palet-seti-90051100003",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-palet-seti-90051200003",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-palet-seti-90051200003",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-palet-seti-90051900004",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-palet-seti-90051900004",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-palet-seti-90052500004",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-palet-seti-90052500004",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-palet-seti-90052600004",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-palet-seti-90052600004",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-palet-seti-90052800003",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-palet-seti-90052800003",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-palet-seti-90054300005",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-palet-seti-90054300005",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-palet-seti-90055000005",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-palet-seti-90055000005",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-palet-seti-90055100005",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-palet-seti-90055100005",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-palet-seti-90055600005",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-palet-seti-90055600005",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-palet-seti-90056100003",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-palet-seti-90056100003",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-palet-seti-90057600008",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-palet-seti-90057600008",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-palet-seti-90057800006",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-palet-seti-90057800006",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-palet-seti-90058000003",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-palet-seti-90058000003",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-palet-seti-90058100003",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-palet-seti-90058100003",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet-seti-0722000270",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet-seti-0722000270",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/-busch-palet-seti-0722000300",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/-busch-palet-seti-0722000300",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet-seti-0722000330",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet-seti-0722000330",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet-seti-0722000360",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet-seti-0722000360",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet-seti-0-722000452",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet-seti-0-722000452",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet-seti-0722000453",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet-seti-0722000453",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet-seti-0722000454",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet-seti-0722000454",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet-seti-0722000455",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet-seti-0722000455",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet-seti-0722000456",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet-seti-0722000456",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet-seti-0722000457",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet-seti-0722000457",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet-seti-0722515895",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet-seti-0722515895",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet-seti-0722516573",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet-seti-0722516573",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet-seti-0722516729",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet-seti-0722516729",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet-seti-0724000573-",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet-seti-0724000573-",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet-seti-0724105206",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet-seti-0724105206",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet-seti-0724118303",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet-seti-0724118303",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet-seti-0724118546",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet-seti-0724118546",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-525400-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-525400-palet-seti",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-567046-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-567046-palet-seti",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-palet-setleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-palet-setleri",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/gev-palet-seti-gev-40100-gev-palet-seti-gev-40065-",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/gev-palet-seti-gev-40100-gev-palet-seti-gev-40065-",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/leybold-sogevac-71214310-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/leybold-sogevac-71214310-palet-seti",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/leybold-sogevac-71234370-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/leybold-sogevac-71234370-palet-seti",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/leybold-sogevac-71401060-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/leybold-sogevac-71401060-palet-seti",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/leybold-sogevac-71401070-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/leybold-sogevac-71401070-palet-seti",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/leybold-sogevac-71401510-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/leybold-sogevac-71401510-palet-seti",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/leybold-sogevac-71412000-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/leybold-sogevac-71412000-palet-seti",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/leybold-sogevac-71412020-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/leybold-sogevac-71412020-palet-seti",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/leybold-sogevac-71413150-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/leybold-sogevac-71413150-palet-seti",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/leybold-sogevac-71416290-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/leybold-sogevac-71416290-palet-seti",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/leybold-sogevac-71416750-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/leybold-sogevac-71416750-palet-seti",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/leybold-sogevac-71418750-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/leybold-sogevac-71418750-palet-seti",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/leybold-sogevac-971424540-palet-seti",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/leybold-sogevac-971424540-palet-seti",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/leybold-sogevac-sv-585-palet-seti-71029380-",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/leybold-sogevac-sv-585-palet-seti-71029380-",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elektrik-komurleri",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elektrik-komurleri",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/mekanik-karbon--karbon-burclar---karbon-ringler",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/mekanik-karbon--karbon-burclar---karbon-ringler",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-vakum-palet-komuru---90139600007-wn-124-243",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-vakum-palet-komuru---90139600007-wn-124-243",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-vakum-palet-komuru---90139700007-wn-124-244",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-vakum-palet-komuru---90139700007-wn-124-244",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-vakum-palet-komuru---wn-124-247-901399",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-vakum-palet-komuru---wn-124-247-901399",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-vakum-palet-komuru---90132400004-wn-124-249",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-vakum-palet-komuru---90132400004-wn-124-249",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-vakum-palet-komuru---90132500005-wn-124-250",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-vakum-palet-komuru---90132500005-wn-124-250",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-vakum-palet-komuru---90140100004-wn-124-252",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-vakum-palet-komuru---90140100004-wn-124-252",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-vakum-palet-komuru---90140200004-wn-124-253",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-vakum-palet-komuru---90140200004-wn-124-253",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet---sd-1080b-dc-0080-b-sv-1080b-olcu-170444-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet---sd-1080b-dc-0080-b-sv-1080b-olcu-170444-mm",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet---sv-1006-b-sd-1006-b-olcu-55254-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet---sv-1006-b-sd-1006-b-olcu-55254-mm",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet---sv-1002-b-olcu-35263-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet---sv-1002-b-olcu-35263-mm",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/busch-palet---sv-1025-b-sd-1025-b-olcu-9836-54-mm",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/busch-palet---sv-1025-b-sd-1025-b-olcu-9836-54-mm",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru--523777-528802",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru--523777-528802",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---524004-523557",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---524004-523557",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---524003-523556",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---524003-523556",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---523474",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---523474",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---523399",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---523399",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---522716",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---522716",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---518943",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---518943",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---516093",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---516093",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---515642-",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---515642-",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---513878",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---513878",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---513702",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---513702",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---513455",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---513455",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---513431",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---513431",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---507110-",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---507110-",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---520201-507109-524011",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---520201-507109-524011",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---524009",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---524009",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---507107",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---507107",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---507106",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---507106",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/elmo-rietschle-vakum-palet-komuru---507051",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/elmo-rietschle-vakum-palet-komuru---507051",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-palet-seti-90058300003",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-palet-seti-90058300003",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-palet-seti-90058500003",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-palet-seti-90058500003",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-palet-seti-90058600004",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-palet-seti-90058600004",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-palet-seti-90058700008",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-palet-seti-90058700008",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-palet-seti-90058800004",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-palet-seti-90058800004",
+   "destination": "/:L/products",
+   "permanent": true
+  },
+  {
+   "source": "/urun/becker-palet-seti-90058900004",
+   "destination": "/urunler",
+   "permanent": true
+  },
+  {
+   "source": "/:L(en|fa|he|ar|fr|de|es|ru|it|nl|ka|mk|az)/product/becker-palet-seti-90058900004",
+   "destination": "/:L/products",
    "permanent": true
   },
   {

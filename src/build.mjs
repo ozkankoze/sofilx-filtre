@@ -3,7 +3,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import zlib from 'node:zlib';
-import { T as TT, CATS, SECTORS } from './i18n.mjs';
+import { T as TT, CATS as ALL_CATS, SECTORS } from './i18n.mjs';
+// sitede artık satılmayan gruplar: ürünleri ve sayfaları kaldırıldı, eski adresler /urunler'e yönlenir
+const REMOVED_CATS = new Set(['kompresor-filtreleri', 'karbon-paletler', 'fiber-paletler', 'endustriyel-filtreler', 'ozel-uretim-filtreler', 'karbon-burc-ve-komurler']);
+const CATS = ALL_CATS.filter(c => !REMOVED_CATS.has(c.id));
 import { pages as LEGAL } from './legal.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
@@ -65,9 +68,10 @@ const FONT_BASE = 'family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wg
 const FONT_EXTRA = { ru: 'family=Fira+Sans:wght@400;500;600;700&family=Fira+Sans+Condensed:wght@500;600;700;800', mk: 'family=Fira+Sans:wght@400;500;600;700&family=Fira+Sans+Condensed:wght@500;600;700;800', ka: 'family=Noto+Sans+Georgian:wght@400;500;600;700;800', ar: 'family=Noto+Sans+Arabic:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@500;600;700;800', fa: 'family=Vazirmatn:wght@400;500;600;700;800', he: 'family=Heebo:wght@400;500;600;700;800' };
 
 // ---------- veri ----------
-const P = data.products.map(p => ({ ...p, bslug: slug(p.brand) }));
+const REMOVED_P = data.products.filter(p => REMOVED_CATS.has(p.cat));
+const P = data.products.filter(p => !REMOVED_CATS.has(p.cat)).map(p => ({ ...p, bslug: slug(p.brand) }));
 P.forEach(p => { if (!p.imgs.length) p.imgs = []; p.img = p.imgs[0] || null; });
-const catById = Object.fromEntries(CATS.map(c => [c.id, c]));
+const catById = Object.fromEntries(ALL_CATS.map(c => [c.id, c]));
 const brands = [...new Set(P.map(p => p.brand))].filter(b => b !== 'Sofilx').sort((a, b) => a.localeCompare(b, 'tr'));
 const brandSlug = b => slug(b);
 const catCover = {};
@@ -422,14 +426,14 @@ function fpHomeSection(L) {
 const t_viewAll = L => D[L].t.viewAll;
 function pageHome(L) {
   const t = D[L].t, x = t.x, url = U.home(L);
-  const popular = ['vakum-pompasi-filtreleri', 'karbon-paletler', 'fiber-paletler', 'kompresor-filtreleri'].flatMap(c => P.filter(p => p.cat === c && p.img && p.models.length).slice(0, 2));
+  const popular = ['vakum-pompasi-filtreleri', 'kompresor-kaplinleri', 'endustriyel-yaglar'].flatMap(c => P.filter(p => p.cat === c && p.img && (p.models.length || c !== 'vakum-pompasi-filtreleri')).slice(0, c === 'vakum-pompasi-filtreleri' ? 4 : 2));
   const body = `<section class="hero2"><div class="hero2-top"><div class="hero2-bg"></div><div class="wrap hero2-in">
   <div class="h2copy"><span class="kick">${t.heroKick}</span><h1>${t.heroH1a}<br><span class="hl">${t.heroH1b}</span></h1><p>${t.heroP}</p>
    <div class="h2btns"><a class="btn btn-white" href="#q-hero" data-codefocus>${I.search} ${esc(XR[L].codeBtn)}</a><a class="btn btn-ghostw" href="https://wa.me/${WA}" target="_blank" rel="noopener">${I.wa} ${t.waQuote}</a></div></div>
   <div class="h2art"><div class="ring"></div>
    <a class="speccard" href="${U.products(L)}"><div class="sc-photo"><img src="${extraUrl('herocard')}" alt="" width="250" height="250"></div>
-    <div class="sc-band"><div><small>${t.cardKick}</small><b>${CATS.length} ${t.cardGroups}</b></div><span class="sc-stock">${t.stockIn}</span></div>
-    <ol class="sc-list">${CATS.slice(0, 5).map(c => `<li>${esc(catName(c.id, L))}</li>`).join('')}</ol>
+    <div class="sc-band"><div><small>${t.cardKick}</small><b>${fpNum(XREF_N + P.length, L)} ${esc(XR[L].items)}</b></div><span class="sc-stock">${t.stockIn}</span></div>
+    <ol class="sc-list">${[XR[L].types.separator, XR[L].types.air, XR[L].types.oil, catName('vakum-pompasi-filtreleri', L), catName('kompresor-kaplinleri', L)].map(n => `<li>${esc(n)}</li>`).join('')}</ol>
     <div class="sc-foot"><span>${t.cardFoot}</span><span class="sc-plus">${I.arrow}</span></div></a>
    <div class="chip2 c1"><span class="ci">${I.check}</span><div><b>${t.chipBrand[0]}</b><small>${t.chipBrand[1]}</small></div></div>
    <a class="chip2 c2" href="#q-hero" data-codefocus><span class="ci">${I.search}</span><div><b>${t.chipRef[0]}</b><small>${t.chipRef[1]}</small></div></a>
@@ -703,12 +707,18 @@ function writeVercel() {
   const red = [];
   const add = (from, to) => { if (from && to && from !== to && !red.find(r => r.source === from)) red.push({ source: from, destination: to, permanent: true }); };
   for (const p of P) add(p.old, U.product(p, 'tr'));
-  for (const l of data.lists) { const b = P.find(p => p.cat === l.cat && p.brand === l.brand); add(l.old, b ? (l.brand === 'Sofilx' ? U.cat(l.cat, 'tr') : U.catBrand(l.cat, l.brand, 'tr')) : U.cat(l.cat, 'tr')); }
-  for (const c of data.cats) add(c.old, U.cat(c.cat, 'tr'));
+  const toCat = c => REMOVED_CATS.has(c) ? '/urunler' : U.cat(c, 'tr');
+  for (const p of REMOVED_P) add(p.old, '/urunler');
+  for (const l of data.lists) { if (REMOVED_CATS.has(l.cat)) { add(l.old, '/urunler'); continue; } const b = P.find(p => p.cat === l.cat && p.brand === l.brand); add(l.old, b ? (l.brand === 'Sofilx' ? U.cat(l.cat, 'tr') : U.catBrand(l.cat, l.brand, 'tr')) : U.cat(l.cat, 'tr')); }
+  for (const c of data.cats) add(c.old, toCat(c.cat));
   [['/tr', '/'], ['/tr/hakkimizda', '/kurumsal'], ['/tr/misyonumuz', '/kurumsal'], ['/tr/vizyonumuz', '/kurumsal'], ['/tr/iletisim', '/iletisim'], ['/tr/markalar', '/markalar'], ['/tr/teklif-al', '/teklif'], ['/en/:path*', '/en'], ['/tr/:path*', '/urunler']].forEach(([a, b]) => add(a, b));
   const wild = red.filter(r => r.source.includes(':path*')); const rest = red.filter(r => !r.source.includes(':path*'));
   const cfg = { $schema: 'https://openapi.vercel.sh/vercel.json', buildCommand: 'npm run build', outputDirectory: 'dist', framework: null, cleanUrls: true, trailingSlash: false, redirects: [...rest, ...wild.filter(w => w.source !== '/en/:path*')], headers: [{ source: '/pimg/(.*)', headers: [{ key: 'Cache-Control', value: 'public, max-age=604800, stale-while-revalidate=2592000' }] }, { source: '/img/(.*)', headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }] }, { source: '/assets/(.*)', headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }] }, { source: '/(.*)', headers: [{ key: 'X-Content-Type-Options', value: 'nosniff' }, { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' }, { key: 'X-Frame-Options', value: 'SAMEORIGIN' }] }] };
   cfg.redirects.push({ source: '/en/:old(.*-kategori)', destination: '/en/products', permanent: true });
+  // kaldırılan gruplar ve ürünleri
+  const LXr = LANGS.filter(l => l !== 'tr').join('|');
+  for (const c of ALL_CATS.filter(c => REMOVED_CATS.has(c.id))) cfg.redirects.push({ source: `/urunler/${c.id}`, destination: '/urunler', permanent: true }, { source: `/urunler/${c.id}/:b`, destination: '/urunler', permanent: true }, { source: `/:L(${LXr})/products/${c.en}`, destination: '/:L/products', permanent: true }, { source: `/:L(${LXr})/products/${c.en}/:b`, destination: '/:L/products', permanent: true });
+  for (const p of REMOVED_P) cfg.redirects.push({ source: `/urun/${p.id}`, destination: '/urunler', permanent: true }, { source: `/:L(${LXr})/product/${p.id}`, destination: '/:L/products', permanent: true });
   // parça kataloğu: sunucu fonksiyonu + tedarikçi görsellerinin vekil adresi
   const LX = LANGS.filter(l => l !== 'tr').join('|');
   const XR_RW = [
