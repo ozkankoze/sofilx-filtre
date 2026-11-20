@@ -9,7 +9,7 @@ const SITE = 'https://www.sofilx.com';
 const DIR = path.join(process.cwd(), 'data/xref');
 const PER = 48, SM = 40000;
 
-let UI, D, TYPES, P, BYSLUG, BYTYPE, EXACT, CODES, BRANDS;
+let UI, D, TYPES, P, BYSLUG, BYTYPE, EXACT, CODES, BRANDS, ENT, ENTBY, PENT, EEXACT, ECODES, EBRANDS;
 const SHELL = {};
 function load() {
   if (UI) return;
@@ -22,6 +22,23 @@ function load() {
     BYSLUG.set(slugOf(r[0]), i);
     const t = TYPES[r[1]]; if (!BYTYPE.has(t)) BYTYPE.set(t, []); BYTYPE.get(t).push(i);
     addCode(r[0], i); for (const [b, c] of r[2]) { addCode(c, i); const k = tight(b); if (!BRANDS.has(k)) BRANDS.set(k, new Set()); BRANDS.get(k).add(i); }
+  });
+  // her orijinal kod (marka + kod) kendi sayfası: ENT; orijinal kodu olmayan ürün NS sayfasıyla listelenir
+  ENT = []; ENTBY = new Map(); PENT = P.map(() => []); EEXACT = new Map(); ECODES = []; EBRANDS = new Map();
+  const key = new Map(), used = new Set(BYSLUG.keys());
+  P.forEach((r, i) => {
+    if (!r[2].length) { const e = { b: '', c: r[0], ps: [i], s: slugOf(r[0]), ns: true }; ENT.push(e); PENT[i].push(ENT.length - 1); return; }
+    for (const [b, c] of r[2]) {
+      const k = bkey(b) + '|' + tight(c); let ei = key.get(k);
+      if (ei === undefined) {
+        let sl = (brandSlugOf(b) + '-' + slugOf(c)).replace(/-+/g, '-'), n = 2; while (used.has(sl)) sl = `${brandSlugOf(b)}-${slugOf(c)}-${n++}`;
+        used.add(sl); ENT.push({ b, c, ps: [], s: sl }); ei = ENT.length - 1; key.set(k, ei); ENTBY.set(sl, ei);
+        const tk = tight(c); if (!EEXACT.has(tk)) EEXACT.set(tk, []); EEXACT.get(tk).push(ei); ECODES.push([tk, ei]);
+        const bk = tight(b); if (!EBRANDS.has(bk)) EBRANDS.set(bk, []); EBRANDS.get(bk).push(ei);
+      }
+      if (!ENT[ei].ps.includes(i)) ENT[ei].ps.push(i);
+      if (!PENT[i].includes(ei)) PENT[i].push(ei);
+    }
   });
 }
 const shell = L => SHELL[L] || (SHELL[L] = fs.readFileSync(path.join(DIR, 'shell', `${L}.html`), 'utf8'));
@@ -41,6 +58,10 @@ const listUrl = L => u(L).base.list;
 const typeName = (t, L) => x(L).types[t] || x('en').types[t] || t;
 const imgOf = t => UI.img[t] || UI.img.part;
 const pname = (r, L) => `${r[0]} ${typeName(TYPES[r[1]], L)}`;
+const etype = e => TYPES[P[e.ps[0]][1]];
+const ename = (e, L) => e.ns ? pname(P[e.ps[0]], L) : `${e.b} ${e.c} ${typeName(etype(e), L)}`;
+const eurl = (e, L) => e.ns ? itemUrl(P[e.ps[0]], L) : u(L).base.item.replace('__S__', e.s);
+const nsOf = e => e.ps.map(i => P[i][0]);
 const I = {
   arrow: '<svg class="i-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
   plus: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>',
@@ -58,6 +79,12 @@ function page(L, { path: p, route, title, desc, body, jsonld = [], ogImg, noinde
 const crumbs = items => `<nav class="crumbs" aria-label="breadcrumb">${items.map((z, i) => i < items.length - 1 ? `<a href="${z[1]}">${esc(z[0])}</a><span>/</span>` : `<span aria-current="page">${esc(z[0])}</span>`).join('')}</nav>`;
 const crumbLd = items => ({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items.map((z, i) => ({ '@type': 'ListItem', position: i + 1, name: z[0], item: SITE + z[1] })) });
 
+function ecard(ei, L) {
+  const e = ENT[ei], t = etype(e), n = ename(e, L), url = eurl(e, L), id = 'x:' + e.s, im = imgOf(t);
+  return `<article class="card" data-id="${esc(id)}" data-name="${esc(n)}" data-code="${esc(e.c)}" data-img="${im}" data-url="${url}" data-type="${esc(typeName(t, L))}" data-cat="${t}">
+<div class="phw"><a class="ph" href="${url}"><img src="${im}" alt="${esc(n)}" loading="lazy" width="440" height="440"></a><button class="quick" type="button" data-add="${esc(id)}" aria-label="${esc(u(L).t.addToList)}" title="${esc(u(L).t.addToList)}">${I.plus}</button></div>
+<div class="info"><span class="brandname">${esc(e.ns ? typeName(t, L) : e.b)}</span><h3><a href="${url}">${esc(n)}</a></h3>${e.ns ? '' : `<span class="code" dir="ltr">${esc(x(L).stock)}: ${esc(nsOf(e).join(' · '))}</span>`}</div></article>`;
+}
 function card(i, L, hit) {
   const r = P[i], t = TYPES[r[1]], n = pname(r, L), url = itemUrl(r, L), id = 'x:' + slugOf(r[0]), im = imgOf(t);
   const codes = hit ? [hit, ...r[2].map(o => o[1]).filter(c => c !== hit)] : r[2].map(o => o[1]);
@@ -90,6 +117,25 @@ function search(q, onlyType) {
   return [...best.entries()].sort((a, b) => b[1][0] - a[1][0] || a[0] - b[0]).map(([i, [s, k]]) => [i, s, codeOf(i, k || tq)]);
 }
 
+// [kayıt sırası, puan]
+function esearch(q) {
+  const tq = tight(q); if (!tq) return [];
+  const best = new Map(), put = (ei, s) => { const b = best.get(ei); if (b === undefined || b < s) best.set(ei, s); };
+  for (const ei of EEXACT.get(tq) || []) put(ei, 100);
+  for (const i of EXACT.get(tq) || []) if (tight(P[i][0]) === tq) for (const ei of PENT[i]) put(ei, 95); // stok kodu (NS ...)
+  if (tq.length >= 3) {
+    for (const [k, ei] of ECODES) if (k !== tq && k.includes(tq)) put(ei, k.startsWith(tq) ? 70 : 50);
+    P.forEach((r, i) => { const k = tight(r[0]); if (k !== tq && k.includes(tq)) for (const ei of PENT[i]) put(ei, 45); });
+  }
+  const words = norm(q).trim().split(/\s+/);
+  if (!best.size && EBRANDS.has(tq)) for (const ei of EBRANDS.get(tq)) put(ei, 30);
+  if (!best.size && words.length > 1) {
+    const last = tight(words[words.length - 1]), bk = tight(words.slice(0, -1).join(' '));
+    for (const ei of EEXACT.get(last) || []) put(ei, tight(ENT[ei].b) === bk ? 99 : 90);
+  }
+  return [...best.entries()].sort((a, b) => b[1] - a[1] || a[0] - b[0]);
+}
+
 // ---------- tüm ürünler (kendi ürünlerimiz + kod kataloğu) ----------
 // Kategori anahtarları: kendi grupları (ör. kompresor-filtreleri) ve kod kataloğu tipleri (ör. air)
 let OWN = {}, ALL;
@@ -97,7 +143,7 @@ const own = L => OWN[L] || (OWN[L] = JSON.parse(zlib.gunzipSync(fs.readFileSync(
 function all() {
   if (ALL) return ALL;
   const o = own('tr');
-  ALL = [...o.map((r, i) => ({ o: i, c: r[5], b: [r[4]] })), ...P.map((r, i) => ({ x: i, c: TYPES[r[1]], b: [...new Set(r[2].map(z => z[0]))] }))];
+  ALL = [...o.map((r, i) => ({ o: i, c: r[5], b: [r[4]] })), ...ENT.map((e, i) => ({ e: i, c: etype(e), b: e.b ? [e.b] : [] }))];
   BNAME = new Map(); for (const it of ALL) for (const bn of it.b) { const k = bkey(bn); if (k && !BNAME.has(k)) BNAME.set(k, bn); }
   for (const it of ALL) it.bk = it.b.map(bkey);
   return ALL;
@@ -122,8 +168,8 @@ function matchAll(q, L) {
   const items = all(); if (!q) return items.map(it => [it, 0, null]);
   const tq = tight(q), words = norm(q).trim().split(/\s+/).filter(Boolean), o = own(L), out = [];
   for (const it of items) if (it.o !== undefined) { const sc = ownScore(o[it.o], tq, words); if (sc) out.push([it, sc + 1, null]); }
-  const xi = new Map(items.filter(it => it.x !== undefined).map(it => [it.x, it]));
-  for (const [i, sc, c] of search(q)) out.push([xi.get(i), sc, c]);
+  const xi = new Map(items.filter(it => it.e !== undefined).map(it => [it.e, it]));
+  for (const [ei, sc] of esearch(q)) out.push([xi.get(ei), sc, null]);
   return out.sort((a, b) => b[1] - a[1]);
 }
 function ownCard(r, L) {
@@ -137,7 +183,7 @@ function viewAll(L, { q, pg, ks, bs, sort, pathCat, pathBrand }) {
   const kset = new Set(ks), bset = new Set(bs.map(bkey).filter(Boolean));
   const okC = it => !kset.size || kset.has(it.c), okB = it => !bset.size || it.bk.some(k => bset.has(k));
   const list = hits.filter(([it]) => okC(it) && okB(it));
-  if (sort === 'az') { const o = own(L); list.sort((a, b) => (a[0].o !== undefined ? o[a[0].o][1] : pname(P[a[0].x], L)).localeCompare(b[0].o !== undefined ? o[b[0].o][1] : pname(P[b[0].x], L), L, { numeric: true })); }
+  if (sort === 'az') { const o = own(L); const nmOf = it => it.o !== undefined ? o[it.o][1] : ename(ENT[it.e], L); list.sort((a, b) => nmOf(a[0]).localeCompare(nmOf(b[0]), L, { numeric: true })); }
   const cc = new Map(), bc = new Map();
   for (const [it] of hits) { if (okB(it)) cc.set(it.c, (cc.get(it.c) || 0) + 1); if (okC(it)) for (const k of new Set(it.bk)) bc.set(k, (bc.get(k) || 0) + 1); }
   const nPg = Math.max(1, Math.ceil(list.length / PER)); pg = Math.min(pg, nPg);
@@ -151,7 +197,7 @@ function viewAll(L, { q, pg, ks, bs, sort, pathCat, pathBrand }) {
   const items = [[st.home, u(L).base.home], [f.title, base], ...(pathCat ? [[catName(pathCat, L), catUrl(pathCat, L)]] : []), ...(pathBrand ? [[BNAME.get(bkey(pathBrand)) || pathBrand, `${catUrl(pathCat, L)}/${brandSlugOf(pathBrand)}`]] : [])];
   const keep = new URLSearchParams(); if (q) keep.set('q', q); ks.forEach(k => keep.append('k', k)); bs.forEach(b => keep.append('b', brandSlugOf(b))); if (sort && sort !== 'rel') keep.set('s', sort);
   const pagerHtml = nPg > 1 ? `<nav class="pager" aria-label="pagination">${pg > 1 ? `<a class="btn btn-line btn-sm" rel="prev" href="${base}?${new URLSearchParams([...keep, ...(pg > 2 ? [['p', pg - 1]] : [])])}">${esc(f.prev)}</a>` : '<span></span>'}<span>${esc(fill(f.page, { p: pg, n: nPg }))}</span>${pg < nPg ? `<a class="btn btn-line btn-sm" rel="next" href="${base}?${new URLSearchParams([...keep, ['p', pg + 1]])}">${esc(f.next)}</a>` : '<span></span>'}</nav>` : '';
-  const cards = slice.map(([it, , c]) => it.o !== undefined ? ownCard(o[it.o], L) : card(it.x, L, c)).join('');
+  const cards = slice.map(([it]) => it.o !== undefined ? ownCard(o[it.o], L) : ecard(it.e, L)).join('');
   const body = `<div class="wrap">${crumbs(items)}
  <div class="cat-head"><div><h1>${esc(title)}</h1><p>${q ? esc(fill(f.searchTitle, { q })) + ' · ' : ''}${num(list.length, L)} ${esc(f.items)}</p></div></div>
  <form class="xform" action="${base}" method="get"><div class="cat-layout"><aside class="filters" id="xfilters">
@@ -173,7 +219,7 @@ function viewItem(L, slug, q) {
   const byBrand = new Map(); for (const [b, c] of r[2]) { if (!byBrand.has(b)) byBrand.set(b, []); byBrand.get(b).push(c); }
   const tq = q ? tight(q) : '';
   const oem = r[2].length ? `<section class="xr-sec"><h2>${esc(f.oemTitle)}</h2><p class="xr-lead">${esc(f.oemLead)}</p>
-<table class="xr-tbl"><thead><tr><th>${esc(f.brand)}</th><th>${esc(f.oemCode)}</th></tr></thead><tbody>${[...byBrand].map(([b, cs]) => `<tr><th>${esc(b)}</th><td dir="ltr"><div class="xr-codes">${cs.map(c => `<span class="mono${tq && tight(c) === tq ? ' hit' : ''}">${esc(c)}</span>`).join('')}</div></td></tr>`).join('')}</tbody></table></section>` : '';
+<table class="xr-tbl"><thead><tr><th>${esc(f.brand)}</th><th>${esc(f.oemCode)}</th></tr></thead><tbody>${[...byBrand].map(([b, cs]) => `<tr><th>${esc(b)}</th><td dir="ltr"><div class="xr-codes">${cs.map(c => { const ei = PENT[i].find(k => ENT[k].c === c && ENT[k].b === b); return `<a class="mono${tq && tight(c) === tq ? ' hit' : ''}" href="${ei !== undefined ? eurl(ENT[ei], L) : '#'}">${esc(c)}</a>`; }).join('')}</div></td></tr>`).join('')}</tbody></table></section>` : '';
   const apps = `<section class="xr-sec"><h2>${esc(f.appsTitle)}</h2>${r[3].length ? `<table class="xr-tbl"><thead><tr><th>${esc(f.brand)}</th><th>${esc(f.model)}</th><th class="q">${esc(f.qty)}</th></tr></thead><tbody>${r[3].map(([b, m, k]) => `<tr><th>${esc(b)}</th><td dir="ltr">${esc(m)}</td><td class="q">${k}</td></tr>`).join('')}</tbody></table>` : `<div class="tabnote"><p>${esc(f.noApps)}</p><a class="btn btn-line btn-sm" href="https://wa.me/${UI.wa}?text=${waTxt}" target="_blank" rel="noopener">${I.wa} ${esc(st.waAsk)}</a></div>`}</section>`;
   const pool = BYTYPE.get(t), at = pool.indexOf(i), rel = [...pool.slice(Math.max(0, at - 2), at), ...pool.slice(at + 1, at + 3)].slice(0, 4);
   const items = [[st.home, u(L).base.home], [f.title, listUrl(L)], [tn, typeUrl(t, L)], [r[0], url]];
@@ -184,24 +230,57 @@ function viewItem(L, slug, q) {
  <div class="gal"><div class="gallery" id="gal-main"><img src="${im}" alt="${esc(n)}" width="900" height="900" fetchpriority="high"></div></div>
  <div><div class="kicker"><span class="pill">Sofilx</span><span class="stock"><a href="${typeUrl(t, L)}">${esc(tn)}</a></span></div>
  <h1>${esc(n)}</h1>${q ? `<p class="xr-matched">${esc(fill(f.matched, { q }))}</p>` : ''}
- <dl class="quick-sp"><dt>${esc(f.code)}</dt><dd class="mono" dir="ltr">${esc(r[0])}</dd><dt>${esc(f.type)}</dt><dd>${esc(tn)}</dd>${firstCodes.length ? `<dt>${esc(f.oemCode)}</dt><dd dir="ltr">${esc(firstCodes.slice(0, 3).join(' · '))}${r[2].length > 3 ? ` <a href="#xr-oem">${esc(fill(f.more, { n: r[2].length - 3 }))}</a>` : ''}</dd>` : ''}</dl>
+ <dl class="quick-sp"><dt>${esc(f.stock)}</dt><dd class="mono" dir="ltr">${esc(r[0])}</dd><dt>${esc(f.type)}</dt><dd>${esc(tn)}</dd>${firstCodes.length ? `<dt>${esc(f.oemCode)}</dt><dd dir="ltr">${esc(firstCodes.slice(0, 3).join(' · '))}${r[2].length > 3 ? ` <a href="#xr-oem">${esc(fill(f.more, { n: r[2].length - 3 }))}</a>` : ''}</dd>` : ''}</dl>
  <div class="buy"><div class="buyrow"><div class="qty"><button type="button" data-step="-1" aria-label="-">−</button><input id="pd-qty" type="number" min="1" value="1" aria-label="${esc(f.qty)}"><button type="button" data-step="1" aria-label="+">+</button></div><button class="btn btn-dark" type="button" id="pd-add">${esc(st.addToList)}</button></div>
   <a class="btn btn-line wa" href="https://wa.me/${UI.wa}?text=${waTxt}" target="_blank" rel="noopener">${I.wa} ${esc(st.waAsk)}</a>
   <div class="notes">${st.notes.map(z => `<div><b>${esc(z[0])}</b>${esc(z[1])}</div>`).join('')}</div>
   <div class="share"><span>${esc(st.share)}</span><a href="https://wa.me/?text=${encodeURIComponent(n + ' – ' + SITE + url)}" target="_blank" rel="noopener" aria-label="WhatsApp">${I.wa}</a><button type="button" data-copy="${esc(r[0])}">${esc(st.copyCode)}</button></div></div>
  </div></div>
 <div class="xr-body" id="xr-oem">${oem}${apps}</div>
-${rel.length ? `<section class="block" style="padding-top:56px"><div class="sec-head"><h2 style="font-size:32px">${esc(f.alsoSee)}</h2><a class="link" href="${typeUrl(t, L)}">${esc(tn)} ${I.arrow}</a></div><div class="cards">${rel.map(k => card(k, L)).join('')}</div></section>` : ''}</div>`;
+${rel.length ? `<section class="block" style="padding-top:56px"><div class="sec-head"><h2 style="font-size:32px">${esc(f.alsoSee)}</h2><a class="link" href="${typeUrl(t, L)}">${esc(tn)} ${I.arrow}</a></div><div class="cards">${rel.map(k => ecard(PENT[k][0], L)).join('')}</div></section>` : ''}</div>`;
   const ld = { '@context': 'https://schema.org', '@type': 'Product', name: n, sku: r[0], mpn: r[0], image: [SITE + im], description: desc, brand: { '@type': 'Brand', name: 'Sofilx' }, category: tn };
   return page(L, { path: url, route: l => itemUrl(r, l), title: `${n}${firstCodes[0] ? ' – ' + firstCodes[0] : ''}`, desc, body, jsonld: [ld, crumbLd(items)], ogImg: im });
 }
+function viewEntry(L, slug, q) {
+  const ei = ENTBY.get(slug); if (ei === undefined) return null;
+  const e = ENT[ei], t = etype(e), f = x(L), st = u(L).t, tn = typeName(t, L), n = ename(e, L), url = eurl(e, L), im = imgOf(t);
+  const waTxt = encodeURIComponent(st.waProduct + `${n} – ${SITE}${url}`);
+  const others = new Map(); for (const i of e.ps) for (const k of PENT[i]) { const z = ENT[k]; if (!others.has(z.b)) others.set(z.b, new Map()); others.get(z.b).set(z.c, k); }
+  const oem = `<section class="xr-sec"><h2>${esc(f.otherCodes)}</h2><p class="xr-lead">${esc(f.oemLead)}</p>
+<table class="xr-tbl"><thead><tr><th>${esc(f.brand)}</th><th>${esc(f.oemCode)}</th></tr></thead><tbody>${[...others].map(([b, cs]) => `<tr><th>${esc(b)}</th><td dir="ltr"><div class="xr-codes">${[...cs].map(([c, k]) => k === ei ? `<span class="mono hit">${esc(c)}</span>` : `<a class="mono" href="${eurl(ENT[k], L)}">${esc(c)}</a>`).join('')}</div></td></tr>`).join('')}</tbody></table></section>`;
+  const multi = e.ps.length > 1 ? `<section class="xr-sec"><h2>${esc(f.matchesTitle)}</h2><table class="xr-tbl"><thead><tr><th>${esc(f.stock)}</th><th>${esc(f.type)}</th></tr></thead><tbody>${e.ps.map(i => `<tr><th><a class="mono" href="${itemUrl(P[i], L)}">${esc(P[i][0])}</a></th><td>${esc(typeName(TYPES[P[i][1]], L))}</td></tr>`).join('')}</tbody></table></section>` : '';
+  const appRows = []; const seen = new Set(); for (const i of e.ps) for (const a of P[i][3]) { const k = a.join('|'); if (!seen.has(k)) { seen.add(k); appRows.push(a); } }
+  appRows.sort((a, b) => (bkey(b[0]) === bkey(e.b)) - (bkey(a[0]) === bkey(e.b)));
+  const apps = `<section class="xr-sec"><h2>${esc(f.appsTitle)}</h2>${appRows.length ? `<table class="xr-tbl"><thead><tr><th>${esc(f.brand)}</th><th>${esc(f.model)}</th><th class="q">${esc(f.qty)}</th></tr></thead><tbody>${appRows.map(([b, m, k]) => `<tr><th>${esc(b)}</th><td dir="ltr">${esc(m)}</td><td class="q">${k}</td></tr>`).join('')}</tbody></table>` : `<div class="tabnote"><p>${esc(f.noApps)}</p><a class="btn btn-line btn-sm" href="https://wa.me/${UI.wa}?text=${waTxt}" target="_blank" rel="noopener">${I.wa} ${esc(st.waAsk)}</a></div>`}</section>`;
+  const sameB = (EBRANDS.get(tight(e.b)) || []).filter(k => k !== ei && etype(ENT[k]) === t), at = sameB.findIndex(k => k > ei);
+  const rel = (at < 0 ? sameB.slice(-4) : sameB.slice(Math.max(0, at - 2), at + 2)).slice(0, 4);
+  const items = [[st.home, u(L).base.home], [f.title, listUrl(L)], [tn, typeUrl(t, L)], [`${e.b} ${e.c}`, url]];
+  const otherList = [...others].flatMap(([b, cs]) => [...cs.keys()].map(c => `${b} ${c}`)).filter(z => z !== `${e.b} ${e.c}`).slice(0, 4);
+  const desc = fill(f.pdesc, { code: `${e.b} ${e.c}`, type: tn, list: [`${e.b} ${e.c}`, ...otherList].join(', ') }).slice(0, 300);
+  const ns = nsOf(e);
+  const body = `<div class="wrap">${crumbs(items)}
+<div class="pd" data-id="x:${esc(e.s)}" data-name="${esc(n)}" data-code="${esc(e.c)}" data-img="${im}" data-url="${url}">
+ <div class="gal"><div class="gallery" id="gal-main"><img src="${im}" alt="${esc(n)}" width="900" height="900" fetchpriority="high"></div></div>
+ <div><div class="kicker"><span class="pill">${esc(e.b)}</span><span class="stock"><a href="${typeUrl(t, L)}">${esc(tn)}</a></span></div>
+ <h1>${esc(n)}</h1>
+ <dl class="quick-sp"><dt>${esc(f.code)}</dt><dd class="mono" dir="ltr">${esc(e.c)}</dd><dt>${esc(f.brand)}</dt><dd>${esc(e.b)}</dd><dt>${esc(f.type)}</dt><dd>${esc(tn)}</dd><dt>${esc(f.stock)}</dt><dd class="mono" dir="ltr">${ns.map((z, k) => e.ps.length > 1 ? `<a href="${itemUrl(P[e.ps[k]], L)}">${esc(z)}</a>` : esc(z)).join(' · ')}</dd></dl>
+ <div class="buy"><div class="buyrow"><div class="qty"><button type="button" data-step="-1" aria-label="-">−</button><input id="pd-qty" type="number" min="1" value="1" aria-label="${esc(f.qty)}"><button type="button" data-step="1" aria-label="+">+</button></div><button class="btn btn-dark" type="button" id="pd-add">${esc(st.addToList)}</button></div>
+  <a class="btn btn-line wa" href="https://wa.me/${UI.wa}?text=${waTxt}" target="_blank" rel="noopener">${I.wa} ${esc(st.waAsk)}</a>
+  <div class="notes">${st.notes.map(z => `<div><b>${esc(z[0])}</b>${esc(z[1])}</div>`).join('')}</div>
+  <div class="share"><span>${esc(st.share)}</span><a href="https://wa.me/?text=${encodeURIComponent(n + ' – ' + SITE + url)}" target="_blank" rel="noopener" aria-label="WhatsApp">${I.wa}</a><button type="button" data-copy="${esc(e.c)}">${esc(st.copyCode)}</button></div></div>
+ </div></div>
+<div class="xr-body" id="xr-oem">${multi}${oem}${apps}</div>
+${rel.length ? `<section class="block" style="padding-top:56px"><div class="sec-head"><h2 style="font-size:32px">${esc(f.alsoSee)}</h2><a class="link" href="${typeUrl(t, L)}">${esc(tn)} ${I.arrow}</a></div><div class="cards">${rel.map(k => ecard(k, L)).join('')}</div></section>` : ''}</div>`;
+  const ld = { '@context': 'https://schema.org', '@type': 'Product', name: n, sku: ns[0], mpn: e.c, image: [SITE + im], description: desc, brand: { '@type': 'Brand', name: 'Sofilx' }, category: tn };
+  return page(L, { path: url, route: l => eurl(e, l), title: n, desc, body, jsonld: [ld, crumbLd(items)], ogImg: im });
+}
 function viewSj(L, q) {
-  const h = search(q);
+  const h = esearch(q);
   return { total: h.length, more: `${listUrl(L)}?q=${encodeURIComponent(q)}`,
-    items: h.slice(0, 8).map(([i, , c]) => { const r = P[i], t = TYPES[r[1]]; return { n: pname(r, L), u: itemUrl(r, L) + (c ? `?q=${encodeURIComponent(c)}` : ''), im: imgOf(t), c: c || r[0], t: typeName(t, L) }; }) };
+    items: h.slice(0, 8).map(([ei]) => { const e = ENT[ei], t = etype(e); return { n: ename(e, L), u: eurl(e, L), im: imgOf(t), c: e.ns ? e.c : `${x(L).stock}: ${nsOf(e).join(' · ')}`, t: typeName(t, L) }; }) };
 }
 function viewSitemap(L, n) {
-  const urls = [listUrl(L), ...UI.cats.map(c => catUrl(c.k, L)), ...P.map(r => itemUrl(r, L))].slice((n - 1) * SM, n * SM);
+  const urls = [listUrl(L), ...UI.cats.map(c => catUrl(c.k, L)), ...ENT.filter(e => !e.ns).map(e => eurl(e, L)), ...P.filter((r, i) => PENT[i].length !== 1).map(r => itemUrl(r, L)), ...ENT.filter(e => e.ns).map(e => eurl(e, L))].slice((n - 1) * SM, n * SM);
   if (!urls.length) return null;
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(z => `<url><loc>${SITE}${esc(z)}</loc></url>`).join('\n')}\n</urlset>`;
 }
@@ -217,15 +296,24 @@ export default function handler(req, res) {
     if (view === 'sitemap') { const s = viewSitemap(L, parseInt(q0.n, 10) || 1); if (!s) { res.statusCode = 404; return res.end('not found'); } res.setHeader('Content-Type', 'application/xml; charset=utf-8'); res.setHeader('Cache-Control', cache); return res.end(s); }
     // tam kod eşleşmesi tek ürüne çıkıyorsa doğrudan ürün sayfasına git
     if (view === 'list' && q && pg === 1 && !q0.k && !q0.b) {
-      const ex = [...new Set(EXACT.get(tight(q)) || [])];
-      if (ex.length === 1) { res.statusCode = 302; res.setHeader('Location', itemUrl(P[ex[0]], L) + (tight(P[ex[0]][0]) === tight(q) ? '' : `?q=${encodeURIComponent(q)}`)); res.setHeader('Cache-Control', cache); return res.end(); }
+      const tq = tight(q), ex = EEXACT.get(tq) || [], ns = (EXACT.get(tq) || []).filter(i => tight(P[i][0]) === tq);
+      let to = null;
+      if (ex.length === 1 && !ns.length) to = eurl(ENT[ex[0]], L);
+      else if (!ex.length && ns.length === 1) to = PENT[ns[0]].length === 1 ? eurl(ENT[PENT[ns[0]][0]], L) : itemUrl(P[ns[0]], L);
+      if (!to && !ex.length && !ns.length) { const h = esearch(q); if (h.length && h[0][1] >= 99 && !(h[1] && h[1][1] >= 99)) to = eurl(ENT[h[0][0]], L); }
+      if (to) { res.statusCode = 302; res.setHeader('Location', to); res.setHeader('Cache-Control', cache); return res.end(); }
     }
     const arr = v => v === undefined ? [] : Array.isArray(v) ? v : [v];
     const sp = new URL(req.url, 'http://x').searchParams;
     const ks = [...new Set([...arr(q0.k), ...sp.getAll('k')].map(String))].filter(k => catOf(k));
     const bs = [...new Set([...arr(q0.b), ...sp.getAll('b')].map(String))].filter(Boolean).slice(0, 20);
     let html;
-    if (view === 'item') html = viewItem(L, String(q0.slug || ''), q);
+    if (view === 'item') {
+      const sl = String(q0.slug || ''), pi = BYSLUG.get(sl);
+      // tek orijinal kodu olan stok kodu sayfası o kodun sayfasına taşındı
+      if (pi !== undefined && PENT[pi].length === 1 && !ENT[PENT[pi][0]].ns) { res.statusCode = 301; res.setHeader('Location', eurl(ENT[PENT[pi][0]], L)); res.setHeader('Cache-Control', cache); return res.end(); }
+      html = ENTBY.has(sl) ? viewEntry(L, sl, q) : viewItem(L, sl, q);
+    }
     else if (view === 'type') {
       all(); const c = catByPath(String(q0.t || ''), L);
       const pb = q0.pb ? String(q0.pb) : '';

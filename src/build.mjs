@@ -313,7 +313,9 @@ const XR = JSON.parse(fs.readFileSync(path.join(ROOT, 'i18n/xref.json'), 'utf8')
 const XREF = JSON.parse(zlib.gunzipSync(fs.readFileSync(path.join(ROOT, 'data/xref/xref.json.gz'))).toString());
 const XREF_EX = ['530A60114', 'NB 100015', '1310250233', '6.4001.0'];
 const XREF_BRANDS = Math.floor(new Set(XREF.p.flatMap(r => r[2].map(o => o[0].toLowerCase()))).size / 10) * 10;
-const XREF_N = XREF.p.length, XREF_OEM = XREF.p.reduce((a, r) => a + r[2].length, 0);
+const xnorm = v => String(v).toLocaleLowerCase('tr').replace(/ı/g, 'i').replace(/ş/g, 's').replace(/ğ/g, 'g').replace(/ü/g, 'u').replace(/ö/g, 'o').replace(/ç/g, 'c').replace(/î/g, 'i');
+// listede her orijinal kod (marka + kod) ayrı ürün sayfasıdır; orijinal kodu olmayanlar stok koduyla
+const XREF_N = new Set(XREF.p.flatMap(r => r[2].length ? r[2].map(o => xnorm(o[0]).replace(/[^a-z0-9]/g, '') + '|' + xnorm(o[1]).replace(/[\s\-.\/|+*_,()#:]/g, '')) : ['ns|' + r[0]])).size, XREF_OEM = XREF.p.reduce((a, r) => a + r[2].length, 0);
 const XREF_SLUG = { separator: 'separator', air: 'air-filter', oil: 'oil-filter', inline: 'in-line-filter', ows: 'oil-water-separator', hyd: 'hydraulic-filter', vane: 'vane', housing: 'air-filter-housing', panel: 'panel-filter', silencer: 'silencer', gasket: 'gasket', kit: 'service-kit', fuel: 'fuel-filter', part: 'spare-part' };
 function writeXrefRuntime() {
   const dir = path.join(ROOT, 'data/xref'), out = path.join(dir, 'shell'); fs.mkdirSync(out, { recursive: true });

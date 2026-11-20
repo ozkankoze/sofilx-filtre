@@ -52,7 +52,10 @@
   "short": "Separatör, hava, yağ ve hat filtreleri",
   "allBrands": "Tüm markalar ({n})",
   "brandSearch": "Marka ara",
-  "noBrand": "Marka bulunamadı"
+  "noBrand": "Marka bulunamadı",
+  "stock": "Stok kodu",
+  "matchesTitle": "Bu koda uyan ürünler",
+  "otherCodes": "Aynı parçanın diğer orijinal kodları"
  },
  "en": {
   "types": {
@@ -107,7 +110,10 @@
   "short": "Separators, air, oil and in-line filters",
   "allBrands": "All brands ({n})",
   "brandSearch": "Search brands",
-  "noBrand": "No brand found"
+  "noBrand": "No brand found",
+  "stock": "Stock code",
+  "matchesTitle": "Products matching this code",
+  "otherCodes": "Other original codes for the same part"
  },
  "fa": {
   "types": {
@@ -162,7 +168,10 @@
   "short": "سپراتور، فیلتر هوا، روغن و خطی",
   "allBrands": "همه برندها ({n})",
   "brandSearch": "جستجوی برند",
-  "noBrand": "برندی یافت نشد"
+  "noBrand": "برندی یافت نشد",
+  "stock": "کد انبار",
+  "matchesTitle": "محصولات منطبق با این کد",
+  "otherCodes": "کدهای اصلی دیگر همین قطعه"
  },
  "he": {
   "types": {
@@ -217,7 +226,10 @@
   "short": "מפרידים, מסנני אוויר, שמן וקו",
   "allBrands": "כל המותגים ({n})",
   "brandSearch": "חיפוש מותג",
-  "noBrand": "לא נמצא מותג"
+  "noBrand": "לא נמצא מותג",
+  "stock": "קוד מלאי",
+  "matchesTitle": "מוצרים התואמים לקוד זה",
+  "otherCodes": "מק\"טים מקוריים נוספים לאותו חלק"
  },
  "ar": {
   "types": {
@@ -272,7 +284,10 @@
   "short": "فواصل وفلاتر هواء وزيت وخطية",
   "allBrands": "جميع العلامات ({n})",
   "brandSearch": "ابحث عن علامة",
-  "noBrand": "لم يتم العثور على علامة"
+  "noBrand": "لم يتم العثور على علامة",
+  "stock": "رمز المخزون",
+  "matchesTitle": "المنتجات المطابقة لهذا الرمز",
+  "otherCodes": "رموز أصلية أخرى للقطعة نفسها"
  },
  "fr": {
   "types": {
@@ -327,7 +342,10 @@
   "short": "Séparateurs, filtres à air, à huile et en ligne",
   "allBrands": "Toutes les marques ({n})",
   "brandSearch": "Rechercher une marque",
-  "noBrand": "Aucune marque trouvée"
+  "noBrand": "Aucune marque trouvée",
+  "stock": "Code stock",
+  "matchesTitle": "Produits correspondant à ce code",
+  "otherCodes": "Autres références d'origine de la même pièce"
  },
  "de": {
   "types": {
@@ -382,7 +400,10 @@
   "short": "Abscheider, Luft-, Öl- und Leitungsfilter",
   "allBrands": "Alle Marken ({n})",
   "brandSearch": "Marke suchen",
-  "noBrand": "Keine Marke gefunden"
+  "noBrand": "Keine Marke gefunden",
+  "stock": "Lagercode",
+  "matchesTitle": "Produkte zu diesem Code",
+  "otherCodes": "Weitere Originalnummern für dasselbe Teil"
  },
  "es": {
   "types": {
@@ -437,7 +458,10 @@
   "short": "Separadores, filtros de aire, aceite y de línea",
   "allBrands": "Todas las marcas ({n})",
   "brandSearch": "Buscar marca",
-  "noBrand": "No se encontró la marca"
+  "noBrand": "No se encontró la marca",
+  "stock": "Código de stock",
+  "matchesTitle": "Productos que corresponden a este código",
+  "otherCodes": "Otras referencias originales de la misma pieza"
  },
  "ru": {
   "types": {
@@ -492,7 +516,10 @@
   "short": "Сепараторы, воздушные, масляные и магистральные фильтры",
   "allBrands": "Все марки ({n})",
   "brandSearch": "Поиск марки",
-  "noBrand": "Марка не найдена"
+  "noBrand": "Марка не найдена",
+  "stock": "Складской код",
+  "matchesTitle": "Товары по этому коду",
+  "otherCodes": "Другие оригинальные номера этой детали"
  },
  "it": {
   "types": {
@@ -547,7 +574,10 @@
   "short": "Separatori, filtri aria, olio e di linea",
   "allBrands": "Tutti i marchi ({n})",
   "brandSearch": "Cerca marca",
-  "noBrand": "Nessun marchio trovato"
+  "noBrand": "Nessun marchio trovato",
+  "stock": "Codice magazzino",
+  "matchesTitle": "Prodotti corrispondenti a questo codice",
+  "otherCodes": "Altri codici originali dello stesso ricambio"
  },
  "nl": {
   "types": {
@@ -602,7 +632,10 @@
   "short": "Afscheiders, lucht-, olie- en leidingfilters",
   "allBrands": "Alle merken ({n})",
   "brandSearch": "Merk zoeken",
-  "noBrand": "Geen merk gevonden"
+  "noBrand": "Geen merk gevonden",
+  "stock": "Voorraadcode",
+  "matchesTitle": "Producten bij deze code",
+  "otherCodes": "Andere originele codes voor hetzelfde onderdeel"
  },
  "ka": {
   "types": {
@@ -657,7 +690,10 @@
   "short": "სეპარატორები, ჰაერის, ზეთისა და ხაზის ფილტრები",
   "allBrands": "ყველა ბრენდი ({n})",
   "brandSearch": "ბრენდის ძიება",
-  "noBrand": "ბრენდი ვერ მოიძებნა"
+  "noBrand": "ბრენდი ვერ მოიძებნა",
+  "stock": "საწყობის კოდი",
+  "matchesTitle": "ამ კოდის შესაბამისი პროდუქტები",
+  "otherCodes": "იმავე ნაწილის სხვა ორიგინალი კოდები"
  },
  "mk": {
   "types": {
@@ -712,7 +748,10 @@
   "short": "Сепаратори, филтри за воздух, масло и линиски",
   "allBrands": "Сите марки ({n})",
   "brandSearch": "Пребарај марка",
-  "noBrand": "Не е пронајдена марка"
+  "noBrand": "Не е пронајдена марка",
+  "stock": "Код на залиха",
+  "matchesTitle": "Производи што одговараат на овој код",
+  "otherCodes": "Други оригинални шифри за истиот дел"
  },
  "az": {
   "types": {
@@ -767,6 +806,9 @@
   "short": "Separatorlar, hava, yağ və xətt filtrləri",
   "allBrands": "Bütün markalar ({n})",
   "brandSearch": "Marka axtar",
-  "noBrand": "Marka tapılmadı"
+  "noBrand": "Marka tapılmadı",
+  "stock": "Anbar kodu",
+  "matchesTitle": "Bu koda uyğun məhsullar",
+  "otherCodes": "Eyni hissənin digər orijinal kodları"
  }
 }
