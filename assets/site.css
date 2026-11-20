@@ -811,3 +811,4 @@ a.chip2:hover{transform:translateY(-2px)}
 .more-b summary::-webkit-details-marker{display:none}
 .more-b summary::after{content:' +'}
 .more-b[open] summary::after{content:' −'}
+#main.loading .xform .cards{opacity:.45;transition:opacity .15s}

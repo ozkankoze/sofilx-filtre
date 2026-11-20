@@ -257,12 +257,43 @@
   bindSearch($('#q-top'), $('#res-top'));
   bindSearch($('#q-hero'), $('#res-hero'));
   var hf = $('#hero-form'); if (hf) hf.addEventListener('submit', function (e) { e.preventDefault(); var v = $('#q-hero').value.trim(); if (v) goList(v); });
-  // tüm ürünler: filtre formu değişince gönder
-  $$('form.xform').forEach(function (fm) {
+  // tüm ürünler: filtre ya da arama değişince liste sayfa yenilenmeden güncellenir
+  (function () {
+    var fm = $('form.xform'); if (!fm || !window.fetch || !window.DOMParser) return;
+    var main = $('#main'), busy = 0, tmr = null;
+    function urlOf(form) {
+      var sp = new URLSearchParams();
+      new FormData(form).forEach(function (v, k) { if ((k === 'q' && !String(v).trim()) || (k === 's' && v === 'rel')) return; sp.append(k, v); });
+      var qs = sp.toString(); return form.getAttribute('action') + (qs ? '?' + qs : '');
+    }
+    function load(url, keepFocus, toTop) {
+      var my = ++busy; main.classList.add('loading');
+      fetch(url, { credentials: 'same-origin' }).then(function (r) { if (r.redirected && !/\/urunler|\/products/.test(new URL(r.url).pathname)) { location.href = r.url; throw 0; } return r.text(); }).then(function (h) {
+        if (my !== busy) return;
+        var d = new DOMParser().parseFromString(h, 'text/html'), nm = d.getElementById('main'); if (!nm) { location.href = url; return; }
+        var ae = document.activeElement, qf = ae && ae.name === 'q' && ae.closest('form.xform'), pos = qf ? ae.selectionStart : 0;
+        var openF = $('#xfilters') && $('#xfilters').classList.contains('open');
+        var det = $$('.more-b').map(function (x) { return x.open; });
+        main.innerHTML = nm.innerHTML; document.title = d.title;
+        history.replaceState(null, '', url);
+        if (openF && $('#xfilters')) $('#xfilters').classList.add('open');
+        $$('.more-b').forEach(function (x, i) { if (det[i]) x.open = true; });
+        var f2 = $('form.xform'); if (f2) f2.classList.add('js');
+        if (qf && keepFocus) { var q = $('form.xform input[name=q]'); if (q) { q.focus(); try { q.setSelectionRange(pos, pos); } catch (e) {} } }
+        if (toTop) { var g = $('.xform .toolbar'); if (g) g.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        badge();
+      }).catch(function (e) { if (e !== 0) location.href = url; }).then(function () { if (my === busy) main.classList.remove('loading'); });
+    }
     fm.classList.add('js');
-    fm.addEventListener('change', function (e) { if (e.target.name === 'q') return; fm.submit(); });
-    var tg = $('#xf-toggle', fm); if (tg) tg.addEventListener('click', function () { $('#xfilters', fm).classList.toggle('open'); });
-  });
+    document.addEventListener('change', function (e) { var f = e.target.closest && e.target.closest('form.xform'); if (!f || e.target.name === 'q') return; load(urlOf(f)); });
+    document.addEventListener('input', function (e) { var f = e.target.closest && e.target.closest('form.xform'); if (!f || e.target.name !== 'q') return; clearTimeout(tmr); tmr = setTimeout(function () { load(urlOf(f), true); }, 450); });
+    document.addEventListener('submit', function (e) { var f = e.target.closest && e.target.closest('form.xform'); if (!f) return; e.preventDefault(); clearTimeout(tmr); location.href = urlOf(f); });
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('form.xform .pager a, form.xform a.btn-line[href]'); if (!a || e.metaKey || e.ctrlKey) return;
+      e.preventDefault(); load(a.getAttribute('href'), false, true);
+    });
+    document.addEventListener('click', function (e) { var t = e.target.closest && e.target.closest('#xf-toggle'); if (t) { var fl = $('#xfilters'); if (fl) fl.classList.toggle('open'); } });
+  })();
   $$('[data-codefocus]').forEach(function (a) { a.addEventListener('click', function (e) { var i = $('#q-hero'); if (!i) return; e.preventDefault(); i.closest('.searchcard').scrollIntoView({ behavior: 'smooth', block: 'center' }); setTimeout(function () { i.focus({ preventScroll: true }); }, 350); }); });
   $$('[data-try]').forEach(function (b) { b.addEventListener('click', function () { var i = $('#q-hero'); i.value = b.dataset.try; i.focus(); i.dispatchEvent(new Event('input')); }); });
   bindListing(); bindProduct(); bindQuote(); cookies(); badge();
